@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class="scroll-smooth light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Payroll & Financial Operations | KAM Global AI</title>
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <!-- Global Assets -->
+    <script src="assets/js/tailwind-config.js"></script>
+    <link href="assets/css/global.css" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+
+    <!-- TopNavBar -->
+    <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm h-20 transition-all duration-300">
+        <div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
+            <a href="index.html" class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-2">
+                KAM Global AI
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="index.html">Home</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="about.html">Company</a>
+                
+                <!-- Services Dropdown -->
+                <div class="relative group z-50">
+                    <a class="font-label-md text-label-md text-secondary font-bold transition-colors flex items-center gap-1 cursor-pointer" href="services.html">
+                        Services <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+                    </a>
+                    <div class="absolute left-0 top-full mt-2 w-72 bg-surface-container-lowest border border-outline-variant/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2 transform origin-top-left group-hover:scale-100 scale-95">
+                        <a href="recruitment.html" class="block px-4 py-2.5 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Recruitment Services</a>
+                        <a href="contract-staffing.html" class="block px-4 py-2.5 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Contract Staffing</a>
+                        <a href="payroll.html" class="block px-4 py-2.5 font-body-sm bg-surface-container text-secondary font-bold rounded-xl transition-colors">Payroll Outsourcing</a>
+                        <a href="hr-advisory.html" class="block px-4 py-2.5 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">HR Advisory & Consulting</a>
+                        <a href="manpower-bgv.html" class="block px-4 py-2.5 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Manpower Consulting & BGV</a>
+                        <a href="executive-search.html" class="block px-4 py-2.5 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Executive Search</a>
+                    </div>
+                </div>
+
+                <!-- Industries Dropdown -->
+                <div class="relative group z-50">
+                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors flex items-center gap-1 cursor-pointer" href="industries.html">
+                        Industries <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+                    </a>
+                    <div class="absolute left-0 top-full mt-2 w-64 bg-surface-container-lowest border border-outline-variant/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2 transform origin-top-left group-hover:scale-100 scale-95">
+                        <a href="industries.html" class="block px-4 py-2 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">IT & Technology</a>
+                        <a href="industries.html" class="block px-4 py-2 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Engineering & Manufacturing</a>
+                        <a href="industries.html" class="block px-4 py-2 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Education & EdTech</a>
+                        <a href="industries.html" class="block px-4 py-2 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Healthcare</a>
+                        <a href="industries.html" class="block px-4 py-2 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Hospitality & Retail</a>
+                    </div>
+                </div>
+
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="insights.html">Insights</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="demo.html" class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-label-md text-label-md hover:bg-secondary transition-all shadow-md hover:shadow-lg active:scale-95">Request Demo</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Cinematic Hero Section -->
+        <section class="relative h-[650px] flex items-center overflow-hidden bg-black">
+            <img src="assets/img/payroll_outsourcing.png" alt="Global Financial Operations" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-luminosity scale-105">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent z-0"></div>
+            
+            <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop w-full">
+                <div class="max-w-3xl" data-aos="fade-right">
+                    <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-label-sm tracking-widest uppercase mb-8 shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span> Sovereign Financial Matrix
+                    </span>
+                    <h1 class="font-display-lg text-display-lg-mobile md:text-[5rem] text-white mb-6 leading-tight font-black">
+                        Payroll & Financial <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-teal-300 to-indigo-200 animate-gradient-text">Ecosystem</span>
+                    </h1>
+                    <p class="font-body-lg text-white/80 mb-10 max-w-2xl leading-relaxed text-lg">
+                        A sovereign AI-driven financial infrastructure engineered for multinational corporations. We synchronize automated gross-to-net payroll, multi-currency global disbursements, and absolute statutory compliance into one secure nexus.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="#capabilities" class="bg-secondary text-on-primary px-8 py-4 rounded-xl font-label-md text-lg hover:bg-secondary/90 hover:scale-105 transition-all shadow-xl">
+                            Explore Operations Nexus
+                        </a>
+                        <a href="contact.html" class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-xl font-label-md text-lg hover:bg-white/20 transition-all shadow-lg">
+                            Request Compliance Audit
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Stats Counter Bar -->
+        <section class="py-16 bg-surface border-b border-outline-variant/30 relative z-20">
+            <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-xl transition-shadow" data-aos="zoom-in">
+                        <div class="text-display-lg font-black text-secondary mb-2 flex items-center justify-center">
+                            <span class="count-up" data-count="99.99">0</span>%
+                        </div>
+                        <div class="font-label-md uppercase tracking-wider text-primary font-bold">Calculation Accuracy</div>
+                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Zero-error algorithmic validation</p>
+                    </div>
+
+                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-xl transition-shadow" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="text-display-lg font-black text-primary mb-2 flex items-center justify-center">
+                            <span class="count-up" data-count="120">0</span>+
+                        </div>
+                        <div class="font-label-md uppercase tracking-wider text-primary font-bold">Supported Jurisdictions</div>
+                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Multi-currency disbursement rails</p>
+                    </div>
+
+                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-xl transition-shadow" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="text-display-lg font-black text-secondary mb-2 flex items-center justify-center">
+                            $<span class="count-up" data-count="4.2">0</span>B+
+                        </div>
+                        <div class="font-label-md uppercase tracking-wider text-primary font-bold">Annually Disbursed</div>
+                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Secured via encrypted financial rails</p>
+                    </div>
+
+                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-xl transition-shadow" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="text-display-lg font-black text-primary mb-2 flex items-center justify-center">
+                            <span class="count-up" data-count="100">0</span>%
+                        </div>
+                        <div class="font-label-md uppercase tracking-wider text-primary font-bold">Platform Uptime</div>
+                        <p class="text-body-sm text-on-surface-variant/80 mt-2">SOC2 Type II military-grade redundancy</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Financial Pillars (3D Tilt Cards) -->
+        <section id="capabilities" class="py-28 bg-surface-container-low">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+                <div class="text-center mb-20">
+                    <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Enterprise Financial Nexus</span>
+                    <h2 class="font-headline-lg text-primary mb-4" data-aos="fade-up">Autonomous Payroll Infrastructure</h2>
+                    <p class="text-on-surface-variant max-w-2xl mx-auto text-lg">Our financial systems eliminate manual payroll reconciliation, ensuring absolute adherence to international statutory law and real-time ledger settlement.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Pillar 1 -->
+                    <div class="glass-card p-10 border border-outline-variant/30 rounded-[2.5rem] tilt-card shadow-xl group" data-aos="fade-up">
+                        <div class="tilt-inner h-full flex flex-col">
+                            <div class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-8 shadow-inner">
+                                <span class="material-symbols-outlined text-4xl">account_balance_wallet</span>
+                            </div>
+                            <h3 class="font-headline-lg text-primary mb-4 group-hover:text-secondary transition-colors">Managed Global Payroll</h3>
+                            <p class="text-on-surface-variant font-body-lg mb-8 leading-relaxed flex-1">
+                                Automated gross-to-net calculations across 120+ tax regimes. We execute complex multi-country payroll cycles with zero manual intervention.
+                            </p>
+                            <ul class="space-y-4 mb-10 pt-6 border-t border-outline-variant/30">
+                                <li class="flex items-center gap-3 text-label-md text-primary font-bold">
+                                    <span class="material-symbols-outlined text-secondary">check_circle</span> Automated Gross-to-Net Engine
+                                </li>
+                                <li class="flex items-center gap-3 text-label-md text-primary font-bold">
+                                    <span class="material-symbols-outlined text-secondary">check_circle</span> Multi-Country Tax Synchronization
+                                </li>
+                            </ul>
+                            <a class="text-secondary font-bold flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-wider text-sm" href="#">
+                                Learn More <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="glass-card p-10 border border-outline-variant/30 rounded-[2.5rem] tilt-card shadow-xl group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="tilt-inner h-full flex flex-col">
+                            <div class="w-16 h-16 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center mb-8 shadow-inner">
+                                <span class="material-symbols-outlined text-4xl">gavel</span>
+                            </div>
+                            <h3 class="font-headline-lg text-primary mb-4 group-hover:text-secondary transition-colors">Statutory Governance</h3>
+                            <p class="text-on-surface-variant font-body-lg mb-8 leading-relaxed flex-1">
+                                Continuous horizon scanning algorithms monitor regional labor laws, statutory pension contributions, and local withholding mandates in real time.
+                            </p>
+                            <ul class="space-y-4 mb-10 pt-6 border-t border-outline-variant/30">
+                                <li class="flex items-center gap-3 text-label-md text-primary font-bold">
+                                    <span class="material-symbols-outlined text-secondary">check_circle</span> Real-Time Horizon Scanning
+                                </li>
+                                <li class="flex items-center gap-3 text-label-md text-primary font-bold">
+                                    <span class="material-symbols-outlined text-secondary">check_circle</span> Automated Withholding Filings
+                                </li>
+                            </ul>
+                            <a class="text-secondary font-bold flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-wider text-sm" href="#">
+                                Learn More <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="bg-gradient-to-br from-primary via-primary to-blue-900 p-10 border border-outline-variant/30 rounded-[2.5rem] tilt-card shadow-2xl group text-white" data-aos="fade-up" data-aos-delay="200">
+                        <div class="tilt-inner h-full flex flex-col">
+                            <div class="w-16 h-16 rounded-2xl bg-white/10 text-teal-300 flex items-center justify-center mb-8 backdrop-blur-md shadow-lg border border-white/20">
+                                <span class="material-symbols-outlined text-4xl">currency_exchange</span>
+                            </div>
+                            <h3 class="font-headline-lg text-white mb-4">Sovereign Treasury Rails</h3>
+                            <p class="text-white/80 font-body-lg mb-8 leading-relaxed flex-1">
+                                Secure, encrypted international payment rails guaranteeing near-instantaneous multi-currency employee disbursement with optimized FX settlement.
+                            </p>
+                            <ul class="space-y-4 mb-10 pt-6 border-t border-white/20">
+                                <li class="flex items-center gap-3 text-label-md text-white font-bold">
+                                    <span class="material-symbols-outlined text-teal-300">check_circle</span> Encrypted Payment Rails
+                                </li>
+                                <li class="flex items-center gap-3 text-label-md text-white font-bold">
+                                    <span class="material-symbols-outlined text-teal-300">check_circle</span> Optimized FX Settlement
+                                </li>
+                            </ul>
+                            <a class="text-teal-300 font-bold flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-wider text-sm" href="#">
+                                Learn More <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Grid: Financial Intelligence -->
+        <section class="py-28 bg-surface">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+                <div class="mb-16 text-center md:text-left">
+                    <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Cognitive Analytics</span>
+                    <h2 class="font-headline-lg text-primary mb-4" data-aos="fade-right">Real-Time Financial Intelligence</h2>
+                    <p class="text-on-surface-variant text-lg max-w-3xl" data-aos="fade-right">Transform raw payroll disbursements into a strategic executive decision engine with predictive forecasting.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[650px]">
+                    <div class="md:col-span-8 relative rounded-[2.5rem] overflow-hidden shadow-xl group" data-aos="fade-up">
+                        <img src="assets/img/payroll_outsourcing.png" alt="Financial Analytics Network" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-12 flex flex-col justify-end text-white z-10">
+                            <span class="material-symbols-outlined text-teal-400 text-4xl mb-4">analytics</span>
+                            <h4 class="font-headline-lg mb-4">Granular Cost Distribution Matrix</h4>
+                            <p class="font-body-lg opacity-90 max-w-2xl leading-relaxed">Interactive heatmaps and AI-driven cost attribution models break down global labor expenditures by department, subsidiary, project code, or international tax bracket in real time.</p>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-4 bg-gradient-to-br from-secondary to-blue-500 flex flex-col justify-center p-12 rounded-[2.5rem] shadow-xl text-white hover:shadow-2xl transition-all" data-aos="fade-up" data-aos-delay="100">
+                        <span class="material-symbols-outlined text-[48px] mb-6 text-white/80">security</span>
+                        <h4 class="font-headline-md font-bold mb-4">SOC2 Type II Defense Shield</h4>
+                        <p class="font-body-md opacity-90 leading-relaxed">Military-grade cryptographic encryption at rest and in transit ensures complete confidentiality of executive salaries and sensitive organizational financial ledgers.</p>
+                    </div>
+
+                    <div class="md:col-span-4 bg-surface-container-highest p-12 rounded-[2.5rem] flex flex-col justify-center border border-outline-variant/30 shadow-sm hover:border-secondary transition-colors" data-aos="fade-up" data-aos-delay="200">
+                        <span class="material-symbols-outlined text-[48px] mb-6 text-secondary">trending_up</span>
+                        <h4 class="font-headline-md font-bold mb-4 text-primary">Predictive Labor Modeling</h4>
+                        <p class="font-body-sm text-on-surface-variant leading-relaxed">Simulate future fiscal quarters, salary inflation curves, and currency fluctuations with our advanced stochastic forecasting models.</p>
+                    </div>
+
+                    <div class="md:col-span-8 relative rounded-[2.5rem] overflow-hidden shadow-xl border border-outline-variant/30 group" data-aos="fade-up" data-aos-delay="300">
+                        <img src="assets/img/hr_advisory.png" alt="Boardroom Strategy" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:scale-105 transition-transform duration-700 mix-blend-multiply">
+                        <div class="absolute inset-0 bg-primary/90 p-12 flex items-center z-10">
+                            <div class="max-w-xl">
+                                <span class="material-symbols-outlined text-teal-300 text-4xl mb-4">fact_check</span>
+                                <h4 class="font-headline-lg mb-4 text-white">One-Click Audit Verification</h4>
+                                <p class="font-body-lg text-white/80 leading-relaxed">Instantly generate cryptographically signed verification ledgers and compliance audit logs for internal governance committees and external financial regulators.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="py-24 px-margin-mobile md:px-margin-tablet max-w-container-max mx-auto">
+            <div class="rounded-[3rem] overflow-hidden shadow-2xl relative bg-black py-24 px-12 md:px-24 text-center border border-outline-variant/30 group">
+                <img src="assets/img/payroll_outsourcing.png" alt="Secure Treasury" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-700 z-0 mix-blend-luminosity">
+                <div class="absolute inset-0 bg-gradient-to-b from-primary/90 via-black/80 to-black z-0"></div>
+
+                <div class="relative z-10 max-w-4xl mx-auto">
+                    <span class="inline-block bg-white/10 backdrop-blur-md text-white border border-white/20 px-5 py-2 font-label-sm uppercase tracking-widest rounded-full mb-8 shadow-sm" data-aos="zoom-in">
+                        Sovereign Financial Control
+                    </span>
+                    <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-8 leading-tight" data-aos="fade-up">
+                        Ready to secure your <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-teal-200 to-white animate-gradient-text">Financial Ecosystem?</span>
+                    </h2>
+                    <p class="font-body-lg text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+                        Consult with our elite Treasury Architects today to automate your global payroll and secure your international financial operations.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-6" data-aos="fade-up" data-aos-delay="200">
+                        <a href="demo.html" class="bg-secondary text-on-primary px-10 py-5 rounded-xl font-label-lg shadow-2xl hover:bg-secondary/90 hover:scale-105 transition-all">
+                            Initiate Consultation
+                        </a>
+                        <a href="contact.html" class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-5 rounded-xl font-label-lg hover:bg-white/20 transition-colors shadow-lg">
+                            Request Security Audit
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full pt-20 pb-12 bg-primary text-on-primary border-t border-on-primary-fixed-variant/20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto mb-16">
+            <div class="lg:col-span-1">
+                <div class="font-headline-lg font-black text-surface-container-lowest mb-6 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-teal-300">all_inclusive</span> KAM Global AI
+                </div>
+                <p class="font-body-sm opacity-80 mb-8 max-w-xs leading-relaxed">
+                    Empowering international finance and HR through mathematical intelligence, automated compliance, and ethical AI innovation.
+                </p>
+            </div>
+            <div>
+                <h6 class="font-label-md text-teal-300 mb-6 uppercase tracking-wider font-bold">Solutions</h6>
+                <ul class="space-y-4">
+                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="recruitment.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> AI HR Suite</a></li>
+                    <li><a class="font-body-sm text-white font-bold flex items-center gap-1" href="payroll.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> Predictive Finance</a></li>
+                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="services.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> EduAI Tutors</a></li>
+                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="services.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> Najah Tutors</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="font-label-md text-teal-300 mb-6 uppercase tracking-wider font-bold">Company</h6>
+                <ul class="space-y-4">
+                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="about.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> About Us</a></li>
+                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="contact.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> Global Locations</a></li>
+                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="recruitment.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> Careers</a></li>
+                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="contact.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="font-label-md text-teal-300 mb-6 uppercase tracking-wider font-bold">Stay Updated</h6>
+                <div class="flex gap-2 mb-6">
+                    <input class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-3 text-body-sm w-full focus:outline-none focus:border-teal-300 text-white placeholder-white/50 shadow-inner" placeholder="Enterprise email" type="email"/>
+                    <button class="bg-secondary px-6 py-3 rounded-xl text-on-primary font-bold shadow-lg hover:bg-secondary/90 transition-all"><span class="material-symbols-outlined">send</span></button>
+                </div>
+                <div class="flex gap-4">
+                    <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-teal-400 hover:text-primary cursor-pointer transition-all border border-white/20"><span class="material-symbols-outlined text-lg">public</span></span>
+                    <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-teal-400 hover:text-primary cursor-pointer transition-all border border-white/20"><span class="material-symbols-outlined text-lg">group</span></span>
+                    <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-teal-400 hover:text-primary cursor-pointer transition-all border border-white/20"><span class="material-symbols-outlined text-lg">hub</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="font-body-sm opacity-70">© 2026 KAM Global AI. Empowering global finance and HR through mathematical intelligence.</p>
+            <div class="flex gap-8">
+                <a class="font-label-sm text-white/80 hover:text-white hover:underline transition-all" href="#">Privacy Policy</a>
+                <a class="font-label-sm text-white/80 hover:text-white hover:underline transition-all" href="#">Terms of Service</a>
+                <a class="font-label-sm text-white/80 hover:text-white hover:underline transition-all" href="#">Security Standards</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

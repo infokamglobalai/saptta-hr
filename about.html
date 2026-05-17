@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>About Us | KAM Global AI</title>
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <!-- Global Assets -->
+    <script src="assets/js/tailwind-config.js"></script>
+    <link href="assets/css/global.css" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+
+    <!-- TopNavBar -->
+    <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm h-20 transition-all duration-300">
+        <div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
+            <a href="index.html" class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-2">
+                KAM Global AI
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="index.html">Home</a>
+                <a class="font-label-md text-label-md text-secondary font-bold transition-colors" href="about.html">Company</a>
+                
+                <!-- Services Dropdown -->
+                <div class="relative group z-50">
+                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors flex items-center gap-1 cursor-pointer" href="services.html">
+                        Services <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+                    </a>
+                    <div class="absolute left-0 top-full mt-2 w-72 bg-surface-container-lowest border border-outline-variant/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2 transform origin-top-left group-hover:scale-100 scale-95">
+                        <a href="recruitment.html" class="block px-4 py-2.5 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Recruitment Services</a>
+                        <a href="contract-staffing.html" class="block px-4 py-2.5 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Contract Staffing</a>
+                        <a href="payroll.html" class="block px-4 py-2.5 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Payroll Outsourcing</a>
+                        <a href="hr-advisory.html" class="block px-4 py-2.5 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">HR Advisory & Consulting</a>
+                        <a href="manpower-bgv.html" class="block px-4 py-2.5 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Manpower Consulting & BGV</a>
+                        <a href="executive-search.html" class="block px-4 py-2.5 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Executive Search</a>
+                    </div>
+                </div>
+
+                <!-- Industries Dropdown -->
+                <div class="relative group">
+                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors flex items-center gap-1 cursor-pointer" href="industries.html">
+                        Industries <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+                    </a>
+                    <div class="absolute left-0 top-full mt-2 w-64 bg-surface-container-lowest border border-outline-variant/30 rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2 transform origin-top-left group-hover:scale-100 scale-95">
+                        <a href="industries.html" class="block px-4 py-2 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">IT & Technology</a>
+                        <a href="industries.html" class="block px-4 py-2 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Engineering & Manufacturing</a>
+                        <a href="industries.html" class="block px-4 py-2 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Education & EdTech</a>
+                        <a href="industries.html" class="block px-4 py-2 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Healthcare</a>
+                        <a href="industries.html" class="block px-4 py-2 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Hospitality & Retail</a>
+                    </div>
+                </div>
+
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="insights.html">Insights</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="demo.html" class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-label-md text-label-md hover:bg-secondary transition-all shadow-md hover:shadow-lg active:scale-95">Request Demo</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Cinematic Split Hero Section -->
+        <section class="relative py-24 md:py-32 overflow-hidden bg-gradient-to-b from-primary/5 to-surface">
+            <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="z-10" data-aos="fade-right">
+                    <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm mb-8 shadow-sm">
+                        <span class="material-symbols-outlined text-sm">public</span> ESTABLISHED HERITAGE
+                    </div>
+                    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-tight">
+                        Bridging 30 Years of Tradition with <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-teal-500 to-blue-600 animate-gradient-text">Mathematical Intelligence.</span>
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl leading-relaxed">
+                        KAM Global AI is the technological vanguard of KAM International Group, dedicated to revolutionizing enterprise human capital and financial engineering across 5 global continents.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#vanguard" class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label-md text-label-md shadow-xl hover:shadow-2xl hover:bg-primary/90 transition-all flex items-center gap-2">
+                            Explore Vanguard <span class="material-symbols-outlined text-sm">arrow_downward</span>
+                        </a>
+                        <a href="contact.html" class="border border-outline-variant text-primary px-8 py-4 rounded-xl font-label-md text-label-md hover:bg-surface-variant transition-colors shadow-sm">
+                            Global Locations
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative" data-aos="fade-left">
+                    <div class="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-r from-primary/20 to-secondary/20 blur-2xl z-0 opacity-70 animate-pulse"></div>
+                    <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border border-outline-variant/30 z-10 bg-black">
+                        <img src="assets/img/executive_search.png" alt="Executive Vanguard" class="w-full h-[450px] md:h-[550px] object-cover opacity-90 hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        
+                        <!-- Floating Glass Badge -->
+                        <div class="absolute bottom-8 left-8 right-8 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl shadow-xl flex items-center justify-between text-white">
+                            <div>
+                                <span class="text-xs uppercase tracking-widest text-white/80 font-bold">Global Presence</span>
+                                <h4 class="font-headline-md text-white">Operational Across 5 Continents</h4>
+                            </div>
+                            <span class="material-symbols-outlined text-4xl text-teal-300">public</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Stats Counter Bar -->
+        <section class="py-16 bg-surface-container-low border-y border-outline-variant/20 relative z-20">
+            <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div class="p-8 rounded-3xl bg-surface/60 backdrop-blur-md border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow" data-aos="zoom-in" data-aos-delay="0">
+                        <div class="text-display-lg font-black text-secondary mb-2 flex items-center justify-center">
+                            <span class="count-up" data-count="30">0</span>+
+                        </div>
+                        <div class="font-label-md uppercase tracking-wider text-on-surface-variant font-bold">Years of Legacy</div>
+                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Established corporate excellence</p>
+                    </div>
+
+                    <div class="p-8 rounded-3xl bg-surface/60 backdrop-blur-md border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="text-display-lg font-black text-primary mb-2 flex items-center justify-center">
+                            <span class="count-up" data-count="15">0</span>+
+                        </div>
+                        <div class="font-label-md uppercase tracking-wider text-on-surface-variant font-bold">Global Offices</div>
+                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Spanning 5 major continents</p>
+                    </div>
+
+                    <div class="p-8 rounded-3xl bg-surface/60 backdrop-blur-md border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="text-display-lg font-black text-secondary mb-2 flex items-center justify-center">
+                            <span class="count-up" data-count="500">0</span>+
+                        </div>
+                        <div class="font-label-md uppercase tracking-wider text-on-surface-variant font-bold">Enterprise Clients</div>
+                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Fortune 500 & high-growth leaders</p>
+                    </div>
+
+                    <div class="p-8 rounded-3xl bg-surface/60 backdrop-blur-md border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="text-display-lg font-black text-primary mb-2 flex items-center justify-center">
+                            <span class="count-up" data-count="99.8">0</span>%
+                        </div>
+                        <div class="font-label-md uppercase tracking-wider text-on-surface-variant font-bold">AI Matching Accuracy</div>
+                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Proprietary vetting models</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Foundation of Excellence (3D Bento Grid) -->
+        <section class="py-28 bg-surface">
+            <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
+                <div class="text-center mb-20" data-aos="fade-up">
+                    <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Core Foundation</span>
+                    <h2 class="font-headline-lg text-primary mb-4">Pillars of Operational Excellence</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+                    <!-- Global Footprint Card -->
+                    <div class="md:col-span-8 glass-card p-12 rounded-[2.5rem] flex flex-col justify-between tilt-card border border-outline-variant/30 shadow-xl" data-aos="fade-up">
+                        <div class="tilt-inner h-full flex flex-col">
+                            <div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-8 shadow-inner">
+                                <span class="material-symbols-outlined text-4xl">public</span>
+                            </div>
+                            <h3 class="font-headline-lg text-primary mb-6">KAM International Group Heritage</h3>
+                            <p class="font-body-lg text-on-surface-variant max-w-3xl leading-relaxed mb-8 flex-1">
+                                With over three decades of international market leadership, KAM International Group has built an unwavering legacy on trust, financial compliance, and elite execution. Our operational presence across North America, Europe, the Middle East, and Asia allows us to seamlessly harmonize regional regulatory nuances with world-class financial standards.
+                            </p>
+                            <div class="flex items-center gap-4 text-secondary font-label-md">
+                                <span class="material-symbols-outlined">verified</span> Certified ISO 27001 & SOC2 Compliant Global Infrastructure
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Mission Card -->
+                    <div class="md:col-span-4 bg-gradient-to-br from-primary via-primary to-blue-900 p-12 rounded-[2.5rem] text-on-primary shadow-2xl tilt-card flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                        <div class="tilt-inner h-full flex flex-col">
+                            <div class="w-16 h-16 bg-white/10 text-teal-300 rounded-2xl flex items-center justify-center mb-8 backdrop-blur-md border border-white/20 shadow-lg">
+                                <span class="material-symbols-outlined text-4xl">psychology</span>
+                            </div>
+                            <h3 class="font-headline-lg text-white mb-6">Our Mission</h3>
+                            <p class="font-body-md text-white/80 leading-relaxed mb-8 flex-1">
+                                To empower the global enterprise workforce by delivering mathematical AI solutions that seamlessly bridge the gap between human intuition and algorithmic precision in complex financial and talent architectures.
+                            </p>
+                            <ul class="space-y-4 pt-6 border-t border-white/10">
+                                <li class="flex items-center gap-3 text-label-md text-white/90">
+                                    <span class="material-symbols-outlined text-teal-300">check_circle</span> Workforce Excellence
+                                </li>
+                                <li class="flex items-center gap-3 text-label-md text-white/90">
+                                    <span class="material-symbols-outlined text-teal-300">check_circle</span> Financial Integrity
+                                </li>
+                                <li class="flex items-center gap-3 text-label-md text-white/90">
+                                    <span class="material-symbols-outlined text-teal-300">check_circle</span> Continuous Innovation
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- EdTech Pillar 1 -->
+                    <div class="md:col-span-6 glass-card p-12 rounded-[2.5rem] border-l-8 border-secondary tilt-card shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                        <div class="tilt-inner h-full flex flex-col">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 bg-secondary/10 text-secondary rounded-xl flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-3xl">school</span>
+                                </div>
+                                <h4 class="font-headline-md text-primary font-bold">EduAI Tutors</h4>
+                            </div>
+                            <p class="font-body-lg text-on-surface-variant leading-relaxed">
+                                Revolutionizing professional certification and corporate financial literacy through adaptive AI learning pipelines. EduAI Tutors provides the intellectual scaffolding and personalized cognitive testing required for the next generation of international finance leaders.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- EdTech Pillar 2 -->
+                    <div class="md:col-span-6 glass-card p-12 rounded-[2.5rem] border-l-8 border-primary tilt-card shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                        <div class="tilt-inner h-full flex flex-col">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-3xl">model_training</span>
+                                </div>
+                                <h4 class="font-headline-md text-primary font-bold">Najah Tutors</h4>
+                            </div>
+                            <p class="font-body-lg text-on-surface-variant leading-relaxed">
+                                A highly specialized EdTech initiative focusing on localized human resource management training, leadership analytics, and operational compliance. Najah Tutors ensures that international enterprise standards are flawlessly executed with regional expertise.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Mathematical Vanguard (New Section) -->
+        <section id="vanguard" class="py-28 bg-surface-container-low border-y border-outline-variant/20 overflow-hidden">
+            <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative" data-aos="zoom-in">
+                    <div class="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-r from-blue-600/20 to-teal-400/20 blur-2xl z-0"></div>
+                    <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border border-outline-variant/30 z-10 bg-black">
+                        <img src="assets/img/hr_advisory.png" alt="Mathematical Leadership" class="w-full h-[500px] object-cover opacity-90 hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-8 left-8 right-8 p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl text-white flex items-center gap-4">
+                            <span class="material-symbols-outlined text-5xl text-teal-300">auto_graph</span>
+                            <div>
+                                <h5 class="font-headline-md text-white font-bold">PhD Data Scientists & HR Strategists</h5>
+                                <p class="text-body-sm text-white/80">Collaborative intelligence driving enterprise success.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-label-sm uppercase tracking-widest mb-6 font-bold">
+                        Intellectual Scaffolding
+                    </span>
+                    <h2 class="font-headline-lg text-primary mb-6">The Mathematical Vanguard</h2>
+                    <p class="font-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        Unlike traditional consulting firms, KAM Global AI operates at the intersection of pure mathematics and corporate strategy. Our core engine is built by a unified vanguard of PhD mathematicians, enterprise software architects, and international compliance officers.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 p-6 rounded-2xl bg-surface border border-outline-variant/30 shadow-sm">
+                            <div class="bg-secondary/10 text-secondary p-3 rounded-xl mt-1 flex-shrink-0">
+                                <span class="material-symbols-outlined text-3xl">calculate</span>
+                            </div>
+                            <div>
+                                <h4 class="font-headline-md text-primary font-bold mb-1">Algorithmic Resource Allocation</h4>
+                                <p class="text-body-sm text-on-surface-variant">We replace guesswork with stochastic modeling, optimizing payroll distributions and workforce capacity in real time.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-6 rounded-2xl bg-surface border border-outline-variant/30 shadow-sm">
+                            <div class="bg-primary/10 text-primary p-3 rounded-xl mt-1 flex-shrink-0">
+                                <span class="material-symbols-outlined text-3xl">verified_user</span>
+                            </div>
+                            <div>
+                                <h4 class="font-headline-md text-primary font-bold mb-1">Zero-Tension Compliance Engine</h4>
+                                <p class="text-body-sm text-on-surface-variant">Continuous automated auditing across 120+ jurisdictions ensures your international operations are completely bulletproof.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Group Ecosystem Architecture Pipeline -->
+        <section class="py-28 bg-surface">
+            <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
+                    <div class="max-w-2xl">
+                        <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Group Architecture</span>
+                        <h2 class="font-headline-lg text-primary mb-4" data-aos="fade-up">The Interconnected Ecosystem</h2>
+                        <p class="font-body-lg text-on-surface-variant">
+                            Our corporate structure is engineered for maximum agility. Core mathematical models developed at our Global AI hub immediately empower our functional enterprise tools.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Interactive Pipeline -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+                    <!-- Step 1 -->
+                    <div class="relative p-8 bg-surface-container rounded-3xl border border-outline-variant/40 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="0">
+                        <div class="w-14 h-14 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center font-bold text-xl mb-6 shadow-sm group-hover:bg-secondary group-hover:text-white transition-colors">
+                            01
+                        </div>
+                        <span class="font-label-sm uppercase tracking-widest text-secondary font-bold mb-2 block">Parent Foundation</span>
+                        <h5 class="font-headline-md text-primary mb-4 font-bold">KAM Group</h5>
+                        <p class="font-body-sm text-on-surface-variant leading-relaxed">Strategic corporate governance, robust international funding, and a 30-year global investment legacy.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative p-8 bg-gradient-to-br from-primary via-primary to-blue-800 text-on-primary rounded-3xl shadow-2xl hover:-translate-y-2 transition-all ring-4 ring-primary-container/30 group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-14 h-14 rounded-2xl bg-white/20 text-teal-300 flex items-center justify-center font-bold text-xl mb-6 backdrop-blur-md border border-white/20 shadow-lg">
+                            02
+                        </div>
+                        <span class="font-label-sm uppercase tracking-widest text-teal-300 font-bold mb-2 block">Innovation Core</span>
+                        <h5 class="font-headline-md text-white mb-4 font-bold">Global AI R&D</h5>
+                        <p class="font-body-sm text-white/80 leading-relaxed">The mathematical modeling powerhouse. Developing proprietary vetting algorithms and predictive engines.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative p-8 bg-surface-container rounded-3xl border border-outline-variant/40 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-14 h-14 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center font-bold text-xl mb-6 shadow-sm group-hover:bg-secondary group-hover:text-white transition-colors">
+                            03
+                        </div>
+                        <span class="font-label-sm uppercase tracking-widest text-secondary font-bold mb-2 block">Enterprise SaaS</span>
+                        <h5 class="font-headline-md text-primary mb-4 font-bold">HR & Finance SaaS</h5>
+                        <p class="font-body-sm text-on-surface-variant leading-relaxed">Deploying automated payroll engines, global compliance frameworks, and executive talent intelligence tools.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative p-8 bg-surface-container rounded-3xl border border-outline-variant/40 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-14 h-14 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center font-bold text-xl mb-6 shadow-sm group-hover:bg-secondary group-hover:text-white transition-colors">
+                            04
+                        </div>
+                        <span class="font-label-sm uppercase tracking-widest text-secondary font-bold mb-2 block">Continuous Growth</span>
+                        <h5 class="font-headline-md text-primary mb-4 font-bold">EdTech Pillars</h5>
+                        <p class="font-body-sm text-on-surface-variant leading-relaxed">Empowering the global workforce via continuous learning through EduAI Tutors and Najah Tutors.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cinematic CTA Section -->
+        <section class="py-24 px-margin-mobile md:px-margin-tablet max-w-container-max mx-auto">
+            <div class="rounded-[3rem] overflow-hidden shadow-2xl relative bg-black py-24 px-12 md:px-24 text-center border border-outline-variant/30 group">
+                <!-- Darkened Background Image -->
+                <img src="assets/img/zero_tension_automation.png" alt="Global Connectivity" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700 z-0">
+                <div class="absolute inset-0 bg-gradient-to-b from-primary/80 via-black/80 to-black z-0"></div>
+
+                <div class="relative z-10 max-w-4xl mx-auto">
+                    <span class="inline-block bg-white/10 backdrop-blur-md text-white border border-white/20 px-5 py-2 font-label-sm uppercase tracking-widest rounded-full mb-8 shadow-sm" data-aos="zoom-in">
+                        Schedule an Executive Briefing
+                    </span>
+                    <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-8 leading-tight" data-aos="fade-up">
+                        Ready to define the future of <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-teal-200 to-white animate-gradient-text">Enterprise Scale?</span>
+                    </h2>
+                    <p class="font-body-lg text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+                        Join elite global enterprises leveraging KAM Global AI to transform their international human capital and financial pipelines.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-6" data-aos="fade-up" data-aos-delay="200">
+                        <a href="demo.html" class="bg-secondary text-on-primary px-10 py-5 rounded-xl font-label-lg shadow-2xl hover:bg-secondary/90 hover:scale-105 transition-all">
+                            Get Started Now
+                        </a>
+                        <a href="contact.html" class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-5 rounded-xl font-label-lg hover:bg-white/20 transition-colors shadow-lg">
+                            Contact Global Sales
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary dark:bg-primary-container text-on-primary pt-20 pb-12 border-t border-outline-variant/20 relative overflow-hidden">
+        <div class="absolute top-0 left-1/4 right-1/4 h-[1px] bg-gradient-to-r from-transparent via-secondary to-transparent opacity-50"></div>
+        
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+            <!-- Brand & Socials Column (Col 4) -->
+            <div class="space-y-6 md:col-span-4">
+                <div class="font-headline-sm font-bold flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-lg bg-on-primary text-primary flex items-center justify-center shadow-md">
+                        <span class="material-symbols-outlined text-[20px]">group_work</span>
+                    </span>
+                    <span class="tracking-tight text-[22px]">KAM Global AI</span>
+                </div>
+                <p class="font-body-sm text-on-primary/70 max-w-sm leading-relaxed">
+                    Part of KAM International Group, delivering mathematical intelligence and advanced HR workforce solutions globally with uncompromised precision, compliance, and institutional scale.
+                </p>
+                
+                <!-- Social Media Bar -->
+                <div class="pt-2">
+                    <span class="font-label-sm text-secondary-fixed-dim uppercase tracking-wider block mb-3">Connect With Us</span>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-secondary hover:border-secondary hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/20 transition-all duration-300" aria-label="LinkedIn">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-secondary hover:border-secondary hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/20 transition-all duration-300" aria-label="X (Twitter)">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-secondary hover:border-secondary hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/20 transition-all duration-300" aria-label="Facebook">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-secondary hover:border-secondary hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/20 transition-all duration-300" aria-label="Instagram">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-secondary hover:border-secondary hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/20 transition-all duration-300" aria-label="YouTube">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.015 3.015 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.376.55 9.376.55s7.505 0 9.377-.55a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Solutions Column (Col 3) -->
+            <div class="md:col-span-3">
+                <h6 class="font-label-md text-secondary-fixed-dim mb-6 uppercase tracking-wider flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Solutions Suite
+                </h6>
+                <ul class="space-y-3.5 font-body-sm">
+                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="recruitment.html">Recruitment Services</a></li>
+                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="contract-staffing.html">Contract Staffing</a></li>
+                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="payroll.html">Payroll Outsourcing</a></li>
+                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="hr-advisory.html">HR Advisory & Consulting</a></li>
+                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="manpower-bgv.html">Manpower Consulting & BGV</a></li>
+                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="executive-search.html">Executive Search</a></li>
+                </ul>
+            </div>
+
+            <!-- Ecosystem & Company (Col 3) -->
+            <div class="md:col-span-3">
+                <h6 class="font-label-md text-secondary-fixed-dim mb-6 uppercase tracking-wider flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Ecosystem & Group
+                </h6>
+                <ul class="space-y-3.5 font-body-sm">
+                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block font-medium text-white/90" href="https://kamglobalai.com/">KAM Global AI Platform</a></li>
+                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="https://kamgroups.com/">KAM International Group</a></li>
+                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="https://eduaitutors.com/">EduAI Tutors</a></li>
+                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="https://www.najahtutors.net/">Najah Tutors</a></li>
+                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="about.html">About Us & Leadership</a></li>
+                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="partners.html">Partnership Network</a></li>
+                </ul>
+            </div>
+
+            <!-- Global Hubs & Newsletter (Col 2) -->
+            <div class="md:col-span-2">
+                <h6 class="font-label-md text-secondary-fixed-dim mb-6 uppercase tracking-wider flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Global Hubs
+                </h6>
+                <ul class="space-y-3.5 font-body-sm mb-8">
+                    <li class="flex items-center gap-2 text-on-primary/70"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span> London (EMEA HQ)</li>
+                    <li class="flex items-center gap-2 text-on-primary/70"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span> New York (AMER HQ)</li>
+                    <li class="flex items-center gap-2 text-on-primary/70"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span> Singapore (APAC HQ)</li>
+                </ul>
+                <div class="pt-2 border-t border-white/10">
+                    <a href="demo.html" class="inline-flex items-center gap-2 text-secondary font-label-md hover:underline mt-2">
+                        Schedule Consultation <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Sub-Footer Bar -->
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-on-primary/50 font-body-sm">
+            <div class="flex items-center gap-2">
+                <span>© 2026 KAM Global AI. Part of KAM International Group. All rights reserved.</span>
+            </div>
+            <div class="flex flex-wrap gap-8 items-center">
+                <a class="hover:text-white transition-colors" href="about.html">Privacy Policy</a>
+                <a class="hover:text-white transition-colors" href="about.html">Terms of Service</a>
+                <a class="hover:text-white transition-colors" href="services.html">Global Compliance</a>
+                <a class="hover:text-white transition-colors" href="services.html">Security Architecture</a>
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-8 h-8 rounded-full bg-white/10 hover:bg-secondary text-white flex items-center justify-center transition-all ml-4" title="Back to top">
+                    <span class="material-symbols-outlined text-[18px]">keyboard_arrow_up</span>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
