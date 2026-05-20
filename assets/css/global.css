@@ -60,6 +60,50 @@ body {
     animation-play-state: paused;
 }
 
+/* Logo */
+.site-logo {
+    height: 34px !important;
+    width: auto;
+    max-height: 34px !important;
+    max-width: 110px;
+    object-fit: contain;
+    display: block;
+}
+
+.site-logo-wrap {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 4px 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    height: 42px;
+    max-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.site-logo-text {
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* Header uses a tighter logo so it never dominates */
+header .site-logo {
+    width: 92px;
+    max-width: 92px;
+    height: 34px !important;
+    object-fit: cover;
+    /* Crop away the bottom "Global HR" line + excess whitespace */
+    object-position: 50% 32%;
+}
+
+header .site-logo-wrap {
+    width: 96px;
+    padding: 0;
+    border-radius: 12px;
+}
+
 @keyframes marquee {
     0% { transform: translateX(0%); }
     100% { transform: translateX(-100%); }
