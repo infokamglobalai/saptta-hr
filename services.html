@@ -21,7 +21,12 @@
     <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm h-20 transition-all duration-300">
         <div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
             <a href="index.html" class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-3">
-                <img src="assets/img/logo_512x512.png" alt="KAM Global AI" class="h-16 w-16 object-contain mix-blend-multiply">
+                <div class="relative group">
+                    <div class="absolute -inset-0.5 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+                    <div class="relative w-16 h-16 bg-white/80 backdrop-blur-md border border-black/10 rounded-xl flex items-center justify-center p-1 shadow-sm">
+                        <img src="assets/img/logo_512x512.png" alt="KAM Global AI" class="w-full h-full object-contain">
+                    </div>
+                </div>
             </a>
             
             <nav class="hidden md:flex items-center gap-8">
@@ -369,8 +374,11 @@
             <!-- Brand & Socials Column (Col 4) -->
             <div class="space-y-6 md:col-span-4">
                 <div class="font-headline-sm font-bold flex items-center gap-3">
-                    <div class="site-logo-wrap w-16 h-16 bg-white border border-white/10 rounded-2xl flex items-center justify-center overflow-hidden p-1.5 shadow-lg">
-                        <img src="assets/img/logo_512x512.png" alt="KAM Global AI" class="w-full h-full object-contain">
+                    <div class="relative group">
+                        <div class="absolute -inset-0.5 bg-gradient-to-r from-secondary to-primary rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-300"></div>
+                        <div class="relative w-20 h-20 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl flex items-center justify-center p-2 shadow-xl">
+                            <img src="assets/img/logo_512x512.png" alt="KAM Global AI" class="w-full h-full object-contain">
+                        </div>
                     </div>
                 </div>
                 <p class="font-body-sm text-on-primary/70 max-w-sm leading-relaxed">
