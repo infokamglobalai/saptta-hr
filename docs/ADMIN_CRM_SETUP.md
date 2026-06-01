@@ -85,6 +85,21 @@ If the CRM API is unavailable, forms fall back to FormSubmit (`info@kamgroups.co
 5. Run `install.php` once, then remove it.
 6. Use HTTPS and strong admin password.
 
+## Troubleshooting: `Unsafe attempt to load URL ... from frame chrome-error://`
+
+This Chrome message means the **parent page failed to load** (DNS, SSL, or server down), and something tried to open `/admin/` inside a frame or embedded preview.
+
+**Fix:**
+
+1. Open the admin in a **full browser tab** (not Cursor/VS Code preview or hosting iframe preview):
+   ```
+   https://kamglobalhr.com/admin/login.php
+   ```
+2. Confirm the main site loads first: `https://kamglobalhr.com/` — if you see a Chrome error page, fix hosting/DNS/SSL before admin will work.
+3. **PHP is required** — static-only hosts (GitHub Pages, Netlify without PHP) cannot run `/admin/` or `/api/`. Use cPanel, VPS, XAMPP, or similar with PHP + MySQL.
+4. Upload `config/.env`, run `install.php` once on the server, then delete `install.php`.
+5. Test locally: `php -S localhost:8080` then visit `http://localhost:8080/admin/login.php`.
+
 ## Security notes
 
 - Admin uses PHP sessions and `password_hash()` for credentials.

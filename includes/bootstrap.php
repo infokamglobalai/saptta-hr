@@ -61,6 +61,10 @@ function kam_config(): array
     ];
 }
 
+if (str_contains(str_replace('\\', '/', $_SERVER['SCRIPT_NAME'] ?? ''), '/admin/')) {
+    require_once KAM_ROOT . '/includes/admin_security.php';
+}
+
 require_once KAM_ROOT . '/includes/Database.php';
 require_once KAM_ROOT . '/includes/Auth.php';
 require_once KAM_ROOT . '/includes/helpers.php';

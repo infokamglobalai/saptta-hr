@@ -1,0 +1,19 @@
+# KAM Global HR — Apache (enable PHP for /admin and /api)
+DirectoryIndex index.html index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Optional: force HTTPS on production
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Block direct access to config and includes
+<IfModule mod_authz_core.c>
+    Require all granted
+</IfModule>
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+RedirectMatch 403 /\.env
