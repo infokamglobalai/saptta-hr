@@ -42,6 +42,8 @@
 
 body.admin-body {
     margin: 0;
+    height: 100vh;
+    overflow: hidden;
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     font-size: 0.9375rem;
     color: var(--admin-text);
@@ -52,24 +54,47 @@ body.admin-body {
 a { color: var(--admin-blue); text-decoration: none; transition: color var(--admin-transition); }
 a:hover { color: var(--admin-blue-bright); }
 
-/* Layout */
+/* Layout — sidebar and main scroll independently */
 .admin-layout {
     display: flex;
-    min-height: 100vh;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
 }
 
 /* Sidebar */
 .admin-sidebar {
     width: var(--admin-sidebar-w);
     flex-shrink: 0;
+    height: 100vh;
+    max-height: 100vh;
     background: linear-gradient(180deg, #001f3f 0%, #001528 55%, #000a14 100%);
     color: #fff;
     display: flex;
     flex-direction: column;
-    padding: 1.35rem 0;
+    padding: 0;
     position: relative;
     overflow: hidden;
     box-shadow: 4px 0 24px rgba(0, 10, 30, 0.15);
+}
+
+.admin-sidebar__nav-scroll {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.35rem 0 0.5rem;
+}
+
+.admin-sidebar__nav-scroll::-webkit-scrollbar {
+    width: 5px;
+}
+
+.admin-sidebar__nav-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
 }
 
 .admin-sidebar::before {
@@ -85,8 +110,9 @@ a:hover { color: var(--admin-blue-bright); }
 .admin-sidebar > * { position: relative; z-index: 1; }
 
 .admin-sidebar__brand {
-    padding: 0 1.25rem 1.35rem;
-    margin: 0 0.75rem 0.5rem;
+    flex-shrink: 0;
+    padding: 1.35rem 1.25rem 1rem;
+    margin: 0 0.75rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -136,7 +162,6 @@ a:hover { color: var(--admin-blue-bright); }
     list-style: none;
     margin: 0;
     padding: 0.5rem 0.85rem;
-    flex: 1;
 }
 
 .admin-nav__section {
@@ -218,7 +243,8 @@ a:hover { color: var(--admin-blue-bright); }
 }
 
 .admin-sidebar__user {
-    margin: 0 0.85rem;
+    flex-shrink: 0;
+    margin: 0.75rem 0.85rem 1rem;
     padding: 0.85rem;
     border-radius: var(--admin-radius);
     background: rgba(255, 255, 255, 0.06);
@@ -268,11 +294,16 @@ a:hover { color: var(--admin-blue-bright); }
 .admin-main {
     flex: 1;
     min-width: 0;
+    min-height: 0;
+    height: 100vh;
+    max-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .admin-topbar {
+    flex-shrink: 0;
     background: var(--admin-glass);
     backdrop-filter: blur(16px) saturate(1.2);
     -webkit-backdrop-filter: blur(16px) saturate(1.2);
@@ -282,8 +313,6 @@ a:hover { color: var(--admin-blue-bright); }
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    position: sticky;
-    top: 0;
     z-index: 30;
 }
 
@@ -393,9 +422,27 @@ a:hover { color: var(--admin-blue-bright); }
 }
 
 .admin-content {
-    padding: 1.5rem 1.75rem 2rem;
     flex: 1;
-    max-width: 90rem;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding: 1.5rem 1.75rem 2rem;
+    max-width: 100%;
+}
+
+.admin-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.admin-content::-webkit-scrollbar-thumb {
+    background: rgba(0, 31, 63, 0.15);
+    border-radius: 999px;
+}
+
+.admin-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 31, 63, 0.25);
 }
 
 .admin-content--animate {
@@ -1362,10 +1409,17 @@ a:hover { color: var(--admin-blue-bright); }
         left: 0;
         top: 0;
         bottom: 0;
+        height: 100vh;
+        max-height: 100vh;
         z-index: 100;
         width: min(var(--admin-sidebar-w), 88vw);
         transform: translateX(-100%);
         transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .admin-main {
+        height: 100vh;
+        max-height: 100vh;
     }
 
     .admin-sidebar.is-open {

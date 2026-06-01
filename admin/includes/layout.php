@@ -51,47 +51,49 @@ $navItems = [
                 </span>
             </a>
         </div>
-        <p class="admin-nav__section">Menu</p>
-        <ul class="admin-nav">
-            <?php foreach ($navItems as $key => $item): ?>
+        <div class="admin-sidebar__nav-scroll">
+            <p class="admin-nav__section">Menu</p>
+            <ul class="admin-nav">
+                <?php foreach ($navItems as $key => $item): ?>
+                    <li>
+                        <a href="<?= kam_h($item['href']) ?>"
+                           class="admin-nav__link <?= ($activeNav ?? '') === $key ? 'is-active' : '' ?>">
+                            <span class="admin-nav__icon-wrap">
+                                <span class="material-symbols-outlined"><?= kam_h($item['icon']) ?></span>
+                            </span>
+                            <span><?= kam_h($item['label']) ?></span>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+            <p class="admin-nav__section">System</p>
+            <ul class="admin-nav admin-nav--secondary">
                 <li>
-                    <a href="<?= kam_h($item['href']) ?>"
-                       class="admin-nav__link <?= ($activeNav ?? '') === $key ? 'is-active' : '' ?>">
+                    <a href="../index.html" target="_blank" rel="noopener" class="admin-nav__link">
                         <span class="admin-nav__icon-wrap">
-                            <span class="material-symbols-outlined"><?= kam_h($item['icon']) ?></span>
+                            <span class="material-symbols-outlined">open_in_new</span>
                         </span>
-                        <span><?= kam_h($item['label']) ?></span>
+                        <span>View website</span>
                     </a>
                 </li>
-            <?php endforeach; ?>
-        </ul>
-        <p class="admin-nav__section">System</p>
-        <ul class="admin-nav admin-nav--secondary">
-            <li>
-                <a href="../index.html" target="_blank" rel="noopener" class="admin-nav__link">
-                    <span class="admin-nav__icon-wrap">
-                        <span class="material-symbols-outlined">open_in_new</span>
-                    </span>
-                    <span>View website</span>
-                </a>
-            </li>
-            <li>
-                <a href="check.php" class="admin-nav__link">
-                    <span class="admin-nav__icon-wrap">
-                        <span class="material-symbols-outlined">health_and_safety</span>
-                    </span>
-                    <span>System check</span>
-                </a>
-            </li>
-            <li>
-                <a href="logout.php" class="admin-nav__link admin-nav__link--danger">
-                    <span class="admin-nav__icon-wrap">
-                        <span class="material-symbols-outlined">logout</span>
-                    </span>
-                    <span>Logout</span>
-                </a>
-            </li>
-        </ul>
+                <li>
+                    <a href="check.php" class="admin-nav__link">
+                        <span class="admin-nav__icon-wrap">
+                            <span class="material-symbols-outlined">health_and_safety</span>
+                        </span>
+                        <span>System check</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="logout.php" class="admin-nav__link admin-nav__link--danger">
+                        <span class="admin-nav__icon-wrap">
+                            <span class="material-symbols-outlined">logout</span>
+                        </span>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
         <div class="admin-sidebar__user">
             <span class="admin-sidebar__avatar"><?= kam_h($initials) ?></span>
             <div class="admin-sidebar__user-info">
