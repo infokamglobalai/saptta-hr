@@ -11,7 +11,9 @@ $status = trim((string) ($_GET['status'] ?? ''));
 $q = trim((string) ($_GET['q'] ?? ''));
 $page = max(1, (int) ($_GET['page'] ?? 1));
 
-kam_admin_render(function () use ($status, $q, $page): void {
+$deleted = isset($_GET['deleted']);
+
+kam_admin_render(function () use ($status, $q, $page, $deleted): void {
 $filters = [];
 if ($status !== '' && in_array($status, kam_lead_statuses(), true)) {
     $filters['status'] = $status;
@@ -24,6 +26,12 @@ $result = LeadRepository::list($filters, $page, 25);
 
 ob_start();
 ?>
+<?php if ($deleted): ?>
+    <div class="admin-alert admin-alert--success">
+        <span class="material-symbols-outlined">check_circle</span>
+        Lead deleted successfully.
+    </div>
+<?php endif; ?>
 <div class="admin-card">
     <div class="admin-card__head">
         <h2><span class="material-symbols-outlined">group</span> All leads</h2>
@@ -58,6 +66,7 @@ ob_start();
                     <th>Company</th>
                     <th>Inquiry</th>
                     <th>Status</th>
+                    <th>Priority</th>
                     <th>Created</th>
                     <th></th>
                 </tr>
@@ -65,29 +74,36 @@ ob_start();
             <tbody>
                 <?php if (empty($result['items'])): ?>
                     <tr>
-                        <td colspan="6" class="admin-table__empty">
+                        <td colspan="7" class="admin-table__empty">
                             <span class="material-symbols-outlined">search_off</span>
                             No leads found. Try adjusting your filters.
                         </td>
                     </tr>
                 <?php else: ?>
                     <?php foreach ($result['items'] as $lead): ?>
-                        <tr>
+                        <?php $leadUrl = 'lead.php?id=' . (int) $lead['id']; ?>
+                        <tr class="admin-table__row--clickable" data-href="<?= kam_h($leadUrl) ?>">
                             <td>
-                                <div class="admin-table__contact">
-                                    <span class="admin-table__avatar"><?= kam_h(kam_initials($lead['name'])) ?></span>
-                                    <span>
-                                        <strong><?= kam_h($lead['name']) ?></strong>
-                                        <small>#<?= (int) $lead['id'] ?> · <?= kam_h($lead['email']) ?></small>
-                                    </span>
-                                </div>
+                                <a href="<?= kam_h($leadUrl) ?>" class="admin-table__row-link">
+                                    <div class="admin-table__contact">
+                                        <span class="admin-table__avatar"><?= kam_h(kam_initials($lead['name'])) ?></span>
+                                        <span>
+                                            <strong><?= kam_h($lead['name']) ?></strong>
+                                            <small>#<?= (int) $lead['id'] ?> · <?= kam_h($lead['email']) ?></small>
+                                        </span>
+                                    </div>
+                                </a>
                             </td>
                             <td><?= kam_h($lead['company'] ?? '—') ?></td>
                             <td><?= kam_h(kam_inquiry_types()[$lead['inquiry_type']] ?? $lead['inquiry_type']) ?></td>
                             <td><span class="admin-badge admin-badge--<?= kam_h($lead['status']) ?>"><?= kam_h(kam_status_label($lead['status'])) ?></span></td>
+                            <td>
+                                <?php $pr = $lead['priority'] ?? 'normal'; ?>
+                                <span class="admin-badge admin-badge--priority admin-badge--priority-<?= kam_h($pr) ?>"><?= kam_h(ucfirst($pr)) ?></span>
+                            </td>
                             <td><?= kam_h(date('M j, Y', strtotime($lead['created_at']))) ?></td>
                             <td>
-                                <a href="lead.php?id=<?= (int) $lead['id'] ?>" class="admin-btn admin-btn--ghost admin-btn--sm">
+                                <a href="<?= kam_h($leadUrl) ?>" class="admin-btn admin-btn--ghost admin-btn--sm">
                                     View
                                     <span class="material-symbols-outlined">chevron_right</span>
                                 </a>

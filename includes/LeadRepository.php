@@ -170,4 +170,35 @@ final class LeadRepository
         $stmt->execute([$leadId]);
         return $stmt->fetchAll();
     }
+
+    public static function delete(int $id): bool
+    {
+        $pdo = Database::connection();
+        $stmt = $pdo->prepare('DELETE FROM leads WHERE id = ?');
+        return $stmt->execute([$id]);
+    }
+
+    /** @return array<int, array{id: int, name: string}> */
+    public static function adminsForAssign(): array
+    {
+        $pdo = Database::connection();
+        return $pdo->query(
+            'SELECT id, name FROM admins WHERE is_active = 1 ORDER BY name ASC'
+        )->fetchAll();
+    }
+
+    public static function activity(int $leadId, int $limit = 20): array
+    {
+        $pdo = Database::connection();
+        $stmt = $pdo->prepare(
+            'SELECT al.*, a.name AS admin_name
+             FROM activity_log al
+             LEFT JOIN admins a ON a.id = al.admin_id
+             WHERE al.entity_type = ? AND al.entity_id = ?
+             ORDER BY al.created_at DESC
+             LIMIT ' . (int) $limit
+        );
+        $stmt->execute(['lead', $leadId]);
+        return $stmt->fetchAll();
+    }
 }

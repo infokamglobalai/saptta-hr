@@ -128,6 +128,10 @@ $navItems = [
                         <span class="material-symbols-outlined">fiber_new</span>
                         New only
                     </a>
+                    <a href="leads.php" class="admin-btn admin-btn--ghost admin-btn--sm">
+                        <span class="material-symbols-outlined">list</span>
+                        All leads
+                    </a>
                 <?php endif; ?>
                 <div class="admin-topbar__user" title="<?= kam_h($user['email'] ?? '') ?>">
                     <span class="admin-topbar__avatar"><?= kam_h($initials) ?></span>
@@ -164,6 +168,14 @@ $navItems = [
         });
     });
 })();
+
+document.querySelectorAll('.admin-table__row--clickable').forEach(function (row) {
+    row.addEventListener('click', function (e) {
+        if (e.target.closest('a, button')) return;
+        var href = row.getAttribute('data-href');
+        if (href) window.location.href = href;
+    });
+});
 </script>
 </body>
 </html>

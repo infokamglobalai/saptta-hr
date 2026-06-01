@@ -1192,7 +1192,202 @@ a:hover { color: var(--admin-blue-bright); }
 
 .admin-pipeline-card {
     position: sticky;
-    top: 5.5rem;
+    top: 0.5rem;
+}
+
+/* Lead detail */
+.admin-lead-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+    padding: 1.35rem 1.5rem;
+    background: var(--admin-glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--admin-glass-border);
+    border-radius: var(--admin-radius-xl);
+    box-shadow: var(--admin-shadow-sm);
+}
+
+.admin-lead-header__main {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    min-width: 0;
+}
+
+.admin-table__avatar--lg {
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 1rem;
+    border-radius: 0.85rem;
+}
+
+.admin-lead-header__name {
+    margin: 0 0 0.25rem;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--admin-navy);
+    letter-spacing: -0.02em;
+}
+
+.admin-lead-header__meta {
+    margin: 0 0 0.65rem;
+    font-size: 0.8125rem;
+    color: var(--admin-muted);
+}
+
+.admin-lead-header__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.admin-lead-header__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.admin-lead-message {
+    padding: 1.15rem 1.25rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #fff 100%);
+    border: 1px solid var(--admin-border);
+    border-left: 4px solid var(--admin-blue);
+    border-radius: var(--admin-radius);
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: var(--admin-text);
+}
+
+.admin-detail--grid {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    gap: 0.35rem 1rem;
+}
+
+.admin-detail--grid dt {
+    margin-top: 0;
+}
+
+.admin-detail--grid dd {
+    margin: 0;
+}
+
+.admin-code {
+    font-size: 0.8125rem;
+    padding: 0.15rem 0.4rem;
+    background: #f1f5f9;
+    border-radius: 0.35rem;
+}
+
+.admin-empty-hint {
+    margin: 0 0 1rem;
+    color: var(--admin-muted);
+    font-size: 0.875rem;
+}
+
+.admin-lead-note-form {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--admin-border);
+}
+
+.admin-badge--priority-low { background: #f1f5f9; color: #64748b; }
+.admin-badge--priority-normal { background: #e0f2fe; color: #0369a1; }
+.admin-badge--priority-high { background: #fee2e2; color: #b91c1c; }
+
+.admin-badge--assigned {
+    background: #f3e8ff;
+    color: #6b21a8;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 0.75rem;
+}
+
+.admin-badge--assigned .material-symbols-outlined {
+    font-size: 0.9rem;
+    vertical-align: -2px;
+}
+
+.admin-activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.admin-activity-item {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+    font-size: 0.8125rem;
+}
+
+.admin-activity-item__dot {
+    width: 8px;
+    height: 8px;
+    margin-top: 0.35rem;
+    border-radius: 50%;
+    background: var(--admin-blue);
+    flex-shrink: 0;
+}
+
+.admin-activity-item__meta {
+    display: block;
+    color: var(--admin-muted);
+    font-size: 0.75rem;
+    margin-top: 0.15rem;
+}
+
+.admin-card--danger {
+    border-color: #fecaca;
+    background: #fffbfb;
+}
+
+.admin-danger-title {
+    margin: 0 0 0.35rem;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: #991b1b;
+}
+
+.admin-btn--danger {
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+.admin-btn--danger:hover {
+    background: #fee2e2;
+    color: #991b1b;
+    text-decoration: none;
+}
+
+.admin-table__row--clickable {
+    cursor: pointer;
+}
+
+.admin-table__row--clickable:hover td {
+    background: rgba(59, 158, 255, 0.06);
+}
+
+.admin-table__row-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.admin-table__row-link:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+    .admin-lead-grid .admin-lead-sidebar {
+        position: relative;
+    }
 }
 
 /* Auth */
