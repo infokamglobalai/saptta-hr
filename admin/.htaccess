@@ -9,3 +9,9 @@
     Header always set X-Frame-Options "DENY"
     Header always set X-Content-Type-Options "nosniff"
 </IfModule>
+
+# Surface PHP errors in logs (not to browser on production)
+<IfModule mod_php.c>
+    php_flag display_errors Off
+    php_flag log_errors On
+</IfModule>

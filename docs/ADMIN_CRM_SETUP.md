@@ -85,6 +85,28 @@ If the CRM API is unavailable, forms fall back to FormSubmit (`info@kamgroups.co
 5. Run `install.php` once, then remove it.
 6. Use HTTPS and strong admin password.
 
+## Troubleshooting: HTTP 500 on `/admin/index.php`
+
+A **500 Internal Server Error** means PHP crashed on the server. Open this diagnostic page first:
+
+```
+https://kamglobalhr.com/admin/check.php
+```
+
+It shows which step failed (PHP version, PDO, `.env`, MySQL).
+
+**Most common fixes:**
+
+| Check | Fix |
+|-------|-----|
+| `config/.env` missing | Upload `config/.env` with production MySQL credentials |
+| Database not created | Import `database/schema.sql` or run `install.php` |
+| Wrong DB password | Update `DB_HOST`, `DB_USER`, `DB_PASS`, `DB_NAME` in `.env` |
+| `pdo_mysql` missing | Enable in cPanel → PHP Extensions |
+| PHP &lt; 7.4 | Switch host to PHP 8.0+ |
+
+After fixing, use **`/admin/login.php`** (not index) to sign in.
+
 ## Troubleshooting: `Unsafe attempt to load URL ... from frame chrome-error://`
 
 This Chrome message means the **parent page failed to load** (DNS, SSL, or server down), and something tried to open `/admin/` inside a frame or embedded preview.

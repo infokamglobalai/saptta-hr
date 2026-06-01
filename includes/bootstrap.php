@@ -7,6 +7,8 @@ declare(strict_types=1);
 
 define('KAM_ROOT', dirname(__DIR__));
 
+require_once KAM_ROOT . '/includes/polyfills.php';
+
 function kam_load_env(string $path): void
 {
     if (!is_readable($path)) {
