@@ -21,6 +21,7 @@ $navItems = [
     'subscribers' => ['href' => 'subscribers.php', 'label' => 'Newsletter', 'icon' => 'mail'],
     'insights' => ['href' => 'insights.php', 'label' => 'Insights', 'icon' => 'article'],
     'cases' => ['href' => 'case-studies.php', 'label' => 'Case studies', 'icon' => 'folder_special'],
+    'testimonials' => ['href' => 'testimonials.php', 'label' => 'Testimonials', 'icon' => 'format_quote'],
     'offices' => ['href' => 'offices.php', 'label' => 'Offices', 'icon' => 'location_on'],
     'settings' => ['href' => 'settings.php', 'label' => 'Site settings', 'icon' => 'settings'],
 ];

@@ -1,5 +1,5 @@
 /**
- * Hydrates static HTML from api/cms.php (footer, offices, insights, case studies).
+ * Hydrates static HTML from api/cms.php (footer, offices, insights, case studies, home blocks).
  */
 (function () {
     'use strict';
@@ -36,12 +36,63 @@
             : fallback;
     }
 
+    function categoryLabel(cat) {
+        var labels = {
+            recruitment: 'Recruitment',
+            'hr-advisory': 'HR Advisory',
+            payroll: 'Payroll',
+            'executive-search': 'Executive Search',
+            'industry-reports': 'Industry Reports',
+            general: 'General',
+        };
+        return labels[cat] || cat;
+    }
+
+    function caseCardHtml(c, idx, compact) {
+        var delay = idx * 50;
+        if (compact) {
+            return '<a class="home-case-card" href="case-studies.html" data-aos="fade-up" data-aos-delay="' + delay + '">' +
+                '<span class="home-case-card__badge">' + esc(c.industry) + '</span>' +
+                '<h3 class="home-case-card__title">' + esc(c.title) + '</h3>' +
+                '<p class="home-case-card__excerpt">' + esc(c.summary || c.outcome || '') + '</p>' +
+                '<span class="home-case-card__cta">Read story <span class="material-symbols-outlined text-[16px]">arrow_forward</span></span></a>';
+        }
+        return '<article class="cs-card" data-aos="fade-up" data-aos-delay="' + delay + '">' +
+            '<span class="cs-badge">' + esc(c.industry) + '</span>' +
+            '<h3>' + esc(c.title) + '</h3>' +
+            (c.summary ? '<p class="cs-card__lead">' + esc(c.summary) + '</p>' : '') +
+            '<dl class="cs-card__details">' +
+            '<div><dt>Challenge</dt><dd>' + esc(c.challenge) + '</dd></div>' +
+            '<div><dt>Solution</dt><dd>' + esc(c.solution) + '</dd></div>' +
+            '<div><dt>Outcome</dt><dd>' + esc(c.outcome) + '</dd></div></dl>' +
+            '<a href="contact.html" class="cs-card__link">Discuss a similar project <span class="material-symbols-outlined">arrow_forward</span></a></article>';
+    }
+
+    function applyTrustBand(settings) {
+        var band = document.querySelector('[data-cms="trust-band-stats"]');
+        if (!band || !settings) return;
+
+        var items = [
+            { icon: 'history', value: setting(settings, 'stat_years_value', '22+'), label: setting(settings, 'stat_years_label', 'Years experience') },
+            { icon: 'handshake', value: setting(settings, 'stat_clients_value', '100+'), label: setting(settings, 'stat_clients_label', 'Client relationships') },
+            { icon: 'public', value: setting(settings, 'stat_countries_value', '7+'), label: setting(settings, 'stat_countries_label', 'Countries served') },
+            { icon: 'domain', value: setting(settings, 'stat_industries_value', '5+'), label: setting(settings, 'stat_industries_label', 'Industries covered') },
+        ];
+
+        band.innerHTML = items.map(function (item) {
+            return '<div class="trust-stat">' +
+                '<span class="trust-stat__icon material-symbols-outlined" aria-hidden="true">' + esc(item.icon) + '</span>' +
+                '<strong>' + esc(item.value) + '</strong>' +
+                '<span>' + esc(item.label) + '</span></div>';
+        }).join('');
+        band.classList.add('cms-loaded');
+    }
+
     function applySettings(settings) {
         if (!settings) return;
 
         var email = setting(settings, 'contact_email', 'info@kamgroups.com');
         var phone = setting(settings, 'contact_phone', '');
-        var tagline = setting(settings, 'site_tagline', '');
 
         document.querySelectorAll('[data-cms="contact-email"]').forEach(function (el) {
             el.textContent = email;
@@ -66,6 +117,7 @@
         });
 
         document.querySelectorAll('[data-cms="site-tagline"]').forEach(function (el) {
+            var tagline = setting(settings, 'site_tagline', '');
             if (tagline) el.textContent = tagline;
         });
 
@@ -102,6 +154,8 @@
                     '<span class="site-footer__trust-text"><strong>' + esc(item.value) + '</strong><span>' + esc(item.label) + '</span></span></div>';
             }).join('');
         }
+
+        applyTrustBand(settings);
     }
 
     function renderOffices(offices) {
@@ -131,18 +185,6 @@
         }
     }
 
-    function categoryLabel(cat) {
-        var labels = {
-            recruitment: 'Recruitment',
-            'hr-advisory': 'HR Advisory',
-            payroll: 'Payroll',
-            'executive-search': 'Executive Search',
-            'industry-reports': 'Industry Reports',
-            general: 'General',
-        };
-        return labels[cat] || cat;
-    }
-
     function renderInsights(insights) {
         if (!insights || !insights.length) return;
 
@@ -155,13 +197,21 @@
             if (feat) {
                 feat.classList.add('cms-loaded');
                 var img = feat.querySelector('.insights-featured__visual img');
-                if (img && featured.image_url) img.setAttribute('src', featured.image_url);
+                if (img && featured.image_url) {
+                    img.setAttribute('src', featured.image_url);
+                    img.setAttribute('alt', featured.title);
+                }
                 var title = feat.querySelector('.insights-featured__title');
                 if (title) title.textContent = featured.title;
                 var desc = feat.querySelector('.insights-featured__desc');
                 if (desc) desc.textContent = featured.excerpt || '';
                 var link = feat.querySelector('.insights-featured__copy a.page-btn');
-                if (link) link.setAttribute('href', 'insight.php?slug=' + encodeURIComponent(featured.slug));
+                if (link) {
+                    link.setAttribute('href', 'insight.php?slug=' + encodeURIComponent(featured.slug));
+                    link.innerHTML = 'Read Full Article <span class="material-symbols-outlined text-[18px]">arrow_forward</span>';
+                }
+                var badge = feat.querySelector('.insights-badge--featured');
+                if (badge) badge.textContent = categoryLabel(featured.category);
             }
         }
 
@@ -189,6 +239,23 @@
                     '<a href="' + esc(href) + '" class="insights-report-card__btn page-btn page-btn--ghost">Download <span class="material-symbols-outlined text-[16px]">download</span></a></article>';
             }).join('');
         }
+
+        renderHomeInsights(articles);
+    }
+
+    function renderHomeInsights(articles) {
+        var grid = document.querySelector('[data-cms="home-insights"]');
+        if (!grid || !articles || !articles.length) return;
+
+        var picked = articles.slice(0, 3);
+        grid.classList.add('cms-loaded');
+        grid.innerHTML = picked.map(function (a, idx) {
+            return '<a class="home-insight-card" href="insight.php?slug=' + encodeURIComponent(a.slug) + '" data-aos="fade-up" data-aos-delay="' + (idx * 60) + '">' +
+                '<span class="home-insight-card__badge">' + esc(categoryLabel(a.category)) + '</span>' +
+                '<h3 class="home-insight-card__title">' + esc(a.title) + '</h3>' +
+                '<p class="home-insight-card__excerpt">' + esc(a.excerpt || '') + '</p>' +
+                '<span class="home-insight-card__cta">Read article <span class="material-symbols-outlined text-[16px]">arrow_forward</span></span></a>';
+        }).join('');
     }
 
     function renderCaseStudies(cases) {
@@ -197,27 +264,40 @@
 
         grid.classList.add('cms-loaded');
         grid.innerHTML = cases.map(function (c, idx) {
-            return '<article class="cs-card" data-aos="fade-up" data-aos-delay="' + (idx * 50) + '">' +
-                '<span class="cs-badge">' + esc(c.industry) + '</span>' +
-                '<h3>' + esc(c.title) + '</h3>' +
-                (c.summary ? '<p class="cs-card__lead">' + esc(c.summary) + '</p>' : '') +
-                '<dl class="cs-card__details">' +
-                '<div><dt>Challenge</dt><dd>' + esc(c.challenge) + '</dd></div>' +
-                '<div><dt>Solution</dt><dd>' + esc(c.solution) + '</dd></div>' +
-                '<div><dt>Outcome</dt><dd>' + esc(c.outcome) + '</dd></div></dl>' +
-                '<a href="contact.html" class="cs-card__link">Discuss a similar project <span class="material-symbols-outlined">arrow_forward</span></a></article>';
+            return caseCardHtml(c, idx, false);
+        }).join('');
+
+        renderHomeCaseStudies(cases);
+    }
+
+    function renderHomeCaseStudies(cases) {
+        var grid = document.querySelector('[data-cms="home-case-studies"]');
+        if (!grid || !cases || !cases.length) return;
+
+        var sorted = cases.slice().sort(function (a, b) {
+            return (Number(b.is_featured) || 0) - (Number(a.is_featured) || 0);
+        });
+        var picked = sorted.slice(0, 3);
+        grid.classList.add('cms-loaded');
+        grid.innerHTML = picked.map(function (c, idx) {
+            return caseCardHtml(c, idx, true);
         }).join('');
     }
 
     function renderTestimonials(items) {
         var el = document.querySelector('[data-cms="testimonial-quote"]');
         if (!el || !items || !items.length) return;
+
         var t = items[0];
         el.classList.add('cms-loaded');
-        var quote = el.querySelector('blockquote, .quote-spotlight__text, p');
+        var quote = el.querySelector('blockquote, .home-testimonial__quote, .quote-spotlight__text, p');
         if (quote) quote.textContent = t.quote;
-        var cite = el.querySelector('cite, .quote-spotlight__cite, .quote-spotlight__meta');
-        if (cite) cite.textContent = (t.name || '') + (t.role_title ? ' — ' + t.role_title : '') + (t.company ? ', ' + t.company : '');
+        var cite = el.querySelector('cite, .home-testimonial__cite, .quote-spotlight__cite, .quote-spotlight__meta');
+        if (cite) {
+            cite.textContent = (t.name || '') +
+                (t.role_title ? ' — ' + t.role_title : '') +
+                (t.company ? ', ' + t.company : '');
+        }
     }
 
     function init() {
@@ -228,6 +308,7 @@
             renderInsights(data.insights);
             renderCaseStudies(data.case_studies);
             renderTestimonials(data.testimonials);
+            document.dispatchEvent(new CustomEvent('cms:hydrated'));
         }).catch(function () {
             /* Keep static HTML fallback */
         });

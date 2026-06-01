@@ -18,7 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'site_tagline', 'contact_email', 'contact_phone', 'copyright_text',
             'social_linkedin', 'social_facebook', 'social_x', 'social_youtube',
             'stat_years_value', 'stat_years_label', 'stat_clients_value', 'stat_clients_label',
-            'stat_countries_value', 'stat_countries_label', 'stat_partner_value', 'stat_partner_label',
+            'stat_countries_value', 'stat_countries_label',
+            'stat_industries_value', 'stat_industries_label',
+            'stat_partner_value', 'stat_partner_label',
         ];
         $pairs = [];
         foreach ($keys as $key) {
@@ -73,7 +75,8 @@ kam_admin_render(function () use ($settings, $message, $error, $csrf): void {
                         ['stat_years_value', 'stat_years_label', 'Years stat'],
                         ['stat_clients_value', 'stat_clients_label', 'Clients stat'],
                         ['stat_countries_value', 'stat_countries_label', 'Countries stat'],
-                        ['stat_partner_value', 'stat_partner_label', 'Partner stat'],
+                        ['stat_industries_value', 'stat_industries_label', 'Industries stat (home trust band)'],
+                        ['stat_partner_value', 'stat_partner_label', 'Partner stat (footer)'],
                     ];
                     foreach ($stats as [$vk, $lk, $title]):
                     ?>

@@ -243,7 +243,7 @@
                         <h2 class="font-headline-lg text-primary mb-2">Latest Insights</h2>
                         <p class="text-on-surface-variant text-lg">Recruitment trends, HR best practices, and workforce strategies from our consulting teams.</p>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 insights-filterable-grid">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 insights-filterable-grid" data-cms="insights-articles">
                         <article class="insights-article-card insights-filterable" data-category="recruitment" data-aos="fade-up">
                             <span class="insights-badge">Recruitment</span>
                             <h3>Recruitment Trends Shaping the Future of Hiring</h3>
@@ -618,11 +618,12 @@
     <script>
     (function () {
         var pills = document.querySelectorAll('.insights-filter-pill');
-        var items = document.querySelectorAll('.insights-filterable');
         if (!pills.length) return;
+        var activeFilter = 'all';
 
         function applyFilter(filter) {
-            items.forEach(function (el) {
+            activeFilter = filter;
+            document.querySelectorAll('.insights-filterable').forEach(function (el) {
                 var cats = (el.getAttribute('data-category') || '').trim().split(/\s+/);
                 var show = filter === 'all' || cats.indexOf(filter) !== -1;
                 el.classList.toggle('is-hidden', !show);
@@ -642,6 +643,10 @@
                 });
                 applyFilter(filter);
             });
+        });
+
+        document.addEventListener('cms:hydrated', function () {
+            applyFilter(activeFilter);
         });
     })();
     </script>
