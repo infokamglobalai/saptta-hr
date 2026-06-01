@@ -188,8 +188,8 @@ $inquiryLabel = kam_inquiry_types()[$lead['inquiry_type']] ?? $lead['inquiry_typ
                 <div class="admin-card__head">
                     <h2><span class="material-symbols-outlined">account_tree</span> Pipeline</h2>
                 </div>
-                <div class="admin-card__body">
-                    <div class="admin-lead-pipeline-track" aria-hidden="true">
+                <div class="admin-card__body admin-pipeline-card__body">
+                    <div class="admin-lead-pipeline-track" role="list" aria-label="Pipeline progress">
                         <?php
                         $statusOrder = array_flip(kam_lead_statuses());
                         $currentIdx = $statusOrder[$lead['status']] ?? 0;
@@ -197,10 +197,10 @@ $inquiryLabel = kam_inquiry_types()[$lead['inquiry_type']] ?? $lead['inquiry_typ
                             $stepIdx = $statusOrder[$s] ?? 0;
                             $stepClass = $lead['status'] === $s ? 'is-current' : ($stepIdx < $currentIdx ? 'is-done' : '');
                         ?>
-                            <span class="admin-lead-pipeline-step <?= kam_h($stepClass) ?>">
-                                <span class="admin-lead-pipeline-step__dot"></span>
+                            <div class="admin-lead-pipeline-step <?= kam_h($stepClass) ?>" role="listitem">
+                                <span class="admin-lead-pipeline-step__dot" aria-hidden="true"></span>
                                 <span class="admin-lead-pipeline-step__label"><?= kam_h(kam_status_label($s)) ?></span>
-                            </span>
+                            </div>
                         <?php endforeach; ?>
                     </div>
                     <form method="post" class="admin-lead-pipeline-form">

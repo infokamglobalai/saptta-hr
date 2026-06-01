@@ -1190,9 +1190,18 @@ a:hover { color: var(--admin-blue-bright); }
 
 .admin-detail dd a { font-weight: 500; }
 
+/* Pipeline card: no sticky — prevents overlap when scrolling */
 .admin-pipeline-card {
-    position: sticky;
-    top: 0.5rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.admin-pipeline-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow: hidden;
 }
 
 /* Lead detail page */
@@ -1377,6 +1386,35 @@ a:hover { color: var(--admin-blue-bright); }
 
 .admin-lead-body {
     gap: 1.35rem;
+    align-items: start;
+}
+
+.admin-lead-main {
+    min-width: 0;
+    position: relative;
+    z-index: 0;
+}
+
+.admin-lead-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    min-width: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.admin-lead-sidebar > .admin-card {
+    margin-bottom: 0 !important;
+    flex-shrink: 0;
+}
+
+.admin-lead-sidebar > .admin-lead-activity-card {
+    margin-top: 0 !important;
+}
+
+.admin-lead-sidebar > .admin-lead-danger {
+    margin-top: 0 !important;
 }
 
 .admin-card--lead {
@@ -1612,21 +1650,42 @@ a:hover { color: var(--admin-blue-bright); }
     box-shadow: 0 0 0 3px rgba(0, 94, 178, 0.12);
 }
 
-/* Pipeline track */
+/* Pipeline track — vertical list (no overlap on scroll) */
 .admin-lead-pipeline-track {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.35rem;
-    margin-bottom: 1.25rem;
-    padding-bottom: 1.25rem;
-    border-bottom: 1px solid var(--admin-border);
+    flex-direction: column;
+    gap: 0;
+    margin: 0 0 1.15rem;
+    padding: 0.65rem 0.75rem;
+    background: #f8fafc;
+    border: 1px solid var(--admin-border);
+    border-radius: var(--admin-radius);
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
 .admin-lead-pipeline-step {
-    flex: 1 1 auto;
-    min-width: 4.5rem;
-    text-align: center;
-    opacity: 0.45;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.45rem 0.35rem;
+    opacity: 0.5;
+    position: relative;
+}
+
+.admin-lead-pipeline-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 0.82rem;
+    top: 1.35rem;
+    bottom: -0.45rem;
+    width: 2px;
+    background: #e2e8f0;
+    z-index: 0;
+}
+
+.admin-lead-pipeline-step.is-done:not(:last-child)::after {
+    background: #86efac;
 }
 
 .admin-lead-pipeline-step.is-done,
@@ -1635,12 +1694,14 @@ a:hover { color: var(--admin-blue-bright); }
 }
 
 .admin-lead-pipeline-step__dot {
-    display: block;
     width: 10px;
     height: 10px;
-    margin: 0 auto 0.35rem;
     border-radius: 50%;
     background: #cbd5e1;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    box-shadow: none;
 }
 
 .admin-lead-pipeline-step.is-done .admin-lead-pipeline-step__dot {
@@ -1649,25 +1710,40 @@ a:hover { color: var(--admin-blue-bright); }
 
 .admin-lead-pipeline-step.is-current .admin-lead-pipeline-step__dot {
     background: var(--admin-blue);
-    box-shadow: 0 0 0 4px rgba(0, 94, 178, 0.2);
+    outline: 2px solid rgba(0, 94, 178, 0.35);
+    outline-offset: 2px;
 }
 
 .admin-lead-pipeline-step__label {
-    display: block;
-    font-size: 0.625rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
+    font-size: 0.75rem;
+    font-weight: 600;
     color: var(--admin-muted);
-    line-height: 1.2;
+    line-height: 1.25;
 }
 
 .admin-lead-pipeline-step.is-current .admin-lead-pipeline-step__label {
     color: var(--admin-navy);
+    font-weight: 700;
+}
+
+.admin-lead-pipeline-form {
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    padding-top: 0.15rem;
+    flex-shrink: 0;
+}
+
+.admin-lead-pipeline-form .admin-form-group {
+    position: relative;
+    z-index: 1;
+    background: #fff;
 }
 
 .admin-input-modern {
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .admin-lead-save-btn {
@@ -1676,7 +1752,9 @@ a:hover { color: var(--admin-blue-bright); }
 }
 
 .admin-lead-activity-card {
-    margin-top: 1.25rem;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .admin-lead-timeline {
@@ -1730,7 +1808,10 @@ a:hover { color: var(--admin-blue-bright); }
 }
 
 .admin-lead-danger {
-    margin-top: 1.25rem;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+    isolation: isolate;
 }
 
 .admin-lead-danger__head {
@@ -1828,16 +1909,9 @@ a:hover { color: var(--admin-blue-bright); }
         justify-content: center;
     }
 
-    .admin-lead-pipeline-step {
-        min-width: calc(33% - 0.35rem);
-    }
 }
 
 @media (min-width: 1024px) {
-    .admin-lead-grid .admin-lead-sidebar {
-        position: relative;
-    }
-
     .admin-lead-grid {
         grid-template-columns: 1.2fr 0.85fr;
     }
