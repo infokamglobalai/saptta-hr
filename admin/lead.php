@@ -59,10 +59,16 @@ ob_start();
     <div>
         <div class="admin-card" style="margin-bottom:1.5rem">
             <div class="admin-card__head">
-                <h2>Lead #<?= (int) $lead['id'] ?></h2>
-                <a href="leads.php" class="admin-btn admin-btn--ghost admin-btn--sm">← Back</a>
+                <h2>
+                    <span class="material-symbols-outlined">person</span>
+                    <?= kam_h($lead['name']) ?>
+                </h2>
+                <a href="leads.php" class="admin-btn admin-btn--ghost admin-btn--sm">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    Back
+                </a>
             </div>
-            <div style="padding:1.25rem">
+            <div class="admin-card__body">
                 <dl class="admin-detail">
                     <dt>Name</dt>
                     <dd><?= kam_h($lead['name']) ?></dd>
@@ -85,8 +91,10 @@ ob_start();
         </div>
 
         <div class="admin-card">
-            <div class="admin-card__head"><h2>Notes</h2></div>
-            <div style="padding:1.25rem">
+            <div class="admin-card__head">
+                <h2><span class="material-symbols-outlined">sticky_note_2</span> Notes</h2>
+            </div>
+            <div class="admin-card__body">
                 <?php if (empty($notes)): ?>
                     <p style="color:var(--admin-muted);margin:0">No notes yet.</p>
                 <?php else: ?>
@@ -113,9 +121,14 @@ ob_start();
     </div>
 
     <div>
-        <div class="admin-card">
-            <div class="admin-card__head"><h2>CRM status</h2></div>
-            <div style="padding:1.25rem">
+        <div class="admin-card admin-pipeline-card">
+            <div class="admin-card__head">
+                <h2><span class="material-symbols-outlined">tune</span> CRM status</h2>
+            </div>
+            <div class="admin-card__body">
+                <p style="margin:0 0 1rem;font-size:0.875rem;color:var(--admin-muted)">
+                    Current: <span class="admin-badge admin-badge--<?= kam_h($lead['status']) ?>"><?= kam_h(kam_status_label($lead['status'])) ?></span>
+                </p>
                 <form method="post">
                     <input type="hidden" name="csrf" value="<?= kam_h($csrf) ?>"/>
                     <input type="hidden" name="action" value="update"/>
@@ -135,7 +148,10 @@ ob_start();
                             <?php endforeach; ?>
                         </select>
                     </div>
-                    <button type="submit" class="admin-btn admin-btn--primary">Update lead</button>
+                    <button type="submit" class="admin-btn admin-btn--primary" style="width:100%">
+                        <span class="material-symbols-outlined">check_circle</span>
+                        Update lead
+                    </button>
                 </form>
             </div>
         </div>
@@ -144,5 +160,6 @@ ob_start();
 <?php
 $content = ob_get_clean();
 $pageTitle = 'Lead #' . $id;
+$pageSubtitle = kam_h($lead['email']);
 $activeNav = 'leads';
 require __DIR__ . '/includes/layout.php';

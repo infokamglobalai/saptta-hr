@@ -24,7 +24,7 @@ ob_start();
 ?>
 <div class="admin-card">
     <div class="admin-card__head">
-        <h2>All leads</h2>
+        <h2><span class="material-symbols-outlined">group</span> All leads</h2>
         <form class="admin-filters" method="get" action="leads.php">
             <div class="admin-form-group">
                 <label for="q">Search</label>
@@ -39,7 +39,10 @@ ob_start();
                     <?php endforeach; ?>
                 </select>
             </div>
-            <button type="submit" class="admin-btn admin-btn--primary admin-btn--sm">Filter</button>
+            <button type="submit" class="admin-btn admin-btn--primary admin-btn--sm">
+                <span class="material-symbols-outlined">filter_list</span>
+                Filter
+            </button>
             <?php if ($q || $status): ?>
                 <a href="leads.php" class="admin-btn admin-btn--ghost admin-btn--sm">Clear</a>
             <?php endif; ?>
@@ -49,7 +52,6 @@ ob_start();
         <table class="admin-table">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Contact</th>
                     <th>Company</th>
                     <th>Inquiry</th>
@@ -60,20 +62,34 @@ ob_start();
             </thead>
             <tbody>
                 <?php if (empty($result['items'])): ?>
-                    <tr><td colspan="7">No leads found.</td></tr>
+                    <tr>
+                        <td colspan="6" class="admin-table__empty">
+                            <span class="material-symbols-outlined">search_off</span>
+                            No leads found. Try adjusting your filters.
+                        </td>
+                    </tr>
                 <?php else: ?>
                     <?php foreach ($result['items'] as $lead): ?>
                         <tr>
-                            <td>#<?= (int) $lead['id'] ?></td>
                             <td>
-                                <strong><?= kam_h($lead['name']) ?></strong><br/>
-                                <small><?= kam_h($lead['email']) ?></small>
+                                <div class="admin-table__contact">
+                                    <span class="admin-table__avatar"><?= kam_h(kam_initials($lead['name'])) ?></span>
+                                    <span>
+                                        <strong><?= kam_h($lead['name']) ?></strong>
+                                        <small>#<?= (int) $lead['id'] ?> · <?= kam_h($lead['email']) ?></small>
+                                    </span>
+                                </div>
                             </td>
                             <td><?= kam_h($lead['company'] ?? '—') ?></td>
                             <td><?= kam_h(kam_inquiry_types()[$lead['inquiry_type']] ?? $lead['inquiry_type']) ?></td>
                             <td><span class="admin-badge admin-badge--<?= kam_h($lead['status']) ?>"><?= kam_h(kam_status_label($lead['status'])) ?></span></td>
-                            <td><?= kam_h(date('M j, Y g:i A', strtotime($lead['created_at']))) ?></td>
-                            <td><a href="lead.php?id=<?= (int) $lead['id'] ?>" class="admin-btn admin-btn--ghost admin-btn--sm">View</a></td>
+                            <td><?= kam_h(date('M j, Y', strtotime($lead['created_at']))) ?></td>
+                            <td>
+                                <a href="lead.php?id=<?= (int) $lead['id'] ?>" class="admin-btn admin-btn--ghost admin-btn--sm">
+                                    View
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </a>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 <?php endif; ?>
@@ -83,9 +99,7 @@ ob_start();
     <?php if ($result['pages'] > 1): ?>
         <div class="admin-pagination">
             <?php for ($p = 1; $p <= $result['pages']; $p++): ?>
-                <?php
-                $qs = http_build_query(array_filter(['status' => $status, 'q' => $q, 'page' => $p]));
-                ?>
+                <?php $qs = http_build_query(array_filter(['status' => $status, 'q' => $q, 'page' => $p])); ?>
                 <a href="leads.php?<?= kam_h($qs) ?>" class="admin-btn admin-btn--ghost admin-btn--sm <?= $p === $page ? 'is-active' : '' ?>"><?= $p ?></a>
             <?php endfor; ?>
         </div>
@@ -94,5 +108,6 @@ ob_start();
 <?php
 $content = ob_get_clean();
 $pageTitle = 'Leads';
+$pageSubtitle = (string) $result['total'] . ' total · Page ' . $page . ' of ' . $result['pages'];
 $activeNav = 'leads';
 require __DIR__ . '/includes/layout.php';

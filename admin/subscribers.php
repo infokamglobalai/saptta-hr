@@ -22,20 +22,33 @@ ob_start();
 ?>
 <div class="admin-card">
     <div class="admin-card__head">
-        <h2>Newsletter subscribers (<?= $total ?>)</h2>
+        <h2><span class="material-symbols-outlined">mail</span> Newsletter subscribers</h2>
+        <span class="admin-badge admin-badge--qualified"><?= (int) $total ?> active</span>
     </div>
     <div class="admin-table-wrap">
         <table class="admin-table">
             <thead>
-                <tr><th>Email</th><th>Source</th><th>Subscribed</th></tr>
+                <tr><th>Subscriber</th><th>Source</th><th>Subscribed</th></tr>
             </thead>
             <tbody>
                 <?php if (empty($items)): ?>
-                    <tr><td colspan="3">No subscribers yet.</td></tr>
+                    <tr>
+                        <td colspan="3" class="admin-table__empty">
+                            <span class="material-symbols-outlined">mail</span>
+                            No subscribers yet. Sign-ups from the Insights page will appear here.
+                        </td>
+                    </tr>
                 <?php else: ?>
                     <?php foreach ($items as $row): ?>
                         <tr>
-                            <td><?= kam_h($row['email']) ?></td>
+                            <td>
+                                <div class="admin-table__contact">
+                                    <span class="admin-table__avatar"><?= kam_h(strtoupper(substr($row['email'], 0, 1))) ?></span>
+                                    <span>
+                                        <strong><?= kam_h($row['email']) ?></strong>
+                                    </span>
+                                </div>
+                            </td>
                             <td><?= kam_h($row['source']) ?></td>
                             <td><?= kam_h(date('M j, Y', strtotime($row['created_at']))) ?></td>
                         </tr>
@@ -48,5 +61,6 @@ ob_start();
 <?php
 $content = ob_get_clean();
 $pageTitle = 'Newsletter';
+$pageSubtitle = (string) $total . ' active subscribers';
 $activeNav = 'subscribers';
 require __DIR__ . '/includes/layout.php';

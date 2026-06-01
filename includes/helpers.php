@@ -54,6 +54,17 @@ function kam_status_label(string $status): string
     return ucfirst(str_replace('_', ' ', $status));
 }
 
+function kam_initials(string $name): string
+{
+    $parts = preg_split('/\s+/', trim($name));
+    $first = substr($parts[0] ?? '?', 0, 1);
+    $second = substr($parts[1] ?? ($parts[0] ?? ''), 1, 1);
+    if ($second === '' && strlen($parts[0] ?? '') > 1) {
+        $second = substr($parts[0], 1, 1);
+    }
+    return strtoupper($first . $second);
+}
+
 function kam_inquiry_types(): array
 {
     return [
