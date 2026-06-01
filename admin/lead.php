@@ -2,13 +2,19 @@
 declare(strict_types=1);
 
 require_once dirname(__DIR__) . '/includes/bootstrap.php';
+require_once dirname(__DIR__) . '/includes/admin_app.php';
 require_once dirname(__DIR__) . '/includes/LeadRepository.php';
 
-Auth::requireLogin();
+kam_admin_app_boot();
 
-$user = Auth::user();
 $id = (int) ($_GET['id'] ?? 0);
-$lead = $id > 0 ? LeadRepository::find($id) : null;
+if ($id <= 0) {
+    kam_redirect('leads.php');
+}
+
+kam_admin_render(function () use ($id): void {
+$user = Auth::user();
+$lead = LeadRepository::find($id);
 
 if (!$lead) {
     kam_redirect('leads.php');

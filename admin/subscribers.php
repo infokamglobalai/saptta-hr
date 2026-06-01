@@ -2,9 +2,11 @@
 declare(strict_types=1);
 
 require_once dirname(__DIR__) . '/includes/bootstrap.php';
+require_once dirname(__DIR__) . '/includes/admin_app.php';
 
-Auth::requireLogin();
+kam_admin_app_boot();
 
+kam_admin_render(function (): void {
 $pdo = Database::connection();
 $page = max(1, (int) ($_GET['page'] ?? 1));
 $perPage = 30;
@@ -64,3 +66,4 @@ $pageTitle = 'Newsletter';
 $pageSubtitle = (string) $total . ' active subscribers';
 $activeNav = 'subscribers';
 require __DIR__ . '/includes/layout.php';
+});

@@ -74,13 +74,8 @@ function kam_crm_ensure_admin(): string
 function kam_crm_ensure_installed(): array
 {
     $messages = [];
-
-    if (kam_crm_tables_exist()) {
-        $messages[] = kam_crm_ensure_admin();
-        return $messages;
-    }
-
     $pdo = Database::connection();
+
     foreach (kam_crm_schema_statements() as $statement) {
         $pdo->exec($statement);
     }

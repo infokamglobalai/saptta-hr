@@ -2,14 +2,16 @@
 declare(strict_types=1);
 
 require_once dirname(__DIR__) . '/includes/bootstrap.php';
+require_once dirname(__DIR__) . '/includes/admin_app.php';
 require_once dirname(__DIR__) . '/includes/LeadRepository.php';
 
-Auth::requireLogin();
+kam_admin_app_boot();
 
 $status = trim((string) ($_GET['status'] ?? ''));
 $q = trim((string) ($_GET['q'] ?? ''));
 $page = max(1, (int) ($_GET['page'] ?? 1));
 
+kam_admin_render(function () use ($status, $q, $page): void {
 $filters = [];
 if ($status !== '' && in_array($status, kam_lead_statuses(), true)) {
     $filters['status'] = $status;
@@ -111,3 +113,4 @@ $pageTitle = 'Leads';
 $pageSubtitle = (string) $result['total'] . ' total · Page ' . $page . ' of ' . $result['pages'];
 $activeNav = 'leads';
 require __DIR__ . '/includes/layout.php';
+});

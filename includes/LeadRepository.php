@@ -103,19 +103,39 @@ final class LeadRepository
     public static function stats(): array
     {
         $pdo = Database::connection();
-        $total = (int) $pdo->query('SELECT COUNT(*) FROM leads')->fetchColumn();
-        $new = (int) $pdo->query("SELECT COUNT(*) FROM leads WHERE status = 'new'")->fetchColumn();
-        $won = (int) $pdo->query("SELECT COUNT(*) FROM leads WHERE status = 'won'")->fetchColumn();
-        $week = (int) $pdo->query(
-            'SELECT COUNT(*) FROM leads WHERE created_at >= DATE_SUB(NOW(), INTERVAL 7 DAY)'
-        )->fetchColumn();
-        $subs = (int) $pdo->query(
-            "SELECT COUNT(*) FROM newsletter_subscribers WHERE status = 'active'"
-        )->fetchColumn();
+        $total = 0;
+        $new = 0;
+        $won = 0;
+        $week = 0;
+        $subs = 0;
+        $byStatus = [];
 
-        $byStatus = $pdo->query(
-            "SELECT status, COUNT(*) AS cnt FROM leads GROUP BY status"
-        )->fetchAll();
+        try {
+            $total = (int) $pdo->query('SELECT COUNT(*) FROM leads')->fetchColumn();
+            $new = (int) $pdo->query("SELECT COUNT(*) FROM leads WHERE status = 'new'")->fetchColumn();
+            $won = (int) $pdo->query("SELECT COUNT(*) FROM leads WHERE status = 'won'")->fetchColumn();
+            $week = (int) $pdo->query(
+                'SELECT COUNT(*) FROM leads WHERE created_at >= DATE_SUB(NOW(), INTERVAL 7 DAY)'
+            )->fetchColumn();
+            $byStatus = $pdo->query(
+                'SELECT status, COUNT(*) AS cnt FROM leads GROUP BY status'
+            )->fetchAll();
+        } catch (Throwable) {
+            // leads table missing — installer will create on next request
+        }
+
+        try {
+            $subs = (int) $pdo->query(
+                "SELECT COUNT(*) FROM newsletter_subscribers WHERE status = 'active'"
+            )->fetchColumn();
+        } catch (Throwable) {
+            $subs = 0;
+        }
+
+        $statusMap = [];
+        foreach ($byStatus as $row) {
+            $statusMap[$row['status']] = (int) $row['cnt'];
+        }
 
         return [
             'total_leads' => $total,
@@ -124,6 +144,7 @@ final class LeadRepository
             'leads_this_week' => $week,
             'subscribers' => $subs,
             'by_status' => $byStatus,
+            'status_counts' => $statusMap,
         ];
     }
 
