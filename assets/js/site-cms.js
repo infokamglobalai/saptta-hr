@@ -36,6 +36,8 @@
             : fallback;
     }
 
+    var INSIGHT_IMG_FALLBACK = 'assets/img/about-team.png';
+
     function categoryLabel(cat) {
         var labels = {
             recruitment: 'Recruitment',
@@ -46,6 +48,16 @@
             general: 'General',
         };
         return labels[cat] || cat;
+    }
+
+    function insightImageSrc(item) {
+        return item && item.image_url ? item.image_url : INSIGHT_IMG_FALLBACK;
+    }
+
+    function insightCardMedia(item) {
+        return '<div class="insights-card__media">' +
+            '<img src="' + esc(insightImageSrc(item)) + '" alt="' + esc(item.title || 'Insight') + '" loading="lazy" decoding="async"/>' +
+            '</div>';
     }
 
     function caseCardHtml(c, idx, compact) {
@@ -197,8 +209,8 @@
             if (feat) {
                 feat.classList.add('cms-loaded');
                 var img = feat.querySelector('.insights-featured__visual img');
-                if (img && featured.image_url) {
-                    img.setAttribute('src', featured.image_url);
+                if (img) {
+                    img.setAttribute('src', insightImageSrc(featured));
                     img.setAttribute('alt', featured.title);
                 }
                 var title = feat.querySelector('.insights-featured__title');
@@ -220,10 +232,12 @@
             grid.classList.add('cms-loaded');
             grid.innerHTML = articles.map(function (a, idx) {
                 return '<article class="insights-article-card insights-filterable" data-category="' + esc(a.category) + '" data-aos="fade-up" data-aos-delay="' + (idx * 50) + '">' +
+                    insightCardMedia(a) +
+                    '<div class="insights-card__body">' +
                     '<span class="insights-badge">' + esc(categoryLabel(a.category)) + '</span>' +
                     '<h3>' + esc(a.title) + '</h3>' +
                     '<p>' + esc(a.excerpt || '') + '</p>' +
-                    '<a href="insight.php?slug=' + encodeURIComponent(a.slug) + '" class="insights-article-card__link">Read article <span class="material-symbols-outlined">arrow_forward</span></a></article>';
+                    '<a href="insight.php?slug=' + encodeURIComponent(a.slug) + '" class="insights-article-card__link">Read article <span class="material-symbols-outlined">arrow_forward</span></a></div></article>';
             }).join('');
         }
 
@@ -233,10 +247,12 @@
             reportsGrid.innerHTML = reports.map(function (r, idx) {
                 var href = r.download_url || ('insight.php?slug=' + encodeURIComponent(r.slug));
                 return '<article class="insights-report-card insights-filterable" data-category="' + esc(r.category) + '" data-aos="fade-up" data-aos-delay="' + (idx * 50) + '">' +
+                    insightCardMedia(r) +
+                    '<div class="insights-card__body">' +
                     '<span class="insights-badge insights-badge--report">Report</span>' +
                     '<h3>' + esc(r.title) + '</h3>' +
                     '<p>' + esc(r.excerpt || '') + '</p>' +
-                    '<a href="' + esc(href) + '" class="insights-report-card__btn page-btn page-btn--ghost">Download <span class="material-symbols-outlined text-[16px]">download</span></a></article>';
+                    '<a href="' + esc(href) + '" class="insights-report-card__btn page-btn page-btn--ghost">Download <span class="material-symbols-outlined text-[16px]">download</span></a></div></article>';
             }).join('');
         }
 
@@ -251,6 +267,7 @@
         grid.classList.add('cms-loaded');
         grid.innerHTML = picked.map(function (a, idx) {
             return '<a class="home-insight-card" href="insight.php?slug=' + encodeURIComponent(a.slug) + '" data-aos="fade-up" data-aos-delay="' + (idx * 60) + '">' +
+                '<div class="home-insight-card__media"><img src="' + esc(insightImageSrc(a)) + '" alt="' + esc(a.title) + '" loading="lazy" decoding="async"/></div>' +
                 '<span class="home-insight-card__badge">' + esc(categoryLabel(a.category)) + '</span>' +
                 '<h3 class="home-insight-card__title">' + esc(a.title) + '</h3>' +
                 '<p class="home-insight-card__excerpt">' + esc(a.excerpt || '') + '</p>' +

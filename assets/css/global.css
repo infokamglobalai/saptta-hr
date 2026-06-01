@@ -6970,12 +6970,40 @@ body.insights-page .insights-hero .service-hero__bg {
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 2rem 1.75rem;
+    padding: 0;
     border-radius: 1.5rem;
     background: #fff;
     border: 1px solid rgba(15, 23, 42, 0.08);
     box-shadow: 0 8px 24px rgba(0, 94, 178, 0.06);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
+}
+
+.insights-card__media {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: linear-gradient(135deg, #e8f0fa 0%, #f1f5f9 100%);
+}
+
+.insights-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+.insights-article-card:hover .insights-card__media img,
+.insights-report-card:hover .insights-card__media img {
+    transform: scale(1.04);
+}
+
+.insights-card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.5rem 1.75rem 2rem;
 }
 
 .insights-article-card:hover,
@@ -13324,7 +13352,7 @@ body.about-page .ab-global__title,
     display: flex;
     flex-direction: column;
     gap: 0.65rem;
-    padding: 1.35rem 1.25rem;
+    padding: 0;
     background: #fff;
     border: 1px solid rgba(0, 31, 63, 0.08);
     border-radius: 1rem;
@@ -13333,6 +13361,45 @@ body.about-page .ab-global__title,
     color: inherit;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     height: 100%;
+    overflow: hidden;
+}
+
+.home-insight-card__media {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #e8f0fa;
+}
+
+.home-insight-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.home-insight-card:hover .home-insight-card__media img {
+    transform: scale(1.04);
+}
+
+.home-insight-card .home-insight-card__badge,
+.home-insight-card .home-insight-card__title,
+.home-insight-card .home-insight-card__excerpt,
+.home-insight-card .home-insight-card__cta {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+}
+
+.home-insight-card .home-insight-card__badge {
+    margin-top: 1rem;
+}
+
+.home-insight-card .home-insight-card__cta {
+    margin-bottom: 1.25rem;
+}
+
+.home-case-card {
+    padding: 1.35rem 1.25rem;
 }
 
 .home-insight-card:hover,

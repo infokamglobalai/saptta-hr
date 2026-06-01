@@ -2202,6 +2202,58 @@ a:hover { color: var(--admin-blue-bright); }
     gap: 0.75rem;
 }
 
+.admin-insight-media {
+    padding: 1rem;
+    border-radius: var(--admin-radius);
+    background: #f8fafc;
+    border: 1px solid var(--admin-border);
+}
+
+.admin-insight-media__preview {
+    margin: 0.75rem 0 1rem;
+    border-radius: var(--admin-radius);
+    overflow: hidden;
+    max-width: 320px;
+    border: 1px solid var(--admin-border);
+}
+
+.admin-insight-media__preview img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.admin-insight-media__remove {
+    margin-bottom: 1rem;
+}
+
+.admin-insight-thumb-cell {
+    width: 4.5rem;
+}
+
+.admin-insight-thumb {
+    width: 3.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+    border-radius: 0.35rem;
+    border: 1px solid var(--admin-border);
+    display: block;
+}
+
+.admin-insight-thumb--empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f5f9;
+    color: #94a3b8;
+}
+
+.admin-insight-thumb--empty .material-symbols-outlined {
+    font-size: 1.25rem;
+}
+
 .admin-checkbox {
     display: flex;
     align-items: center;

@@ -26,10 +26,17 @@ kam_admin_render(function () use ($items, $csrf): void {
         </div>
         <div class="admin-table-wrap">
             <table class="admin-table">
-                <thead><tr><th>Title</th><th>Type</th><th>Status</th><th>Featured</th><th></th></tr></thead>
+                <thead><tr><th>Photo</th><th>Title</th><th>Type</th><th>Status</th><th>Featured</th><th></th></tr></thead>
                 <tbody>
                 <?php foreach ($items as $row): ?>
                     <tr>
+                        <td class="admin-insight-thumb-cell">
+                            <?php if (!empty($row['image_url'])): ?>
+                                <img class="admin-insight-thumb" src="../<?= kam_h($row['image_url']) ?>" alt="" loading="lazy"/>
+                            <?php else: ?>
+                                <span class="admin-insight-thumb admin-insight-thumb--empty" aria-hidden="true"><span class="material-symbols-outlined">image</span></span>
+                            <?php endif; ?>
+                        </td>
                         <td>
                             <strong><?= kam_h($row['title']) ?></strong><br/>
                             <small>/insight.php?slug=<?= kam_h($row['slug']) ?></small>
