@@ -13,3 +13,10 @@ Thumbs.db
 
 # Local dev scripts (do not deploy)
 scratch/
+
+# PHP environment (secrets)
+config/.env
+config/.env.local
+
+# Never commit after production install
+install.php

@@ -230,8 +230,10 @@ document.addEventListener('DOMContentLoaded', () => {
         quoteSpotlight.classList.add('is-visible');
     }
 
-    // Lead forms: validation, submit, success states
-    const FORM_ENDPOINT = 'https://formsubmit.co/ajax/info@kamgroups.com';
+    // Lead forms: CRM API first, FormSubmit fallback when PHP/DB unavailable
+    const FORM_FALLBACK = 'https://formsubmit.co/ajax/info@kamgroups.com';
+    const CRM_LEAD_API = new URL('api/submit-lead.php', window.location.href).href;
+    const CRM_NEWSLETTER_API = new URL('api/newsletter.php', window.location.href).href;
 
     function showFormMessage(form, type, message) {
         let box = form.querySelector('.form-message');
@@ -264,6 +266,28 @@ document.addEventListener('DOMContentLoaded', () => {
         return valid;
     }
 
+    async function postCrm(endpoint, data) {
+        const res = await fetch(endpoint, {
+            method: 'POST',
+            body: data,
+            headers: { Accept: 'application/json' }
+        });
+        const json = await res.json().catch(() => ({}));
+        if (!res.ok || json.ok === false) {
+            throw new Error(json.error || 'submit failed');
+        }
+        return json;
+    }
+
+    async function postFallback(data) {
+        const res = await fetch(FORM_FALLBACK, {
+            method: 'POST',
+            body: data,
+            headers: { Accept: 'application/json' }
+        });
+        if (!res.ok) throw new Error('submit failed');
+    }
+
     async function submitLeadForm(form) {
         const submitBtn = form.querySelector('[type="submit"]');
         const originalLabel = submitBtn ? submitBtn.innerHTML : '';
@@ -272,35 +296,64 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.setAttribute('aria-busy', 'true');
         }
 
-        const data = new FormData(form);
-        const subject = form.classList.contains('insights-newsletter__form')
+        const isNewsletter = form.classList.contains('insights-newsletter__form');
+        const crmEndpoint = isNewsletter ? CRM_NEWSLETTER_API : CRM_LEAD_API;
+
+        const crmData = new FormData(form);
+        if (!isNewsletter) {
+            crmData.set('source', 'website');
+        }
+
+        const payload = isNewsletter
+            ? (() => {
+                const fd = new FormData();
+                fd.set('email', form.querySelector('[type="email"]')?.value || '');
+                fd.set('source', 'insights');
+                return fd;
+            })()
+            : crmData;
+
+        const fallbackData = new FormData(form);
+        fallbackData.set('_subject', isNewsletter
             ? 'KAM Global HR newsletter subscription'
-            : 'KAM Global HR website inquiry';
-        data.set('_subject', subject);
-        data.set('_captcha', 'false');
+            : 'KAM Global HR website inquiry');
+        fallbackData.set('_captcha', 'false');
+
+        const successMsg = isNewsletter
+            ? 'Thank you. You are subscribed to workforce insights.'
+            : 'Thank you. Your message has been sent. Our team will respond shortly.';
 
         try {
-            const res = await fetch(FORM_ENDPOINT, {
-                method: 'POST',
-                body: data,
-                headers: { Accept: 'application/json' }
-            });
-            if (!res.ok) throw new Error('submit failed');
-            form.reset();
-            showFormMessage(form, 'success', 'Thank you. Your message has been sent. Our team will respond shortly.');
-            if (form.classList.contains('contact-form')) {
-                window.setTimeout(() => {
-                    window.location.href = 'thank-you.html';
-                }, 1200);
+            if (window.location.protocol === 'file:') {
+                throw new Error('file protocol');
             }
+            await postCrm(crmEndpoint, payload);
         } catch {
-            showFormMessage(form, 'error', 'We could not send your message. Please email info@kamgroups.com or try again.');
-        } finally {
-            if (submitBtn) {
-                submitBtn.disabled = false;
-                submitBtn.removeAttribute('aria-busy');
-                submitBtn.innerHTML = originalLabel;
+            try {
+                await postFallback(fallbackData);
+            } catch {
+                showFormMessage(form, 'error', 'We could not send your message. Please email info@kamgroups.com or try again.');
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.removeAttribute('aria-busy');
+                    submitBtn.innerHTML = originalLabel;
+                }
+                return;
             }
+        }
+
+        form.reset();
+        showFormMessage(form, 'success', successMsg);
+        if (form.classList.contains('contact-form')) {
+            window.setTimeout(() => {
+                window.location.href = 'thank-you.html';
+            }, 1200);
+        }
+
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.removeAttribute('aria-busy');
+            submitBtn.innerHTML = originalLabel;
         }
     }
 
