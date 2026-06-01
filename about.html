@@ -3,397 +3,218 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>About Us | KAM Global AI — HR &amp; Accounting for Growing Teams</title>
-    <link rel='icon' type='image/png' sizes='32x32' href='assets/img/favicon_32x32.png'/>
+    <title>About Us | KAM Global HR | Enterprise Workforce Solutions</title>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="About Us | KAM Global HR | Enterprise Workforce Solutions"/>
+    <meta property="og:description" content="Learn about KAM Global HR — enterprise recruitment, staffing, payroll, and HR consulting with 22+ years of workforce delivery experience."/>
+    <meta property="og:url" content="https://www.kamglobalhr.com/about.html"/>
+    <meta property="og:image" content="https://www.kamglobalhr.com/assets/img/favicon-512x512.png"/>
+    <meta property="og:image:width" content="512"/>
+    <meta property="og:image:height" content="512"/>
+    <meta name="twitter:image" content="https://www.kamglobalhr.com/assets/img/favicon-512x512.png"/>
 
-    <!-- External Libraries -->
+    <meta name="twitter:card" content="summary_large_image"/>
+
+    <meta name="description" content="Learn about KAM Global HR — enterprise recruitment, staffing, payroll, and HR consulting with 22+ years of workforce delivery experience."/>
+    <link rel="canonical" href="https://www.kamglobalhr.com/about.html"/>
+    <link rel="icon" href="assets/img/favicon.ico" sizes="any"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    
-    <!-- Global Assets -->
+
     <script src="assets/js/tailwind-config.js"></script>
     <link href="assets/css/global.css" rel="stylesheet"/>
 </head>
-<body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<body class="site-page about-page bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed overflow-x-hidden">
 
-    <!-- TopNavBar -->
-    <header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-2xl border-b border-secondary/15 shadow-md h-24 transition-all duration-300">
-        <div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
-            <a href="index.html" class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-3">
-                <img src="assets/img/logo_512x512.png" alt="KAM Global AI" class="h-16 w-auto object-contain">
-            </a>
-            
-            <nav class="hidden md:flex items-center gap-4 xl:gap-8">
-                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="index.html">Home</a>
-                <a class="font-label-md text-label-md text-secondary font-bold transition-colors" href="about.html">Company</a>
-                
-                <!-- Services Dropdown -->
-                <div class="relative group z-50">
-                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors flex items-center gap-1 cursor-pointer" href="services.html">
-                        Services <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+    <header class="site-header fixed top-0 w-full z-50" id="site-header">
+        <div class="site-header__glow" aria-hidden="true"></div>
+        <div class="site-header__bar">
+            <div class="site-header__inner h-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
+                <div class="site-header__logo">
+                    <a href="index.html" class="site-header__logo-link" aria-label="KAM Global HR home">
+                        <img src="assets/img/logo.png" alt="KAM Global HR" class="site-logo" width="220" height="80"/>
                     </a>
-                    <div class="absolute left-0 top-full mt-4 w-[680px] bg-surface-container-lowest border border-outline-variant/30 rounded-3xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-3.5 grid grid-cols-2 gap-2 transform origin-top group-hover:scale-100 scale-95 border-t-4 border-t-primary">
-                        <a href="recruitment.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-blue-500">
-                            <span class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">person_search</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Recruitment Services</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Find top-tier permanent talent across regions</p>
+                </div>
+
+                <div class="site-header__nav-zone hidden lg:flex">
+                    <div class="site-header__pill">
+                        <nav class="site-header__nav" aria-label="Main navigation">
+                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link is-active" href="about.html">About Us</a>
+
+                            <div class="nav-item nav-item--dropdown nav-item--dropdown-services relative group z-50">
+                                <a class="nav-link nav-link--trigger" href="services.html">
+                                    Services <span class="material-symbols-outlined nav-chevron">expand_more</span>
+                                </a>
+                                <div class="nav-dropdown nav-dropdown--menu">
+                                    <a href="recruitment.html" class="nav-dropdown__link">Recruitment</a>
+                                    <a href="contract-staffing.html" class="nav-dropdown__link">Contract Staffing</a>
+                                    <a href="payroll.html" class="nav-dropdown__link">Payroll Outsourcing</a>
+                                    <a href="hr-advisory.html" class="nav-dropdown__link">HR Advisory</a>
+                                    <a href="executive-search.html" class="nav-dropdown__link">Executive Search</a>
+                                    <a href="manpower-bgv.html" class="nav-dropdown__link">Background Verification</a>
+                                </div>
                             </div>
-                        </a>
-                        <a href="contract-staffing.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-amber-500">
-                            <span class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">badge</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Contract Staffing</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Flexible contract staffing for rapid scaling</p>
+
+                            <div class="nav-item nav-item--dropdown nav-item--dropdown-software relative group z-50">
+                                <a class="nav-link nav-link--trigger" href="ats.html">
+                                    Software <span class="material-symbols-outlined nav-chevron">expand_more</span>
+                                </a>
+                                <div class="nav-dropdown nav-dropdown--menu">
+                                    <a href="ats.html" class="nav-dropdown__link">ATS</a>
+                                    <a href="hr-talent.html" class="nav-dropdown__link">HRMS</a>
+                                    <a href="payroll-software.html" class="nav-dropdown__link">Payroll Software</a>
+                                </div>
                             </div>
-                        </a>
-                        <a href="payroll.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-emerald-500">
-                            <span class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">payments</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Payroll Outsourcing</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Compliant payroll & benefits administration</p>
+
+                            <a class="nav-link" href="industries.html">Industries</a>
+
+                            <div class="nav-item nav-item--dropdown nav-item--dropdown-resources relative group z-50">
+                                <a class="nav-link nav-link--trigger" href="insights.html">
+                                    Resources <span class="material-symbols-outlined nav-chevron">expand_more</span>
+                                </a>
+                                <div class="nav-dropdown nav-dropdown--menu">
+                                    <a href="case-studies.html" class="nav-dropdown__link">Case Studies</a>
+                                    <a href="insights.html" class="nav-dropdown__link">Insights / Blog</a>
+                                    <a href="partners.html" class="nav-dropdown__link">Partner With Us</a>
+                                </div>
                             </div>
-                        </a>
-                        <a href="hr-advisory.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-purple-500">
-                            <span class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">partner_exchange</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">HR Advisory & Consulting</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Strategic HR policy & compliance guidance</p>
-                            </div>
-                        </a>
-                        <a href="manpower-bgv.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-teal-500">
-                            <span class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">fact_check</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Manpower Consulting & BGV</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Comprehensive background checks & verification</p>
-                            </div>
-                        </a>
-                        <a href="executive-search.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-indigo-500">
-                            <span class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">diversity_3</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Executive Search</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Retained search for C-suite & leadership roles</p>
-                            </div>
-                        </a>
+
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </nav>
                     </div>
                 </div>
 
-                <!-- Industries Dropdown -->
-                <div class="relative group">
-                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors flex items-center gap-1 cursor-pointer" href="industries.html">
-                        Industries <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
-                    </a>
-                    <div class="absolute right-0 top-full mt-4 w-[680px] bg-surface-container-lowest border border-outline-variant/30 rounded-3xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-3.5 grid grid-cols-2 gap-2 transform origin-top group-hover:scale-100 scale-95 border-t-4 border-t-secondary">
-                        <a href="industries.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-violet-500">
-                            <span class="w-10 h-10 rounded-xl bg-violet-500/10 text-violet-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">terminal</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">IT & Technology</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Talent for software, cloud, & deep tech startups</p>
-                            </div>
-                        </a>
-                        <a href="industries.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-cyan-500">
-                            <span class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Engineering & Manufacturing</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Technical staffing for industrial & auto operations</p>
-                            </div>
-                        </a>
-                        <a href="industries.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-amber-500">
-                            <span class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">school</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Education & EdTech</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Recruiting leaders for modern learning institutions</p>
-                            </div>
-                        </a>
-                        <a href="industries.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-rose-500">
-                            <span class="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">medical_services</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Healthcare</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Fully compliant medical and clinical staff hiring</p>
-                            </div>
-                        </a>
-                        <a href="industries.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-orange-500">
-                            <span class="w-10 h-10 rounded-xl bg-orange-500/10 text-orange-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">storefront</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Hospitality & Retail</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Flexible frontline and service sector operations</p>
-                            </div>
-                        </a>
-                    </div>
+                <div class="site-header__actions">
+                    <a href="contact.html" class="site-header__cta site-header__cta--primary hidden lg:inline-flex">Book Consultation</a>
+                    <button type="button" id="mobile-menu-btn" class="site-header__menu-btn lg:hidden" aria-label="Open menu" aria-expanded="false">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
                 </div>
+            </div>
+        </div>
 
-                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="insights.html">Insights</a>
+        <div id="mobile-menu" class="site-header__mobile hidden" aria-hidden="true">
+            <nav class="site-header__mobile-nav" aria-label="Mobile navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <span class="site-header__mobile-label">Services</span>
+                <a href="recruitment.html" class="site-header__mobile-sublink">Recruitment</a>
+                <a href="contract-staffing.html" class="site-header__mobile-sublink">Contract Staffing</a>
+                <a href="payroll.html" class="site-header__mobile-sublink">Payroll Outsourcing</a>
+                <a href="hr-advisory.html" class="site-header__mobile-sublink">HR Advisory</a>
+                <a href="executive-search.html" class="site-header__mobile-sublink">Executive Search</a>
+                <a href="manpower-bgv.html" class="site-header__mobile-sublink">Background Verification</a>
+                <span class="site-header__mobile-label">Software</span>
+                <a href="ats.html" class="site-header__mobile-sublink">ATS</a>
+                <a href="hr-talent.html" class="site-header__mobile-sublink">HRMS</a>
+                <a href="payroll-software.html" class="site-header__mobile-sublink">Payroll Software</a>
+                <a href="industries.html">Industries</a>
+                <span class="site-header__mobile-label">Resources</span>
+                <a href="case-studies.html" class="site-header__mobile-sublink">Case Studies</a>
+                <a href="insights.html" class="site-header__mobile-sublink">Insights / Blog</a>
+                <a href="partners.html" class="site-header__mobile-sublink">Partner With Us</a>
+                <a href="contact.html">Contact</a>
             </nav>
-
-            <div class="flex items-center gap-4">
-                <a href="login.html" class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors mr-2">Login</a>
-                <a href="demo.html" class="bg-gradient-to-r from-primary to-secondary text-white px-7 py-3 rounded-xl font-label-md hover:from-secondary hover:to-primary hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-md">Request Demo</a>
+            <div class="site-header__mobile-actions">
+                <a href="contact.html" class="site-header__cta site-header__cta--primary site-header__cta--mobile">Book Consultation</a>
             </div>
         </div>
     </header>
 
-    <main class="pt-24">
-        <!-- Cinematic Split Hero Section -->
-        <section class="relative py-24 md:py-32 overflow-hidden bg-gradient-to-b from-primary/5 to-surface">
-            <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="z-10" data-aos="fade-right">
-                    <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm mb-8 shadow-sm">
-                        <span class="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span> AI-POWERED STARTUP · HR &amp; ACCOUNTING
-                    </div>
-                    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-tight">
-                        One platform for HR, payroll &amp; accounting — <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-teal-500 to-blue-600 animate-gradient-text">so you can focus on growing.</span>
+    <main class="page-wrap abt">
+
+        <!-- HERO -->
+        <section class="ab-hero">
+            <div class="ab-hero__bg" aria-hidden="true"></div>
+            <div class="page-container ab-hero__grid">
+                <div class="ab-hero__copy" data-aos="fade-up">
+                    <span class="ab-eyebrow">About KAM Global HR</span>
+                    <h1 class="ab-hero__title">
+                        <span class="ab-hero__title-line">A Workforce <span class="ab-hero__grad">Solutions Division</span></span>
+                        <span class="ab-hero__title-line"><span class="ab-hero__grad">Built for Global Delivery</span></span>
                     </h1>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl leading-relaxed">
-                        We are a new-generation startup building practical AI tools for companies of every size. Run hiring, payroll, compliance, and books from a single place — plus hands-on consulting when you need a human expert in the room.
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="demo.html" class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label-md text-label-md shadow-xl hover:shadow-2xl hover:bg-primary/90 transition-all flex items-center gap-2">
-                            Book a Free Consultation <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                        </a>
-                        <a href="#platform" class="border border-outline-variant text-primary px-8 py-4 rounded-xl font-label-md text-label-md hover:bg-surface-variant transition-colors shadow-sm">
-                            See the Platform
-                        </a>
+                    <p class="ab-hero__lead">KAM Global HR, part of KAM International Group, delivers recruitment, staffing, payroll outsourcing, executive search, and workforce consulting solutions across multiple industries and regions.</p>
+                    <ul class="ab-stats">
+                        <li class="ab-stat">
+                            <span class="material-symbols-outlined ab-stat__icon">history_edu</span>
+                            <strong>22+</strong><span>Years Experience</span>
+                        </li>
+                        <li class="ab-stat">
+                            <span class="material-symbols-outlined ab-stat__icon">groups</span>
+                            <strong>100+</strong><span>Client Relationships</span>
+                        </li>
+                        <li class="ab-stat">
+                            <span class="material-symbols-outlined ab-stat__icon">public</span>
+                            <strong>7</strong><span>Countries Served</span>
+                        </li>
+                        <li class="ab-stat">
+                            <span class="material-symbols-outlined ab-stat__icon">domain</span>
+                            <strong>5+</strong><span>Industries Covered</span>
+                        </li>
+                    </ul>
+                    <div class="ab-hero__actions">
+                        <a href="contact.html" class="page-btn page-btn--primary">Talk to Experts <span class="material-symbols-outlined">arrow_forward</span></a>
+                        <a href="services.html" class="page-btn page-btn--ghost">Explore Services</a>
                     </div>
                 </div>
+                <div class="ab-hero__visual" data-aos="fade-left" data-aos-delay="100">
+                    <div class="ab-hero__frame">
+                        <img src="assets/img/about-team.png" alt="KAM Global HR team" loading="eager"/>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <div class="relative" data-aos="fade-left">
-                    <div class="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-r from-primary/20 to-secondary/20 blur-2xl z-0 opacity-70 animate-pulse"></div>
-                    <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border border-outline-variant/30 z-10 bg-black">
-                        <img src="assets/img/executive_search.png" alt="Executive Vanguard" class="w-full h-[450px] md:h-[550px] object-cover opacity-90 hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                        
-                        <!-- Floating Glass Badge -->
-                        <div class="absolute bottom-8 left-8 right-8 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl shadow-xl flex items-center justify-between text-white">
+        <!-- WHO WE ARE -->
+        <section class="ab-section ab-who">
+            <div class="page-container ab-who__grid">
+                <div class="ab-who__media" data-aos="fade-right">
+                    <div class="ab-who__img-wrap">
+                        <img src="assets/img/why-switch-team.png" alt="KAM Global HR workforce consulting team" width="640" height="480" loading="lazy"/>
+                    </div>
+                </div>
+                <div class="ab-who__copy" data-aos="fade-left">
+                    <span class="ab-eyebrow">Who We Are</span>
+                    <h2 class="ab-section__title">Established Workforce Solutions Division</h2>
+                    <p class="ab-who__lead">KAM Global HR is the dedicated Human Resource Consultancy division of KAM International Group � an established international workforce company with over 22+ years of experience delivering recruitment, staffing, payroll, advisory, and workforce management solutions.</p>
+                    <p class="ab-who__body">We help organisations across sectors build reliable, productive, and compliant teams. With a strong presence in the GCC and international markets, we combine 22+ years of expertise with modern HR technology and consulting excellence.</p>
+                    <div class="ab-who__cards">
+                        <div class="ab-who-card">
+                            <span class="material-symbols-outlined">person_search</span>
                             <div>
-                                <span class="text-xs uppercase tracking-widest text-white/80 font-bold">All-in-One</span>
-                                <h4 class="font-headline-md text-white">HR · Payroll · Accounting</h4>
-                            </div>
-                            <span class="material-symbols-outlined text-4xl text-teal-300">hub</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Hero Quote — emotional hook before proof stats -->
-        <section class="py-14 md:py-20 bg-gradient-to-r from-primary via-primary to-blue-900 text-on-primary relative overflow-hidden">
-            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,white,transparent_50%)]"></div>
-            <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto z-10">
-                <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
-                    <span class="material-symbols-outlined text-5xl text-teal-300/90 mb-6 block">format_quote</span>
-                    <blockquote class="font-headline-lg md:text-[2rem] leading-snug font-medium text-white mb-8">
-                        “We stopped juggling spreadsheets, payroll tools, and monthly accountant calls. One dashboard — and our team finally has time to grow the business, not chase paperwork.”
-                    </blockquote>
-                    <p class="font-label-md text-white/70 mb-8">
-                        — Typical result from early teams using KAM Global AI <span class="text-white/40">·</span> 12–50 employees
-                    </p>
-                    <a href="contact.html" class="inline-flex items-center gap-2 bg-secondary text-on-primary px-8 py-4 rounded-xl font-label-md shadow-xl hover:bg-secondary/90 hover:scale-[1.02] transition-all">
-                        Connect With Us <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                    </a>
-                    <p class="text-body-sm text-white/50 mt-4">Free 30-minute consultation · No commitment required</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Outcome Stats — rational proof for startups & SMBs -->
-        <section class="py-16 bg-surface-container-low border-y border-outline-variant/20 relative z-20">
-            <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
-                <p class="text-center font-label-sm uppercase tracking-widest text-on-surface-variant mb-10" data-aos="fade-up">
-                    Typical outcomes teams see in their first 90 days*
-                </p>
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                    <div class="p-8 rounded-3xl bg-surface/60 backdrop-blur-md border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow" data-aos="zoom-in" data-aos-delay="0">
-                        <div class="text-display-lg font-black text-secondary mb-2 flex items-center justify-center">
-                            <span class="count-up" data-count="12">0</span>+
-                        </div>
-                        <div class="font-label-md uppercase tracking-wider text-on-surface-variant font-bold">Hours Saved Weekly</div>
-                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Less time on HR admin &amp; data entry</p>
-                    </div>
-
-                    <div class="p-8 rounded-3xl bg-surface/60 backdrop-blur-md border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="text-display-lg font-black text-primary mb-2 flex items-center justify-center">
-                            <span class="count-up" data-count="40">0</span>%
-                        </div>
-                        <div class="font-label-md uppercase tracking-wider text-on-surface-variant font-bold">Faster Payroll Cycles</div>
-                        <p class="text-body-sm text-on-surface-variant/80 mt-2">AI-assisted runs &amp; compliance checks</p>
-                    </div>
-
-                    <div class="p-8 rounded-3xl bg-surface/60 backdrop-blur-md border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="text-display-lg font-black text-secondary mb-2 flex items-center justify-center">
-                            <span class="count-up" data-count="3">0</span>
-                        </div>
-                        <div class="font-label-md uppercase tracking-wider text-on-surface-variant font-bold">Tools in One Place</div>
-                        <p class="text-body-sm text-on-surface-variant/80 mt-2">HR, payroll &amp; accounting unified</p>
-                    </div>
-
-                    <div class="p-8 rounded-3xl bg-surface/60 backdrop-blur-md border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="text-display-lg font-black text-primary mb-2 flex items-center justify-center">
-                            <span class="count-up" data-count="24">0</span>/7
-                        </div>
-                        <div class="font-label-md uppercase tracking-wider text-on-surface-variant font-bold">AI Assistant Access</div>
-                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Answers on policies, pay &amp; books</p>
-                    </div>
-                </div>
-                <p class="text-center text-body-sm text-on-surface-variant/60 mt-8 max-w-2xl mx-auto">
-                    *Illustrative benchmarks from pilot teams. Your results depend on team size and current workflows. We’ll map yours on a free consultation call.
-                </p>
-            </div>
-        </section>
-
-        <!-- Why teams choose us -->
-        <section id="platform" class="py-28 bg-surface">
-            <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
-                <div class="text-center mb-20" data-aos="fade-up">
-                    <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Built for modern teams</span>
-                    <h2 class="font-headline-lg text-primary mb-4">HR, accounting &amp; consulting — all in one flow</h2>
-                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-                    <!-- Global Footprint Card -->
-                    <div class="md:col-span-8 glass-card p-12 rounded-[2.5rem] flex flex-col justify-between tilt-card border border-outline-variant/30 shadow-xl" data-aos="fade-up">
-                        <div class="tilt-inner h-full flex flex-col">
-                            <div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-8 shadow-inner">
-                                <span class="material-symbols-outlined text-4xl">dashboard</span>
-                            </div>
-                            <h3 class="font-headline-lg text-primary mb-6">All-in-one for small teams &amp; growing companies</h3>
-                            <p class="font-body-lg text-on-surface-variant max-w-3xl leading-relaxed mb-8 flex-1">
-                                Whether you are hiring your first employee or managing payroll across regions, KAM Global AI keeps HR, payroll, and accounting in sync. AI handles repetitive tasks — document checks, pay runs, expense categorization, and compliance reminders — so your people spend time on strategy, not spreadsheets.
-                            </p>
-                            <div class="flex flex-wrap gap-3">
-                                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 text-secondary font-label-sm"><span class="material-symbols-outlined text-sm">groups</span> Hiring &amp; onboarding</span>
-                                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-label-sm"><span class="material-symbols-outlined text-sm">payments</span> Payroll &amp; tax</span>
-                                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 text-secondary font-label-sm"><span class="material-symbols-outlined text-sm">account_balance</span> Books &amp; reporting</span>
+                                <strong>Recruitment Services</strong>
+                                <span>Permanent, bulk and specialist hiring</span>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Consulting Card -->
-                    <div class="md:col-span-4 bg-gradient-to-br from-primary via-primary to-blue-900 p-12 rounded-[2.5rem] text-on-primary shadow-2xl tilt-card flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
-                        <div class="tilt-inner h-full flex flex-col">
-                            <div class="w-16 h-16 bg-white/10 text-teal-300 rounded-2xl flex items-center justify-center mb-8 backdrop-blur-md border border-white/20 shadow-lg">
-                                <span class="material-symbols-outlined text-4xl">psychology</span>
-                            </div>
-                            <h3 class="font-headline-lg text-white mb-6">Expert consulting included</h3>
-                            <p class="font-body-md text-white/80 leading-relaxed mb-8 flex-1">
-                                Software alone is not enough when you are setting up payroll, policies, or books for the first time. Our HR and finance consultants work alongside your team — implementation, compliance questions, and process design.
-                            </p>
-                            <ul class="space-y-4 pt-6 border-t border-white/10">
-                                <li class="flex items-center gap-3 text-label-md text-white/90">
-                                    <span class="material-symbols-outlined text-teal-300">check_circle</span> Setup &amp; onboarding help
-                                </li>
-                                <li class="flex items-center gap-3 text-label-md text-white/90">
-                                    <span class="material-symbols-outlined text-teal-300">check_circle</span> HR policy &amp; compliance guidance
-                                </li>
-                                <li class="flex items-center gap-3 text-label-md text-white/90">
-                                    <span class="material-symbols-outlined text-teal-300">check_circle</span> Accounting &amp; payroll advisory
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- EdTech Pillar 1 -->
-                    <div class="md:col-span-6 glass-card p-12 rounded-[2.5rem] border-l-8 border-secondary tilt-card shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                        <div class="tilt-inner h-full flex flex-col">
-                            <div class="flex items-center gap-4 mb-6">
-                                <div class="w-12 h-12 bg-secondary/10 text-secondary rounded-xl flex items-center justify-center">
-                                    <span class="material-symbols-outlined text-3xl">smart_toy</span>
-                                </div>
-                                <h4 class="font-headline-md text-primary font-bold">AI that works today</h4>
-                            </div>
-                            <p class="font-body-lg text-on-surface-variant leading-relaxed">
-                                Smart document parsing for contracts and IDs, automated pay-run suggestions, expense categorization, and an assistant that answers HR and finance questions in plain language — trained on your policies, not generic internet advice.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- EdTech Pillar 2 -->
-                    <div class="md:col-span-6 glass-card p-12 rounded-[2.5rem] border-l-8 border-primary tilt-card shadow-lg" data-aos="fade-up" data-aos-delay="300">
-                        <div class="tilt-inner h-full flex flex-col">
-                            <div class="flex items-center gap-4 mb-6">
-                                <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center">
-                                    <span class="material-symbols-outlined text-3xl">trending_up</span>
-                                </div>
-                                <h4 class="font-headline-md text-primary font-bold">Built to scale with you</h4>
-                            </div>
-                            <p class="font-body-lg text-on-surface-variant leading-relaxed">
-                                Start with a lean team of five or grow to hundreds — same platform, same workflows. Add modules as you need them without switching tools or re-entering employee data.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- AI features in action -->
-        <section id="solutions" class="py-28 bg-surface-container-low border-y border-outline-variant/20 overflow-hidden">
-            <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="relative" data-aos="zoom-in">
-                    <div class="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-r from-blue-600/20 to-teal-400/20 blur-2xl z-0"></div>
-                    <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border border-outline-variant/30 z-10 bg-black">
-                        <img src="assets/img/hr_advisory.png" alt="Mathematical Leadership" class="w-full h-[500px] object-cover opacity-90 hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                        <div class="absolute bottom-8 left-8 right-8 p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl text-white flex items-center gap-4">
-                            <span class="material-symbols-outlined text-5xl text-teal-300">auto_graph</span>
+                        <div class="ab-who-card">
+                            <span class="material-symbols-outlined">payments</span>
                             <div>
-                                <h5 class="font-headline-md text-white font-bold">Live AI insights on your dashboard</h5>
-                                <p class="text-body-sm text-white/80">Payroll, headcount, and cash flow in one view.</p>
+                                <strong>Payroll &amp; Compliance</strong>
+                                <span>Statutory-ready payroll operations</span>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <div data-aos="fade-left">
-                    <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-label-sm uppercase tracking-widest mb-6 font-bold">
-                        Present-day AI features
-                    </span>
-                    <h2 class="font-headline-lg text-primary mb-6">Less busywork. More clarity.</h2>
-                    <p class="font-body-lg text-on-surface-variant mb-8 leading-relaxed">
-                        We ship features teams use from day one — not roadmap promises. Automate what slows you down; keep humans in the loop for decisions that matter. When you need advice, our consultants are one click away.
-                    </p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4 p-6 rounded-2xl bg-surface border border-outline-variant/30 shadow-sm">
-                            <div class="bg-secondary/10 text-secondary p-3 rounded-xl mt-1 flex-shrink-0">
-                                <span class="material-symbols-outlined text-3xl">calculate</span>
-                            </div>
+                        <div class="ab-who-card">
+                            <span class="material-symbols-outlined">workspace_premium</span>
                             <div>
-                                <h4 class="font-headline-md text-primary font-bold mb-1">Smart payroll &amp; workforce planning</h4>
-                                <p class="text-body-sm text-on-surface-variant">AI flags anomalies before pay day, suggests optimal headcount by department, and keeps tax and benefit rules up to date.</p>
+                                <strong>Executive Search</strong>
+                                <span>Leadership and CXO hiring</span>
                             </div>
                         </div>
-
-                        <div class="flex items-start gap-4 p-6 rounded-2xl bg-surface border border-outline-variant/30 shadow-sm">
-                            <div class="bg-primary/10 text-primary p-3 rounded-xl mt-1 flex-shrink-0">
-                                <span class="material-symbols-outlined text-3xl">verified_user</span>
-                            </div>
+                        <div class="ab-who-card">
+                            <span class="material-symbols-outlined">support_agent</span>
                             <div>
-                                <h4 class="font-headline-md text-primary font-bold mb-1">Compliance &amp; books on autopilot</h4>
-                                <p class="text-body-sm text-on-surface-variant">Automated reminders for filings, contract renewals, and reconciliations — plus categorized expenses ready for your accountant.</p>
+                                <strong>Client Focused</strong>
+                                <span>Long-term client partnerships</span>
                             </div>
                         </div>
                     </div>
@@ -401,196 +222,367 @@
             </div>
         </section>
 
-        <!-- Group Ecosystem Architecture Pipeline -->
-        <section class="py-28 bg-surface">
-            <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
-                <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
-                    <div class="max-w-2xl">
-                        <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">How it works</span>
-                        <h2 class="font-headline-lg text-primary mb-4" data-aos="fade-up">From signup to running smoothly</h2>
-                        <p class="font-body-lg text-on-surface-variant">
-                            Most teams are live within days — not months. We pair self-serve AI tools with consulting so you never get stuck on setup.
-                        </p>
-                    </div>
+        <!-- OUR JOURNEY -->
+        <section class="ab-section ab-section--alt ab-journey">
+            <div class="page-container">
+                <div class="ab-section__head" data-aos="fade-up">
+                    <span class="ab-eyebrow">Our Journey</span>
+                    <h2 class="ab-section__title">A Legacy of Growth and Excellence</h2>
+                    <p class="ab-section__sub">Over two decades of workforce expertise evolving into a modern global HR solutions company.</p>
                 </div>
-
-                <!-- Interactive Pipeline -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
-                    <!-- Step 1 -->
-                    <div class="relative p-8 bg-surface-container rounded-3xl border border-outline-variant/40 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="0">
-                        <div class="w-14 h-14 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center font-bold text-xl mb-6 shadow-sm group-hover:bg-secondary group-hover:text-white transition-colors">
-                            01
+                <ol class="ab-timeline" data-aos="fade-up" data-aos-delay="80">
+                    <li class="ab-timeline__item">
+                        <span class="ab-timeline__dot" aria-hidden="true"></span>
+                        <span class="ab-timeline__year">2003</span>
+                        <div class="ab-timeline__content">
+                            <h3>KAM International Group founded</h3>
+                            <p>Built on hands-on workforce delivery, recruitment operations, and client-first consulting across emerging markets.</p>
                         </div>
-                        <span class="font-label-sm uppercase tracking-widest text-secondary font-bold mb-2 block">Step 1</span>
-                        <h5 class="font-headline-md text-primary mb-4 font-bold">Connect &amp; consult</h5>
-                        <p class="font-body-sm text-on-surface-variant leading-relaxed">Book a free call. We learn your team size, tools, and goals — HR, payroll, accounting, or all three.</p>
-                    </div>
-
-                    <!-- Step 2 -->
-                    <div class="relative p-8 bg-gradient-to-br from-primary via-primary to-blue-800 text-on-primary rounded-3xl shadow-2xl hover:-translate-y-2 transition-all ring-4 ring-primary-container/30 group" data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-14 h-14 rounded-2xl bg-white/20 text-teal-300 flex items-center justify-center font-bold text-xl mb-6 backdrop-blur-md border border-white/20 shadow-lg">
-                            02
+                    </li>
+                    <li class="ab-timeline__item">
+                        <span class="ab-timeline__dot" aria-hidden="true"></span>
+                        <span class="ab-timeline__year">2010+</span>
+                        <div class="ab-timeline__content">
+                            <h3>International recruitment expansion</h3>
+                            <p>Scaled cross-border hiring capabilities and industry-specialist recruiter networks across the GCC and beyond.</p>
                         </div>
-                        <span class="font-label-sm uppercase tracking-widest text-teal-300 font-bold mb-2 block">Step 2</span>
-                        <h5 class="font-headline-md text-white mb-4 font-bold">Configure your workspace</h5>
-                        <p class="font-body-sm text-white/80 leading-relaxed">Import employees, connect payroll and accounting, and turn on AI modules matched to your workflow.</p>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="relative p-8 bg-surface-container rounded-3xl border border-outline-variant/40 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-14 h-14 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center font-bold text-xl mb-6 shadow-sm group-hover:bg-secondary group-hover:text-white transition-colors">
-                            03
+                    </li>
+                    <li class="ab-timeline__item">
+                        <span class="ab-timeline__dot" aria-hidden="true"></span>
+                        <span class="ab-timeline__year">2018+</span>
+                        <div class="ab-timeline__content">
+                            <h3>Workforce consulting &amp; payroll at scale</h3>
+                            <p>Expanded payroll operations, HR advisory, and compliance programs to support multi-country enterprise clients.</p>
                         </div>
-                        <span class="font-label-sm uppercase tracking-widest text-secondary font-bold mb-2 block">Step 3</span>
-                        <h5 class="font-headline-md text-primary mb-4 font-bold">Let AI run the routine</h5>
-                        <p class="font-body-sm text-on-surface-variant leading-relaxed">Pay runs, reminders, document checks, and expense sorting — handled automatically with clear audit trails.</p>
-                    </div>
-
-                    <!-- Step 4 -->
-                    <div class="relative p-8 bg-surface-container rounded-3xl border border-outline-variant/40 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="300">
-                        <div class="w-14 h-14 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center font-bold text-xl mb-6 shadow-sm group-hover:bg-secondary group-hover:text-white transition-colors">
-                            04
+                    </li>
+                    <li class="ab-timeline__item ab-timeline__item--active">
+                        <span class="ab-timeline__dot" aria-hidden="true"></span>
+                        <span class="ab-timeline__year">Today</span>
+                        <div class="ab-timeline__content">
+                            <h3>KAM Global HR</h3>
+                            <p>A modern workforce solutions division combining consulting, staffing, payroll, and HR technology � grounded in 22+ years of operational experience.</p>
                         </div>
-                        <span class="font-label-sm uppercase tracking-widest text-secondary font-bold mb-2 block">Step 4</span>
-                        <h5 class="font-headline-md text-primary mb-4 font-bold">Scale with consulting</h5>
-                        <p class="font-body-sm text-on-surface-variant leading-relaxed">As you grow, our experts help with new hires, multi-location payroll, policy updates, and financial reporting.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- INDUSTRIES -->
+        <section class="ab-section ab-industries">
+            <div class="page-container">
+                <div class="ab-section__head" data-aos="fade-up">
+                    <span class="ab-eyebrow">Industries We Serve</span>
+                    <h2 class="ab-section__title">Multi-Industry Workforce Solutions</h2>
+                    <p class="ab-section__sub">Scalable recruitment and HR solutions across diverse industries.</p>
+                </div>
+                <div class="ab-industry-grid">
+                    <article class="ab-industry-card" data-aos="fade-up">
+                        <span class="material-symbols-outlined ab-industry-card__icon">computer</span>
+                        <h3>IT &amp; Technology</h3>
+                        <p>Technical hiring, project teams, and scalable engineering talent for digital enterprises.</p>
+                    </article>
+                    <article class="ab-industry-card" data-aos="fade-up" data-aos-delay="40">
+                        <span class="material-symbols-outlined ab-industry-card__icon">engineering</span>
+                        <h3>Engineering</h3>
+                        <p>Specialist engineers and technical professionals for infrastructure and industrial projects.</p>
+                    </article>
+                    <article class="ab-industry-card" data-aos="fade-up" data-aos-delay="80">
+                        <span class="material-symbols-outlined ab-industry-card__icon">precision_manufacturing</span>
+                        <h3>Manufacturing</h3>
+                        <p>Production, operations, and plant workforce for manufacturing environments.</p>
+                    </article>
+                    <article class="ab-industry-card" data-aos="fade-up" data-aos-delay="120">
+                        <span class="material-symbols-outlined ab-industry-card__icon">school</span>
+                        <h3>Education &amp; EdTech</h3>
+                        <p>Academic, administrative, and EdTech talent for institutions and platforms.</p>
+                    </article>
+                    <article class="ab-industry-card" data-aos="fade-up" data-aos-delay="160">
+                        <span class="material-symbols-outlined ab-industry-card__icon">health_and_safety</span>
+                        <h3>Healthcare</h3>
+                        <p>Clinical and non-clinical staffing with compliance-aware hiring processes.</p>
+                    </article>
+                    <article class="ab-industry-card" data-aos="fade-up" data-aos-delay="200">
+                        <span class="material-symbols-outlined ab-industry-card__icon">concierge</span>
+                        <h3>Hospitality</h3>
+                        <p>Front-line and management talent for hotels, F&amp;B, and guest experience teams.</p>
+                    </article>
+                    <article class="ab-industry-card" data-aos="fade-up" data-aos-delay="240">
+                        <span class="material-symbols-outlined ab-industry-card__icon">storefront</span>
+                        <h3>Retail</h3>
+                        <p>Store operations, merchandising, and customer-facing workforce at scale.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT WE BELIEVE -->
+        <section class="ab-section ab-believe">
+            <div class="page-container">
+                <div class="ab-section__head ab-section__head--light" data-aos="fade-up">
+                    <span class="ab-eyebrow ab-eyebrow--light">Our Approach</span>
+                    <h2 class="ab-section__title">What We Believe</h2>
+                </div>
+                <div class="ab-believe-grid">
+                    <article class="ab-believe-card" data-aos="fade-up">
+                        <span class="material-symbols-outlined ab-believe-card__icon">handshake</span>
+                        <h3>Long-Term Partnerships</h3>
+                        <p>We focus on building long-term workforce relationships instead of transactional hiring. Every engagement is built on trust, transparency, and consistent delivery.</p>
+                    </article>
+                    <article class="ab-believe-card" data-aos="fade-up" data-aos-delay="80">
+                        <span class="material-symbols-outlined ab-believe-card__icon">verified</span>
+                        <h3>Operational Excellence</h3>
+                        <p>Reliable payroll, compliant workforce management, and scalable HR operations built for growing businesses and enterprise clients.</p>
+                    </article>
+                    <article class="ab-believe-card" data-aos="fade-up" data-aos-delay="160">
+                        <span class="material-symbols-outlined ab-believe-card__icon">devices</span>
+                        <h3>Workforce Solutions</h3>
+                        <p>Modern HR technology combined with experienced human consultants for practical, effective workforce management at scale.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEADERSHIP -->
+        <section class="ab-section ab-leadership">
+            <div class="page-container ab-leadership__grid">
+                <div class="ab-leadership__copy" data-aos="fade-right">
+                    <span class="ab-eyebrow">Leadership Perspective</span>
+                    <span class="ab-leadership__quote-mark" aria-hidden="true">&ldquo;</span>
+                    <p class="ab-leadership__quote">For over two decades, KAM International Group has supported businesses with scalable workforce and operational solutions across industries and regions. KAM Global HR was built to combine that experience with modern workforce technology and consulting excellence.</p>
+                    <p class="ab-leadership__quote-p2">Our goal is simple helping businesses build reliable teams that drive growth and create long-term impact.</p>
+                    <p class="ab-leadership__sig">Leadership Team</p>
+                    <p class="ab-leadership__org">KAM Global HR</p>
+                </div>
+                <div class="ab-leadership__media" data-aos="fade-left" data-aos-delay="100">
+                    <div class="ab-leadership__frame">
+                        <img src="assets/img/leadership-perspective.png" alt="Leadership perspective" width="640" height="520" loading="lazy"/>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Cinematic CTA Section -->
-        <section class="py-24 px-margin-mobile md:px-margin-tablet max-w-container-max mx-auto">
-            <div class="rounded-[3rem] overflow-hidden shadow-2xl relative bg-black py-24 px-12 md:px-24 text-center border border-outline-variant/30 group">
-                <!-- Darkened Background Image -->
-                <img src="assets/img/zero_tension_automation.png" alt="Global Connectivity" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700 z-0">
-                <div class="absolute inset-0 bg-gradient-to-b from-primary/80 via-black/80 to-black z-0"></div>
+        <!-- GLOBAL PRESENCE -->
+        <section class="ab-section ab-global">
+            <div class="page-container ab-global__inner">
+                <header class="ab-global__head" data-aos="fade-up">
+                    <span class="ab-eyebrow">Global Presence</span>
+                    <h2 class="ab-global__title">A Global Footprint. Local Understanding.</h2>
+                    <p class="ab-global__sub">Supporting businesses across international markets with scalable workforce solutions.</p>
+                </header>
 
-                <div class="relative z-10 max-w-4xl mx-auto">
-                    <span class="inline-block bg-white/10 backdrop-blur-md text-white border border-white/20 px-5 py-2 font-label-sm uppercase tracking-widest rounded-full mb-8 shadow-sm" data-aos="zoom-in">
-                        Start in days, not months
-                    </span>
-                    <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-8 leading-tight" data-aos="fade-up">
-                        Ready to reclaim time for <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-teal-200 to-white animate-gradient-text">what actually grows your company?</span>
-                    </h2>
-                    <p class="font-body-lg text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-                        Join startups and growing businesses using KAM Global AI for HR, payroll, accounting, and expert consulting — all in one place.
-                    </p>
-                    <div class="flex flex-wrap justify-center gap-6" data-aos="fade-up" data-aos-delay="200">
-                        <a href="demo.html" class="bg-secondary text-on-primary px-10 py-5 rounded-xl font-label-lg shadow-2xl hover:bg-secondary/90 hover:scale-105 transition-all">
-                            Request a Demo
-                        </a>
-                        <a href="contact.html" class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-5 rounded-xl font-label-lg hover:bg-white/20 transition-colors shadow-lg">
-                            Connect With Us
-                        </a>
+                <div class="ab-global__body" data-aos="fade-up" data-aos-delay="80">
+                    <div class="ab-global__map-col">
+                        <div class="ab-global__map-visual">
+                            <img
+                                class="ab-global__map-img"
+                                src="assets/img/world-map.png"
+                                alt="KAM Global HR worldwide presence map"
+                                width="800"
+                                height="420"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="ab-global__grid">
+                        <article class="ab-global-card">
+                            <img class="ab-global-card__flag" src="assets/img/flags/kuwait.png" alt="Kuwait flag" width="52" height="36" loading="lazy"/>
+                            <h3>Kuwait</h3>
+                            <span class="ab-global-card__label">Head Office</span>
+                        </article>
+                        <article class="ab-global-card">
+                            <img class="ab-global-card__flag" src="assets/img/flags/saudi-arabia.png" alt="Saudi Arabia flag" width="52" height="36" loading="lazy"/>
+                            <h3>Saudi Arabia</h3>
+                            <span class="ab-global-card__label">Operations</span>
+                        </article>
+                        <article class="ab-global-card">
+                            <img class="ab-global-card__flag" src="assets/img/flags/qatar.png" alt="Qatar flag" width="52" height="36" loading="lazy"/>
+                            <h3>Qatar</h3>
+                            <span class="ab-global-card__label">Operations</span>
+                        </article>
+                        <article class="ab-global-card">
+                            <img class="ab-global-card__flag" src="assets/img/flags/bahrain.png" alt="Bahrain flag" width="52" height="36" loading="lazy"/>
+                            <h3>Bahrain</h3>
+                            <span class="ab-global-card__label">Operations</span>
+                        </article>
+                        <article class="ab-global-card">
+                            <img class="ab-global-card__flag" src="assets/img/flags/uae.png" alt="UAE flag" width="52" height="36" loading="lazy"/>
+                            <h3>UAE</h3>
+                            <span class="ab-global-card__label">Operations</span>
+                        </article>
+                        <article class="ab-global-card">
+                            <img class="ab-global-card__flag" src="assets/img/flags/usa.png" alt="USA flag" width="52" height="36" loading="lazy"/>
+                            <h3>USA</h3>
+                            <span class="ab-global-card__label">Operations</span>
+                        </article>
+                        <article class="ab-global-card">
+                            <img class="ab-global-card__flag" src="assets/img/flags/india.png" alt="India flag" width="52" height="36" loading="lazy"/>
+                            <h3>India</h3>
+                            <span class="ab-global-card__label">Operations</span>
+                        </article>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- FINAL CTA -->
+        <section class="ab-cta">
+            <div class="ab-cta__bg" aria-hidden="true"></div>
+            <div class="page-container ab-cta__inner" data-aos="fade-up">
+                <span class="ab-eyebrow">Let's Work Together</span>
+                <h2 class="ab-cta__title">Let&rsquo;s Build Great Teams Together</h2>
+                <p class="ab-cta__lead">Partner with KAM Global HR for scalable recruitment, staffing, payroll, and workforce consulting solutions.</p>
+                <div class="ab-cta__actions">
+                    <a href="contact.html" class="page-btn page-btn--primary">Schedule Consultation <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+                    <a href="services.html" class="page-btn page-btn--ghost">Explore Services</a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-primary dark:bg-primary-container text-on-primary pt-20 pb-12 border-t border-outline-variant/20 relative overflow-hidden">
-        <div class="absolute top-0 left-1/4 right-1/4 h-[1px] bg-gradient-to-r from-transparent via-secondary to-transparent opacity-50"></div>
-        
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
-            <!-- Brand & Socials Column (Col 4) -->
-            <div class="space-y-6 md:col-span-4">
-                <div class="font-headline-sm font-bold flex items-center gap-3">
-                    <img src="assets/img/logo_512x512.png" alt="KAM Global AI" class="h-24 w-auto object-contain">
+                                <!-- Global site footer — edit this file only; run: python scratch/sync_global_footer.py -->
+    <footer class="site-footer site-footer--enterprise" role="contentinfo">
+        <div class="site-footer__inner max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="site-footer__main">
+                <div class="site-footer__brand">
+                    <a href="index.html" class="site-footer__logo-link" aria-label="KAM Global HR home">
+                        <img src="assets/img/logo.png" alt="KAM Global HR" class="site-footer__logo" width="280" height="96"/>
+                    </a>
+                    <p class="site-footer__desc">Empowering organizations worldwide with recruitment excellence, workforce solutions, payroll services, and HR expertise to build stronger, future-ready teams.</p>
+                    <ul class="site-footer__contact">
+                        <li>
+                            <span class="site-footer__contact-icon material-symbols-outlined" aria-hidden="true">mail</span>
+                            <a href="mailto:info@kamgroups.com">info@kamgroups.com</a>
+                        </li>
+                        <li>
+                            <span class="site-footer__contact-icon material-symbols-outlined" aria-hidden="true">call</span>
+                            <a href="tel:+442079460000">+44 20 7946 0000</a>
+                        </li>
+                    </ul>
                 </div>
-                <p class="font-body-sm text-on-primary/70 max-w-sm leading-relaxed">
-                    A startup building AI-powered HR, payroll, and accounting — plus hands-on consulting — so teams of every size can run their company without the operational overload.
-                </p>
-                
-                <!-- Social Media Bar -->
-                <div class="pt-2">
-                    <span class="font-label-sm text-secondary-fixed-dim uppercase tracking-wider block mb-3">Connect With Us</span>
-                    <div class="flex flex-wrap gap-3">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-secondary hover:border-secondary hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/20 transition-all duration-300" aria-label="LinkedIn">
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <nav class="site-footer__col" aria-labelledby="footer-solutions-title">
+                    <h2 class="site-footer__heading" id="footer-solutions-title">Solutions</h2>
+                    <ul class="site-footer__links">
+                        <li><a href="recruitment.html"><span class="site-footer__chev" aria-hidden="true">›</span>Recruitment Services</a></li>
+                        <li><a href="contract-staffing.html"><span class="site-footer__chev" aria-hidden="true">›</span>Contract Staffing</a></li>
+                        <li><a href="payroll.html"><span class="site-footer__chev" aria-hidden="true">›</span>Payroll Outsourcing</a></li>
+                        <li><a href="hr-advisory.html"><span class="site-footer__chev" aria-hidden="true">›</span>HR Advisory &amp; Consulting</a></li>
+                        <li><a href="executive-search.html"><span class="site-footer__chev" aria-hidden="true">›</span>Executive Search</a></li>
+                        <li><a href="manpower-bgv.html"><span class="site-footer__chev" aria-hidden="true">›</span>Background Verification</a></li>
+                    </ul>
+                </nav>
+                <nav class="site-footer__col" aria-labelledby="footer-software-title">
+                    <h2 class="site-footer__heading" id="footer-software-title">Software</h2>
+                    <ul class="site-footer__links">
+                        <li><a href="hr-talent.html"><span class="site-footer__chev" aria-hidden="true">›</span>HRMS Software</a></li>
+                        <li><a href="ats.html"><span class="site-footer__chev" aria-hidden="true">›</span>ATS Software</a></li>
+                        <li><a href="payroll-software.html"><span class="site-footer__chev" aria-hidden="true">›</span>Payroll Software</a></li>
+                    </ul>
+                </nav>
+                <nav class="site-footer__col" aria-labelledby="footer-resources-title">
+                    <h2 class="site-footer__heading" id="footer-resources-title">Resources</h2>
+                    <ul class="site-footer__links">
+                        <li><a href="insights.html"><span class="site-footer__chev" aria-hidden="true">›</span>Insights Hub</a></li>
+                        <li><a href="case-studies.html"><span class="site-footer__chev" aria-hidden="true">›</span>Case Studies</a></li>
+                        <li><a href="industries.html"><span class="site-footer__chev" aria-hidden="true">›</span>Industries</a></li>
+                        <li><a href="insights.html"><span class="site-footer__chev" aria-hidden="true">›</span>Downloads &amp; Guides</a></li>
+                    </ul>
+                </nav>
+                <nav class="site-footer__col" aria-labelledby="footer-company-title">
+                    <h2 class="site-footer__heading" id="footer-company-title">Company</h2>
+                    <ul class="site-footer__links">
+                        <li><a href="about.html"><span class="site-footer__chev" aria-hidden="true">›</span>About Us</a></li>
+                        <li><a href="about.html"><span class="site-footer__chev" aria-hidden="true">›</span>Our Leadership</a></li>
+                        <li><a href="contact.html"><span class="site-footer__chev" aria-hidden="true">›</span>Careers</a></li>
+                        <li><a href="insights.html"><span class="site-footer__chev" aria-hidden="true">›</span>Newsroom</a></li>
+                        <li><a href="contact.html"><span class="site-footer__chev" aria-hidden="true">›</span>Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div class="site-footer__col site-footer__col--offices">
+                    <h2 class="site-footer__heading" id="footer-offices-title">Global Offices</h2>
+                    <address class="site-footer__offices" aria-labelledby="footer-offices-title">
+                        <a class="site-footer__office-card" href="https://www.google.com/maps/place/KAM+GLOBAL+AI/@13.3104691,75.2165459,7z/data=!4m7!3m6!1s0x3bae170035391cbd:0xa77c598425d3a196!8m2!3d13.0209878!4d77.593684!15sCglrYW1nbG9iYWzgAQA!16s%2Fg%2F11yvxpjv74?entry=tts&amp;g_ep=EgoyMDI2MDMwOC4wIPu8ASoASAFQAw%3D%3D&amp;skid=dbeb7bd2-d116-4915-b0b8-033022d7beab" target="_blank" rel="noopener noreferrer">
+                            <span class="site-footer__office-pin material-symbols-outlined" aria-hidden="true">location_on</span>
+                            <span class="site-footer__office-body">
+                                <span class="site-footer__office-title">India</span>
+                                <span class="site-footer__office-lines">RT Nagar,<br>Bengaluru, KA</span>
+                            </span>
                         </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-secondary hover:border-secondary hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/20 transition-all duration-300" aria-label="X (Twitter)">
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        <a class="site-footer__office-card" href="https://www.google.com/maps/place/KAM+International+Group+Co./@29.3438775,48.0144258,17z/data=!3m1!4b1!4m6!3m5!1s0x3fcf9c96696d414d:0x96261e72f31ecb19!8m2!3d29.3438728!4d48.0170007!16s%2Fg%2F1tf5zs5_?entry=tts&amp;g_ep=EgoyMDI2MDMwOC4wIPu8ASoASAFQAw%3D%3D&amp;skid=7a633f8f-4cd3-46c7-a404-eedc9e31f22f" target="_blank" rel="noopener noreferrer">
+                            <span class="site-footer__office-pin material-symbols-outlined" aria-hidden="true">location_on</span>
+                            <span class="site-footer__office-body">
+                                <span class="site-footer__office-title">Kuwait</span>
+                                <span class="site-footer__office-lines">Block 4, Tunisia St.,<br>Hawally</span>
+                            </span>
                         </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-secondary hover:border-secondary hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/20 transition-all duration-300" aria-label="Facebook">
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-secondary hover:border-secondary hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/20 transition-all duration-300" aria-label="Instagram">
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-secondary hover:border-secondary hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/20 transition-all duration-300" aria-label="YouTube">
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.015 3.015 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.376.55 9.376.55s7.505 0 9.377-.55a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                        </a>
-                    </div>
+                    </address>
                 </div>
             </div>
-            
-            <!-- Solutions Column (Col 3) -->
-            <div class="md:col-span-3">
-                <h6 class="font-label-md text-secondary-fixed-dim mb-6 uppercase tracking-wider flex items-center gap-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Solutions Suite
-                </h6>
-                <ul class="space-y-3.5 font-body-sm">
-                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="recruitment.html">Recruitment Services</a></li>
-                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="contract-staffing.html">Contract Staffing</a></li>
-                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="payroll.html">Payroll Outsourcing</a></li>
-                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="hr-advisory.html">HR Advisory & Consulting</a></li>
-                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="manpower-bgv.html">Manpower Consulting & BGV</a></li>
-                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="executive-search.html">Executive Search</a></li>
-                </ul>
+    
+            <div class="site-footer__trust" aria-label="Company highlights">
+                <div class="site-footer__trust-item">
+                    <span class="site-footer__trust-icon material-symbols-outlined" aria-hidden="true">engineering</span>
+                    <span class="site-footer__trust-text">
+                        <strong>22+ Years</strong>
+                        <span>Workforce Excellence</span>
+                    </span>
+                </div>
+                <div class="site-footer__trust-item">
+                    <span class="site-footer__trust-icon material-symbols-outlined" aria-hidden="true">work</span>
+                    <span class="site-footer__trust-text">
+                        <strong>100+</strong>
+                        <span>Client Relationships</span>
+                    </span>
+                </div>
+                <div class="site-footer__trust-item">
+                    <span class="site-footer__trust-icon material-symbols-outlined" aria-hidden="true">public</span>
+                    <span class="site-footer__trust-text">
+                        <strong>7+ Countries</strong>
+                        <span>Global Presence</span>
+                    </span>
+                </div>
+                <div class="site-footer__trust-item">
+                    <span class="site-footer__trust-icon material-symbols-outlined" aria-hidden="true">verified_user</span>
+                    <span class="site-footer__trust-text">
+                        <strong>Trusted Partner</strong>
+                        <span>Compliance &amp; Quality Driven</span>
+                    </span>
+                </div>
             </div>
-
-            <!-- Ecosystem & Company (Col 3) -->
-            <div class="md:col-span-3">
-                <h6 class="font-label-md text-secondary-fixed-dim mb-6 uppercase tracking-wider flex items-center gap-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Ecosystem & Group
-                </h6>
-                <ul class="space-y-3.5 font-body-sm">
-                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block font-medium text-white/90" href="https://kamglobalai.com/">KAM Global AI Platform</a></li>
-                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="https://kamgroups.com/">KAM International Group</a></li>
-                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="https://eduaitutors.com/">EduAI Tutors</a></li>
-                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="https://www.najahtutors.net/">Najah Tutors</a></li>
-                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="about.html">About Us & Leadership</a></li>
-                    <li><a class="text-on-primary/70 hover:text-white hover:translate-x-1 transition-all inline-block" href="partners.html">Partnership Network</a></li>
-                </ul>
-            </div>
-
-            <!-- Global Hubs & Newsletter (Col 2) -->
-            <div class="md:col-span-2">
-                <h6 class="font-label-md text-secondary-fixed-dim mb-6 uppercase tracking-wider flex items-center gap-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Global Hubs
-                </h6>
-                <ul class="space-y-3.5 font-body-sm mb-8">
-                    <li class="flex items-center gap-2 text-on-primary/70"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span> London (EMEA HQ)</li>
-                    <li class="flex items-center gap-2 text-on-primary/70"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span> New York (AMER HQ)</li>
-                    <li class="flex items-center gap-2 text-on-primary/70"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span> Singapore (APAC HQ)</li>
-                </ul>
-                <div class="pt-2 border-t border-white/10">
-                    <a href="demo.html" class="inline-flex items-center gap-2 text-secondary font-label-md hover:underline mt-2">
-                        Schedule Consultation <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+    
+            <div class="site-footer__bottom">
+                <p class="site-footer__copy">&copy; 2026 KAM Global HR. All rights reserved.</p>
+                <nav class="site-footer__legal" aria-label="Legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <span class="site-footer__legal-sep" aria-hidden="true">|</span>
+                    <a href="terms.html">Terms of Service</a>
+                    <span class="site-footer__legal-sep" aria-hidden="true">|</span>
+                    <a href="privacy.html">Cookie Policy</a>
+                </nav>
+                <div class="site-footer__social" aria-label="Social media">
+                    <a href="#" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="#" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                    </a>
+                    <a href="#" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="X">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="#" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
                     </a>
                 </div>
-            </div>
-        </div>
-        
-        <!-- Bottom Sub-Footer Bar -->
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-on-primary/50 font-body-sm">
-            <div class="flex items-center gap-2">
-                <span>© 2026 KAM Global AI. Part of KAM International Group. All rights reserved.</span>
-            </div>
-            <div class="flex flex-wrap gap-8 items-center">
-                <a class="hover:text-white transition-colors" href="about.html">Privacy Policy</a>
-                <a class="hover:text-white transition-colors" href="about.html">Terms of Service</a>
-                <a class="hover:text-white transition-colors" href="services.html">Global Compliance</a>
-                <a class="hover:text-white transition-colors" href="services.html">Security Architecture</a>
-                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-8 h-8 rounded-full bg-white/10 hover:bg-secondary text-white flex items-center justify-center transition-all ml-4" title="Back to top">
-                    <span class="material-symbols-outlined text-[18px]">keyboard_arrow_up</span>
-                </button>
             </div>
         </div>
     </footer>
+
+
+
+
+
+
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>

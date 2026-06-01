@@ -3,8 +3,28 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Manpower Consulting & BGV | KAM Global AI</title>
-    <link rel='icon' type='image/png' sizes='32x32' href='assets/img/favicon_32x32.png'/>
+    <title>Background Verification Solutions | KAM Global HR</title>
+    <meta name="description" content="Employment, education, identity, and compliance background checks for hiring confidence."/>
+    <link rel="canonical" href="https://www.kamglobalhr.com/manpower-bgv.html"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Background Verification | KAM Global HR"/>
+    <meta property="og:description" content="Employment, education, identity, and compliance background checks for hiring confidence."/>
+    <meta property="og:url" content="https://www.kamglobalhr.com/manpower-bgv.html"/>
+    <meta property="og:image" content="https://www.kamglobalhr.com/assets/img/favicon-512x512.png"/>
+    <meta property="og:image:width" content="512"/>
+    <meta property="og:image:height" content="512"/>
+    <meta name="twitter:image" content="https://www.kamglobalhr.com/assets/img/favicon-512x512.png"/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+
+    <link rel="icon" href="assets/img/favicon.ico" sizes="any"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- External Libraries -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -15,386 +35,583 @@
     <script src="assets/js/tailwind-config.js"></script>
     <link href="assets/css/global.css" rel="stylesheet"/>
 </head>
-<body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<body class="service-page service-page--blue bgv-page site-page bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
 
-    <!-- TopNavBar -->
-    <header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-2xl border-b border-secondary/15 shadow-md h-24 transition-all duration-300">
-        <div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
-            <a href="index.html" class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-3">
-                <img src="assets/img/logo_512x512.png" alt="KAM Global AI" class="h-16 w-auto object-contain">
-            </a>
-            
-            <nav class="hidden md:flex items-center gap-4 xl:gap-8">
-                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="index.html">Home</a>
-                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="about.html">Company</a>
-                
-                <!-- Services Dropdown -->
-                <div class="relative group z-50">
-                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors flex items-center gap-1 cursor-pointer" href="services.html">
-                        Services <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+            <!-- TopNavBar -->
+    <header class="site-header fixed top-0 w-full z-50" id="site-header">
+        <div class="site-header__glow" aria-hidden="true"></div>
+        <div class="site-header__bar">
+            <div class="site-header__inner h-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
+                <div class="site-header__logo">
+                    <a href="index.html" class="site-header__logo-link" aria-label="Kam Global HR home">
+                        <img src="assets/img/logo.png" alt="Kam Global HR" class="site-logo" width="240" height="72"/>
                     </a>
-                    <div class="absolute left-0 top-full mt-4 w-[680px] bg-surface-container-lowest border border-outline-variant/30 rounded-3xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-3.5 grid grid-cols-2 gap-2 transform origin-top group-hover:scale-100 scale-95 border-t-4 border-t-primary">
-                        <a href="recruitment.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-blue-500">
-                            <span class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">person_search</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Recruitment Services</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Find top-tier permanent talent across regions</p>
+                </div>
+
+                <div class="site-header__nav-zone hidden lg:flex">
+                    <div class="site-header__pill">
+                        <nav class="site-header__nav" aria-label="Main navigation">
+                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="about.html">About Us</a>
+
+                            <div class="nav-item nav-item--dropdown nav-item--dropdown-services relative group z-50">
+                                <a class="nav-link nav-link--trigger is-active" href="services.html">
+                                    Services <span class="material-symbols-outlined nav-chevron">expand_more</span>
+                                </a>
+                                <div class="nav-dropdown nav-dropdown--menu">
+                                    <a href="recruitment.html" class="nav-dropdown__link">Recruitment</a>
+                                    <a href="contract-staffing.html" class="nav-dropdown__link">Contract Staffing</a>
+                                    <a href="payroll.html" class="nav-dropdown__link">Payroll Outsourcing</a>
+                                    <a href="hr-advisory.html" class="nav-dropdown__link">HR Advisory</a>
+                                    <a href="executive-search.html" class="nav-dropdown__link">Executive Search</a>
+                                    <a href="manpower-bgv.html" class="nav-dropdown__link">Background Verification</a>
+                                </div>
                             </div>
-                        </a>
-                        <a href="contract-staffing.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-amber-500">
-                            <span class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">badge</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Contract Staffing</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Flexible contract staffing for rapid scaling</p>
+
+                            <div class="nav-item nav-item--dropdown nav-item--dropdown-software relative group z-50">
+                                <a class="nav-link nav-link--trigger" href="ats.html">
+                                    Software <span class="material-symbols-outlined nav-chevron">expand_more</span>
+                                </a>
+                                <div class="nav-dropdown nav-dropdown--menu">
+                                    <a href="ats.html" class="nav-dropdown__link">ATS</a>
+                                    <a href="hr-talent.html" class="nav-dropdown__link">HRMS</a>
+                                    <a href="payroll-software.html" class="nav-dropdown__link">Payroll Software</a>
+                                </div>
                             </div>
-                        </a>
-                        <a href="payroll.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-emerald-500">
-                            <span class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">payments</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Payroll Outsourcing</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Compliant payroll & benefits administration</p>
+
+                            <a class="nav-link" href="industries.html">Industries</a>
+                            <div class="nav-item nav-item--dropdown nav-item--dropdown-resources relative group z-50">
+                                <a class="nav-link nav-link--trigger" href="insights.html">
+                                    Resources <span class="material-symbols-outlined nav-chevron">expand_more</span>
+                                </a>
+                                <div class="nav-dropdown nav-dropdown--menu">
+                                    <a href="case-studies.html" class="nav-dropdown__link">Case Studies</a>
+                                    <a href="insights.html" class="nav-dropdown__link">Insights / Blog</a>
+                                    <a href="partners.html" class="nav-dropdown__link">Partner With Us</a>
+                                </div>
                             </div>
-                        </a>
-                        <a href="hr-advisory.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-purple-500">
-                            <span class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">partner_exchange</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">HR Advisory & Consulting</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Strategic HR policy & compliance guidance</p>
-                            </div>
-                        </a>
-                        <a href="manpower-bgv.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-teal-500">
-                            <span class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">fact_check</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Manpower Consulting & BGV</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Comprehensive background checks & verification</p>
-                            </div>
-                        </a>
-                        <a href="executive-search.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-indigo-500">
-                            <span class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">diversity_3</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Executive Search</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Retained search for C-suite & leadership roles</p>
-                            </div>
-                        </a>
+
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </nav>
                     </div>
                 </div>
 
-                <!-- Industries Dropdown -->
-                <div class="relative group z-50">
-                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors flex items-center gap-1 cursor-pointer" href="industries.html">
-                        Industries <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
-                    </a>
-                    <div class="absolute left-0 top-full mt-2 w-64 bg-surface-container-lowest border border-outline-variant/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2 transform origin-top-left group-hover:scale-100 scale-95">
-                        <a href="industries.html" class="block px-4 py-2 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">IT & Technology</a>
-                        <a href="industries.html" class="block px-4 py-2 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Engineering & Manufacturing</a>
-                        <a href="industries.html" class="block px-4 py-2 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Education & EdTech</a>
-                        <a href="industries.html" class="block px-4 py-2 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Healthcare</a>
-                        <a href="industries.html" class="block px-4 py-2 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Hospitality & Retail</a>
-                    </div>
+                <div class="site-header__actions">
+                    <a href="contact.html" class="site-header__cta site-header__cta--primary hidden lg:inline-flex">Book Consultation</a>
+                    <button type="button" id="mobile-menu-btn" class="site-header__menu-btn lg:hidden" aria-label="Open menu" aria-expanded="false">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
                 </div>
+            </div>
+        </div>
 
-                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="insights.html">Insights</a>
+        <div id="mobile-menu" class="site-header__mobile hidden" aria-hidden="true">
+            <nav class="site-header__mobile-nav" aria-label="Mobile navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <span class="site-header__mobile-label">Services</span>
+                <a href="recruitment.html" class="site-header__mobile-sublink">Recruitment</a>
+                <a href="contract-staffing.html" class="site-header__mobile-sublink">Contract Staffing</a>
+                <a href="payroll.html" class="site-header__mobile-sublink">Payroll Outsourcing</a>
+                <a href="hr-advisory.html" class="site-header__mobile-sublink">HR Advisory</a>
+                <a href="executive-search.html" class="site-header__mobile-sublink">Executive Search</a>
+                <a href="manpower-bgv.html" class="site-header__mobile-sublink">Background Verification</a>
+                <span class="site-header__mobile-label">Software</span>
+                <a href="ats.html" class="site-header__mobile-sublink">ATS</a>
+                <a href="hr-talent.html" class="site-header__mobile-sublink">HRMS</a>
+                <a href="payroll-software.html" class="site-header__mobile-sublink">Payroll Software</a>
+                <a href="industries.html">Industries</a>
+                <span class="site-header__mobile-label">Resources</span>
+                <a href="case-studies.html" class="site-header__mobile-sublink">Case Studies</a>
+                <a href="insights.html" class="site-header__mobile-sublink">Insights / Blog</a>
+                <a href="partners.html" class="site-header__mobile-sublink">Partner With Us</a>
+                <a href="contact.html">Contact</a>
             </nav>
-
-            <div class="flex items-center gap-4">
-                <a href="login.html" class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors mr-2">Login</a>
-                <a href="demo.html" class="bg-gradient-to-r from-primary to-secondary text-white px-7 py-3 rounded-xl font-label-md hover:from-secondary hover:to-primary hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-md">Request Demo</a>
+            <div class="site-header__mobile-actions">
+                <a href="contact.html" class="site-header__cta site-header__cta--primary site-header__cta--mobile">Book Consultation</a>
             </div>
         </div>
     </header>
 
-    <main class="pt-24">
-        <!-- Cinematic Hero Section -->
-        <section class="relative h-[650px] flex items-center overflow-hidden bg-black">
-            <img src="assets/img/zero_tension_automation.png" alt="Forensic Automated Verification" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-luminosity scale-105">
-            <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent z-0"></div>
-            
-            <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop w-full">
-                <div class="max-w-3xl" data-aos="fade-right">
-                    <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-label-sm tracking-widest uppercase mb-8 shadow-sm">
-                        <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span> Zero Tension Automation
-                    </span>
-                    <h1 class="font-display-lg text-display-lg-mobile md:text-[5rem] text-white mb-6 leading-tight font-black">
-                        Manpower Consulting <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-blue-300 to-indigo-200 animate-gradient-text">& Forensic BGV</span>
-                    </h1>
-                    <p class="font-body-lg text-white/80 mb-10 max-w-2xl leading-relaxed text-lg">
-                        Executing automated credential authentication, biometric validation, and global criminal database scans across 40+ international databases. We provide absolute defense against credential fraud.
-                    </p>
-                    <div class="flex flex-wrap gap-6">
-                        <a href="#capabilities" class="bg-secondary text-on-primary px-8 py-4 rounded-xl font-label-md text-lg hover:bg-secondary/90 hover:scale-105 transition-all shadow-xl">
-                            Explore Forensic Protocols
-                        </a>
-                        <a href="contact.html" class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-xl font-label-md text-lg hover:bg-white/20 transition-all shadow-lg">
-                            Request BGV Audit
-                        </a>
+    <main class="page-wrap">
+        <!-- Service Hero -->
+        <section class="service-hero service-hero--blue bgv-hero">
+            <div class="service-hero__bg" aria-hidden="true"></div>
+            <div class="page-container service-hero__grid">
+                <div class="service-hero__copy" data-aos="fade-right" data-aos-duration="700">
+                    <span class="page-hero__badge"><span class="page-hero__badge-dot"></span> Background Verification Solutions</span>
+                    <h1 class="type-display">Trusted Verification for <span class="type-gradient animate-gradient-text">Confident Hiring Decisions</span></h1>
+                    <p class="type-lead">KAM Global HR provides comprehensive background verification services that help organizations validate candidate credentials, reduce hiring risks, and strengthen workforce integrity.</p>
+                    <div class="page-hero__actions">
+                        <a href="contact.html" class="page-btn page-btn--primary">Request Verification Consultation <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+                        <a href="contact.html" class="page-btn page-btn--ghost">Talk to Verification Experts</a>
+                    </div>
+                </div>
+                <div class="service-hero__visual" data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
+                    <div class="service-hero__media">
+                        <img src="assets/img/about-team.png" alt="Workforce screening and compliance verification professionals" width="720" height="480" loading="eager" decoding="async"/>
+                        <span class="service-hero__chip"><span class="material-symbols-outlined text-[14px] align-middle mr-1">verified_user</span>Trusted workforce screening</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Dynamic Stats Counter Bar -->
+        <!-- Hero highlights -->
         <section class="py-16 bg-surface border-b border-outline-variant/30 relative z-20">
             <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-xl transition-shadow" data-aos="zoom-in">
-                        <div class="text-display-lg font-black text-secondary mb-2 flex items-center justify-center">
-                            <span class="count-up" data-count="10">0</span>M+
-                        </div>
-                        <div class="font-label-md uppercase tracking-wider text-primary font-bold">Verifications Executed</div>
-                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Cryptographically signed records</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-xl transition-shadow" data-aos="fade-up">
+                        <span class="material-symbols-outlined text-secondary text-3xl mb-3">badge</span>
+                        <div class="font-label-md uppercase tracking-wider text-primary font-bold">Identity Verification</div>
+                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Authenticated candidate credentials</p>
                     </div>
-
-                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-xl transition-shadow" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="text-display-lg font-black text-primary mb-2 flex items-center justify-center">
-                            <span class="count-up" data-count="40">0</span>+
-                        </div>
-                        <div class="font-label-md uppercase tracking-wider text-primary font-bold">Country Databases</div>
-                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Synchronized with interpol & federal registries</p>
+                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="80">
+                        <span class="material-symbols-outlined text-secondary text-3xl mb-3">work_history</span>
+                        <div class="font-label-md uppercase tracking-wider text-primary font-bold">Employment Verification</div>
+                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Validated professional history</p>
                     </div>
-
-                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-xl transition-shadow" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="text-display-lg font-black text-secondary mb-2 flex items-center justify-center">
-                            <span class="count-up" data-count="12">0</span>
-                        </div>
-                        <div class="font-label-md uppercase tracking-wider text-primary font-bold">Hours Avg SLA</div>
-                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Industry-leading automated turnaround</p>
+                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="160">
+                        <span class="material-symbols-outlined text-secondary text-3xl mb-3">gavel</span>
+                        <div class="font-label-md uppercase tracking-wider text-primary font-bold">Compliance-Focused Screening</div>
+                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Policy-aligned verification</p>
                     </div>
-
-                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-xl transition-shadow" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="text-display-lg font-black text-primary mb-2 flex items-center justify-center">
-                            <span class="count-up" data-count="99.9">0</span>%
-                        </div>
-                        <div class="font-label-md uppercase tracking-wider text-primary font-bold">Fraud Detection Rate</div>
-                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Eliminating synthetic identity risks</p>
+                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="240">
+                        <span class="material-symbols-outlined text-secondary text-3xl mb-3">shield</span>
+                        <div class="font-label-md uppercase tracking-wider text-primary font-bold">Workforce Risk Management</div>
+                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Informed hiring decisions</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Core BGV Pillars (3D Tilt Cards) -->
+        <!-- Verification Services -->
         <section id="capabilities" class="py-28 bg-surface-container-low">
             <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
-                <div class="text-center mb-20">
-                    <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Enterprise Security Matrix</span>
-                    <h2 class="font-headline-lg text-primary mb-4" data-aos="fade-up">Forensic Background Verification</h2>
-                    <p class="text-on-surface-variant max-w-2xl mx-auto text-lg">Our background verification protocols utilize automated data scraping and direct cryptographic verification against global sovereign databases.</p>
+                <div class="text-center mb-20 max-w-3xl mx-auto">
+                    <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Verification Expertise</span>
+                    <h2 class="font-headline-lg text-primary mb-4" data-aos="fade-up">Comprehensive Background Verification Services</h2>
+                    <p class="text-on-surface-variant text-lg">Helping organizations verify candidate credentials, strengthen workforce trust, and make informed hiring decisions.</p>
                 </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Pillar 1 -->
-                    <div class="glass-card p-10 border border-outline-variant/30 rounded-[2.5rem] tilt-card shadow-xl group" data-aos="fade-up">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="glass-card p-8 border border-outline-variant/30 rounded-[2rem] tilt-card shadow-lg group" data-aos="fade-up">
                         <div class="tilt-inner h-full flex flex-col">
-                            <div class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-8 shadow-inner">
-                                <span class="material-symbols-outlined text-4xl">fingerprint</span>
-                            </div>
-                            <h3 class="font-headline-lg text-primary mb-4 group-hover:text-secondary transition-colors">Biometric & Identity Scans</h3>
-                            <p class="text-on-surface-variant font-body-lg mb-8 leading-relaxed flex-1">
-                                High-speed passport, national identity card, and biometric authentication matching against official state issuing authorities.
-                            </p>
-                            <ul class="space-y-4 mb-10 pt-6 border-t border-outline-variant/30">
-                                <li class="flex items-center gap-3 text-label-md text-primary font-bold">
-                                    <span class="material-symbols-outlined text-secondary">check_circle</span> Automated Passport Verification
-                                </li>
-                                <li class="flex items-center gap-3 text-label-md text-primary font-bold">
-                                    <span class="material-symbols-outlined text-secondary">check_circle</span> Biometric Identity Matching
-                                </li>
+                            <span class="material-symbols-outlined text-secondary text-4xl mb-4">badge</span>
+                            <h3 class="font-headline-md text-primary font-bold mb-3 group-hover:text-secondary transition-colors">Identity Verification</h3>
+                            <p class="text-on-surface-variant text-sm leading-relaxed flex-1 mb-6">Validate candidate identity information and supporting documentation to establish authenticity and workforce trust.</p>
+                            <ul class="space-y-2 pt-4 border-t border-outline-variant/30 text-label-md text-primary font-bold">
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Identity Validation</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Government Documentation Checks</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Candidate Authentication</li>
                             </ul>
-                            <a class="text-secondary font-bold flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-wider text-sm" href="#">
-                                Learn More <span class="material-symbols-outlined">arrow_forward</span>
-                            </a>
                         </div>
                     </div>
-
-                    <!-- Pillar 2 -->
-                    <div class="glass-card p-10 border border-outline-variant/30 rounded-[2.5rem] tilt-card shadow-xl group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card p-8 border border-outline-variant/30 rounded-[2rem] tilt-card shadow-lg group" data-aos="fade-up" data-aos-delay="60">
                         <div class="tilt-inner h-full flex flex-col">
-                            <div class="w-16 h-16 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center mb-8 shadow-inner">
-                                <span class="material-symbols-outlined text-4xl">verified</span>
-                            </div>
-                            <h3 class="font-headline-lg text-primary mb-4 group-hover:text-secondary transition-colors">Forensic Credential Audit</h3>
-                            <p class="text-on-surface-variant font-body-lg mb-8 leading-relaxed flex-1">
-                                Direct integration with global university registrar databases and past employer tax filings to authenticate academic degrees and professional track records.
-                            </p>
-                            <ul class="space-y-4 mb-10 pt-6 border-t border-outline-variant/30">
-                                <li class="flex items-center gap-3 text-label-md text-primary font-bold">
-                                    <span class="material-symbols-outlined text-secondary">check_circle</span> Academic Registrar Scans
-                                </li>
-                                <li class="flex items-center gap-3 text-label-md text-primary font-bold">
-                                    <span class="material-symbols-outlined text-secondary">check_circle</span> Past Employer Tax Verification
-                                </li>
+                            <span class="material-symbols-outlined text-secondary text-4xl mb-4">work_history</span>
+                            <h3 class="font-headline-md text-primary font-bold mb-3 group-hover:text-secondary transition-colors">Employment Verification</h3>
+                            <p class="text-on-surface-variant text-sm leading-relaxed flex-1 mb-6">Confirm previous employment history, positions held, responsibilities, and professional experience.</p>
+                            <ul class="space-y-2 pt-4 border-t border-outline-variant/30 text-label-md text-primary font-bold">
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Employment History Validation</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Experience Verification</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Professional Background Checks</li>
                             </ul>
-                            <a class="text-secondary font-bold flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-wider text-sm" href="#">
-                                Learn More <span class="material-symbols-outlined">arrow_forward</span>
-                            </a>
                         </div>
                     </div>
-
-                    <!-- Pillar 3 -->
-                    <div class="bg-gradient-to-br from-primary via-primary to-blue-900 p-10 border border-outline-variant/30 rounded-[2.5rem] tilt-card shadow-2xl group text-white" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card p-8 border border-outline-variant/30 rounded-[2rem] tilt-card shadow-lg group" data-aos="fade-up" data-aos-delay="120">
                         <div class="tilt-inner h-full flex flex-col">
-                            <div class="w-16 h-16 rounded-2xl bg-white/10 text-teal-300 flex items-center justify-center mb-8 backdrop-blur-md shadow-lg border border-white/20">
-                                <span class="material-symbols-outlined text-4xl">local_police</span>
-                            </div>
-                            <h3 class="font-headline-lg text-white mb-4">Global Watchlist Scans</h3>
-                            <p class="text-white/80 font-body-lg mb-8 leading-relaxed flex-1">
-                                Real-time cross-referencing against international criminal databases, Interpol red notices, OFAC sanctions lists, and global anti-money laundering (AML) registries.
-                            </p>
-                            <ul class="space-y-4 mb-10 pt-6 border-t border-white/20">
-                                <li class="flex items-center gap-3 text-label-md text-white font-bold">
-                                    <span class="material-symbols-outlined text-teal-300">check_circle</span> Interpol & OFAC Scans
-                                </li>
-                                <li class="flex items-center gap-3 text-label-md text-white font-bold">
-                                    <span class="material-symbols-outlined text-teal-300">check_circle</span> AML & Sanctions Monitoring
-                                </li>
+                            <span class="material-symbols-outlined text-secondary text-4xl mb-4">school</span>
+                            <h3 class="font-headline-md text-primary font-bold mb-3 group-hover:text-secondary transition-colors">Education Verification</h3>
+                            <p class="text-on-surface-variant text-sm leading-relaxed flex-1 mb-6">Verify academic qualifications, certifications, and educational credentials from recognized institutions.</p>
+                            <ul class="space-y-2 pt-4 border-t border-outline-variant/30 text-label-md text-primary font-bold">
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Academic Verification</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Qualification Checks</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Certification Validation</li>
                             </ul>
-                            <a class="text-teal-300 font-bold flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-wider text-sm" href="#">
-                                Learn More <span class="material-symbols-outlined">arrow_forward</span>
-                            </a>
+                        </div>
+                    </div>
+                    <div class="glass-card p-8 border border-outline-variant/30 rounded-[2rem] tilt-card shadow-lg group" data-aos="fade-up" data-aos-delay="180">
+                        <div class="tilt-inner h-full flex flex-col">
+                            <span class="material-symbols-outlined text-secondary text-4xl mb-4">forum</span>
+                            <h3 class="font-headline-md text-primary font-bold mb-3 group-hover:text-secondary transition-colors">Reference Checks</h3>
+                            <p class="text-on-surface-variant text-sm leading-relaxed flex-1 mb-6">Gather professional references and insights regarding performance, conduct, and workplace behavior.</p>
+                            <ul class="space-y-2 pt-4 border-t border-outline-variant/30 text-label-md text-primary font-bold">
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Professional References</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Workplace Feedback</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Performance Validation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="glass-card p-8 border border-outline-variant/30 rounded-[2rem] tilt-card shadow-lg group" data-aos="fade-up" data-aos-delay="240">
+                        <div class="tilt-inner h-full flex flex-col">
+                            <span class="material-symbols-outlined text-secondary text-4xl mb-4">home_pin</span>
+                            <h3 class="font-headline-md text-primary font-bold mb-3 group-hover:text-secondary transition-colors">Address Verification</h3>
+                            <p class="text-on-surface-variant text-sm leading-relaxed flex-1 mb-6">Confirm residential information and supporting records to strengthen candidate verification processes.</p>
+                            <ul class="space-y-2 pt-4 border-t border-outline-variant/30 text-label-md text-primary font-bold">
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Address Validation</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Residence Confirmation</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Supporting Documentation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="glass-card p-8 border border-outline-variant/30 rounded-[2rem] tilt-card shadow-lg group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="tilt-inner h-full flex flex-col">
+                            <span class="material-symbols-outlined text-secondary text-4xl mb-4">policy</span>
+                            <h3 class="font-headline-md text-primary font-bold mb-3 group-hover:text-secondary transition-colors">Criminal &amp; Compliance Screening</h3>
+                            <p class="text-on-surface-variant text-sm leading-relaxed flex-1 mb-6">Support organizations with legally compliant screening processes designed to mitigate workforce risks.</p>
+                            <ul class="space-y-2 pt-4 border-t border-outline-variant/30 text-label-md text-primary font-bold">
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Risk Mitigation</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Compliance Reviews</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Workforce Protection</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Bento Grid: The BGV Advantage -->
-        <section class="py-28 bg-surface">
-            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
-                <div class="mb-16 text-center md:text-left">
-                    <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Zero Tension Verification</span>
-                    <h2 class="font-headline-lg text-primary mb-4" data-aos="fade-right">The Forensic BGV Matrix</h2>
-                    <p class="text-on-surface-variant text-lg max-w-3xl" data-aos="fade-right">How we deliver absolute certainty before you grant high-level system access to incoming staff.</p>
+        <!-- Verification Process -->
+        <section class="bgv-process py-28 bg-surface border-y border-outline-variant/20">
+            <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
+                <div class="text-center mb-20" data-aos="fade-up">
+                    <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Our Background Verification Process</span>
+                    <h2 class="font-headline-lg text-primary mb-4">A Structured, Transparent Verification Workflow</h2>
+                    <p class="text-on-surface-variant text-lg max-w-2xl mx-auto">Reliable, compliance-focused verification�from request initiation through final reporting.</p>
                 </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[650px]">
-                    <div class="md:col-span-8 relative rounded-[2.5rem] overflow-hidden shadow-xl group" data-aos="fade-up">
-                        <img src="assets/img/zero_tension_automation.png" alt="Forensic Automation Network" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-12 flex flex-col justify-end text-white z-10">
-                            <span class="material-symbols-outlined text-teal-400 text-4xl mb-4">admin_panel_settings</span>
-                            <h4 class="font-headline-lg mb-4">Continuous Risk Scoring Engine</h4>
-                            <p class="font-body-lg opacity-90 max-w-2xl leading-relaxed">Our AI doesn't stop at initial onboarding. We offer continuous periodic background scanning to ensure ongoing compliance with regulatory security mandates for sensitive financial roles.</p>
-                        </div>
-                    </div>
-
-                    <div class="md:col-span-4 bg-gradient-to-br from-secondary to-blue-500 flex flex-col justify-center p-12 rounded-[2.5rem] shadow-xl text-white hover:shadow-2xl transition-all" data-aos="fade-up" data-aos-delay="100">
-                        <span class="material-symbols-outlined text-[48px] mb-6 text-white/80">fact_check</span>
-                        <h4 class="font-headline-md font-bold mb-4">Cryptographic Audit Trails</h4>
-                        <p class="font-body-md opacity-90 leading-relaxed">Every verification check is timestamped and cryptographically signed on a secure digital ledger, providing an immutable audit trail for internal security reviews.</p>
-                    </div>
-
-                    <div class="md:col-span-4 bg-surface-container-highest p-12 rounded-[2.5rem] flex flex-col justify-center border border-outline-variant/30 shadow-sm hover:border-secondary transition-colors" data-aos="fade-up" data-aos-delay="200">
-                        <span class="material-symbols-outlined text-[48px] mb-6 text-secondary">verified_user</span>
-                        <h4 class="font-headline-md font-bold mb-4 text-primary">Zero-Friction Candidate Portal</h4>
-                        <p class="font-body-sm text-on-surface-variant leading-relaxed">Candidates upload their identity documents via an intuitive, encrypted mobile portal that validates image authenticity in under 60 seconds.</p>
-                    </div>
-
-                    <div class="md:col-span-8 relative rounded-[2.5rem] overflow-hidden shadow-xl border border-outline-variant/30 group" data-aos="fade-up" data-aos-delay="300">
-                        <img src="assets/img/ai_recruitment.png" alt="Secure Operations" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:scale-105 transition-transform duration-700 mix-blend-multiply">
-                        <div class="absolute inset-0 bg-primary/90 p-12 flex items-center z-10">
-                            <div class="max-w-xl">
-                                <span class="material-symbols-outlined text-teal-300 text-4xl mb-4">rule</span>
-                                <h4 class="font-headline-lg mb-4 text-white">Global Regulatory Adherence</h4>
-                                <p class="font-body-lg text-white/80 leading-relaxed">All verification workflows strictly adhere to GDPR, FCRA, and international data privacy regulations, guaranteeing legal compliance at every phase.</p>
+                <div class="recruitment-pipeline recruitment-pipeline--8 max-w-7xl mx-auto">
+                    <div class="recruitment-pipeline__track hidden xl:block" aria-hidden="true"></div>
+                    <ol class="recruitment-pipeline__grid">
+                        <li class="recruitment-pipeline__card" data-aos="fade-up">
+                            <span class="recruitment-pipeline__badge recruitment-pipeline__badge--primary">01</span>
+                            <div class="recruitment-pipeline__body">
+                                <h3 class="recruitment-pipeline__title">Verification Request Initiation</h3>
+                                <p class="recruitment-pipeline__desc">Scope and verification requirements defined.</p>
                             </div>
-                        </div>
+                        </li>
+                        <li class="recruitment-pipeline__card" data-aos="fade-up" data-aos-delay="50">
+                            <span class="recruitment-pipeline__badge recruitment-pipeline__badge--secondary">02</span>
+                            <div class="recruitment-pipeline__body">
+                                <h3 class="recruitment-pipeline__title">Candidate Consent &amp; Documentation</h3>
+                                <p class="recruitment-pipeline__desc">Consent and document collection.</p>
+                            </div>
+                        </li>
+                        <li class="recruitment-pipeline__card" data-aos="fade-up" data-aos-delay="100">
+                            <span class="recruitment-pipeline__badge recruitment-pipeline__badge--primary">03</span>
+                            <div class="recruitment-pipeline__body">
+                                <h3 class="recruitment-pipeline__title">Identity Validation</h3>
+                                <p class="recruitment-pipeline__desc">Identity and credential checks.</p>
+                            </div>
+                        </li>
+                        <li class="recruitment-pipeline__card" data-aos="fade-up" data-aos-delay="150">
+                            <span class="recruitment-pipeline__badge recruitment-pipeline__badge--secondary">04</span>
+                            <div class="recruitment-pipeline__body">
+                                <h3 class="recruitment-pipeline__title">Employment Verification</h3>
+                                <p class="recruitment-pipeline__desc">Work history confirmation.</p>
+                            </div>
+                        </li>
+                        <li class="recruitment-pipeline__card" data-aos="fade-up" data-aos-delay="200">
+                            <span class="recruitment-pipeline__badge recruitment-pipeline__badge--primary">05</span>
+                            <div class="recruitment-pipeline__body">
+                                <h3 class="recruitment-pipeline__title">Education Verification</h3>
+                                <p class="recruitment-pipeline__desc">Academic and certification validation.</p>
+                            </div>
+                        </li>
+                        <li class="recruitment-pipeline__card" data-aos="fade-up" data-aos-delay="250">
+                            <span class="recruitment-pipeline__badge recruitment-pipeline__badge--secondary">06</span>
+                            <div class="recruitment-pipeline__body">
+                                <h3 class="recruitment-pipeline__title">Reference Checks</h3>
+                                <p class="recruitment-pipeline__desc">Professional reference outreach.</p>
+                            </div>
+                        </li>
+                        <li class="recruitment-pipeline__card" data-aos="fade-up" data-aos-delay="300">
+                            <span class="recruitment-pipeline__badge recruitment-pipeline__badge--primary">07</span>
+                            <div class="recruitment-pipeline__body">
+                                <h3 class="recruitment-pipeline__title">Compliance Review</h3>
+                                <p class="recruitment-pipeline__desc">Regulatory and policy alignment.</p>
+                            </div>
+                        </li>
+                        <li class="recruitment-pipeline__card" data-aos="fade-up" data-aos-delay="350">
+                            <span class="recruitment-pipeline__badge recruitment-pipeline__badge--secondary">08</span>
+                            <div class="recruitment-pipeline__body">
+                                <h3 class="recruitment-pipeline__title">Final Verification Report</h3>
+                                <p class="recruitment-pipeline__desc">Clear, professional reporting delivery.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why BGV Matters -->
+        <section class="py-28 bg-surface-container-low">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+                <div class="text-center mb-12 max-w-3xl mx-auto" data-aos="fade-up">
+                    <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Workforce Risk Management</span>
+                    <h2 class="font-headline-lg text-primary mb-4">Reducing Workforce Risk Through Verification</h2>
+                    <p class="text-on-surface-variant text-lg">Hiring decisions influence productivity, security, compliance, and organizational reputation. Comprehensive verification helps organizations reduce uncertainty and improve workforce confidence.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="glass-card p-8 rounded-[2rem] border border-outline-variant/30 shadow-lg" data-aos="fade-up"><span class="material-symbols-outlined text-secondary text-3xl mb-4">verified_user</span><h3 class="font-headline-md text-primary font-bold mb-3">Workforce Integrity</h3><p class="text-on-surface-variant">Strengthen hiring confidence through verified information.</p></div>
+                    <div class="glass-card p-8 rounded-[2rem] border border-outline-variant/30 shadow-lg" data-aos="fade-up" data-aos-delay="60"><span class="material-symbols-outlined text-secondary text-3xl mb-4">shield</span><h3 class="font-headline-md text-primary font-bold mb-3">Risk Reduction</h3><p class="text-on-surface-variant">Reduce exposure to hiring-related risks.</p></div>
+                    <div class="glass-card p-8 rounded-[2rem] border border-outline-variant/30 shadow-lg" data-aos="fade-up" data-aos-delay="120"><span class="material-symbols-outlined text-secondary text-3xl mb-4">gavel</span><h3 class="font-headline-md text-primary font-bold mb-3">Compliance Support</h3><p class="text-on-surface-variant">Maintain verification practices aligned with organizational policies.</p></div>
+                    <div class="glass-card p-8 rounded-[2rem] border border-outline-variant/30 shadow-lg" data-aos="fade-up" data-aos-delay="180"><span class="material-symbols-outlined text-secondary text-3xl mb-4">thumb_up</span><h3 class="font-headline-md text-primary font-bold mb-3">Better Hiring Decisions</h3><p class="text-on-surface-variant">Improve workforce quality through validated information.</p></div>
+                    <div class="glass-card p-8 rounded-[2rem] border border-outline-variant/30 shadow-lg" data-aos="fade-up" data-aos-delay="240"><span class="material-symbols-outlined text-secondary text-3xl mb-4">workspace_premium</span><h3 class="font-headline-md text-primary font-bold mb-3">Reputation Protection</h3><p class="text-on-surface-variant">Support organizational trust and credibility.</p></div>
+                    <div class="glass-card p-8 rounded-[2rem] border border-outline-variant/30 shadow-lg" data-aos="fade-up" data-aos-delay="300"><span class="material-symbols-outlined text-secondary text-3xl mb-4">health_and_safety</span><h3 class="font-headline-md text-primary font-bold mb-3">Safer Work Environments</h3><p class="text-on-surface-variant">Create secure and reliable workplaces.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Verification Coverage -->
+        <section class="py-24 bg-surface">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right">
+                        <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Lifecycle Coverage</span>
+                        <h2 class="font-headline-lg text-primary mb-4">Verification Coverage Across the Employee Lifecycle</h2>
+                        <p class="text-on-surface-variant text-lg leading-relaxed mb-8">Background verification supports workforce quality across recruitment, staffing, executive hiring, and contractor onboarding.</p>
                     </div>
+                    <div class="bgv-coverage-grid" data-aos="fade-left">
+                        <a href="recruitment.html" class="bgv-coverage-item"><span class="material-symbols-outlined">person_search</span> Permanent Hiring</a>
+                        <a href="contract-staffing.html" class="bgv-coverage-item"><span class="material-symbols-outlined">groups</span> Contract Staffing</a>
+                        <a href="executive-search.html" class="bgv-coverage-item"><span class="material-symbols-outlined">corporate_fare</span> Executive Search</a>
+                        <a href="executive-search.html" class="bgv-coverage-item"><span class="material-symbols-outlined">workspace_premium</span> Leadership Hiring</a>
+                        <a href="recruitment.html" class="bgv-coverage-item"><span class="material-symbols-outlined">trending_up</span> Workforce Expansion</a>
+                        <a href="contract-staffing.html" class="bgv-coverage-item"><span class="material-symbols-outlined">handshake</span> Contractor Engagement</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industries -->
+        <section class="py-24 bg-surface-container-low border-y border-outline-variant/20">
+            <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Sector Coverage</span>
+                    <h2 class="font-headline-lg text-primary mb-4">Verification Solutions Across Industries</h2>
+                    <p class="text-on-surface-variant max-w-2xl mx-auto text-lg">Workforce screening tailored to industry-specific compliance and risk requirements.</p>
+                </div>
+                <ul class="recruitment-industries" aria-label="Industries we verify for">
+                    <li class="recruitment-industries__card" data-aos="fade-up">
+                        <span class="recruitment-industries__icon material-symbols-outlined" aria-hidden="true">computer</span>
+                        <span class="recruitment-industries__label">IT &amp; Technology</span>
+                    </li>
+                    <li class="recruitment-industries__card" data-aos="fade-up" data-aos-delay="40">
+                        <span class="recruitment-industries__icon material-symbols-outlined" aria-hidden="true">engineering</span>
+                        <span class="recruitment-industries__label">Engineering</span>
+                    </li>
+                    <li class="recruitment-industries__card" data-aos="fade-up" data-aos-delay="80">
+                        <span class="recruitment-industries__icon material-symbols-outlined" aria-hidden="true">precision_manufacturing</span>
+                        <span class="recruitment-industries__label">Manufacturing</span>
+                    </li>
+                    <li class="recruitment-industries__card" data-aos="fade-up" data-aos-delay="120">
+                        <span class="recruitment-industries__icon material-symbols-outlined" aria-hidden="true">health_and_safety</span>
+                        <span class="recruitment-industries__label">Healthcare</span>
+                    </li>
+                    <li class="recruitment-industries__card" data-aos="fade-up" data-aos-delay="160">
+                        <span class="recruitment-industries__icon material-symbols-outlined" aria-hidden="true">room_service</span>
+                        <span class="recruitment-industries__label">Hospitality</span>
+                    </li>
+                    <li class="recruitment-industries__card" data-aos="fade-up" data-aos-delay="200">
+                        <span class="recruitment-industries__icon material-symbols-outlined" aria-hidden="true">storefront</span>
+                        <span class="recruitment-industries__label">Retail</span>
+                    </li>
+                    <li class="recruitment-industries__card" data-aos="fade-up" data-aos-delay="240">
+                        <span class="recruitment-industries__icon material-symbols-outlined" aria-hidden="true">school</span>
+                        <span class="recruitment-industries__label">Education</span>
+                    </li>
+                    <li class="recruitment-industries__card" data-aos="fade-up" data-aos-delay="280">
+                        <span class="recruitment-industries__icon material-symbols-outlined" aria-hidden="true">business_center</span>
+                        <span class="recruitment-industries__label">Professional Services</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Compliance & Confidentiality -->
+        <section class="py-28 bg-surface">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop text-center">
+                <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block" data-aos="fade-up">Confidentiality &amp; Compliance</span>
+                <h2 class="font-headline-lg text-primary mb-4" data-aos="fade-up">Built on Confidentiality, Accuracy &amp; Compliance</h2>
+                <p class="text-on-surface-variant text-lg max-w-3xl mx-auto mb-14" data-aos="fade-up">Verification processes require secure handling of sensitive information. KAM Global HR follows structured verification methodologies focused on confidentiality, professionalism, and data integrity.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-lg" data-aos="fade-up"><span class="material-symbols-outlined text-secondary text-3xl mb-3">lock</span><div class="font-label-lg text-primary font-bold">Confidential Information Handling</div></div>
+                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-lg" data-aos="fade-up" data-aos-delay="60"><span class="material-symbols-outlined text-secondary text-3xl mb-3">fact_check</span><div class="font-label-lg text-primary font-bold">Verification Accuracy</div></div>
+                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-lg" data-aos="fade-up" data-aos-delay="120"><span class="material-symbols-outlined text-secondary text-3xl mb-3">folder_lock</span><div class="font-label-lg text-primary font-bold">Secure Documentation Processes</div></div>
+                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-lg" data-aos="fade-up" data-aos-delay="180"><span class="material-symbols-outlined text-secondary text-3xl mb-3">gavel</span><div class="font-label-lg text-primary font-bold">Compliance-Oriented Reviews</div></div>
+                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-lg" data-aos="fade-up" data-aos-delay="240"><span class="material-symbols-outlined text-secondary text-3xl mb-3">description</span><div class="font-label-lg text-primary font-bold">Professional Reporting</div></div>
+                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-lg" data-aos="fade-up" data-aos-delay="300"><span class="material-symbols-outlined text-secondary text-3xl mb-3">admin_panel_settings</span><div class="font-label-lg text-primary font-bold">Workforce Risk Governance</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Trust (Editorial) -->
+        <section class="bgv-trust py-32">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+                <div class="bgv-trust__inner" data-aos="fade-up">
+                    <span class="bgv-trust__eyebrow">Workforce Confidence</span>
+                    <h2 class="bgv-trust__title">Verification Builds Workforce Confidence</h2>
+                    <p class="bgv-trust__lead">Strong organizations depend on trustworthy people. Background verification helps businesses make informed workforce decisions while reducing operational and compliance risks.</p>
                 </div>
             </div>
         </section>
 
         <!-- Final CTA -->
         <section class="py-24 px-margin-mobile md:px-margin-tablet max-w-container-max mx-auto">
-            <div class="rounded-[3rem] overflow-hidden shadow-2xl relative bg-black py-24 px-12 md:px-24 text-center border border-outline-variant/30 group">
-                <img src="assets/img/zero_tension_automation.png" alt="Secure Workforce" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-700 z-0 mix-blend-luminosity">
-                <div class="absolute inset-0 bg-gradient-to-b from-primary/90 via-black/80 to-black z-0"></div>
-
+            <div class="rounded-[3rem] overflow-hidden shadow-2xl relative bg-surface-container-lowest py-20 px-12 md:px-24 text-center border border-outline-variant/30">
                 <div class="relative z-10 max-w-4xl mx-auto">
-                    <span class="inline-block bg-white/10 backdrop-blur-md text-white border border-white/20 px-5 py-2 font-label-sm uppercase tracking-widest rounded-full mb-8 shadow-sm" data-aos="zoom-in">
-                        Zero Tension Security
-                    </span>
-                    <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-8 leading-tight" data-aos="fade-up">
-                        Ready to secure your <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-teal-200 to-white animate-gradient-text">Organizational Perimeter?</span>
-                    </h2>
-                    <p class="font-body-lg text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-                        Consult with our forensic Verification Experts today to implement bulletproof background screening and protect your corporate ecosystem.
-                    </p>
+                    <span class="inline-block bg-primary/10 text-primary border border-outline-variant/30 px-5 py-2 font-label-sm uppercase tracking-widest rounded-full mb-8 shadow-sm" data-aos="zoom-in">Trusted Screening</span>
+                    <h2 class="type-h2 text-primary mb-6 leading-tight" data-aos="fade-up">Strengthen Hiring Decisions with Trusted Verification</h2>
+                    <p class="font-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">Partner with KAM Global HR for comprehensive background verification, workforce screening, and risk management solutions.</p>
                     <div class="flex flex-wrap justify-center gap-6" data-aos="fade-up" data-aos-delay="200">
-                        <a href="demo.html" class="bg-secondary text-on-primary px-10 py-5 rounded-xl font-label-lg shadow-2xl hover:bg-secondary/90 hover:scale-105 transition-all">
-                            Initiate Verification Suite
-                        </a>
-                        <a href="contact.html" class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-5 rounded-xl font-label-lg hover:bg-white/20 transition-colors shadow-lg">
-                            Request Forensic Demo
-                        </a>
+                        <a href="contact.html" class="page-btn page-btn--primary">Request Verification Consultation <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+                        <a href="contact.html" class="page-btn page-btn--ghost">Speak to Verification Specialists</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="w-full pt-20 pb-12 bg-primary text-on-primary border-t border-on-primary-fixed-variant/20">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto mb-16">
-            <div class="lg:col-span-1">
-                <div class="font-headline-lg font-black text-surface-container-lowest mb-6 flex items-center gap-3">
-                    <img src="assets/img/logo_512x512.png" alt="KAM Global AI" class="h-24 w-auto object-contain">
+                        <!-- Global site footer — edit this file only; run: python scratch/sync_global_footer.py -->
+    <footer class="site-footer site-footer--enterprise" role="contentinfo">
+        <div class="site-footer__inner max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="site-footer__main">
+                <div class="site-footer__brand">
+                    <a href="index.html" class="site-footer__logo-link" aria-label="KAM Global HR home">
+                        <img src="assets/img/logo.png" alt="KAM Global HR" class="site-footer__logo" width="280" height="96"/>
+                    </a>
+                    <p class="site-footer__desc">Empowering organizations worldwide with recruitment excellence, workforce solutions, payroll services, and HR expertise to build stronger, future-ready teams.</p>
+                    <ul class="site-footer__contact">
+                        <li>
+                            <span class="site-footer__contact-icon material-symbols-outlined" aria-hidden="true">mail</span>
+                            <a href="mailto:info@kamgroups.com">info@kamgroups.com</a>
+                        </li>
+                        <li>
+                            <span class="site-footer__contact-icon material-symbols-outlined" aria-hidden="true">call</span>
+                            <a href="tel:+442079460000">+44 20 7946 0000</a>
+                        </li>
+                    </ul>
                 </div>
-                <p class="font-body-sm opacity-80 mb-8 max-w-xs leading-relaxed">
-                    Empowering international finance and HR through mathematical intelligence, automated compliance, and ethical AI innovation.
-                </p>
-            </div>
-            <div>
-                <h6 class="font-label-md text-teal-300 mb-6 uppercase tracking-wider font-bold">Solutions</h6>
-                <ul class="space-y-4">
-                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="recruitment.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> AI HR Suite</a></li>
-                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="payroll.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> Predictive Finance</a></li>
-                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="services.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> EduAI Tutors</a></li>
-                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="services.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> Najah Tutors</a></li>
-                </ul>
-            </div>
-            <div>
-                <h6 class="font-label-md text-teal-300 mb-6 uppercase tracking-wider font-bold">Company</h6>
-                <ul class="space-y-4">
-                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="about.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> About Us</a></li>
-                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="contact.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> Global Locations</a></li>
-                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="recruitment.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> Careers</a></li>
-                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="contact.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h6 class="font-label-md text-teal-300 mb-6 uppercase tracking-wider font-bold">Stay Updated</h6>
-                <div class="flex gap-2 mb-6">
-                    <input class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-3 text-body-sm w-full focus:outline-none focus:border-teal-300 text-white placeholder-white/50 shadow-inner" placeholder="Enterprise email" type="email"/>
-                    <button class="bg-secondary px-6 py-3 rounded-xl text-on-primary font-bold shadow-lg hover:bg-secondary/90 transition-all"><span class="material-symbols-outlined">send</span></button>
+                <nav class="site-footer__col" aria-labelledby="footer-solutions-title">
+                    <h2 class="site-footer__heading" id="footer-solutions-title">Solutions</h2>
+                    <ul class="site-footer__links">
+                        <li><a href="recruitment.html"><span class="site-footer__chev" aria-hidden="true">›</span>Recruitment Services</a></li>
+                        <li><a href="contract-staffing.html"><span class="site-footer__chev" aria-hidden="true">›</span>Contract Staffing</a></li>
+                        <li><a href="payroll.html"><span class="site-footer__chev" aria-hidden="true">›</span>Payroll Outsourcing</a></li>
+                        <li><a href="hr-advisory.html"><span class="site-footer__chev" aria-hidden="true">›</span>HR Advisory &amp; Consulting</a></li>
+                        <li><a href="executive-search.html"><span class="site-footer__chev" aria-hidden="true">›</span>Executive Search</a></li>
+                        <li><a href="manpower-bgv.html"><span class="site-footer__chev" aria-hidden="true">›</span>Background Verification</a></li>
+                    </ul>
+                </nav>
+                <nav class="site-footer__col" aria-labelledby="footer-software-title">
+                    <h2 class="site-footer__heading" id="footer-software-title">Software</h2>
+                    <ul class="site-footer__links">
+                        <li><a href="hr-talent.html"><span class="site-footer__chev" aria-hidden="true">›</span>HRMS Software</a></li>
+                        <li><a href="ats.html"><span class="site-footer__chev" aria-hidden="true">›</span>ATS Software</a></li>
+                        <li><a href="payroll-software.html"><span class="site-footer__chev" aria-hidden="true">›</span>Payroll Software</a></li>
+                    </ul>
+                </nav>
+                <nav class="site-footer__col" aria-labelledby="footer-resources-title">
+                    <h2 class="site-footer__heading" id="footer-resources-title">Resources</h2>
+                    <ul class="site-footer__links">
+                        <li><a href="insights.html"><span class="site-footer__chev" aria-hidden="true">›</span>Insights Hub</a></li>
+                        <li><a href="case-studies.html"><span class="site-footer__chev" aria-hidden="true">›</span>Case Studies</a></li>
+                        <li><a href="industries.html"><span class="site-footer__chev" aria-hidden="true">›</span>Industries</a></li>
+                        <li><a href="insights.html"><span class="site-footer__chev" aria-hidden="true">›</span>Downloads &amp; Guides</a></li>
+                    </ul>
+                </nav>
+                <nav class="site-footer__col" aria-labelledby="footer-company-title">
+                    <h2 class="site-footer__heading" id="footer-company-title">Company</h2>
+                    <ul class="site-footer__links">
+                        <li><a href="about.html"><span class="site-footer__chev" aria-hidden="true">›</span>About Us</a></li>
+                        <li><a href="about.html"><span class="site-footer__chev" aria-hidden="true">›</span>Our Leadership</a></li>
+                        <li><a href="contact.html"><span class="site-footer__chev" aria-hidden="true">›</span>Careers</a></li>
+                        <li><a href="insights.html"><span class="site-footer__chev" aria-hidden="true">›</span>Newsroom</a></li>
+                        <li><a href="contact.html"><span class="site-footer__chev" aria-hidden="true">›</span>Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div class="site-footer__col site-footer__col--offices">
+                    <h2 class="site-footer__heading" id="footer-offices-title">Global Offices</h2>
+                    <address class="site-footer__offices" aria-labelledby="footer-offices-title">
+                        <a class="site-footer__office-card" href="https://www.google.com/maps/place/KAM+GLOBAL+AI/@13.3104691,75.2165459,7z/data=!4m7!3m6!1s0x3bae170035391cbd:0xa77c598425d3a196!8m2!3d13.0209878!4d77.593684!15sCglrYW1nbG9iYWzgAQA!16s%2Fg%2F11yvxpjv74?entry=tts&amp;g_ep=EgoyMDI2MDMwOC4wIPu8ASoASAFQAw%3D%3D&amp;skid=dbeb7bd2-d116-4915-b0b8-033022d7beab" target="_blank" rel="noopener noreferrer">
+                            <span class="site-footer__office-pin material-symbols-outlined" aria-hidden="true">location_on</span>
+                            <span class="site-footer__office-body">
+                                <span class="site-footer__office-title">India</span>
+                                <span class="site-footer__office-lines">RT Nagar,<br>Bengaluru, KA</span>
+                            </span>
+                        </a>
+                        <a class="site-footer__office-card" href="https://www.google.com/maps/place/KAM+International+Group+Co./@29.3438775,48.0144258,17z/data=!3m1!4b1!4m6!3m5!1s0x3fcf9c96696d414d:0x96261e72f31ecb19!8m2!3d29.3438728!4d48.0170007!16s%2Fg%2F1tf5zs5_?entry=tts&amp;g_ep=EgoyMDI2MDMwOC4wIPu8ASoASAFQAw%3D%3D&amp;skid=7a633f8f-4cd3-46c7-a404-eedc9e31f22f" target="_blank" rel="noopener noreferrer">
+                            <span class="site-footer__office-pin material-symbols-outlined" aria-hidden="true">location_on</span>
+                            <span class="site-footer__office-body">
+                                <span class="site-footer__office-title">Kuwait</span>
+                                <span class="site-footer__office-lines">Block 4, Tunisia St.,<br>Hawally</span>
+                            </span>
+                        </a>
+                    </address>
                 </div>
-                <div class="flex gap-4">
-                    <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-teal-400 hover:text-primary cursor-pointer transition-all border border-white/20"><span class="material-symbols-outlined text-lg">public</span></span>
-                    <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-teal-400 hover:text-primary cursor-pointer transition-all border border-white/20"><span class="material-symbols-outlined text-lg">group</span></span>
-                    <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-teal-400 hover:text-primary cursor-pointer transition-all border border-white/20"><span class="material-symbols-outlined text-lg">hub</span></span>
+            </div>
+    
+            <div class="site-footer__trust" aria-label="Company highlights">
+                <div class="site-footer__trust-item">
+                    <span class="site-footer__trust-icon material-symbols-outlined" aria-hidden="true">engineering</span>
+                    <span class="site-footer__trust-text">
+                        <strong>22+ Years</strong>
+                        <span>Workforce Excellence</span>
+                    </span>
+                </div>
+                <div class="site-footer__trust-item">
+                    <span class="site-footer__trust-icon material-symbols-outlined" aria-hidden="true">work</span>
+                    <span class="site-footer__trust-text">
+                        <strong>100+</strong>
+                        <span>Client Relationships</span>
+                    </span>
+                </div>
+                <div class="site-footer__trust-item">
+                    <span class="site-footer__trust-icon material-symbols-outlined" aria-hidden="true">public</span>
+                    <span class="site-footer__trust-text">
+                        <strong>7+ Countries</strong>
+                        <span>Global Presence</span>
+                    </span>
+                </div>
+                <div class="site-footer__trust-item">
+                    <span class="site-footer__trust-icon material-symbols-outlined" aria-hidden="true">verified_user</span>
+                    <span class="site-footer__trust-text">
+                        <strong>Trusted Partner</strong>
+                        <span>Compliance &amp; Quality Driven</span>
+                    </span>
                 </div>
             </div>
-        </div>
-        <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p class="font-body-sm opacity-70">© 2026 KAM Global AI. Empowering global finance and HR through mathematical intelligence.</p>
-            <div class="flex gap-8">
-                <a class="font-label-sm text-white/80 hover:text-white hover:underline transition-all" href="#">Privacy Policy</a>
-                <a class="font-label-sm text-white/80 hover:text-white hover:underline transition-all" href="#">Terms of Service</a>
-                <a class="font-label-sm text-white/80 hover:text-white hover:underline transition-all" href="#">Security Standards</a>
+    
+            <div class="site-footer__bottom">
+                <p class="site-footer__copy">&copy; 2026 KAM Global HR. All rights reserved.</p>
+                <nav class="site-footer__legal" aria-label="Legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <span class="site-footer__legal-sep" aria-hidden="true">|</span>
+                    <a href="terms.html">Terms of Service</a>
+                    <span class="site-footer__legal-sep" aria-hidden="true">|</span>
+                    <a href="privacy.html">Cookie Policy</a>
+                </nav>
+                <div class="site-footer__social" aria-label="Social media">
+                    <a href="#" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="#" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                    </a>
+                    <a href="#" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="X">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="#" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
+
+
+
+
+
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>

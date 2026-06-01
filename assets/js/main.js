@@ -1,36 +1,81 @@
-// Global JavaScript for KAM Global AI
+// Global JavaScript for Kam Global HR
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize AOS (Animate On Scroll)
     if (typeof AOS !== 'undefined') {
         AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
+            duration: 750,
+            easing: 'ease-out-cubic',
             once: true,
-            offset: 50
+            offset: 60,
+            delay: 0,
+            anchorPlacement: 'top-bottom'
         });
     }
 
-    // Mobile menu toggle logic
+    // Site header: scroll state + mobile menu
+    const siteHeader = document.getElementById('site-header');
+    if (siteHeader) {
+        const onScroll = () => {
+            siteHeader.classList.toggle('site-header--scrolled', window.scrollY > 16);
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+    }
+
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
-        if (mobileMenuBtn && mobileMenu) {
+    if (mobileMenuBtn && mobileMenu) {
+        const icon = mobileMenuBtn.querySelector('.material-symbols-outlined');
+        const openMenu = () => {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.setAttribute('aria-hidden', 'false');
+            mobileMenuBtn.classList.add('is-open');
+            mobileMenuBtn.setAttribute('aria-expanded', 'true');
+            if (icon) icon.textContent = 'close';
+            document.body.style.overflow = 'hidden';
+        };
+        const closeMenu = () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.setAttribute('aria-hidden', 'true');
+            mobileMenuBtn.classList.remove('is-open');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            if (icon) icon.textContent = 'menu';
+            document.body.style.overflow = '';
+        };
         mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) openMenu();
+            else closeMenu();
+        });
+        mobileMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', closeMenu);
+        });
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) closeMenu();
+        });
+    }
+
+    // Hero hub: highlight connector on chip hover
+    const heroHubStage = document.querySelector('.hero-hub__stage');
+    if (heroHubStage) {
+        heroHubStage.querySelectorAll('.hero-hub__chip').forEach((chip) => {
+            const service = chip.getAttribute('data-service');
+            if (!service) return;
+            chip.addEventListener('mouseenter', () => {
+                heroHubStage.classList.add(`is-hover-${service}`);
+            });
+            chip.addEventListener('mouseleave', () => {
+                heroHubStage.classList.remove(`is-hover-${service}`);
+            });
         });
     }
 
     // Scroll Spy for Process Section (Sticky Images)
     const processSteps = document.querySelectorAll('.process-step');
-    const processImages = [
-        document.getElementById('process-img-1'),
-        document.getElementById('process-img-2'),
-        document.getElementById('process-img-3'),
-        document.getElementById('process-img-4')
-    ];
+    const processImages = Array.from(document.querySelectorAll('.process-section__sticky-img'));
 
-    if (processSteps.length > 0 && processImages[0]) {
+    if (processSteps.length > 0 && processImages.length > 0) {
         const observerOptions = {
             root: null,
             rootMargin: '-30% 0px -40% 0px',
@@ -40,14 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const stepIndex = parseInt(entry.target.getAttribute('data-step')) - 1;
-                    
-                    // Fade out all images
+                    const stepIndex = parseInt(entry.target.getAttribute('data-step'), 10) - 1;
+
                     processImages.forEach(img => {
-                        if(img) img.style.opacity = '0';
+                        if (img) img.style.opacity = '0';
                     });
-                    
-                    // Fade in current image
+
                     if (processImages[stepIndex]) {
                         processImages[stepIndex].style.opacity = '1';
                     }
@@ -57,30 +100,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
         processSteps.forEach(step => observer.observe(step));
     }
-});
 
     // 3D Tilt Effect for cards
-    const tiltCards = document.querySelectorAll(".tilt-card");
-    tiltCards.forEach(card => {
-        card.addEventListener("mousemove", e => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            const rotateX = ((y - centerY) / centerY) * -10; // Max 10 deg
-            const rotateY = ((x - centerX) / centerX) * 10;
-            
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    const tiltCards = document.querySelectorAll('.tilt-card');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!prefersReducedMotion) {
+        tiltCards.forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const rotateX = ((y - centerY) / centerY) * -8;
+                const rotateY = ((x - centerX) / centerX) * 8;
+
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            });
         });
-        
-        card.addEventListener("mouseleave", () => {
-            card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
-        });
-    });
-    // Interactive Video Player Logic
+    }
+
+    // Interactive Video Player Logic
     const automationVideo = document.getElementById('automation-video');
     const playOverlay = document.getElementById('play-overlay');
     const muteBtn = document.getElementById('mute-btn');
@@ -108,7 +155,9 @@ document.addEventListener('DOMContentLoaded', () => {
             muteBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 automationVideo.muted = !automationVideo.muted;
-                muteBtn.innerHTML = automationVideo.muted ? '<span class="material-symbols-outlined text-xl">volume_off</span>' : '<span class="material-symbols-outlined text-xl">volume_up</span>';
+                muteBtn.innerHTML = automationVideo.muted
+                    ? '<span class="material-symbols-outlined text-xl">volume_off</span>'
+                    : '<span class="material-symbols-outlined text-xl">volume_up</span>';
             });
         }
 
@@ -120,14 +169,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dynamic Counter Animation Engine
     const counterElements = document.querySelectorAll('.count-up');
-    if (counterElements.length > 0) {
+    if (counterElements.length > 0 && !prefersReducedMotion) {
         const counterObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const target = entry.target;
-                    const finalValue = parseFloat(target.getAttribute('data-count')) || 0;
-                    const isDecimal = target.getAttribute('data-count').includes('.');
-                    const duration = 2500; // 2.5 seconds
+                    const raw = target.getAttribute('data-count') || '0';
+                    const finalValue = parseFloat(raw) || 0;
+                    const isDecimal = raw.includes('.');
+                    const duration = 2200;
                     const frameRate = 1000 / 60;
                     const totalFrames = Math.round(duration / frameRate);
                     let currentFrame = 0;
@@ -135,7 +185,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     const updateCounter = () => {
                         currentFrame++;
                         const progress = currentFrame / totalFrames;
-                        // Ease out quad
                         const current = finalValue * (1 - Math.pow(1 - progress, 3));
 
                         if (isDecimal) {
@@ -147,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (currentFrame < totalFrames) {
                             requestAnimationFrame(updateCounter);
                         } else {
-                            target.innerText = finalValue;
+                            target.innerText = raw;
                         }
                     };
 
@@ -155,7 +204,115 @@ document.addEventListener('DOMContentLoaded', () => {
                     observer.unobserve(target);
                 }
             });
-        }, { threshold: 0.3 });
+        }, { threshold: 0.35 });
 
         counterElements.forEach(el => counterObserver.observe(el));
     }
+
+    // Image reveal on scroll
+    const imgRevealBlocks = document.querySelectorAll('.img-reveal');
+    if (imgRevealBlocks.length > 0) {
+        const imgObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+        imgRevealBlocks.forEach(el => imgObserver.observe(el));
+    }
+
+    // Quote spotlight — subtle entrance (text stays visible; no empty band)
+    const quoteSpotlight = document.querySelector('.quote-spotlight');
+    if (quoteSpotlight) {
+        quoteSpotlight.classList.add('is-visible');
+    }
+
+    // Lead forms: validation, submit, success states
+    const FORM_ENDPOINT = 'https://formsubmit.co/ajax/info@kamgroups.com';
+
+    function showFormMessage(form, type, message) {
+        let box = form.querySelector('.form-message');
+        if (!box) {
+            box = document.createElement('p');
+            box.className = 'form-message';
+            box.setAttribute('role', 'status');
+            box.setAttribute('aria-live', 'polite');
+            form.appendChild(box);
+        }
+        box.className = `form-message form-message--${type}`;
+        box.textContent = message;
+    }
+
+    function validateLeadForm(form) {
+        const required = form.querySelectorAll('[required]');
+        let valid = true;
+        required.forEach((field) => {
+            field.classList.remove('is-invalid');
+            if (!field.value.trim()) {
+                field.classList.add('is-invalid');
+                valid = false;
+            }
+        });
+        const email = form.querySelector('input[type="email"]');
+        if (email && email.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+            email.classList.add('is-invalid');
+            valid = false;
+        }
+        return valid;
+    }
+
+    async function submitLeadForm(form) {
+        const submitBtn = form.querySelector('[type="submit"]');
+        const originalLabel = submitBtn ? submitBtn.innerHTML : '';
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.setAttribute('aria-busy', 'true');
+        }
+
+        const data = new FormData(form);
+        const subject = form.classList.contains('insights-newsletter__form')
+            ? 'KAM Global HR newsletter subscription'
+            : 'KAM Global HR website inquiry';
+        data.set('_subject', subject);
+        data.set('_captcha', 'false');
+
+        try {
+            const res = await fetch(FORM_ENDPOINT, {
+                method: 'POST',
+                body: data,
+                headers: { Accept: 'application/json' }
+            });
+            if (!res.ok) throw new Error('submit failed');
+            form.reset();
+            showFormMessage(form, 'success', 'Thank you. Your message has been sent. Our team will respond shortly.');
+            if (form.classList.contains('contact-form')) {
+                window.setTimeout(() => {
+                    window.location.href = 'thank-you.html';
+                }, 1200);
+            }
+        } catch {
+            showFormMessage(form, 'error', 'We could not send your message. Please email info@kamgroups.com or try again.');
+        } finally {
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.removeAttribute('aria-busy');
+                submitBtn.innerHTML = originalLabel;
+            }
+        }
+    }
+
+    document.querySelectorAll('form.contact-form, form.insights-newsletter__form').forEach((form) => {
+        form.setAttribute('novalidate', 'novalidate');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (!validateLeadForm(form)) {
+                showFormMessage(form, 'error', 'Please complete all required fields.');
+                return;
+            }
+            submitLeadForm(form);
+        });
+    });
+});

@@ -3,8 +3,28 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Executive Search & Board Advisory | KAM Global AI</title>
-    <link rel='icon' type='image/png' sizes='32x32' href='assets/img/favicon_32x32.png'/>
+    <title>Executive Search Solutions | KAM Global HR</title>
+    <meta name="description" content="Confidential C-suite and senior leadership search, assessment, and placement."/>
+    <link rel="canonical" href="https://www.kamglobalhr.com/executive-search.html"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Executive Search | KAM Global HR"/>
+    <meta property="og:description" content="Confidential C-suite and senior leadership search, assessment, and placement."/>
+    <meta property="og:url" content="https://www.kamglobalhr.com/executive-search.html"/>
+    <meta property="og:image" content="https://www.kamglobalhr.com/assets/img/favicon-512x512.png"/>
+    <meta property="og:image:width" content="512"/>
+    <meta property="og:image:height" content="512"/>
+    <meta name="twitter:image" content="https://www.kamglobalhr.com/assets/img/favicon-512x512.png"/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+
+    <link rel="icon" href="assets/img/favicon.ico" sizes="any"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- External Libraries -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -15,386 +35,566 @@
     <script src="assets/js/tailwind-config.js"></script>
     <link href="assets/css/global.css" rel="stylesheet"/>
 </head>
-<body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<body class="service-page service-page--blue executive-search-page site-page bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
 
-    <!-- TopNavBar -->
-    <header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-2xl border-b border-secondary/15 shadow-md h-24 transition-all duration-300">
-        <div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
-            <a href="index.html" class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-3">
-                <img src="assets/img/logo_512x512.png" alt="KAM Global AI" class="h-16 w-auto object-contain">
-            </a>
-            
-            <nav class="hidden md:flex items-center gap-4 xl:gap-8">
-                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="index.html">Home</a>
-                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="about.html">Company</a>
-                
-                <!-- Services Dropdown -->
-                <div class="relative group z-50">
-                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors flex items-center gap-1 cursor-pointer" href="services.html">
-                        Services <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+            <!-- TopNavBar -->
+    <header class="site-header fixed top-0 w-full z-50" id="site-header">
+        <div class="site-header__glow" aria-hidden="true"></div>
+        <div class="site-header__bar">
+            <div class="site-header__inner h-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
+                <div class="site-header__logo">
+                    <a href="index.html" class="site-header__logo-link" aria-label="Kam Global HR home">
+                        <img src="assets/img/logo.png" alt="Kam Global HR" class="site-logo" width="240" height="72"/>
                     </a>
-                    <div class="absolute left-0 top-full mt-4 w-[680px] bg-surface-container-lowest border border-outline-variant/30 rounded-3xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-3.5 grid grid-cols-2 gap-2 transform origin-top group-hover:scale-100 scale-95 border-t-4 border-t-primary">
-                        <a href="recruitment.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-blue-500">
-                            <span class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">person_search</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Recruitment Services</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Find top-tier permanent talent across regions</p>
+                </div>
+
+                <div class="site-header__nav-zone hidden lg:flex">
+                    <div class="site-header__pill">
+                        <nav class="site-header__nav" aria-label="Main navigation">
+                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="about.html">About Us</a>
+
+                            <div class="nav-item nav-item--dropdown nav-item--dropdown-services relative group z-50">
+                                <a class="nav-link nav-link--trigger is-active" href="services.html">
+                                    Services <span class="material-symbols-outlined nav-chevron">expand_more</span>
+                                </a>
+                                <div class="nav-dropdown nav-dropdown--menu">
+                                    <a href="recruitment.html" class="nav-dropdown__link">Recruitment</a>
+                                    <a href="contract-staffing.html" class="nav-dropdown__link">Contract Staffing</a>
+                                    <a href="payroll.html" class="nav-dropdown__link">Payroll Outsourcing</a>
+                                    <a href="hr-advisory.html" class="nav-dropdown__link">HR Advisory</a>
+                                    <a href="executive-search.html" class="nav-dropdown__link">Executive Search</a>
+                                    <a href="manpower-bgv.html" class="nav-dropdown__link">Background Verification</a>
+                                </div>
                             </div>
-                        </a>
-                        <a href="contract-staffing.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-amber-500">
-                            <span class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">badge</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Contract Staffing</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Flexible contract staffing for rapid scaling</p>
+
+                            <div class="nav-item nav-item--dropdown nav-item--dropdown-software relative group z-50">
+                                <a class="nav-link nav-link--trigger" href="ats.html">
+                                    Software <span class="material-symbols-outlined nav-chevron">expand_more</span>
+                                </a>
+                                <div class="nav-dropdown nav-dropdown--menu">
+                                    <a href="ats.html" class="nav-dropdown__link">ATS</a>
+                                    <a href="hr-talent.html" class="nav-dropdown__link">HRMS</a>
+                                    <a href="payroll-software.html" class="nav-dropdown__link">Payroll Software</a>
+                                </div>
                             </div>
-                        </a>
-                        <a href="payroll.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-emerald-500">
-                            <span class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">payments</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Payroll Outsourcing</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Compliant payroll & benefits administration</p>
+
+                            <a class="nav-link" href="industries.html">Industries</a>
+                            <div class="nav-item nav-item--dropdown nav-item--dropdown-resources relative group z-50">
+                                <a class="nav-link nav-link--trigger" href="insights.html">
+                                    Resources <span class="material-symbols-outlined nav-chevron">expand_more</span>
+                                </a>
+                                <div class="nav-dropdown nav-dropdown--menu">
+                                    <a href="case-studies.html" class="nav-dropdown__link">Case Studies</a>
+                                    <a href="insights.html" class="nav-dropdown__link">Insights / Blog</a>
+                                    <a href="partners.html" class="nav-dropdown__link">Partner With Us</a>
+                                </div>
                             </div>
-                        </a>
-                        <a href="hr-advisory.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-purple-500">
-                            <span class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">partner_exchange</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">HR Advisory & Consulting</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Strategic HR policy & compliance guidance</p>
-                            </div>
-                        </a>
-                        <a href="manpower-bgv.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-teal-500">
-                            <span class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">fact_check</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Manpower Consulting & BGV</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Comprehensive background checks & verification</p>
-                            </div>
-                        </a>
-                        <a href="executive-search.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-indigo-500">
-                            <span class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">diversity_3</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Executive Search</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Retained search for C-suite & leadership roles</p>
-                            </div>
-                        </a>
+
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </nav>
                     </div>
                 </div>
 
-                <!-- Industries Dropdown -->
-                <div class="relative group z-50">
-                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors flex items-center gap-1 cursor-pointer" href="industries.html">
-                        Industries <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
-                    </a>
-                    <div class="absolute left-0 top-full mt-2 w-64 bg-surface-container-lowest border border-outline-variant/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2 transform origin-top-left group-hover:scale-100 scale-95">
-                        <a href="industries.html" class="block px-4 py-2 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">IT & Technology</a>
-                        <a href="industries.html" class="block px-4 py-2 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Engineering & Manufacturing</a>
-                        <a href="industries.html" class="block px-4 py-2 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Education & EdTech</a>
-                        <a href="industries.html" class="block px-4 py-2 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Healthcare</a>
-                        <a href="industries.html" class="block px-4 py-2 font-body-sm hover:bg-surface-container hover:text-secondary rounded-xl transition-colors">Hospitality & Retail</a>
-                    </div>
+                <div class="site-header__actions">
+                    <a href="contact.html" class="site-header__cta site-header__cta--primary hidden lg:inline-flex">Book Consultation</a>
+                    <button type="button" id="mobile-menu-btn" class="site-header__menu-btn lg:hidden" aria-label="Open menu" aria-expanded="false">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
                 </div>
+            </div>
+        </div>
 
-                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="insights.html">Insights</a>
+        <div id="mobile-menu" class="site-header__mobile hidden" aria-hidden="true">
+            <nav class="site-header__mobile-nav" aria-label="Mobile navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <span class="site-header__mobile-label">Services</span>
+                <a href="recruitment.html" class="site-header__mobile-sublink">Recruitment</a>
+                <a href="contract-staffing.html" class="site-header__mobile-sublink">Contract Staffing</a>
+                <a href="payroll.html" class="site-header__mobile-sublink">Payroll Outsourcing</a>
+                <a href="hr-advisory.html" class="site-header__mobile-sublink">HR Advisory</a>
+                <a href="executive-search.html" class="site-header__mobile-sublink">Executive Search</a>
+                <a href="manpower-bgv.html" class="site-header__mobile-sublink">Background Verification</a>
+                <span class="site-header__mobile-label">Software</span>
+                <a href="ats.html" class="site-header__mobile-sublink">ATS</a>
+                <a href="hr-talent.html" class="site-header__mobile-sublink">HRMS</a>
+                <a href="payroll-software.html" class="site-header__mobile-sublink">Payroll Software</a>
+                <a href="industries.html">Industries</a>
+                <span class="site-header__mobile-label">Resources</span>
+                <a href="case-studies.html" class="site-header__mobile-sublink">Case Studies</a>
+                <a href="insights.html" class="site-header__mobile-sublink">Insights / Blog</a>
+                <a href="partners.html" class="site-header__mobile-sublink">Partner With Us</a>
+                <a href="contact.html">Contact</a>
             </nav>
-
-            <div class="flex items-center gap-4">
-                <a href="login.html" class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors mr-2">Login</a>
-                <a href="demo.html" class="bg-gradient-to-r from-primary to-secondary text-white px-7 py-3 rounded-xl font-label-md hover:from-secondary hover:to-primary hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-md">Request Demo</a>
+            <div class="site-header__mobile-actions">
+                <a href="contact.html" class="site-header__cta site-header__cta--primary site-header__cta--mobile">Book Consultation</a>
             </div>
         </div>
     </header>
 
-    <main class="pt-24">
-        <!-- Cinematic Hero Section -->
-        <section class="relative h-[650px] flex items-center overflow-hidden bg-black">
-            <img src="assets/img/executive_search.png" alt="Executive Leadership Mapping" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-luminosity scale-105">
-            <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent z-0"></div>
-            
-            <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop w-full">
-                <div class="max-w-3xl" data-aos="fade-right">
-                    <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-label-sm tracking-widest uppercase mb-8 shadow-sm">
-                        <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span> Elite C-Suite Acquisition
-                    </span>
-                    <h1 class="font-display-lg text-display-lg-mobile md:text-[5rem] text-white mb-6 leading-tight font-black">
-                        Executive Search <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-teal-300 to-blue-300 animate-gradient-text">& Board Advisory</span>
-                    </h1>
-                    <p class="font-body-lg text-white/80 mb-10 max-w-2xl leading-relaxed text-lg">
-                        Discreet, high-level leadership acquisition. We identify visionaries capable of navigating complex global financial matrices, leading major corporate turnarounds, and scaling enterprise architecture.
-                    </p>
-                    <div class="flex flex-wrap gap-6">
-                        <a href="#capabilities" class="bg-secondary text-on-primary px-8 py-4 rounded-xl font-label-md text-lg hover:bg-secondary/90 hover:scale-105 transition-all shadow-xl">
-                            Explore Search Protocol
-                        </a>
-                        <a href="contact.html" class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-xl font-label-md text-lg hover:bg-white/20 transition-all shadow-lg">
-                            Request Leadership Brief
-                        </a>
+    <main class="page-wrap">
+        <!-- Service Hero -->
+        <section class="service-hero service-hero--blue exec-search-hero">
+            <div class="service-hero__bg" aria-hidden="true"></div>
+            <div class="page-container service-hero__grid">
+                <div class="service-hero__copy" data-aos="fade-right" data-aos-duration="700">
+                    <span class="page-hero__badge"><span class="page-hero__badge-dot"></span> Executive Search Solutions</span>
+                    <h1 class="type-display">Connecting Organizations with <span class="type-gradient animate-gradient-text">Exceptional Leadership Talent</span></h1>
+                    <p class="type-lead">KAM Global HR helps organizations identify, assess, and secure high-impact leaders through confidential executive search solutions tailored to business objectives and organizational growth.</p>
+                    <div class="page-hero__actions">
+                        <a href="contact.html" class="page-btn page-btn--primary">Schedule Executive Consultation <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+                        <a href="contact.html" class="page-btn page-btn--ghost">Speak with Search Specialists</a>
+                    </div>
+                </div>
+                <div class="service-hero__visual" data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
+                    <div class="service-hero__media exec-search-hero__media">
+                        <img src="assets/img/leadership-perspective.png" alt="Executive boardroom leadership discussion" width="720" height="480" loading="eager" decoding="async"/>
+                        <span class="service-hero__chip"><span class="material-symbols-outlined text-[14px] align-middle mr-1">lock</span>Confidential executive search</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Dynamic Stats Counter Bar -->
-        <section class="py-16 bg-surface border-b border-outline-variant/30 relative z-20">
+        <!-- Hero highlights -->
+        <section class="py-20 bg-surface border-b border-outline-variant/30 relative z-20">
             <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-xl transition-shadow" data-aos="zoom-in">
-                        <div class="text-display-lg font-black text-secondary mb-2 flex items-center justify-center">
-                            <span class="count-up" data-count="500">0</span>+
-                        </div>
-                        <div class="font-label-md uppercase tracking-wider text-primary font-bold">C-Suite Placements</div>
-                        <p class="text-body-sm text-on-surface-variant/80 mt-2">CEOs, CFOs, CTOs, and Managing Directors</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div class="exec-search-stat p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm" data-aos="fade-up">
+                        <span class="material-symbols-outlined text-secondary text-3xl mb-3">workspace_premium</span>
+                        <div class="font-label-md uppercase tracking-wider text-primary font-bold">Leadership Hiring Expertise</div>
+                        <p class="text-body-sm text-on-surface-variant/80 mt-2">C-suite and senior leadership focus</p>
                     </div>
-
-                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-xl transition-shadow" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="text-display-lg font-black text-primary mb-2 flex items-center justify-center">
-                            $<span class="count-up" data-count="500">0</span>B+
-                        </div>
-                        <div class="font-label-md uppercase tracking-wider text-primary font-bold">Client Market Cap</div>
-                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Aggregate market valuation of portfolio firms</p>
+                    <div class="exec-search-stat p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm" data-aos="fade-up" data-aos-delay="80">
+                        <span class="material-symbols-outlined text-secondary text-3xl mb-3">lock</span>
+                        <div class="font-label-md uppercase tracking-wider text-primary font-bold">Confidential Search Process</div>
+                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Discreet, board-level engagement</p>
                     </div>
-
-                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-xl transition-shadow" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="text-display-lg font-black text-secondary mb-2 flex items-center justify-center">
-                            <span class="count-up" data-count="100">0</span>%
-                        </div>
-                        <div class="font-label-md uppercase tracking-wider text-primary font-bold">Confidentiality Protocol</div>
-                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Military-grade data isolation</p>
+                    <div class="exec-search-stat p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm" data-aos="fade-up" data-aos-delay="160">
+                        <span class="material-symbols-outlined text-secondary text-3xl mb-3">hub</span>
+                        <div class="font-label-md uppercase tracking-wider text-primary font-bold">Multi-Industry Leadership Network</div>
+                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Executive talent across sectors</p>
                     </div>
-
-                    <div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-xl transition-shadow" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="text-display-lg font-black text-primary mb-2 flex items-center justify-center">
-                            <span class="count-up" data-count="98.6">0</span>%
-                        </div>
-                        <div class="font-label-md uppercase tracking-wider text-primary font-bold">Board Retention SLA</div>
-                        <p class="text-body-sm text-on-surface-variant/80 mt-2">3-year executive continuity milestone</p>
+                    <div class="exec-search-stat p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm" data-aos="fade-up" data-aos-delay="240">
+                        <span class="material-symbols-outlined text-secondary text-3xl mb-3">strategy</span>
+                        <div class="font-label-md uppercase tracking-wider text-primary font-bold">Strategic Talent Advisory</div>
+                        <p class="text-body-sm text-on-surface-variant/80 mt-2">Leadership aligned to vision</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Core Executive Pillars (3D Tilt Cards) -->
-        <section id="capabilities" class="py-28 bg-surface-container-low">
+        <!-- Executive Search Solutions -->
+        <section id="capabilities" class="py-32 bg-surface">
             <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
-                <div class="text-center mb-20">
-                    <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">C-Suite Acquisition Matrix</span>
-                    <h2 class="font-headline-lg text-primary mb-4" data-aos="fade-up">Elite Search Methodologies</h2>
-                    <p class="text-on-surface-variant max-w-2xl mx-auto text-lg">Our search teams operate with unparalleled discretion, utilizing advanced mapping to identify global industry authorities who perfectly complement your board's vision.</p>
+                <div class="text-center mb-24 max-w-3xl mx-auto">
+                    <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Executive Search Expertise</span>
+                    <h2 class="font-headline-lg text-primary mb-4" data-aos="fade-up">Leadership Search &amp; Talent Advisory Services</h2>
+                    <p class="text-on-surface-variant text-lg">Helping organizations secure exceptional leadership talent capable of driving growth, transformation, and long-term business success.</p>
                 </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Pillar 1 -->
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                     <div class="glass-card p-10 border border-outline-variant/30 rounded-[2.5rem] tilt-card shadow-xl group" data-aos="fade-up">
                         <div class="tilt-inner h-full flex flex-col">
                             <div class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-8 shadow-inner">
-                                <span class="material-symbols-outlined text-4xl">workspace_premium</span>
+                                <span class="material-symbols-outlined text-4xl">corporate_fare</span>
                             </div>
-                            <h3 class="font-headline-lg text-primary mb-4 group-hover:text-secondary transition-colors">Global C-Suite Network</h3>
+                            <h3 class="font-headline-lg text-primary mb-4 group-hover:text-secondary transition-colors">C-Suite Executive Search</h3>
                             <p class="text-on-surface-variant font-body-lg mb-8 leading-relaxed flex-1">
-                                Direct personal access to passive, top-tier executive talent across major global financial hubs including London, New York, Tokyo, and Dubai.
+                                Confidential search services for CEOs, CFOs, COOs, CHROs, CTOs, and other executive leadership positions.
                             </p>
                             <ul class="space-y-4 mb-10 pt-6 border-t border-outline-variant/30">
-                                <li class="flex items-center gap-3 text-label-md text-primary font-bold">
-                                    <span class="material-symbols-outlined text-secondary">check_circle</span> Top-Tier Passive Talent Access
-                                </li>
-                                <li class="flex items-center gap-3 text-label-md text-primary font-bold">
-                                    <span class="material-symbols-outlined text-secondary">check_circle</span> Major Global Hub Integration
-                                </li>
+                                <li class="flex items-center gap-3 text-label-md text-primary font-bold"><span class="material-symbols-outlined text-secondary">check_circle</span> Board-Level Talent</li>
+                                <li class="flex items-center gap-3 text-label-md text-primary font-bold"><span class="material-symbols-outlined text-secondary">check_circle</span> C-Suite Leadership</li>
+                                <li class="flex items-center gap-3 text-label-md text-primary font-bold"><span class="material-symbols-outlined text-secondary">check_circle</span> Strategic Hiring</li>
                             </ul>
-                            <a class="text-secondary font-bold flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-wider text-sm" href="#">
-                                Learn More <span class="material-symbols-outlined">arrow_forward</span>
-                            </a>
+                            <a class="text-secondary font-bold flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-wider text-sm" href="contact.html">Learn More <span class="material-symbols-outlined">arrow_forward</span></a>
                         </div>
                     </div>
 
-                    <!-- Pillar 2 -->
                     <div class="glass-card p-10 border border-outline-variant/30 rounded-[2.5rem] tilt-card shadow-xl group" data-aos="fade-up" data-aos-delay="100">
                         <div class="tilt-inner h-full flex flex-col">
                             <div class="w-16 h-16 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center mb-8 shadow-inner">
-                                <span class="material-symbols-outlined text-4xl">lock</span>
+                                <span class="material-symbols-outlined text-4xl">groups</span>
                             </div>
-                            <h3 class="font-headline-lg text-primary mb-4 group-hover:text-secondary transition-colors">Discreet Search Protocols</h3>
+                            <h3 class="font-headline-lg text-primary mb-4 group-hover:text-secondary transition-colors">Senior Leadership Recruitment</h3>
                             <p class="text-on-surface-variant font-body-lg mb-8 leading-relaxed flex-1">
-                                Complete confidentiality maintained through encrypted communication channels and blind executive briefs, preventing market volatility during leadership transitions.
+                                Identify experienced leaders for department heads, business unit leaders, and senior management positions.
                             </p>
                             <ul class="space-y-4 mb-10 pt-6 border-t border-outline-variant/30">
-                                <li class="flex items-center gap-3 text-label-md text-primary font-bold">
-                                    <span class="material-symbols-outlined text-secondary">check_circle</span> Encrypted Communication Rails
-                                </li>
-                                <li class="flex items-center gap-3 text-label-md text-primary font-bold">
-                                    <span class="material-symbols-outlined text-secondary">check_circle</span> Blind Executive Briefs
-                                </li>
+                                <li class="flex items-center gap-3 text-label-md text-primary font-bold"><span class="material-symbols-outlined text-secondary">check_circle</span> Functional Leaders</li>
+                                <li class="flex items-center gap-3 text-label-md text-primary font-bold"><span class="material-symbols-outlined text-secondary">check_circle</span> Operational Leadership</li>
+                                <li class="flex items-center gap-3 text-label-md text-primary font-bold"><span class="material-symbols-outlined text-secondary">check_circle</span> Business Growth Roles</li>
                             </ul>
-                            <a class="text-secondary font-bold flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-wider text-sm" href="#">
-                                Learn More <span class="material-symbols-outlined">arrow_forward</span>
-                            </a>
+                            <a class="text-secondary font-bold flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-wider text-sm" href="contact.html">Learn More <span class="material-symbols-outlined">arrow_forward</span></a>
                         </div>
                     </div>
 
-                    <!-- Pillar 3 -->
-                    <div class="bg-gradient-to-br from-primary via-primary to-blue-900 p-10 border border-outline-variant/30 rounded-[2.5rem] tilt-card shadow-2xl group text-white" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card p-10 border border-outline-variant/30 rounded-[2.5rem] tilt-card shadow-xl group" data-aos="fade-up" data-aos-delay="200">
                         <div class="tilt-inner h-full flex flex-col">
-                            <div class="w-16 h-16 rounded-2xl bg-white/10 text-teal-300 flex items-center justify-center mb-8 backdrop-blur-md shadow-lg border border-white/20">
-                                <span class="material-symbols-outlined text-4xl">balance</span>
+                            <div class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-8 shadow-inner">
+                                <span class="material-symbols-outlined text-4xl">map</span>
                             </div>
-                            <h3 class="font-headline-lg text-white mb-4">Board Advisory Alignment</h3>
-                            <p class="text-white/80 font-body-lg mb-8 leading-relaxed flex-1">
-                                Comprehensive evaluation of candidate corporate governance philosophies and shareholder value creation strategies to guarantee perfect board synergy.
+                            <h3 class="font-headline-lg text-primary mb-4 group-hover:text-secondary transition-colors">Leadership Talent Mapping</h3>
+                            <p class="text-on-surface-variant font-body-lg mb-8 leading-relaxed flex-1">
+                                Develop visibility into leadership markets and talent availability to support future workforce planning.
                             </p>
-                            <ul class="space-y-4 mb-10 pt-6 border-t border-white/20">
-                                <li class="flex items-center gap-3 text-label-md text-white font-bold">
-                                    <span class="material-symbols-outlined text-teal-300">check_circle</span> Governance Philosophy Evaluation
-                                </li>
-                                <li class="flex items-center gap-3 text-label-md text-white font-bold">
-                                    <span class="material-symbols-outlined text-teal-300">check_circle</span> Shareholder Value Verification
-                                </li>
+                            <ul class="space-y-4 mb-10 pt-6 border-t border-outline-variant/30">
+                                <li class="flex items-center gap-3 text-label-md text-primary font-bold"><span class="material-symbols-outlined text-secondary">check_circle</span> Market Intelligence</li>
+                                <li class="flex items-center gap-3 text-label-md text-primary font-bold"><span class="material-symbols-outlined text-secondary">check_circle</span> Leadership Pipeline</li>
+                                <li class="flex items-center gap-3 text-label-md text-primary font-bold"><span class="material-symbols-outlined text-secondary">check_circle</span> Succession Insights</li>
                             </ul>
-                            <a class="text-teal-300 font-bold flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-wider text-sm" href="#">
-                                Learn More <span class="material-symbols-outlined">arrow_forward</span>
-                            </a>
+                            <a class="text-secondary font-bold flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-wider text-sm" href="contact.html">Learn More <span class="material-symbols-outlined">arrow_forward</span></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Bento Grid: The Search Advantage -->
-        <section class="py-28 bg-surface">
-            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
-                <div class="mb-16 text-center md:text-left">
-                    <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Cognitive Authority</span>
-                    <h2 class="font-headline-lg text-primary mb-4" data-aos="fade-right">The Executive Search Matrix</h2>
-                    <p class="text-on-surface-variant text-lg max-w-3xl" data-aos="fade-right">How we deliver absolute certainty when selecting the leaders who will define your organization's future.</p>
+        <!-- Executive Search Methodology (Dark) -->
+        <section class="exec-search-dark py-32">
+            <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
+                <div class="text-center mb-24 max-w-3xl mx-auto" data-aos="fade-up">
+                    <span class="exec-search-dark__eyebrow">Our Executive Search Process</span>
+                    <h2 class="exec-search-dark__title">A Disciplined, Confidential Leadership Search</h2>
+                    <p class="exec-search-dark__sub">Structured executive search methodology�from leadership assessment through onboarding support.</p>
                 </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[650px]">
-                    <div class="md:col-span-8 relative rounded-[2.5rem] overflow-hidden shadow-xl group" data-aos="fade-up">
-                        <img src="assets/img/executive_search.png" alt="Boardroom Executive Search" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-12 flex flex-col justify-end text-white z-10">
-                            <span class="material-symbols-outlined text-teal-400 text-4xl mb-4">psychology_alt</span>
-                            <h4 class="font-headline-lg mb-4">Leadership DNA Architecture</h4>
-                            <p class="font-body-lg opacity-90 max-w-2xl leading-relaxed">Our search consultants evaluate candidates not just on past successes, but on their cognitive adaptability under crisis conditions and their long-term strategic vision for market disruption.</p>
-                        </div>
-                    </div>
-
-                    <div class="md:col-span-4 bg-gradient-to-br from-secondary to-blue-500 flex flex-col justify-center p-12 rounded-[2.5rem] shadow-xl text-white hover:shadow-2xl transition-all" data-aos="fade-up" data-aos-delay="100">
-                        <span class="material-symbols-outlined text-[48px] mb-6 text-white/80">assured_workload</span>
-                        <h4 class="font-headline-md font-bold mb-4">Board Dynamics Audit</h4>
-                        <p class="font-body-md opacity-90 leading-relaxed">We analyze your existing board chemistry and committee structures to identify the specific leadership personality profile required to maximize board-level cohesion.</p>
-                    </div>
-
-                    <div class="md:col-span-4 bg-surface-container-highest p-12 rounded-[2.5rem] flex flex-col justify-center border border-outline-variant/30 shadow-sm hover:border-secondary transition-colors" data-aos="fade-up" data-aos-delay="200">
-                        <span class="material-symbols-outlined text-[48px] mb-6 text-secondary">handshake</span>
-                        <h4 class="font-headline-md font-bold mb-4 text-primary">Interim C-Suite Management</h4>
-                        <p class="font-body-sm text-on-surface-variant leading-relaxed">Rapidly insert elite interim executives to steer corporate turnaround operations or oversee critical IPO preparations while permanent searches execute.</p>
-                    </div>
-
-                    <div class="md:col-span-8 relative rounded-[2.5rem] overflow-hidden shadow-xl border border-outline-variant/30 group" data-aos="fade-up" data-aos-delay="300">
-                        <img src="assets/img/ai_recruitment.png" alt="Executive Decision" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:scale-105 transition-transform duration-700 mix-blend-multiply">
-                        <div class="absolute inset-0 bg-primary/90 p-12 flex items-center z-10">
-                            <div class="max-w-xl">
-                                <span class="material-symbols-outlined text-teal-300 text-4xl mb-4">military_tech</span>
-                                <h4 class="font-headline-lg mb-4 text-white">Verified Authority Matrix</h4>
-                                <p class="font-body-lg text-white/80 leading-relaxed">Every presented executive profile comes backed by intensive 360-degree forensic reference checks from former board chairmen and institutional investors.</p>
+                <div class="recruitment-pipeline recruitment-pipeline--8 recruitment-pipeline--dark max-w-7xl mx-auto">
+                    <div class="recruitment-pipeline__track hidden xl:block" aria-hidden="true"></div>
+                    <ol class="recruitment-pipeline__grid">
+                        <li class="recruitment-pipeline__card" data-aos="fade-up">
+                            <span class="recruitment-pipeline__badge recruitment-pipeline__badge--primary">01</span>
+                            <div class="recruitment-pipeline__body">
+                                <h3 class="recruitment-pipeline__title">Leadership Requirement Assessment</h3>
+                                <p class="recruitment-pipeline__desc">Role scope, board alignment, and success criteria.</p>
                             </div>
-                        </div>
+                        </li>
+                        <li class="recruitment-pipeline__card" data-aos="fade-up" data-aos-delay="50">
+                            <span class="recruitment-pipeline__badge recruitment-pipeline__badge--secondary">02</span>
+                            <div class="recruitment-pipeline__body">
+                                <h3 class="recruitment-pipeline__title">Market &amp; Talent Mapping</h3>
+                                <p class="recruitment-pipeline__desc">Leadership market intelligence and targeting.</p>
+                            </div>
+                        </li>
+                        <li class="recruitment-pipeline__card" data-aos="fade-up" data-aos-delay="100">
+                            <span class="recruitment-pipeline__badge recruitment-pipeline__badge--primary">03</span>
+                            <div class="recruitment-pipeline__body">
+                                <h3 class="recruitment-pipeline__title">Executive Research &amp; Identification</h3>
+                                <p class="recruitment-pipeline__desc">Confidential outreach to qualified leaders.</p>
+                            </div>
+                        </li>
+                        <li class="recruitment-pipeline__card" data-aos="fade-up" data-aos-delay="150">
+                            <span class="recruitment-pipeline__badge recruitment-pipeline__badge--secondary">04</span>
+                            <div class="recruitment-pipeline__body">
+                                <h3 class="recruitment-pipeline__title">Leadership Evaluation</h3>
+                                <p class="recruitment-pipeline__desc">Capability, fit, and strategic assessment.</p>
+                            </div>
+                        </li>
+                        <li class="recruitment-pipeline__card" data-aos="fade-up" data-aos-delay="200">
+                            <span class="recruitment-pipeline__badge recruitment-pipeline__badge--primary">05</span>
+                            <div class="recruitment-pipeline__body">
+                                <h3 class="recruitment-pipeline__title">Candidate Shortlisting</h3>
+                                <p class="recruitment-pipeline__desc">Curated executive profiles for review.</p>
+                            </div>
+                        </li>
+                        <li class="recruitment-pipeline__card" data-aos="fade-up" data-aos-delay="250">
+                            <span class="recruitment-pipeline__badge recruitment-pipeline__badge--secondary">06</span>
+                            <div class="recruitment-pipeline__body">
+                                <h3 class="recruitment-pipeline__title">Executive Interviews</h3>
+                                <p class="recruitment-pipeline__desc">Board and stakeholder interview coordination.</p>
+                            </div>
+                        </li>
+                        <li class="recruitment-pipeline__card" data-aos="fade-up" data-aos-delay="300">
+                            <span class="recruitment-pipeline__badge recruitment-pipeline__badge--primary">07</span>
+                            <div class="recruitment-pipeline__body">
+                                <h3 class="recruitment-pipeline__title">Offer Negotiation</h3>
+                                <p class="recruitment-pipeline__desc">Executive offer and terms advisory.</p>
+                            </div>
+                        </li>
+                        <li class="recruitment-pipeline__card" data-aos="fade-up" data-aos-delay="350">
+                            <span class="recruitment-pipeline__badge recruitment-pipeline__badge--secondary">08</span>
+                            <div class="recruitment-pipeline__body">
+                                <h3 class="recruitment-pipeline__title">Leadership Onboarding Support</h3>
+                                <p class="recruitment-pipeline__desc">Transition planning and early success enablement.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Assessment -->
+        <section class="py-32 bg-surface-container-low">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+                <div class="text-center mb-16 max-w-3xl mx-auto" data-aos="fade-up">
+                    <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Leadership Evaluation</span>
+                    <h2 class="font-headline-lg text-primary mb-4">Beyond Recruitment � Leadership Evaluation</h2>
+                    <p class="text-on-surface-variant text-lg">Executive hiring decisions require more than resume reviews. Our process evaluates leadership capability, strategic alignment, organizational fit, and long-term growth potential.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                    <div class="exec-assessment-item" data-aos="fade-up"><span class="material-symbols-outlined">psychology</span><span>Leadership Capability</span></div>
+                    <div class="exec-assessment-item" data-aos="fade-up" data-aos-delay="60"><span class="material-symbols-outlined">lightbulb</span><span>Strategic Thinking</span></div>
+                    <div class="exec-assessment-item" data-aos="fade-up" data-aos-delay="120"><span class="material-symbols-outlined">diversity_3</span><span>Cultural Alignment</span></div>
+                    <div class="exec-assessment-item" data-aos="fade-up" data-aos-delay="180"><span class="material-symbols-outlined">sync_alt</span><span>Change Leadership</span></div>
+                    <div class="exec-assessment-item" data-aos="fade-up" data-aos-delay="240"><span class="material-symbols-outlined">groups</span><span>Stakeholder Management</span></div>
+                    <div class="exec-assessment-item" data-aos="fade-up" data-aos-delay="300"><span class="material-symbols-outlined">trending_up</span><span>Growth Potential</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Trust -->
+        <section class="py-32 bg-surface">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+                <div class="text-center mb-20" data-aos="fade-up">
+                    <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Why Partner With Us</span>
+                    <h2 class="font-headline-lg text-primary mb-4">Why Businesses Choose KAM Executive Search</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="glass-card p-8 rounded-[2rem] border border-outline-variant/30 shadow-lg" data-aos="fade-up"><span class="material-symbols-outlined text-secondary text-3xl mb-4">lock</span><h3 class="font-headline-md text-primary font-bold mb-3">Confidential Search Management</h3><p class="text-on-surface-variant">Protect sensitive leadership hiring initiatives.</p></div>
+                    <div class="glass-card p-8 rounded-[2rem] border border-outline-variant/30 shadow-lg" data-aos="fade-up" data-aos-delay="60"><span class="material-symbols-outlined text-secondary text-3xl mb-4">hub</span><h3 class="font-headline-md text-primary font-bold mb-3">Access to Leadership Networks</h3><p class="text-on-surface-variant">Reach highly qualified executive talent.</p></div>
+                    <div class="glass-card p-8 rounded-[2rem] border border-outline-variant/30 shadow-lg" data-aos="fade-up" data-aos-delay="120"><span class="material-symbols-outlined text-secondary text-3xl mb-4">strategy</span><h3 class="font-headline-md text-primary font-bold mb-3">Strategic Advisory Support</h3><p class="text-on-surface-variant">Align leadership hiring with business goals.</p></div>
+                    <div class="glass-card p-8 rounded-[2rem] border border-outline-variant/30 shadow-lg" data-aos="fade-up" data-aos-delay="180"><span class="material-symbols-outlined text-secondary text-3xl mb-4">domain</span><h3 class="font-headline-md text-primary font-bold mb-3">Industry Expertise</h3><p class="text-on-surface-variant">Leadership hiring experience across industries.</p></div>
+                    <div class="glass-card p-8 rounded-[2rem] border border-outline-variant/30 shadow-lg" data-aos="fade-up" data-aos-delay="240"><span class="material-symbols-outlined text-secondary text-3xl mb-4">verified</span><h3 class="font-headline-md text-primary font-bold mb-3">Long-Term Leadership Success</h3><p class="text-on-surface-variant">Focus on sustainable executive placements.</p></div>
+                    <div class="glass-card p-8 rounded-[2rem] border border-outline-variant/30 shadow-lg" data-aos="fade-up" data-aos-delay="300"><span class="material-symbols-outlined text-secondary text-3xl mb-4">military_tech</span><h3 class="font-headline-md text-primary font-bold mb-3">Executive Hiring Excellence</h3><p class="text-on-surface-variant">Structured and disciplined search methodology.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Succession Planning -->
+        <section class="exec-search-dark exec-search-dark--soft py-28">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div data-aos="fade-right">
+                        <span class="exec-search-dark__eyebrow">Leadership Continuity</span>
+                        <h2 class="exec-search-dark__title mb-6">Supporting Leadership Continuity</h2>
+                        <p class="exec-search-dark__sub text-left mb-10">Strong organizations plan for future leadership needs. KAM Global HR supports succession planning and leadership pipeline development to ensure organizational stability and long-term growth.</p>
+                        <ul class="exec-search-features">
+                            <li><span class="material-symbols-outlined">check_circle</span> Succession Planning</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> Leadership Pipelines</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> Future Talent Mapping</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> Organizational Continuity</li>
+                        </ul>
                     </div>
+                    <div class="rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/10" data-aos="fade-left">
+                        <img src="assets/img/about-team.png" alt="Executive succession and leadership planning" class="w-full h-full object-cover min-h-[22rem]" loading="lazy"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industries -->
+        <section class="py-28 bg-surface border-y border-outline-variant/20">
+            <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Sector Leadership</span>
+                    <h2 class="font-headline-lg text-primary mb-4">Executive Search Across Industries</h2>
+                    <p class="text-on-surface-variant max-w-2xl mx-auto text-lg">Confidential executive search tailored to industry-specific leadership requirements.</p>
+                </div>
+                <ul class="recruitment-industries" aria-label="Executive search industries">
+                    <li class="recruitment-industries__card" data-aos="fade-up">
+                        <span class="recruitment-industries__icon material-symbols-outlined" aria-hidden="true">computer</span>
+                        <span class="recruitment-industries__label">IT &amp; Technology</span>
+                    </li>
+                    <li class="recruitment-industries__card" data-aos="fade-up" data-aos-delay="40">
+                        <span class="recruitment-industries__icon material-symbols-outlined" aria-hidden="true">engineering</span>
+                        <span class="recruitment-industries__label">Engineering</span>
+                    </li>
+                    <li class="recruitment-industries__card" data-aos="fade-up" data-aos-delay="80">
+                        <span class="recruitment-industries__icon material-symbols-outlined" aria-hidden="true">precision_manufacturing</span>
+                        <span class="recruitment-industries__label">Manufacturing</span>
+                    </li>
+                    <li class="recruitment-industries__card" data-aos="fade-up" data-aos-delay="120">
+                        <span class="recruitment-industries__icon material-symbols-outlined" aria-hidden="true">health_and_safety</span>
+                        <span class="recruitment-industries__label">Healthcare</span>
+                    </li>
+                    <li class="recruitment-industries__card" data-aos="fade-up" data-aos-delay="160">
+                        <span class="recruitment-industries__icon material-symbols-outlined" aria-hidden="true">school</span>
+                        <span class="recruitment-industries__label">Education</span>
+                    </li>
+                    <li class="recruitment-industries__card" data-aos="fade-up" data-aos-delay="200">
+                        <span class="recruitment-industries__icon material-symbols-outlined" aria-hidden="true">room_service</span>
+                        <span class="recruitment-industries__label">Hospitality</span>
+                    </li>
+                    <li class="recruitment-industries__card" data-aos="fade-up" data-aos-delay="240">
+                        <span class="recruitment-industries__icon material-symbols-outlined" aria-hidden="true">storefront</span>
+                        <span class="recruitment-industries__label">Retail</span>
+                    </li>
+                    <li class="recruitment-industries__card" data-aos="fade-up" data-aos-delay="280">
+                        <span class="recruitment-industries__icon material-symbols-outlined" aria-hidden="true">business_center</span>
+                        <span class="recruitment-industries__label">Professional Services</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Leadership Impact (Editorial Dark) -->
+        <section class="exec-search-impact py-32">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+                <div class="exec-search-impact__inner" data-aos="fade-up">
+                    <span class="exec-search-impact__eyebrow">Leadership Impact</span>
+                    <h2 class="exec-search-impact__title">Leadership Drives Business Performance</h2>
+                    <p class="exec-search-impact__lead">The right leaders shape culture, accelerate growth, strengthen decision-making, and drive organizational transformation. Identifying and securing exceptional leadership talent is essential for long-term organizational success.</p>
                 </div>
             </div>
         </section>
 
         <!-- Final CTA -->
-        <section class="py-24 px-margin-mobile md:px-margin-tablet max-w-container-max mx-auto">
-            <div class="rounded-[3rem] overflow-hidden shadow-2xl relative bg-black py-24 px-12 md:px-24 text-center border border-outline-variant/30 group">
-                <img src="assets/img/executive_search.png" alt="Executive Leadership" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-700 z-0 mix-blend-luminosity">
-                <div class="absolute inset-0 bg-gradient-to-b from-primary/90 via-black/80 to-black z-0"></div>
-
+        <section class="py-28 px-margin-mobile md:px-margin-tablet max-w-container-max mx-auto">
+            <div class="exec-search-cta rounded-[3rem] overflow-hidden shadow-2xl relative py-24 px-12 md:px-24 text-center border border-white/10">
                 <div class="relative z-10 max-w-4xl mx-auto">
-                    <span class="inline-block bg-white/10 backdrop-blur-md text-white border border-white/20 px-5 py-2 font-label-sm uppercase tracking-widest rounded-full mb-8 shadow-sm" data-aos="zoom-in">
-                        Confidential Executive Acquisition
-                    </span>
-                    <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-8 leading-tight" data-aos="fade-up">
-                        Ready to acquire your next <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-teal-200 to-white animate-gradient-text">Corporate Visionary?</span>
-                    </h2>
-                    <p class="font-body-lg text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-                        Consult with our Managing Partners today to discuss your leadership requirements under our strict confidential search protocol.
-                    </p>
+                    <span class="exec-search-cta__badge" data-aos="zoom-in">Executive Leadership</span>
+                    <h2 class="exec-search-cta__title" data-aos="fade-up">Find Leaders Who Shape the Future</h2>
+                    <p class="exec-search-cta__sub mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Partner with KAM Global HR to identify and secure exceptional executive talent aligned with your business vision and leadership goals.</p>
                     <div class="flex flex-wrap justify-center gap-6" data-aos="fade-up" data-aos-delay="200">
-                        <a href="demo.html" class="bg-secondary text-on-primary px-10 py-5 rounded-xl font-label-lg shadow-2xl hover:bg-secondary/90 hover:scale-105 transition-all">
-                            Initiate Confidential Search
-                        </a>
-                        <a href="contact.html" class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-5 rounded-xl font-label-lg hover:bg-white/20 transition-colors shadow-lg">
-                            Request Partner Consultation
-                        </a>
+                        <a href="contact.html" class="page-btn page-btn--primary">Start Executive Search <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+                        <a href="contact.html" class="page-btn page-btn--ghost exec-search-cta__ghost">Talk to Search Specialists</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="w-full pt-20 pb-12 bg-primary text-on-primary border-t border-on-primary-fixed-variant/20">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto mb-16">
-            <div class="lg:col-span-1">
-                <div class="font-headline-lg font-black text-surface-container-lowest mb-6 flex items-center gap-3">
-                    <img src="assets/img/logo_512x512.png" alt="KAM Global AI" class="h-24 w-auto object-contain">
+                        <!-- Global site footer — edit this file only; run: python scratch/sync_global_footer.py -->
+    <footer class="site-footer site-footer--enterprise" role="contentinfo">
+        <div class="site-footer__inner max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="site-footer__main">
+                <div class="site-footer__brand">
+                    <a href="index.html" class="site-footer__logo-link" aria-label="KAM Global HR home">
+                        <img src="assets/img/logo.png" alt="KAM Global HR" class="site-footer__logo" width="280" height="96"/>
+                    </a>
+                    <p class="site-footer__desc">Empowering organizations worldwide with recruitment excellence, workforce solutions, payroll services, and HR expertise to build stronger, future-ready teams.</p>
+                    <ul class="site-footer__contact">
+                        <li>
+                            <span class="site-footer__contact-icon material-symbols-outlined" aria-hidden="true">mail</span>
+                            <a href="mailto:info@kamgroups.com">info@kamgroups.com</a>
+                        </li>
+                        <li>
+                            <span class="site-footer__contact-icon material-symbols-outlined" aria-hidden="true">call</span>
+                            <a href="tel:+442079460000">+44 20 7946 0000</a>
+                        </li>
+                    </ul>
                 </div>
-                <p class="font-body-sm opacity-80 mb-8 max-w-xs leading-relaxed">
-                    Empowering international finance and HR through mathematical intelligence, automated compliance, and ethical AI innovation.
-                </p>
-            </div>
-            <div>
-                <h6 class="font-label-md text-teal-300 mb-6 uppercase tracking-wider font-bold">Solutions</h6>
-                <ul class="space-y-4">
-                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="recruitment.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> AI HR Suite</a></li>
-                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="payroll.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> Predictive Finance</a></li>
-                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="services.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> EduAI Tutors</a></li>
-                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="services.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> Najah Tutors</a></li>
-                </ul>
-            </div>
-            <div>
-                <h6 class="font-label-md text-teal-300 mb-6 uppercase tracking-wider font-bold">Company</h6>
-                <ul class="space-y-4">
-                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="about.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> About Us</a></li>
-                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="contact.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> Global Locations</a></li>
-                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="recruitment.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> Careers</a></li>
-                    <li><a class="font-body-sm text-white/80 hover:text-white transition-colors flex items-center gap-1" href="contact.html"><span class="material-symbols-outlined text-xs text-teal-300">chevron_right</span> Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h6 class="font-label-md text-teal-300 mb-6 uppercase tracking-wider font-bold">Stay Updated</h6>
-                <div class="flex gap-2 mb-6">
-                    <input class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-3 text-body-sm w-full focus:outline-none focus:border-teal-300 text-white placeholder-white/50 shadow-inner" placeholder="Enterprise email" type="email"/>
-                    <button class="bg-secondary px-6 py-3 rounded-xl text-on-primary font-bold shadow-lg hover:bg-secondary/90 transition-all"><span class="material-symbols-outlined">send</span></button>
+                <nav class="site-footer__col" aria-labelledby="footer-solutions-title">
+                    <h2 class="site-footer__heading" id="footer-solutions-title">Solutions</h2>
+                    <ul class="site-footer__links">
+                        <li><a href="recruitment.html"><span class="site-footer__chev" aria-hidden="true">›</span>Recruitment Services</a></li>
+                        <li><a href="contract-staffing.html"><span class="site-footer__chev" aria-hidden="true">›</span>Contract Staffing</a></li>
+                        <li><a href="payroll.html"><span class="site-footer__chev" aria-hidden="true">›</span>Payroll Outsourcing</a></li>
+                        <li><a href="hr-advisory.html"><span class="site-footer__chev" aria-hidden="true">›</span>HR Advisory &amp; Consulting</a></li>
+                        <li><a href="executive-search.html"><span class="site-footer__chev" aria-hidden="true">›</span>Executive Search</a></li>
+                        <li><a href="manpower-bgv.html"><span class="site-footer__chev" aria-hidden="true">›</span>Background Verification</a></li>
+                    </ul>
+                </nav>
+                <nav class="site-footer__col" aria-labelledby="footer-software-title">
+                    <h2 class="site-footer__heading" id="footer-software-title">Software</h2>
+                    <ul class="site-footer__links">
+                        <li><a href="hr-talent.html"><span class="site-footer__chev" aria-hidden="true">›</span>HRMS Software</a></li>
+                        <li><a href="ats.html"><span class="site-footer__chev" aria-hidden="true">›</span>ATS Software</a></li>
+                        <li><a href="payroll-software.html"><span class="site-footer__chev" aria-hidden="true">›</span>Payroll Software</a></li>
+                    </ul>
+                </nav>
+                <nav class="site-footer__col" aria-labelledby="footer-resources-title">
+                    <h2 class="site-footer__heading" id="footer-resources-title">Resources</h2>
+                    <ul class="site-footer__links">
+                        <li><a href="insights.html"><span class="site-footer__chev" aria-hidden="true">›</span>Insights Hub</a></li>
+                        <li><a href="case-studies.html"><span class="site-footer__chev" aria-hidden="true">›</span>Case Studies</a></li>
+                        <li><a href="industries.html"><span class="site-footer__chev" aria-hidden="true">›</span>Industries</a></li>
+                        <li><a href="insights.html"><span class="site-footer__chev" aria-hidden="true">›</span>Downloads &amp; Guides</a></li>
+                    </ul>
+                </nav>
+                <nav class="site-footer__col" aria-labelledby="footer-company-title">
+                    <h2 class="site-footer__heading" id="footer-company-title">Company</h2>
+                    <ul class="site-footer__links">
+                        <li><a href="about.html"><span class="site-footer__chev" aria-hidden="true">›</span>About Us</a></li>
+                        <li><a href="about.html"><span class="site-footer__chev" aria-hidden="true">›</span>Our Leadership</a></li>
+                        <li><a href="contact.html"><span class="site-footer__chev" aria-hidden="true">›</span>Careers</a></li>
+                        <li><a href="insights.html"><span class="site-footer__chev" aria-hidden="true">›</span>Newsroom</a></li>
+                        <li><a href="contact.html"><span class="site-footer__chev" aria-hidden="true">›</span>Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div class="site-footer__col site-footer__col--offices">
+                    <h2 class="site-footer__heading" id="footer-offices-title">Global Offices</h2>
+                    <address class="site-footer__offices" aria-labelledby="footer-offices-title">
+                        <a class="site-footer__office-card" href="https://www.google.com/maps/place/KAM+GLOBAL+AI/@13.3104691,75.2165459,7z/data=!4m7!3m6!1s0x3bae170035391cbd:0xa77c598425d3a196!8m2!3d13.0209878!4d77.593684!15sCglrYW1nbG9iYWzgAQA!16s%2Fg%2F11yvxpjv74?entry=tts&amp;g_ep=EgoyMDI2MDMwOC4wIPu8ASoASAFQAw%3D%3D&amp;skid=dbeb7bd2-d116-4915-b0b8-033022d7beab" target="_blank" rel="noopener noreferrer">
+                            <span class="site-footer__office-pin material-symbols-outlined" aria-hidden="true">location_on</span>
+                            <span class="site-footer__office-body">
+                                <span class="site-footer__office-title">India</span>
+                                <span class="site-footer__office-lines">RT Nagar,<br>Bengaluru, KA</span>
+                            </span>
+                        </a>
+                        <a class="site-footer__office-card" href="https://www.google.com/maps/place/KAM+International+Group+Co./@29.3438775,48.0144258,17z/data=!3m1!4b1!4m6!3m5!1s0x3fcf9c96696d414d:0x96261e72f31ecb19!8m2!3d29.3438728!4d48.0170007!16s%2Fg%2F1tf5zs5_?entry=tts&amp;g_ep=EgoyMDI2MDMwOC4wIPu8ASoASAFQAw%3D%3D&amp;skid=7a633f8f-4cd3-46c7-a404-eedc9e31f22f" target="_blank" rel="noopener noreferrer">
+                            <span class="site-footer__office-pin material-symbols-outlined" aria-hidden="true">location_on</span>
+                            <span class="site-footer__office-body">
+                                <span class="site-footer__office-title">Kuwait</span>
+                                <span class="site-footer__office-lines">Block 4, Tunisia St.,<br>Hawally</span>
+                            </span>
+                        </a>
+                    </address>
                 </div>
-                <div class="flex gap-4">
-                    <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-teal-400 hover:text-primary cursor-pointer transition-all border border-white/20"><span class="material-symbols-outlined text-lg">public</span></span>
-                    <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-teal-400 hover:text-primary cursor-pointer transition-all border border-white/20"><span class="material-symbols-outlined text-lg">group</span></span>
-                    <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-teal-400 hover:text-primary cursor-pointer transition-all border border-white/20"><span class="material-symbols-outlined text-lg">hub</span></span>
+            </div>
+    
+            <div class="site-footer__trust" aria-label="Company highlights">
+                <div class="site-footer__trust-item">
+                    <span class="site-footer__trust-icon material-symbols-outlined" aria-hidden="true">engineering</span>
+                    <span class="site-footer__trust-text">
+                        <strong>22+ Years</strong>
+                        <span>Workforce Excellence</span>
+                    </span>
+                </div>
+                <div class="site-footer__trust-item">
+                    <span class="site-footer__trust-icon material-symbols-outlined" aria-hidden="true">work</span>
+                    <span class="site-footer__trust-text">
+                        <strong>100+</strong>
+                        <span>Client Relationships</span>
+                    </span>
+                </div>
+                <div class="site-footer__trust-item">
+                    <span class="site-footer__trust-icon material-symbols-outlined" aria-hidden="true">public</span>
+                    <span class="site-footer__trust-text">
+                        <strong>7+ Countries</strong>
+                        <span>Global Presence</span>
+                    </span>
+                </div>
+                <div class="site-footer__trust-item">
+                    <span class="site-footer__trust-icon material-symbols-outlined" aria-hidden="true">verified_user</span>
+                    <span class="site-footer__trust-text">
+                        <strong>Trusted Partner</strong>
+                        <span>Compliance &amp; Quality Driven</span>
+                    </span>
                 </div>
             </div>
-        </div>
-        <div class="px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p class="font-body-sm opacity-70">© 2026 KAM Global AI. Empowering global finance and HR through mathematical intelligence.</p>
-            <div class="flex gap-8">
-                <a class="font-label-sm text-white/80 hover:text-white hover:underline transition-all" href="#">Privacy Policy</a>
-                <a class="font-label-sm text-white/80 hover:text-white hover:underline transition-all" href="#">Terms of Service</a>
-                <a class="font-label-sm text-white/80 hover:text-white hover:underline transition-all" href="#">Security Standards</a>
+    
+            <div class="site-footer__bottom">
+                <p class="site-footer__copy">&copy; 2026 KAM Global HR. All rights reserved.</p>
+                <nav class="site-footer__legal" aria-label="Legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <span class="site-footer__legal-sep" aria-hidden="true">|</span>
+                    <a href="terms.html">Terms of Service</a>
+                    <span class="site-footer__legal-sep" aria-hidden="true">|</span>
+                    <a href="privacy.html">Cookie Policy</a>
+                </nav>
+                <div class="site-footer__social" aria-label="Social media">
+                    <a href="#" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="#" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                    </a>
+                    <a href="#" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="X">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="#" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
+
+
+
+
+
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>

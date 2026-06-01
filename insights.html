@@ -1,356 +1,655 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+<html class="scroll-smooth light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Workforce Insights &amp; Resources | KAM Global HR</title>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Workforce Insights &amp; Resources | KAM Global HR"/>
+    <meta property="og:description" content="Workforce trends, recruitment insights, payroll updates, and HR strategy articles."/>
+    <meta property="og:url" content="https://www.kamglobalhr.com/insights.html"/>
+    <meta property="og:image" content="https://www.kamglobalhr.com/assets/img/favicon-512x512.png"/>
+    <meta property="og:image:width" content="512"/>
+    <meta property="og:image:height" content="512"/>
+    <meta name="twitter:image" content="https://www.kamglobalhr.com/assets/img/favicon-512x512.png"/>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- External Libraries -->
+    <meta name="twitter:card" content="summary_large_image"/>
+
+    <meta name="description" content="Workforce trends, recruitment insights, payroll updates, and HR strategy articles."/>
+    <link rel="canonical" href="https://www.kamglobalhr.com/insights.html"/>
+    <link rel="icon" href="assets/img/favicon.ico" sizes="any"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- Global Assets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <script src="assets/js/tailwind-config.js"></script>
     <link href="assets/css/global.css" rel="stylesheet"/>
-    <link rel='icon' type='image/png' sizes='32x32' href='assets/img/favicon_32x32.png'/>
 </head>
-<body class="bg-background text-on-surface font-body-md antialiased">
-<!-- TopNavBar -->
-<!-- TopNavBar -->
-    <header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-2xl border-b border-secondary/15 shadow-md h-24 transition-all duration-300">
-        <div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
-            <a href="index.html" class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-3">
-                <img src="assets/img/logo_512x512.png" alt="KAM Global AI" class="h-16 w-auto object-contain">
-            </a>
-            
-            <nav class="hidden md:flex items-center gap-4 xl:gap-8">
-                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="index.html">Home</a>
-                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="about.html">Company</a>
-                
-                <!-- Services Dropdown -->
-                <div class="relative group z-50">
-                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors flex items-center gap-1 cursor-pointer" href="services.html">
-                        Services <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+<body class="service-page service-page--blue insights-page site-page bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+
+    <header class="site-header fixed top-0 w-full z-50" id="site-header">
+        <div class="site-header__glow" aria-hidden="true"></div>
+        <div class="site-header__bar">
+            <div class="site-header__inner h-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop max-w-container-max mx-auto">
+                <div class="site-header__logo">
+                    <a href="index.html" class="site-header__logo-link" aria-label="Kam Global HR home">
+                        <img src="assets/img/logo.png" alt="Kam Global HR" class="site-logo" width="240" height="72"/>
                     </a>
-                    <div class="absolute left-0 top-full mt-4 w-[680px] bg-surface-container-lowest border border-outline-variant/30 rounded-3xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-3.5 grid grid-cols-2 gap-2 transform origin-top group-hover:scale-100 scale-95 border-t-4 border-t-primary">
-                        <a href="recruitment.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-blue-500">
-                            <span class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">person_search</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Recruitment Services</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Find top-tier permanent talent across regions</p>
+                </div>
+
+                <div class="site-header__nav-zone hidden lg:flex">
+                    <div class="site-header__pill">
+                        <nav class="site-header__nav" aria-label="Main navigation">
+                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="about.html">About Us</a>
+
+                            <div class="nav-item nav-item--dropdown nav-item--dropdown-services relative group z-50">
+                                <a class="nav-link nav-link--trigger" href="services.html">
+                                    Services <span class="material-symbols-outlined nav-chevron">expand_more</span>
+                                </a>
+                                <div class="nav-dropdown nav-dropdown--menu">
+                                    <a href="recruitment.html" class="nav-dropdown__link">Recruitment</a>
+                                    <a href="contract-staffing.html" class="nav-dropdown__link">Contract Staffing</a>
+                                    <a href="payroll.html" class="nav-dropdown__link">Payroll Outsourcing</a>
+                                    <a href="hr-advisory.html" class="nav-dropdown__link">HR Advisory</a>
+                                    <a href="executive-search.html" class="nav-dropdown__link">Executive Search</a>
+                                    <a href="manpower-bgv.html" class="nav-dropdown__link">Background Verification</a>
+                                </div>
                             </div>
-                        </a>
-                        <a href="contract-staffing.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-amber-500">
-                            <span class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">badge</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Contract Staffing</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Flexible contract staffing for rapid scaling</p>
+
+                            <div class="nav-item nav-item--dropdown nav-item--dropdown-software relative group z-50">
+                                <a class="nav-link nav-link--trigger" href="ats.html">
+                                    Software <span class="material-symbols-outlined nav-chevron">expand_more</span>
+                                </a>
+                                <div class="nav-dropdown nav-dropdown--menu">
+                                    <a href="ats.html" class="nav-dropdown__link">ATS</a>
+                                    <a href="hr-talent.html" class="nav-dropdown__link">HRMS</a>
+                                    <a href="payroll-software.html" class="nav-dropdown__link">Payroll Software</a>
+                                </div>
                             </div>
-                        </a>
-                        <a href="payroll.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-emerald-500">
-                            <span class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">payments</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Payroll Outsourcing</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Compliant payroll & benefits administration</p>
+
+                            <a class="nav-link" href="industries.html">Industries</a>
+                            <div class="nav-item nav-item--dropdown nav-item--dropdown-resources relative group z-50">
+                                <a class="nav-link nav-link--trigger is-active" href="insights.html">
+                                    Resources <span class="material-symbols-outlined nav-chevron">expand_more</span>
+                                </a>
+                                <div class="nav-dropdown nav-dropdown--menu">
+                                    <a href="case-studies.html" class="nav-dropdown__link">Case Studies</a>
+                                    <a href="insights.html" class="nav-dropdown__link">Insights / Blog</a>
+                                    <a href="partners.html" class="nav-dropdown__link">Partner With Us</a>
+                                </div>
                             </div>
-                        </a>
-                        <a href="hr-advisory.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-purple-500">
-                            <span class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">partner_exchange</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">HR Advisory & Consulting</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Strategic HR policy & compliance guidance</p>
-                            </div>
-                        </a>
-                        <a href="manpower-bgv.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-teal-500">
-                            <span class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">fact_check</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Manpower Consulting & BGV</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Comprehensive background checks & verification</p>
-                            </div>
-                        </a>
-                        <a href="executive-search.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-indigo-500">
-                            <span class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">diversity_3</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Executive Search</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Retained search for C-suite & leadership roles</p>
-                            </div>
-                        </a>
+
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </nav>
                     </div>
                 </div>
 
-                <!-- Industries Dropdown -->
-                <div class="relative group">
-                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors flex items-center gap-1 cursor-pointer" href="industries.html">
-                        Industries <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
-                    </a>
-                    <div class="absolute right-0 top-full mt-4 w-[680px] bg-surface-container-lowest border border-outline-variant/30 rounded-3xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-3.5 grid grid-cols-2 gap-2 transform origin-top group-hover:scale-100 scale-95 border-t-4 border-t-secondary">
-                        <a href="industries.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-violet-500">
-                            <span class="w-10 h-10 rounded-xl bg-violet-500/10 text-violet-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">terminal</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">IT & Technology</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Talent for software, cloud, & deep tech startups</p>
-                            </div>
-                        </a>
-                        <a href="industries.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-cyan-500">
-                            <span class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Engineering & Manufacturing</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Technical staffing for industrial & auto operations</p>
-                            </div>
-                        </a>
-                        <a href="industries.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-amber-500">
-                            <span class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">school</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Education & EdTech</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Recruiting leaders for modern learning institutions</p>
-                            </div>
-                        </a>
-                        <a href="industries.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-rose-500">
-                            <span class="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">medical_services</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Healthcare</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Fully compliant medical and clinical staff hiring</p>
-                            </div>
-                        </a>
-                        <a href="industries.html" class="flex gap-3 p-2 rounded-2xl hover:bg-surface-container/60 transition-all duration-200 group/item hover:translate-x-1 border-l-2 border-l-transparent hover:border-l-orange-500">
-                            <span class="w-10 h-10 rounded-xl bg-orange-500/10 text-orange-600 flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">storefront</span>
-                            </span>
-                            <div>
-                                <h4 class="font-label-md text-primary font-semibold group-hover/item:text-secondary transition-colors">Hospitality & Retail</h4>
-                                <p class="font-body-xs text-on-surface-variant/80 mt-0.5 leading-normal">Flexible frontline and service sector operations</p>
-                            </div>
-                        </a>
-                    </div>
+                <div class="site-header__actions">
+                    <a href="contact.html" class="site-header__cta site-header__cta--primary hidden lg:inline-flex">Book Consultation</a>
+                    <button type="button" id="mobile-menu-btn" class="site-header__menu-btn lg:hidden" aria-label="Open menu" aria-expanded="false">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
                 </div>
+            </div>
+        </div>
 
-                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="insights.html">Insights</a>
+        <div id="mobile-menu" class="site-header__mobile hidden" aria-hidden="true">
+            <nav class="site-header__mobile-nav" aria-label="Mobile navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <span class="site-header__mobile-label">Services</span>
+                <a href="recruitment.html" class="site-header__mobile-sublink">Recruitment</a>
+                <a href="contract-staffing.html" class="site-header__mobile-sublink">Contract Staffing</a>
+                <a href="payroll.html" class="site-header__mobile-sublink">Payroll Outsourcing</a>
+                <a href="hr-advisory.html" class="site-header__mobile-sublink">HR Advisory</a>
+                <a href="executive-search.html" class="site-header__mobile-sublink">Executive Search</a>
+                <a href="manpower-bgv.html" class="site-header__mobile-sublink">Background Verification</a>
+                <span class="site-header__mobile-label">Software</span>
+                <a href="ats.html" class="site-header__mobile-sublink">ATS</a>
+                <a href="hr-talent.html" class="site-header__mobile-sublink">HRMS</a>
+                <a href="payroll-software.html" class="site-header__mobile-sublink">Payroll Software</a>
+                <a href="industries.html">Industries</a>
+                <span class="site-header__mobile-label">Resources</span>
+                <a href="case-studies.html" class="site-header__mobile-sublink">Case Studies</a>
+                <a href="insights.html" class="site-header__mobile-sublink">Insights / Blog</a>
+                <a href="partners.html" class="site-header__mobile-sublink">Partner With Us</a>
+                <a href="contact.html">Contact</a>
             </nav>
-
-            <div class="flex items-center gap-4">
-                <a href="login.html" class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors mr-2">Login</a>
-                <a href="demo.html" class="bg-gradient-to-r from-primary to-secondary text-white px-7 py-3 rounded-xl font-label-md hover:from-secondary hover:to-primary hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-md">Request Demo</a>
+            <div class="site-header__mobile-actions">
+                <a href="contact.html" class="site-header__cta site-header__cta--primary site-header__cta--mobile">Book Consultation</a>
             </div>
         </div>
     </header>
-<main class="pt-24">
-<!-- Hero Section -->
-<section class="relative h-[500px] flex items-center overflow-hidden bg-primary">
-<div class="absolute inset-0 z-0">
-<img alt="Mathematical Intelligence Background" class="w-full h-full object-cover opacity-40 mix-blend-overlay" data-alt="A sophisticated data visualization background featuring intricate neural network patterns and flowing digital data streams. The aesthetic is professional and technical, utilizing a deep navy and slate blue color palette with subtle glowing nodes. Soft cinematic lighting highlights the complexity of the mathematical intelligence represented in the abstract digital landscape." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgSqJ19xaJH6_vIIe_jEB3dEpWKb6HzZeUTttXiqFmhJyPHwFq7Dm6FNdaHqeSv3T1dl9H7No0qkg9ueJyyia75X2EqNYdZ1RY80U4fndUFSW4MdxWh9Kqf6GOBjUm4WvClBdck--95jpiHYHuu2DaxQb-WpMFSoGwl5NRmJV2M7-spmBjIwiDm4zlFpRDhuHKy4JniH4t8MPblXXKXkLvTNMGdERbTmDOph8ME8Dkc3LtUuY13nIm38UMtcrn7weR6O21GU9KRhM"/>
-<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
-</div>
-<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full">
-<div class="max-w-2xl">
-<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm mb-6 uppercase tracking-widest">Thought Leadership</span>
-<h1 class="font-display-lg text-display-lg text-on-primary mb-6 leading-tight">
-                        Thought Leadership in Mathematical Intelligence
-                    </h1>
-<p class="font-body-lg text-body-lg text-on-primary/80 mb-8 max-w-lg">
-                        Exploring the intersection of advanced algorithms, global workforce management, and the future of institutional finance.
-                    </p>
-<div class="flex gap-4">
-<button class="bg-secondary-container text-on-secondary-container px-8 py-3 rounded-lg font-label-md hover:bg-secondary-container/90 transition-colors">
-                            Latest Research
-                        </button>
-</div>
-</div>
-</div>
-</section>
-<!-- Category Filters -->
-<section class="bg-surface-container-lowest py-8 sticky top-20 z-40 border-b border-outline-variant/10 shadow-sm">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="flex flex-wrap items-center gap-4">
-<span class="font-label-md text-on-surface-variant mr-4">Filter By:</span>
-<button class="px-6 py-2 rounded-full bg-primary text-on-primary font-label-sm">All Resources</button>
-<button class="px-6 py-2 rounded-full border border-outline-variant/30 text-on-surface-variant hover:border-secondary hover:text-secondary transition-all font-label-sm">Whitepapers</button>
-<button class="px-6 py-2 rounded-full border border-outline-variant/30 text-on-surface-variant hover:border-secondary hover:text-secondary transition-all font-label-sm">Case Studies</button>
-<button class="px-6 py-2 rounded-full border border-outline-variant/30 text-on-surface-variant hover:border-secondary hover:text-secondary transition-all font-label-sm">AI Research</button>
-<button class="px-6 py-2 rounded-full border border-outline-variant/30 text-on-surface-variant hover:border-secondary hover:text-secondary transition-all font-label-sm">Market Trends</button>
-</div>
-</div>
-</section>
-<!-- Featured Article -->
-<section class="py-16 max-w-container-max mx-auto px-margin-desktop">
-<div class="group relative overflow-hidden rounded-xl bg-surface border border-outline-variant/20 flex flex-col lg:flex-row h-full lg:h-[450px]">
-<div class="lg:w-1/2 relative h-64 lg:h-auto overflow-hidden">
-<img alt="Global Payroll Research" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A clean, minimalist high-tech office environment representing global payroll operations. In the foreground, a sleek digital tablet displays complex financial charts and global compliance maps. The lighting is bright and airy with a professional blue and white color scheme, evoking a sense of stability and advanced technological transparency for HR and finance sectors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnaQ1fmLy3gbPUJiY2CSGZEC53I2YrFphh-6TuWZSVPkOKVJjA24VHIJd5ojn2MAkPInw6lHZ43VfMEQgBl1o17bd4Vu-1YoMN3mbwxNU7A7dkwZoT1IEcUydkRqlEA0eQerHoI3HudEJxFPYl0zJ4KaUxsXRVtt-zi08ztn0O8fVXItwuebQ7gzzannHVeq1_wYvRL0XOZxoJ2RgCvIKuamDx0UiyOdUqdNHpbAToZuXJv3ecWjHW8AkqqRsYupt7VON3ZdOwbJw"/>
-</div>
-<div class="lg:w-1/2 p-10 lg:p-16 flex flex-col justify-center bg-white">
-<div class="flex items-center gap-2 text-secondary font-label-sm mb-4">
-<span class="material-symbols-outlined text-[18px]" data-icon="description">description</span>
-<span>FEATURED WHITEPAPER</span>
-</div>
-<h2 class="font-headline-lg text-headline-lg text-primary mb-6" data-aos="fade-up">
-                        The Future of AI in Global Payroll &amp; Compliance
-                    </h2>
-<p class="font-body-md text-on-surface-variant mb-8 line-clamp-3">
-                        An in-depth analysis of how generative AI and predictive modeling are transforming multi-jurisdictional compliance frameworks and streamlining payroll for the global workforce of 2025.
-                    </p>
-<div class="mt-auto">
-<a class="inline-flex items-center gap-2 text-secondary font-label-md hover:underline" href="#">
-                            Download Whitepaper
-                            <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- Resource Grid -->
-<section class="py-16 bg-surface-container-low">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="flex justify-between items-end mb-12">
-<div>
-<h3 class="font-headline-md text-headline-md text-primary mb-2">Latest Insights</h3>
-<p class="text-on-surface-variant">Expert analysis on AI-driven financial and HR transformation.</p>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-<!-- Resource Card 1 -->
-<div class="glass-effect p-8 rounded-xl flex flex-col border border-outline-variant/10 hover:shadow-lg transition-shadow duration-300">
-<div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-secondary" data-icon="monitoring">monitoring</span>
-</div>
-<span class="font-label-sm text-secondary-fixed-dim uppercase tracking-wider mb-3">Market Trends</span>
-<h4 class="font-headline-md text-[20px] leading-tight text-primary mb-4">Q3 Global Workforce Compensation Benchmarks</h4>
-<p class="font-body-sm text-on-surface-variant mb-8">
-                            A data-driven report exploring salary trends across 40+ countries and the impact of inflation on global talent acquisition strategies.
-                        </p>
-<a class="mt-auto inline-flex items-center gap-2 text-secondary font-label-md hover:translate-x-1 transition-transform" href="#">
-                            Read More
-                            <span class="material-symbols-outlined text-[16px]" data-icon="east">east</span>
-</a>
-</div>
-<!-- Resource Card 2 -->
-<div class="glass-effect p-8 rounded-xl flex flex-col border border-outline-variant/10 hover:shadow-lg transition-shadow duration-300">
-<div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-secondary" data-icon="psychology">psychology</span>
-</div>
-<span class="font-label-sm text-secondary-fixed-dim uppercase tracking-wider mb-3">AI Research</span>
-<h4 class="font-headline-md text-[20px] leading-tight text-primary mb-4">Neural Networks in Risk Mitigation</h4>
-<p class="font-body-sm text-on-surface-variant mb-8">
-                            How KAM's proprietary mathematical models identify potential compliance risks before they impact your financial reporting.
-                        </p>
-<a class="mt-auto inline-flex items-center gap-2 text-secondary font-label-md hover:translate-x-1 transition-transform" href="#">
-                            Read More
-                            <span class="material-symbols-outlined text-[16px]" data-icon="east">east</span>
-</a>
-</div>
-<!-- Resource Card 3 -->
-<div class="glass-effect p-8 rounded-xl flex flex-col border border-outline-variant/10 hover:shadow-lg transition-shadow duration-300">
-<div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-secondary" data-icon="verified_user">verified_user</span>
-</div>
-<span class="font-label-sm text-secondary-fixed-dim uppercase tracking-wider mb-3">Case Studies</span>
-<h4 class="font-headline-md text-[20px] leading-tight text-primary mb-4">Scaling HR for a Global Fintech Leader</h4>
-<p class="font-body-sm text-on-surface-variant mb-8">
-                            Discover how a Tier-1 financial institution reduced operational overhead by 40% using automated compliance workflows.
-                        </p>
-<a class="mt-auto inline-flex items-center gap-2 text-secondary font-label-md hover:translate-x-1 transition-transform" href="#">
-                            Read More
-                            <span class="material-symbols-outlined text-[16px]" data-icon="east">east</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- Newsletter Section -->
-<section class="py-24 bg-primary text-on-primary">
-<div class="max-w-container-max mx-auto px-margin-desktop text-center">
-<div class="max-w-3xl mx-auto">
-<h2 class="font-display-lg text-display-lg mb-6" data-aos="fade-up">Stay Ahead of the Curve</h2>
-<p class="font-body-lg text-on-primary/70 mb-12">
-                        Get the latest insights on global AI transformation, compliance shifts, and mathematical intelligence delivered directly to your inbox.
-                    </p>
-<form class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
-<input class="flex-grow px-6 py-4 rounded-lg bg-on-primary/10 border border-on-primary/20 focus:ring-2 focus:ring-secondary text-on-primary placeholder:text-on-primary/40 outline-none" placeholder="professional@company.com" type="email"/>
-<button class="bg-secondary-container text-on-secondary-container font-label-md px-10 py-4 rounded-lg hover:bg-secondary-container/90 transition-all" type="submit">
-                            Subscribe
-                        </button>
-</form>
-<p class="mt-6 text-on-primary/40 font-body-sm">
-                        By subscribing, you agree to our Privacy Policy and consent to receive marketing communications.
-                    </p>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-primary dark:bg-tertiary-container text-on-primary dark:text-on-tertiary-container w-full mt-auto">
-<div class="max-w-container-max mx-auto px-margin-desktop py-16 grid grid-cols-1 md:grid-cols-4 gap-gutter">
-<div class="md:col-span-1">
-<div class="font-headline-sm text-headline-sm font-bold text-on-primary dark:text-on-tertiary-container mb-6 flex items-center gap-3">
-                    <img src="assets/img/logo_512x512.png" alt="KAM Global AI" class="h-24 w-auto object-contain">
+
+    <main class="page-wrap">
+        <!-- Hero -->
+        <section class="service-hero service-hero--blue insights-hero">
+            <div class="service-hero__bg" aria-hidden="true"></div>
+            <div class="page-container service-hero__grid">
+                <div class="service-hero__copy" data-aos="fade-right" data-aos-duration="700">
+                    <span class="page-hero__badge"><span class="page-hero__badge-dot"></span> Knowledge Center</span>
+                    <h1 class="type-display">Workforce Insights for <span class="type-gradient animate-gradient-text">Modern Organizations</span></h1>
+                    <p class="type-lead">Explore workforce trends, recruitment strategies, HR best practices, payroll updates, and industry insights designed to help organizations build stronger teams and make informed workforce decisions.</p>
+                    <div class="page-hero__actions">
+                        <a href="#resources" class="page-btn page-btn--primary">Explore Resources <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+                        <a href="#newsletter" class="page-btn page-btn--ghost">Subscribe for Updates</a>
+                    </div>
                 </div>
-<p class="font-body-sm text-on-primary/70 mb-8 max-w-xs">
-                    Leading the future of mathematical intelligence for HR and Finance operations globally.
-                </p>
-</div>
-<div>
-<h5 class="font-label-md text-on-primary mb-6">Solutions</h5>
-<ul class="space-y-4 font-body-sm text-on-primary/70">
-<li><a class="hover:text-secondary-container transition-colors" href="payroll.html">AI Payroll</a></li>
-<li><a class="hover:text-secondary-container transition-colors" href="services.html">Compliance Engine</a></li>
-<li><a class="hover:text-secondary-container transition-colors" href="payroll.html">Risk Modeling</a></li>
-<li><a class="hover:text-secondary-container transition-colors" href="insights.html">Global Insights</a></li>
-</ul>
-</div>
-<div>
-<h5 class="font-label-md text-on-primary mb-6">Resources</h5>
-<ul class="space-y-4 font-body-sm text-on-primary/70">
-<li><a class="text-on-primary font-bold" href="insights.html">Insights Hub</a></li>
-<li><a class="hover:text-secondary-container transition-colors" href="insights.html">Whitepapers</a></li>
-<li><a class="hover:text-secondary-container transition-colors" href="insights.html">Documentation</a></li>
-<li><a class="hover:text-secondary-container transition-colors" href="services.html">Compliance Guide</a></li>
-</ul>
-</div>
-<div>
-<h5 class="font-label-md text-on-primary mb-6">Legal</h5>
-<ul class="space-y-4 font-body-sm text-on-primary/70">
-<li><a class="hover:text-secondary-container transition-colors" href="#">Privacy Policy</a></li>
-<li><a class="hover:text-secondary-container transition-colors" href="#">Terms of Service</a></li>
-<li><a class="hover:text-secondary-container transition-colors" href="#">Global Locations</a></li>
-<li><a class="hover:text-secondary-container transition-colors" href="#">Compliance</a></li>
-</ul>
-</div>
-</div>
-<div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-on-primary/10">
-<div class="flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="font-body-sm text-on-primary/50">
-                    © 2024 KAM Global AI. Part of KAM International Group. All rights reserved.
-                </p>
-<div class="flex gap-6">
-<a class="text-on-primary/50 hover:text-on-primary transition-colors" href="#">
-<span class="material-symbols-outlined text-[20px]" data-icon="public">public</span>
-</a>
-<a class="text-on-primary/50 hover:text-on-primary transition-colors" href="#">
-<span class="material-symbols-outlined text-[20px]" data-icon="alternate_email">alternate_email</span>
-</a>
-</div>
-</div>
-</div>
-</footer>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                <div class="service-hero__visual" data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
+                    <div class="service-hero__media">
+                        <img src="assets/img/hr_advisory.png" alt="HR leadership discussion on workforce strategy and talent management" width="720" height="480" loading="eager" decoding="async"/>
+                        <span class="service-hero__chip"><span class="material-symbols-outlined text-[14px] align-middle mr-1">menu_book</span>Practical workforce knowledge</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resource filters -->
+        <section class="insights-filter-bar" aria-label="Filter resources by topic">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+                <span class="insights-filter-bar__label">Filter by:</span>
+                <div class="insights-filter-bar__pills" role="tablist">
+                    <button type="button" class="insights-filter-pill is-active" data-filter="all" aria-pressed="true">All Resources</button>
+                    <button type="button" class="insights-filter-pill" data-filter="recruitment" aria-pressed="false">Recruitment</button>
+                    <button type="button" class="insights-filter-pill" data-filter="hr-advisory" aria-pressed="false">HR Advisory</button>
+                    <button type="button" class="insights-filter-pill" data-filter="payroll" aria-pressed="false">Payroll</button>
+                    <button type="button" class="insights-filter-pill" data-filter="executive-search" aria-pressed="false">Executive Search</button>
+                    <button type="button" class="insights-filter-pill" data-filter="workforce-technology" aria-pressed="false">Workforce Technology</button>
+                    <button type="button" class="insights-filter-pill" data-filter="industry-reports" aria-pressed="false">Industry Reports</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="resources">
+            <!-- Resource categories -->
+            <section class="py-28 bg-surface insights-filterable-section">
+                <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+                    <div class="text-center mb-16 max-w-3xl mx-auto" data-aos="fade-up">
+                        <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Topics</span>
+                        <h2 class="font-headline-lg text-primary mb-4">Browse Resources by Topic</h2>
+                        <p class="text-on-surface-variant text-lg">Practical guidance across recruitment, HR advisory, payroll, leadership hiring, and workforce technology.</p>
+                    </div>
+                    <div class="insights-topic-grid insights-filterable-grid">
+                        <a href="recruitment.html" class="insights-topic-card insights-filterable" data-category="recruitment" data-aos="fade-up">
+                            <span class="material-symbols-outlined">person_search</span>
+                            <h3>Recruitment Insights</h3>
+                            <p>Hiring trends, sourcing strategies, and recruitment best practices.</p>
+                        </a>
+                        <a href="hr-advisory.html" class="insights-topic-card insights-filterable" data-category="hr-advisory" data-aos="fade-up" data-aos-delay="50">
+                            <span class="material-symbols-outlined">support_agent</span>
+                            <h3>HR Advisory</h3>
+                            <p>Workforce planning, employee engagement, and HR transformation.</p>
+                        </a>
+                        <a href="payroll.html" class="insights-topic-card insights-filterable" data-category="payroll" data-aos="fade-up" data-aos-delay="100">
+                            <span class="material-symbols-outlined">payments</span>
+                            <h3>Payroll &amp; Compliance</h3>
+                            <p>Payroll updates, compliance guidance, and workforce administration insights.</p>
+                        </a>
+                        <a href="executive-search.html" class="insights-topic-card insights-filterable" data-category="executive-search" data-aos="fade-up" data-aos-delay="150">
+                            <span class="material-symbols-outlined">workspace_premium</span>
+                            <h3>Executive Search</h3>
+                            <p>Leadership hiring, succession planning, and executive talent trends.</p>
+                        </a>
+                        <a href="manpower-bgv.html" class="insights-topic-card insights-filterable" data-category="recruitment" data-aos="fade-up" data-aos-delay="200">
+                            <span class="material-symbols-outlined">verified_user</span>
+                            <h3>Background Verification</h3>
+                            <p>Workforce screening, risk management, and hiring confidence.</p>
+                        </a>
+                        <a href="hr-talent.html" class="insights-topic-card insights-filterable" data-category="workforce-technology" data-aos="fade-up" data-aos-delay="250">
+                            <span class="material-symbols-outlined">devices</span>
+                            <h3>HR Technology</h3>
+                            <p>HRMS, ATS, payroll software, and workforce platform resources.</p>
+                        </a>
+                        <a href="industries.html" class="insights-topic-card insights-topic-card--wide insights-filterable" data-category="industry-reports" data-aos="fade-up" data-aos-delay="300">
+                            <span class="material-symbols-outlined">analytics</span>
+                            <h3>Industry Reports</h3>
+                            <p>Market trends and workforce developments across industries.</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured insight -->
+            <section class="py-16 bg-surface-container-low border-y border-outline-variant/20">
+                <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+                    <article class="insights-featured" data-aos="fade-up">
+                        <div class="insights-featured__visual">
+                            <img src="assets/img/about-team.png" alt="Workforce management and future-ready teams" loading="lazy"/>
+                        </div>
+                        <div class="insights-featured__copy">
+                            <span class="insights-badge insights-badge--featured">Featured Workforce Insight</span>
+                            <h2 class="insights-featured__title">The Future of Workforce Management in a Changing Business Landscape</h2>
+                            <p class="insights-featured__desc">Explore emerging workforce trends, evolving employee expectations, and strategies organizations can adopt to build resilient and future-ready teams.</p>
+                            <a href="contact.html" class="page-btn page-btn--primary">Read Full Article <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Latest insights -->
+            <section class="py-28 bg-surface insights-filterable-section">
+                <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+                    <div class="mb-14" data-aos="fade-up">
+                        <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Articles</span>
+                        <h2 class="font-headline-lg text-primary mb-2">Latest Insights</h2>
+                        <p class="text-on-surface-variant text-lg">Recruitment trends, HR best practices, and workforce strategies from our consulting teams.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 insights-filterable-grid">
+                        <article class="insights-article-card insights-filterable" data-category="recruitment" data-aos="fade-up">
+                            <span class="insights-badge">Recruitment</span>
+                            <h3>Recruitment Trends Shaping the Future of Hiring</h3>
+                            <p>How organizations are adapting sourcing, assessment, and offer strategies in competitive talent markets.</p>
+                            <a href="contact.html" class="insights-article-card__link">Read article <span class="material-symbols-outlined">arrow_forward</span></a>
+                        </article>
+                        <article class="insights-article-card insights-filterable" data-category="hr-advisory" data-aos="fade-up" data-aos-delay="50">
+                            <span class="insights-badge">HR Advisory</span>
+                            <h3>How Organizations Can Improve Employee Retention</h3>
+                            <p>Practical approaches to engagement, career pathways, and workforce experience that reduce attrition.</p>
+                            <a href="contact.html" class="insights-article-card__link">Read article <span class="material-symbols-outlined">arrow_forward</span></a>
+                        </article>
+                        <article class="insights-article-card insights-filterable" data-category="hr-advisory" data-aos="fade-up" data-aos-delay="100">
+                            <span class="insights-badge">Workforce Planning</span>
+                            <h3>The Growing Importance of Workforce Planning</h3>
+                            <p>Why structured workforce planning is essential for scaling operations and managing skills gaps.</p>
+                            <a href="contact.html" class="insights-article-card__link">Read article <span class="material-symbols-outlined">arrow_forward</span></a>
+                        </article>
+                        <article class="insights-article-card insights-filterable" data-category="recruitment" data-aos="fade-up" data-aos-delay="150">
+                            <span class="insights-badge">Contract Staffing</span>
+                            <h3>Building Effective Contract Staffing Strategies</h3>
+                            <p>Best practices for flexible workforce deployment, compliance, and contractor management.</p>
+                            <a href="contact.html" class="insights-article-card__link">Read article <span class="material-symbols-outlined">arrow_forward</span></a>
+                        </article>
+                        <article class="insights-article-card insights-filterable" data-category="payroll" data-aos="fade-up" data-aos-delay="200">
+                            <span class="insights-badge">Payroll</span>
+                            <h3>Payroll Compliance Essentials for Modern Businesses</h3>
+                            <p>Key considerations for statutory payroll, documentation, and multi-country workforce administration.</p>
+                            <a href="contact.html" class="insights-article-card__link">Read article <span class="material-symbols-outlined">arrow_forward</span></a>
+                        </article>
+                        <article class="insights-article-card insights-filterable" data-category="executive-search" data-aos="fade-up" data-aos-delay="250">
+                            <span class="insights-badge">Executive Search</span>
+                            <h3>Executive Search Best Practices for Leadership Hiring</h3>
+                            <p>Structured approaches to C-suite and senior leadership recruitment with long-term fit in mind.</p>
+                            <a href="contact.html" class="insights-article-card__link">Read article <span class="material-symbols-outlined">arrow_forward</span></a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reports & guides -->
+            <section class="py-28 bg-surface-container-low border-y border-outline-variant/20 insights-filterable-section">
+                <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+                    <div class="mb-14" data-aos="fade-up">
+                        <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Downloads</span>
+                        <h2 class="font-headline-lg text-primary mb-2">Featured Reports &amp; Guides</h2>
+                        <p class="text-on-surface-variant text-lg">In-depth workforce resources for HR leaders, recruiters, and operations teams.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 insights-filterable-grid">
+                        <article class="insights-report-card insights-filterable" data-category="industry-reports" data-aos="fade-up">
+                            <span class="insights-badge insights-badge--report">Report</span>
+                            <h3>2026 Workforce Trends Report</h3>
+                            <p>Annual outlook on hiring demand, workforce mobility, and sector-specific talent dynamics.</p>
+                            <a href="contact.html" class="insights-report-card__btn page-btn page-btn--ghost">Download <span class="material-symbols-outlined text-[16px]">download</span></a>
+                        </article>
+                        <article class="insights-report-card insights-filterable" data-category="recruitment" data-aos="fade-up" data-aos-delay="50">
+                            <span class="insights-badge insights-badge--report">Guide</span>
+                            <h3>Guide to Effective Recruitment Strategies</h3>
+                            <p>Frameworks for role scoping, sourcing channels, and structured hiring workflows.</p>
+                            <a href="contact.html" class="insights-report-card__btn page-btn page-btn--ghost">Download <span class="material-symbols-outlined text-[16px]">download</span></a>
+                        </article>
+                        <article class="insights-report-card insights-filterable" data-category="payroll" data-aos="fade-up" data-aos-delay="100">
+                            <span class="insights-badge insights-badge--report">Handbook</span>
+                            <h3>Payroll Compliance Handbook</h3>
+                            <p>Practical reference for payroll administration, statutory obligations, and governance.</p>
+                            <a href="contact.html" class="insights-report-card__btn page-btn page-btn--ghost">Download <span class="material-symbols-outlined text-[16px]">download</span></a>
+                        </article>
+                        <article class="insights-report-card insights-filterable" data-category="executive-search" data-aos="fade-up" data-aos-delay="150">
+                            <span class="insights-badge insights-badge--report">Guide</span>
+                            <h3>Executive Search &amp; Leadership Guide</h3>
+                            <p>Insights on succession planning, leadership assessment, and board-level hiring.</p>
+                            <a href="contact.html" class="insights-report-card__btn page-btn page-btn--ghost">Download <span class="material-symbols-outlined text-[16px]">download</span></a>
+                        </article>
+                        <article class="insights-report-card insights-filterable" data-category="hr-advisory" data-aos="fade-up" data-aos-delay="200">
+                            <span class="insights-badge insights-badge--report">Guide</span>
+                            <h3>HR Advisory Best Practices</h3>
+                            <p>Workforce strategy, policy design, and organizational effectiveness for growing businesses.</p>
+                            <a href="contact.html" class="insights-report-card__btn page-btn page-btn--ghost">Download <span class="material-symbols-outlined text-[16px]">download</span></a>
+                        </article>
+                        <article class="insights-report-card insights-filterable" data-category="recruitment" data-aos="fade-up" data-aos-delay="250">
+                            <span class="insights-badge insights-badge--report">Framework</span>
+                            <h3>Background Verification Framework</h3>
+                            <p>Structured screening approaches to strengthen hiring confidence and workforce integrity.</p>
+                            <a href="contact.html" class="insights-report-card__btn page-btn page-btn--ghost">Download <span class="material-symbols-outlined text-[16px]">download</span></a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Industry insights -->
+            <section class="py-28 bg-surface insights-filterable-section">
+                <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+                    <div class="text-center mb-16 max-w-3xl mx-auto" data-aos="fade-up">
+                        <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">By Industry</span>
+                        <h2 class="font-headline-lg text-primary mb-4">Insights Across Industries</h2>
+                        <p class="text-on-surface-variant text-lg">Sector-specific hiring trends, workforce challenges, and recruitment perspectives.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 insights-filterable-grid">
+                        <article class="insights-industry-card insights-filterable" data-category="industry-reports workforce-technology" data-aos="fade-up">
+                            <span class="material-symbols-outlined insights-industry-card__icon">computer</span>
+                            <h3>IT &amp; Technology</h3>
+                            <ul>
+                                <li>Technical hiring demand and skills shortages</li>
+                                <li>Remote and hybrid workforce models</li>
+                                <li>Recruitment insights for digital enterprises</li>
+                            </ul>
+                        </article>
+                        <article class="insights-industry-card insights-filterable" data-category="industry-reports" data-aos="fade-up" data-aos-delay="40">
+                            <span class="material-symbols-outlined insights-industry-card__icon">engineering</span>
+                            <h3>Engineering</h3>
+                            <ul>
+                                <li>Project-based workforce planning</li>
+                                <li>Infrastructure talent availability</li>
+                                <li>Specialist recruitment approaches</li>
+                            </ul>
+                        </article>
+                        <article class="insights-industry-card insights-filterable" data-category="industry-reports" data-aos="fade-up" data-aos-delay="80">
+                            <span class="material-symbols-outlined insights-industry-card__icon">precision_manufacturing</span>
+                            <h3>Manufacturing</h3>
+                            <ul>
+                                <li>Production staffing and shift planning</li>
+                                <li>Operational workforce challenges</li>
+                                <li>Technical and plant hiring trends</li>
+                            </ul>
+                        </article>
+                        <article class="insights-industry-card insights-filterable" data-category="industry-reports" data-aos="fade-up" data-aos-delay="120">
+                            <span class="material-symbols-outlined insights-industry-card__icon">health_and_safety</span>
+                            <h3>Healthcare</h3>
+                            <ul>
+                                <li>Clinical and administrative hiring demand</li>
+                                <li>Workforce continuity planning</li>
+                                <li>Compliance-aware recruitment</li>
+                            </ul>
+                        </article>
+                        <article class="insights-industry-card insights-filterable" data-category="industry-reports" data-aos="fade-up" data-aos-delay="160">
+                            <span class="material-symbols-outlined insights-industry-card__icon">concierge</span>
+                            <h3>Hospitality</h3>
+                            <ul>
+                                <li>Seasonal staffing strategies</li>
+                                <li>Guest service talent availability</li>
+                                <li>Front-line workforce retention</li>
+                            </ul>
+                        </article>
+                        <article class="insights-industry-card insights-filterable" data-category="industry-reports" data-aos="fade-up" data-aos-delay="200">
+                            <span class="material-symbols-outlined insights-industry-card__icon">storefront</span>
+                            <h3>Retail</h3>
+                            <ul>
+                                <li>Store operations hiring cycles</li>
+                                <li>Customer-facing workforce planning</li>
+                                <li>Scaling retail teams efficiently</li>
+                            </ul>
+                        </article>
+                        <article class="insights-industry-card insights-filterable insights-industry-card--wide" data-category="industry-reports" data-aos="fade-up" data-aos-delay="240">
+                            <span class="material-symbols-outlined insights-industry-card__icon">school</span>
+                            <h3>Education &amp; EdTech</h3>
+                            <ul>
+                                <li>Academic and operations hiring trends</li>
+                                <li>EdTech workforce growth patterns</li>
+                                <li>Faculty and support team recruitment</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Newsletter -->
+        <section id="newsletter" class="insights-newsletter py-28">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+                <div class="insights-newsletter__inner" data-aos="fade-up">
+                    <span class="text-secondary font-label-md tracking-wider uppercase mb-3 block">Newsletter</span>
+                    <h2 class="insights-newsletter__title">Stay Updated on Workforce Trends</h2>
+                    <p class="insights-newsletter__lead">Receive practical insights on recruitment, workforce planning, payroll, HR strategy, leadership hiring, and industry developments.</p>
+                    <form class="insights-newsletter__form" action="https://formsubmit.co/info@kamgroups.com" method="post">
+                        <input type="hidden" name="inquiry_type" value="newsletter"/>
+                        <input type="hidden" name="name" value="Newsletter subscriber"/>
+                        <input type="hidden" name="message" value="Insights newsletter subscription"/>
+                        <label class="sr-only" for="insights-email">Email address</label>
+                        <input id="insights-email" name="email" type="email" placeholder="professional@company.com" required autocomplete="email"/>
+                        <button type="submit" class="page-btn page-btn--primary">Subscribe to Insights</button>
+                    </form>
+                    <p class="insights-newsletter__fine">By subscribing, you agree to receive workforce insights from KAM Global HR. View our <a href="privacy.html">privacy policy</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust -->
+        <section class="py-28 bg-surface border-y border-outline-variant/20">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div data-aos="fade-right">
+                        <span class="text-secondary font-label-md tracking-wider uppercase mb-2 block">Our Expertise</span>
+                        <h2 class="font-headline-lg text-primary mb-6">Built on Real Workforce Expertise</h2>
+                        <p class="text-on-surface-variant text-lg leading-relaxed">KAM Global HR combines workforce consulting experience, recruitment expertise, HR advisory services, payroll administration knowledge, and workforce technology capabilities to deliver practical business insights.</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6" data-aos="fade-left">
+                        <div class="glass-card p-8 rounded-2xl border border-outline-variant/30 text-center">
+                            <strong class="block text-3xl text-primary font-bold mb-1">22+</strong>
+                            <span class="text-on-surface-variant font-semibold">Years Experience</span>
+                        </div>
+                        <div class="glass-card p-8 rounded-2xl border border-outline-variant/30 text-center">
+                            <strong class="block text-3xl text-primary font-bold mb-1">100+</strong>
+                            <span class="text-on-surface-variant font-semibold">Client Relationships</span>
+                        </div>
+                        <div class="glass-card p-8 rounded-2xl border border-outline-variant/30 text-center">
+                            <strong class="block text-3xl text-primary font-bold mb-1">Multi</strong>
+                            <span class="text-on-surface-variant font-semibold">Industry Expertise</span>
+                        </div>
+                        <div class="glass-card p-8 rounded-2xl border border-outline-variant/30 text-center">
+                            <strong class="block text-3xl text-primary font-bold mb-1">Global</strong>
+                            <span class="text-on-surface-variant font-semibold">Workforce Perspective</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="py-24 px-margin-mobile md:px-margin-tablet max-w-container-max mx-auto">
+            <div class="rounded-[3rem] overflow-hidden shadow-2xl relative bg-surface-container-lowest py-20 px-12 md:px-24 text-center border border-outline-variant/30">
+                <div class="relative z-10 max-w-4xl mx-auto">
+                    <span class="inline-block bg-primary/10 text-primary border border-outline-variant/30 px-5 py-2 font-label-sm uppercase tracking-widest rounded-full mb-8 shadow-sm" data-aos="zoom-in">Knowledge Center</span>
+                    <h2 class="type-h2 text-primary mb-6 leading-tight" data-aos="fade-up">Explore Workforce Knowledge That Drives Better Decisions</h2>
+                    <p class="font-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">Access expert insights, industry trends, workforce strategies, and HR best practices from KAM Global HR.</p>
+                    <div class="flex flex-wrap justify-center gap-6" data-aos="fade-up" data-aos-delay="200">
+                        <a href="#resources" class="page-btn page-btn--primary">Explore Resources <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+                        <a href="contact.html" class="page-btn page-btn--ghost">Contact Our Team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+                            <!-- Global site footer — edit this file only; run: python scratch/sync_global_footer.py -->
+    <footer class="site-footer site-footer--enterprise" role="contentinfo">
+        <div class="site-footer__inner max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="site-footer__main">
+                <div class="site-footer__brand">
+                    <a href="index.html" class="site-footer__logo-link" aria-label="KAM Global HR home">
+                        <img src="assets/img/logo.png" alt="KAM Global HR" class="site-footer__logo" width="280" height="96"/>
+                    </a>
+                    <p class="site-footer__desc">Empowering organizations worldwide with recruitment excellence, workforce solutions, payroll services, and HR expertise to build stronger, future-ready teams.</p>
+                    <ul class="site-footer__contact">
+                        <li>
+                            <span class="site-footer__contact-icon material-symbols-outlined" aria-hidden="true">mail</span>
+                            <a href="mailto:info@kamgroups.com">info@kamgroups.com</a>
+                        </li>
+                        <li>
+                            <span class="site-footer__contact-icon material-symbols-outlined" aria-hidden="true">call</span>
+                            <a href="tel:+442079460000">+44 20 7946 0000</a>
+                        </li>
+                    </ul>
+                </div>
+                <nav class="site-footer__col" aria-labelledby="footer-solutions-title">
+                    <h2 class="site-footer__heading" id="footer-solutions-title">Solutions</h2>
+                    <ul class="site-footer__links">
+                        <li><a href="recruitment.html"><span class="site-footer__chev" aria-hidden="true">›</span>Recruitment Services</a></li>
+                        <li><a href="contract-staffing.html"><span class="site-footer__chev" aria-hidden="true">›</span>Contract Staffing</a></li>
+                        <li><a href="payroll.html"><span class="site-footer__chev" aria-hidden="true">›</span>Payroll Outsourcing</a></li>
+                        <li><a href="hr-advisory.html"><span class="site-footer__chev" aria-hidden="true">›</span>HR Advisory &amp; Consulting</a></li>
+                        <li><a href="executive-search.html"><span class="site-footer__chev" aria-hidden="true">›</span>Executive Search</a></li>
+                        <li><a href="manpower-bgv.html"><span class="site-footer__chev" aria-hidden="true">›</span>Background Verification</a></li>
+                    </ul>
+                </nav>
+                <nav class="site-footer__col" aria-labelledby="footer-software-title">
+                    <h2 class="site-footer__heading" id="footer-software-title">Software</h2>
+                    <ul class="site-footer__links">
+                        <li><a href="hr-talent.html"><span class="site-footer__chev" aria-hidden="true">›</span>HRMS Software</a></li>
+                        <li><a href="ats.html"><span class="site-footer__chev" aria-hidden="true">›</span>ATS Software</a></li>
+                        <li><a href="payroll-software.html"><span class="site-footer__chev" aria-hidden="true">›</span>Payroll Software</a></li>
+                    </ul>
+                </nav>
+                <nav class="site-footer__col" aria-labelledby="footer-resources-title">
+                    <h2 class="site-footer__heading" id="footer-resources-title">Resources</h2>
+                    <ul class="site-footer__links">
+                        <li><a href="insights.html"><span class="site-footer__chev" aria-hidden="true">›</span>Insights Hub</a></li>
+                        <li><a href="case-studies.html"><span class="site-footer__chev" aria-hidden="true">›</span>Case Studies</a></li>
+                        <li><a href="industries.html"><span class="site-footer__chev" aria-hidden="true">›</span>Industries</a></li>
+                        <li><a href="insights.html"><span class="site-footer__chev" aria-hidden="true">›</span>Downloads &amp; Guides</a></li>
+                    </ul>
+                </nav>
+                <nav class="site-footer__col" aria-labelledby="footer-company-title">
+                    <h2 class="site-footer__heading" id="footer-company-title">Company</h2>
+                    <ul class="site-footer__links">
+                        <li><a href="about.html"><span class="site-footer__chev" aria-hidden="true">›</span>About Us</a></li>
+                        <li><a href="about.html"><span class="site-footer__chev" aria-hidden="true">›</span>Our Leadership</a></li>
+                        <li><a href="contact.html"><span class="site-footer__chev" aria-hidden="true">›</span>Careers</a></li>
+                        <li><a href="insights.html"><span class="site-footer__chev" aria-hidden="true">›</span>Newsroom</a></li>
+                        <li><a href="contact.html"><span class="site-footer__chev" aria-hidden="true">›</span>Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div class="site-footer__col site-footer__col--offices">
+                    <h2 class="site-footer__heading" id="footer-offices-title">Global Offices</h2>
+                    <address class="site-footer__offices" aria-labelledby="footer-offices-title">
+                        <a class="site-footer__office-card" href="https://www.google.com/maps/place/KAM+GLOBAL+AI/@13.3104691,75.2165459,7z/data=!4m7!3m6!1s0x3bae170035391cbd:0xa77c598425d3a196!8m2!3d13.0209878!4d77.593684!15sCglrYW1nbG9iYWzgAQA!16s%2Fg%2F11yvxpjv74?entry=tts&amp;g_ep=EgoyMDI2MDMwOC4wIPu8ASoASAFQAw%3D%3D&amp;skid=dbeb7bd2-d116-4915-b0b8-033022d7beab" target="_blank" rel="noopener noreferrer">
+                            <span class="site-footer__office-pin material-symbols-outlined" aria-hidden="true">location_on</span>
+                            <span class="site-footer__office-body">
+                                <span class="site-footer__office-title">India</span>
+                                <span class="site-footer__office-lines">RT Nagar,<br>Bengaluru, KA</span>
+                            </span>
+                        </a>
+                        <a class="site-footer__office-card" href="https://www.google.com/maps/place/KAM+International+Group+Co./@29.3438775,48.0144258,17z/data=!3m1!4b1!4m6!3m5!1s0x3fcf9c96696d414d:0x96261e72f31ecb19!8m2!3d29.3438728!4d48.0170007!16s%2Fg%2F1tf5zs5_?entry=tts&amp;g_ep=EgoyMDI2MDMwOC4wIPu8ASoASAFQAw%3D%3D&amp;skid=7a633f8f-4cd3-46c7-a404-eedc9e31f22f" target="_blank" rel="noopener noreferrer">
+                            <span class="site-footer__office-pin material-symbols-outlined" aria-hidden="true">location_on</span>
+                            <span class="site-footer__office-body">
+                                <span class="site-footer__office-title">Kuwait</span>
+                                <span class="site-footer__office-lines">Block 4, Tunisia St.,<br>Hawally</span>
+                            </span>
+                        </a>
+                    </address>
+                </div>
+            </div>
+    
+            <div class="site-footer__trust" aria-label="Company highlights">
+                <div class="site-footer__trust-item">
+                    <span class="site-footer__trust-icon material-symbols-outlined" aria-hidden="true">engineering</span>
+                    <span class="site-footer__trust-text">
+                        <strong>22+ Years</strong>
+                        <span>Workforce Excellence</span>
+                    </span>
+                </div>
+                <div class="site-footer__trust-item">
+                    <span class="site-footer__trust-icon material-symbols-outlined" aria-hidden="true">work</span>
+                    <span class="site-footer__trust-text">
+                        <strong>100+</strong>
+                        <span>Client Relationships</span>
+                    </span>
+                </div>
+                <div class="site-footer__trust-item">
+                    <span class="site-footer__trust-icon material-symbols-outlined" aria-hidden="true">public</span>
+                    <span class="site-footer__trust-text">
+                        <strong>7+ Countries</strong>
+                        <span>Global Presence</span>
+                    </span>
+                </div>
+                <div class="site-footer__trust-item">
+                    <span class="site-footer__trust-icon material-symbols-outlined" aria-hidden="true">verified_user</span>
+                    <span class="site-footer__trust-text">
+                        <strong>Trusted Partner</strong>
+                        <span>Compliance &amp; Quality Driven</span>
+                    </span>
+                </div>
+            </div>
+    
+            <div class="site-footer__bottom">
+                <p class="site-footer__copy">&copy; 2026 KAM Global HR. All rights reserved.</p>
+                <nav class="site-footer__legal" aria-label="Legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <span class="site-footer__legal-sep" aria-hidden="true">|</span>
+                    <a href="terms.html">Terms of Service</a>
+                    <span class="site-footer__legal-sep" aria-hidden="true">|</span>
+                    <a href="privacy.html">Cookie Policy</a>
+                </nav>
+                <div class="site-footer__social" aria-label="Social media">
+                    <a href="#" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="#" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                    </a>
+                    <a href="#" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="X">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="#" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>
-</body></html>
+    <script>
+    (function () {
+        var pills = document.querySelectorAll('.insights-filter-pill');
+        var items = document.querySelectorAll('.insights-filterable');
+        if (!pills.length) return;
+
+        function applyFilter(filter) {
+            items.forEach(function (el) {
+                var cats = (el.getAttribute('data-category') || '').trim().split(/\s+/);
+                var show = filter === 'all' || cats.indexOf(filter) !== -1;
+                el.classList.toggle('is-hidden', !show);
+            });
+            document.querySelectorAll('.insights-filterable-section').forEach(function (section) {
+                var visible = section.querySelectorAll('.insights-filterable:not(.is-hidden)').length;
+                section.classList.toggle('is-empty', visible === 0);
+            });
+        }
+
+        pills.forEach(function (pill) {
+            pill.addEventListener('click', function () {
+                var filter = pill.getAttribute('data-filter');
+                pills.forEach(function (p) {
+                    p.classList.toggle('is-active', p === pill);
+                    p.setAttribute('aria-pressed', p === pill ? 'true' : 'false');
+                });
+                applyFilter(filter);
+            });
+        });
+    })();
+    </script>
+</body>
+</html>
