@@ -1,6 +1,6 @@
 # KAM Global HR — Admin CRM Setup
 
-PHP + MySQL admin panel for managing website leads and newsletter subscribers.
+PHP + MySQL admin panel for managing website leads, newsletter subscribers, and site content (settings, offices, insights, case studies).
 
 ## Requirements
 
@@ -85,6 +85,23 @@ If the CRM API is unavailable, forms fall back to FormSubmit (`info@kamgroups.co
 - **Leads** — search, filter by pipeline status, pagination
 - **Lead detail** — view message, update status (new → contacted → qualified → proposal → won/lost), add internal notes
 - **Newsletter** — list active subscribers
+- **Site settings** — email, phone, footer tagline, social URLs, trust stats
+- **Offices** — India/Kuwait (and more) for footer + contact page
+- **Insights** — articles and reports (published to `insights.html` + `insight.php?slug=…`)
+- **Case studies** — challenge/solution/outcome cards on `case-studies.html`
+
+### Dynamic website content
+
+Static HTML pages load content from `api/cms.php` via `assets/js/site-cms.js` (included from `main.js`):
+
+| Public page | Dynamic sections |
+|-------------|------------------|
+| All pages (footer) | Contact email/phone, tagline, offices, trust stats, social links |
+| `contact.html` | Office cards |
+| `insights.html` | Featured article, latest articles, reports |
+| `case-studies.html` | Case study grid |
+
+Default content is seeded once when CMS tables are empty (on deploy / first request).
 
 ## Production deployment
 

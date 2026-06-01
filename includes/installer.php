@@ -84,5 +84,13 @@ function kam_crm_ensure_installed(): array
     $messages[] = 'Database tables verified (created if missing).';
     $messages[] = kam_crm_ensure_admin();
 
+    require_once KAM_ROOT . '/includes/cms_seed.php';
+    try {
+        kam_cms_seed_defaults();
+        $messages[] = 'CMS default content seeded (if empty).';
+    } catch (Throwable $e) {
+        $messages[] = 'CMS seed skipped: ' . $e->getMessage();
+    }
+
     return $messages;
 }

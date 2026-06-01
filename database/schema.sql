@@ -73,3 +73,78 @@ CREATE TABLE IF NOT EXISTS activity_log (
   INDEX idx_activity_created (created_at),
   CONSTRAINT fk_activity_admin FOREIGN KEY (admin_id) REFERENCES admins(id) ON DELETE SET NULL
 ) ENGINE=InnoDB;
+
+-- Site CMS (managed from admin)
+CREATE TABLE IF NOT EXISTS site_settings (
+  setting_key VARCHAR(80) NOT NULL PRIMARY KEY,
+  setting_value TEXT NULL,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS offices (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(120) NOT NULL,
+  address_line1 VARCHAR(190) NOT NULL,
+  address_line2 VARCHAR(190) NULL,
+  phone VARCHAR(40) NULL,
+  email VARCHAR(190) NULL,
+  map_url VARCHAR(500) NULL,
+  sort_order INT NOT NULL DEFAULT 0,
+  is_active TINYINT(1) NOT NULL DEFAULT 1,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  INDEX idx_offices_sort (sort_order)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS insights (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(220) NOT NULL,
+  slug VARCHAR(220) NOT NULL UNIQUE,
+  excerpt TEXT NULL,
+  body_html MEDIUMTEXT NULL,
+  category VARCHAR(60) NOT NULL DEFAULT 'general',
+  content_type ENUM('article', 'report') NOT NULL DEFAULT 'article',
+  image_url VARCHAR(500) NULL,
+  download_url VARCHAR(500) NULL,
+  is_featured TINYINT(1) NOT NULL DEFAULT 0,
+  status ENUM('draft', 'published') NOT NULL DEFAULT 'draft',
+  sort_order INT NOT NULL DEFAULT 0,
+  published_at DATETIME NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  INDEX idx_insights_status (status),
+  INDEX idx_insights_featured (is_featured),
+  INDEX idx_insights_category (category)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS case_studies (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(220) NOT NULL,
+  slug VARCHAR(220) NOT NULL UNIQUE,
+  industry VARCHAR(120) NOT NULL DEFAULT 'General',
+  summary VARCHAR(500) NULL,
+  challenge TEXT NOT NULL,
+  solution TEXT NOT NULL,
+  outcome TEXT NOT NULL,
+  is_featured TINYINT(1) NOT NULL DEFAULT 0,
+  status ENUM('draft', 'published') NOT NULL DEFAULT 'draft',
+  sort_order INT NOT NULL DEFAULT 0,
+  published_at DATETIME NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  INDEX idx_cases_status (status),
+  INDEX idx_cases_featured (is_featured)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS testimonials (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  role_title VARCHAR(160) NULL,
+  company VARCHAR(160) NULL,
+  quote TEXT NOT NULL,
+  image_url VARCHAR(500) NULL,
+  sort_order INT NOT NULL DEFAULT 0,
+  is_active TINYINT(1) NOT NULL DEFAULT 1,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB;

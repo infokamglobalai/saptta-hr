@@ -368,4 +368,12 @@ document.addEventListener('DOMContentLoaded', () => {
             submitLeadForm(form);
         });
     });
+
+    const mainScript = document.querySelector('script[src*="main.js"]');
+    const cmsScript = document.createElement('script');
+    cmsScript.src = mainScript
+        ? mainScript.src.replace(/main\.js(\?.*)?$/, 'site-cms.js')
+        : 'assets/js/site-cms.js';
+    cmsScript.defer = true;
+    document.body.appendChild(cmsScript);
 });
