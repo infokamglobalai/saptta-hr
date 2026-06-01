@@ -2,11 +2,11 @@
 -- Run: mysql -u root -p < database/schema.sql
 -- Or import via phpMyAdmin
 
-CREATE DATABASE IF NOT EXISTS kam_hr_crm
+CREATE DATABASE IF NOT EXISTS u879823199_kamglobal_hr
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
 
-USE kam_hr_crm;
+USE u879823199_kamglobal_hr;
 
 CREATE TABLE IF NOT EXISTS admins (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,

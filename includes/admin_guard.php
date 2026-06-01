@@ -63,7 +63,14 @@ function kam_admin_test_database(): ?string
     } catch (Throwable $e) {
         $msg = $e->getMessage();
         if (str_contains($msg, 'Base table') || str_contains($msg, "doesn't exist")) {
-            return 'Database tables are missing. Run install.php to create them.';
+            try {
+                require_once KAM_ROOT . '/includes/installer.php';
+                kam_crm_ensure_installed();
+                Database::connection()->query('SELECT COUNT(*) FROM admins LIMIT 1');
+                return null;
+            } catch (Throwable $inner) {
+                return 'Database tables missing: ' . $inner->getMessage();
+            }
         }
         if (str_contains($msg, 'Access denied') || str_contains($msg, 'Unknown database')) {
             return 'Cannot connect to MySQL. Check DB_HOST, DB_NAME, DB_USER, and DB_PASS in config/.env.';

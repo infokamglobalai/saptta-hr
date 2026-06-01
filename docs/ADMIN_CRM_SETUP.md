@@ -8,6 +8,16 @@ PHP + MySQL admin panel for managing website leads and newsletter subscribers.
 - MySQL 5.7+ or MariaDB 10.4+
 - Apache/Nginx (or `php -S` for local dev)
 
+## Deploy without re-installing every push
+
+`config/.env` is stored in the repository (for your Hostinger setup). On each deploy/pull:
+
+- Missing tables are created automatically (`CREATE TABLE IF NOT EXISTS`)
+- Existing leads and admin users are **not** deleted
+- Admin password is **not** reset if the account already exists
+
+You only need `install.php` for manual troubleshooting — not after every git push.
+
 ## Quick start (local)
 
 1. **Copy environment file**
