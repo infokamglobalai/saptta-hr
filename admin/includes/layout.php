@@ -27,7 +27,7 @@ $navItems = [
 ];
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="admin-app">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -35,7 +35,7 @@ $navItems = [
     <title><?= kam_h($pageTitle) ?> — KAM CRM</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link rel="stylesheet" href="assets/css/admin.css"/>
+    <link rel="stylesheet" href="assets/css/admin.css?v=2"/>
 </head>
 <body class="admin-body" data-page="<?= kam_h($activeNav ?? '') ?>">
 <div class="admin-layout">

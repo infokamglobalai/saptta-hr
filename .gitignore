@@ -14,5 +14,6 @@ Thumbs.db
 # Local dev scripts (do not deploy)
 scratch/
 
-# Optional local overrides (keep secrets out of shared .env if needed)
+# Secrets — never commit real credentials
+config/.env
 config/.env.local

@@ -40,9 +40,14 @@
     vertical-align: middle;
 }
 
+html.admin-app {
+    height: 100%;
+    overflow: hidden;
+}
+
 body.admin-body {
     margin: 0;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     font-size: 0.9375rem;
@@ -54,11 +59,10 @@ body.admin-body {
 a { color: var(--admin-blue); text-decoration: none; transition: color var(--admin-transition); }
 a:hover { color: var(--admin-blue-bright); }
 
-/* Layout — sidebar and main scroll independently */
+/* Layout — fixed viewport; main pane scrolls (scrollbar hidden) */
 .admin-layout {
     display: flex;
-    height: 100vh;
-    max-height: 100vh;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -66,14 +70,12 @@ a:hover { color: var(--admin-blue-bright); }
 .admin-sidebar {
     width: var(--admin-sidebar-w);
     flex-shrink: 0;
-    height: 100vh;
-    max-height: 100vh;
+    height: 100%;
     background: linear-gradient(180deg, #001f3f 0%, #001528 55%, #000a14 100%);
     color: #fff;
     display: flex;
     flex-direction: column;
     padding: 0;
-    position: relative;
     overflow: hidden;
     box-shadow: 4px 0 24px rgba(0, 10, 30, 0.15);
 }
@@ -86,15 +88,14 @@ a:hover { color: var(--admin-blue-bright); }
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
     padding: 0.35rem 0 0.5rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .admin-sidebar__nav-scroll::-webkit-scrollbar {
-    width: 5px;
-}
-
-.admin-sidebar__nav-scroll::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 999px;
+    width: 0;
+    height: 0;
+    display: none;
 }
 
 .admin-sidebar::before {
@@ -295,8 +296,7 @@ a:hover { color: var(--admin-blue-bright); }
     flex: 1;
     min-width: 0;
     min-height: 0;
-    height: 100vh;
-    max-height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -424,25 +424,20 @@ a:hover { color: var(--admin-blue-bright); }
 .admin-content {
     flex: 1;
     min-height: 0;
-    overflow-y: auto;
     overflow-x: hidden;
+    overflow-y: auto;
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
     padding: 1.5rem 1.75rem 2rem;
     max-width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .admin-content::-webkit-scrollbar {
-    width: 8px;
-}
-
-.admin-content::-webkit-scrollbar-thumb {
-    background: rgba(0, 31, 63, 0.15);
-    border-radius: 999px;
-}
-
-.admin-content::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 31, 63, 0.25);
+    width: 0;
+    height: 0;
+    display: none;
 }
 
 .admin-content--animate {
@@ -860,7 +855,17 @@ a:hover { color: var(--admin-blue-bright); }
 }
 
 /* Tables */
-.admin-table-wrap { overflow-x: auto; }
+.admin-table-wrap {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.admin-table-wrap::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+}
 
 .admin-table {
     width: 100%;
@@ -2131,8 +2136,7 @@ a:hover { color: var(--admin-blue-bright); }
         left: 0;
         top: 0;
         bottom: 0;
-        height: 100vh;
-        max-height: 100vh;
+        height: auto;
         z-index: 100;
         width: min(var(--admin-sidebar-w), 88vw);
         transform: translateX(-100%);
@@ -2140,15 +2144,18 @@ a:hover { color: var(--admin-blue-bright); }
     }
 
     .admin-main {
-        height: 100vh;
-        max-height: 100vh;
+        height: 100%;
+        min-height: 0;
     }
 
     .admin-sidebar.is-open {
         transform: translateX(0);
     }
 
-    body.admin-nav-open { overflow: hidden; }
+    body.admin-nav-open,
+    html.admin-app:has(body.admin-nav-open) {
+        overflow: hidden;
+    }
 
     .admin-search { display: none; }
 

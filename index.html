@@ -1,8 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="light" lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <style>
+        html { overflow-x: hidden !important; scrollbar-width: none !important; -ms-overflow-style: none !important; }
+        html::-webkit-scrollbar { display: none !important; width: 0 !important; height: 0 !important; }
+        #mobile-menu.hidden { overflow: hidden !important; }
+    </style>
     <title>Kam Global HR | Enterprise HR &amp; Workforce Solutions</title>
     <meta name="description" content="Recruitment, contract staffing, payroll outsourcing, HR advisory, executive search, and background verification across global markets."/>
     <link rel="canonical" href="https://www.kamglobalhr.com/"/>
@@ -33,10 +38,10 @@
     
     <!-- Global Assets -->
     <script src="assets/js/tailwind-config.js"></script>
-    <link href="assets/css/global.css" rel="stylesheet"/>
+    <link href="assets/css/global.css?v=12" rel="stylesheet"/>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"KAM Global HR","url":"https://www.kamglobalhr.com/","description":"Enterprise HR and workforce solutions across recruitment, staffing, payroll, and executive search.","parentOrganization":{"@type":"Organization","name":"KAM International Group"}}</script>
 </head>
-<body class="site-page bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed overflow-x-hidden">
+<body class="site-page bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
     
             <!-- TopNavBar -->
     <header class="site-header fixed top-0 w-full z-50" id="site-header">
@@ -159,10 +164,10 @@
                         </a>
                         <a href="services.html" class="hero-cta hero-cta--secondary">Explore Services</a>
                     </div>
-                    <ul class="hero-section__pills hero-title__anim" aria-label="Core strengths">
-                        <li class="hero-pill"><span class="material-symbols-outlined" aria-hidden="true">history</span>22+ years</li>
-                        <li class="hero-pill"><span class="material-symbols-outlined" aria-hidden="true">public</span>7 countries</li>
-                        <li class="hero-pill"><span class="material-symbols-outlined" aria-hidden="true">verified_user</span>Enterprise HR</li>
+                    <ul class="hero-value-list hero-title__anim" aria-label="Why teams choose KAM">
+                        <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Hire-to-payroll under one accountable partner</li>
+                        <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Dedicated account &amp; delivery teams</li>
+                        <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Regional compliance &amp; HR advisory</li>
                     </ul>
                 </div>
                 
@@ -266,42 +271,43 @@
         </section>
 
         <!-- Why Partner With KAM Global HR -->
-        <section class="partner-why partner-why--strip page-section" id="why-partner" aria-labelledby="partner-why-title">
+        <section class="partner-why partner-why--strip partner-why--animated page-section" id="why-partner" aria-labelledby="partner-why-title">
+            <div class="partner-why__ambient" aria-hidden="true"></div>
             <div class="partner-why__inner max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-                <header class="partner-why__head" data-aos="fade-up">
+                <header class="partner-why__head" data-aos="partner-title" data-aos-duration="900">
                     <h2 class="partner-why__title" id="partner-why-title">Why Partner With <span>KAM Global HR</span></h2>
                 </header>
 
                 <div class="partner-why__grid partner-why__grid--strip">
-                    <article class="partner-point partner-point--strip partner-point--blue" data-aos="fade-up">
+                    <article class="partner-point partner-point--strip partner-point--blue" data-aos="partner-card" data-aos-delay="0">
                         <div class="partner-point__icon" aria-hidden="true"><span class="material-symbols-outlined">history_edu</span></div>
                         <h3 class="partner-point__title">22+ Years Experience</h3>
                     </article>
-                    <article class="partner-point partner-point--strip partner-point--teal" data-aos="fade-up" data-aos-delay="40">
+                    <article class="partner-point partner-point--strip partner-point--teal" data-aos="partner-card" data-aos-delay="70">
                         <div class="partner-point__icon" aria-hidden="true"><span class="material-symbols-outlined">bolt</span></div>
                         <h3 class="partner-point__title">Faster Turnaround</h3>
                     </article>
-                    <article class="partner-point partner-point--strip partner-point--indigo" data-aos="fade-up" data-aos-delay="80">
+                    <article class="partner-point partner-point--strip partner-point--indigo" data-aos="partner-card" data-aos-delay="140">
                         <div class="partner-point__icon" aria-hidden="true"><span class="material-symbols-outlined">policy</span></div>
                         <h3 class="partner-point__title">Compliance-Focused</h3>
                     </article>
-                    <article class="partner-point partner-point--strip partner-point--amber" data-aos="fade-up" data-aos-delay="120">
+                    <article class="partner-point partner-point--strip partner-point--amber" data-aos="partner-card" data-aos-delay="210">
                         <div class="partner-point__icon" aria-hidden="true"><span class="material-symbols-outlined">groups</span></div>
                         <h3 class="partner-point__title">Strong Talent Network</h3>
                     </article>
-                    <article class="partner-point partner-point--strip partner-point--blue" data-aos="fade-up" data-aos-delay="160">
+                    <article class="partner-point partner-point--strip partner-point--blue" data-aos="partner-card" data-aos-delay="280">
                         <div class="partner-point__icon" aria-hidden="true"><span class="material-symbols-outlined">public</span></div>
                         <h3 class="partner-point__title">Global Workforce Expertise</h3>
                     </article>
-                    <article class="partner-point partner-point--strip partner-point--teal" data-aos="fade-up" data-aos-delay="200">
+                    <article class="partner-point partner-point--strip partner-point--teal" data-aos="partner-card" data-aos-delay="350">
                         <div class="partner-point__icon" aria-hidden="true"><span class="material-symbols-outlined">insights</span></div>
                         <h3 class="partner-point__title">Workforce Technology</h3>
                     </article>
-                    <article class="partner-point partner-point--strip partner-point--indigo" data-aos="fade-up" data-aos-delay="240">
+                    <article class="partner-point partner-point--strip partner-point--indigo" data-aos="partner-card" data-aos-delay="420">
                         <div class="partner-point__icon" aria-hidden="true"><span class="material-symbols-outlined">trending_up</span></div>
                         <h3 class="partner-point__title">Scalable Hiring Solutions</h3>
                     </article>
-                    <article class="partner-point partner-point--strip partner-point--amber" data-aos="fade-up" data-aos-delay="280">
+                    <article class="partner-point partner-point--strip partner-point--amber" data-aos="partner-card" data-aos-delay="490">
                         <div class="partner-point__icon" aria-hidden="true"><span class="material-symbols-outlined">handshake</span></div>
                         <h3 class="partner-point__title">Client-Centric Partnerships</h3>
                     </article>
@@ -805,6 +811,6 @@
 
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js?v=3"></script>
 </body>
 </html>

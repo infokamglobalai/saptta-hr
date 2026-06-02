@@ -1,6 +1,36 @@
 // Global JavaScript for Kam Global HR
 
+/** One scroll surface, no visible scrollbar (wheel/touch still scroll the page) */
+function kamFixPageScroll() {
+    const root = document.documentElement;
+    if (root.classList.contains('admin-app')) return;
+
+    root.style.overflowX = 'hidden';
+    root.style.overflowY = 'auto';
+    root.style.scrollbarWidth = 'none';
+
+    const body = document.body;
+    if (!body) return;
+
+    body.classList.remove('overflow-x-hidden');
+    body.style.overflow = 'visible';
+    body.style.scrollbarWidth = 'none';
+
+    document.querySelectorAll('main.page-wrap, .page-wrap').forEach((el) => {
+        el.style.overflow = 'visible';
+        el.style.scrollbarWidth = 'none';
+    });
+
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenu && mobileMenu.classList.contains('hidden')) {
+        mobileMenu.style.overflow = 'hidden';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    kamFixPageScroll();
+    window.addEventListener('load', kamFixPageScroll);
+
     // Initialize AOS (Animate On Scroll)
     if (typeof AOS !== 'undefined') {
         AOS.init({
@@ -34,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenuBtn.classList.add('is-open');
             mobileMenuBtn.setAttribute('aria-expanded', 'true');
             if (icon) icon.textContent = 'close';
+            mobileMenu.style.overflow = '';
             document.body.style.overflow = 'hidden';
         };
         const closeMenu = () => {
@@ -42,7 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenuBtn.classList.remove('is-open');
             mobileMenuBtn.setAttribute('aria-expanded', 'false');
             if (icon) icon.textContent = 'menu';
+            mobileMenu.style.overflow = 'hidden';
             document.body.style.overflow = '';
+            kamFixPageScroll();
         };
         mobileMenuBtn.addEventListener('click', () => {
             if (mobileMenu.classList.contains('hidden')) openMenu();
