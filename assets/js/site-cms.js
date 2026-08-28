@@ -103,7 +103,7 @@
     function applySettings(settings) {
         if (!settings) return;
 
-        var email = setting(settings, 'contact_email', 'info@kamgroups.com');
+        var email = setting(settings, 'contact_email', 'recruitment@kamglobalai.com');
         var phone = setting(settings, 'contact_phone', '');
 
         document.querySelectorAll('[data-cms="contact-email"]').forEach(function (el) {
@@ -115,17 +115,49 @@
             if (!el.textContent.trim()) el.textContent = email;
         });
 
+        function parsePhones(value) {
+            return String(value || '')
+                .split(/[,;/|]+/)
+                .map(function (part) { return part.trim(); })
+                .filter(Boolean);
+        }
+
+        function telHref(value) {
+            return 'tel:' + String(value).replace(/[^\d+]/g, '');
+        }
+
+        function phoneRowHtml(p) {
+            return '<li class="site-footer__phone-item">' +
+                '<span class="site-footer__contact-icon material-symbols-outlined" aria-hidden="true">call</span>' +
+                '<a href="' + telHref(p) + '">' + esc(p) + '</a></li>';
+        }
+
+        var phones = parsePhones(phone);
+
         document.querySelectorAll('[data-cms="contact-phone"]').forEach(function (el) {
-            if (!phone) return;
-            el.textContent = phone;
-            var tel = phone.replace(/[^\d+]/g, '');
-            if (el.tagName === 'A') el.setAttribute('href', 'tel:' + tel);
+            if (!phones.length) return;
+            if (el.tagName === 'A' && phones.length === 1) {
+                el.textContent = phones[0];
+                el.setAttribute('href', telHref(phones[0]));
+                return;
+            }
+            el.innerHTML = phones.map(function (p) {
+                return '<a href="' + telHref(p) + '">' + esc(p) + '</a>';
+            }).join('');
         });
         document.querySelectorAll('[data-cms="contact-phone-href"]').forEach(function (el) {
-            if (!phone) return;
-            var tel = phone.replace(/[^\d+]/g, '');
-            el.setAttribute('href', 'tel:' + tel);
-            if (!el.textContent.trim()) el.textContent = phone;
+            if (!phones.length) return;
+            if (el.tagName === 'A') {
+                el.setAttribute('href', telHref(phones[0]));
+                el.textContent = phones.length === 1 ? phones[0] : phones.join(', ');
+            }
+        });
+        document.querySelectorAll('ul.site-footer__contact').forEach(function (list) {
+            if (!phones.length) return;
+            list.querySelectorAll('.site-footer__phone-item').forEach(function (row) {
+                row.remove();
+            });
+            list.insertAdjacentHTML('beforeend', phones.map(phoneRowHtml).join(''));
         });
 
         document.querySelectorAll('[data-cms="site-tagline"]').forEach(function (el) {

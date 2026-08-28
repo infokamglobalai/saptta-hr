@@ -6,10 +6,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Single scroll on html; scrollbar hidden (wheel/touch still works) */
+/* Viewport is the scroller. overflow-x on html would force a nested Y scrollport. */
 html:not(.admin-app) {
-    overflow-x: hidden;
-    overflow-y: auto;
+    scroll-behavior: smooth;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -20,9 +19,15 @@ html:not(.admin-app)::-webkit-scrollbar {
     display: none;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    html:not(.admin-app) {
+        scroll-behavior: auto;
+    }
+}
+
 body.site-page,
 body.site-page.overflow-x-hidden {
-    overflow: visible !important;
+    overflow-x: clip;
     max-width: 100%;
 }
 
@@ -14087,12 +14092,12 @@ body.about-page .ab-global__title,
     margin-top: 0.25rem;
 }
 
-/* Keep last: wins over Tailwind CDN injected utilities */
+/* Keep last: wins over Tailwind CDN injected utilities.
+   Do not set overflow-x/y on html — that creates a nested scrollport and janky wheel scroll. */
 html:not(.admin-app) {
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
     scrollbar-width: none !important;
     -ms-overflow-style: none !important;
+    scroll-behavior: smooth;
 }
 
 html:not(.admin-app)::-webkit-scrollbar {
@@ -14101,15 +14106,21 @@ html:not(.admin-app)::-webkit-scrollbar {
     display: none !important;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    html:not(.admin-app) {
+        scroll-behavior: auto !important;
+    }
+}
+
 body.site-page,
-body.site-page.overflow-x-hidden,
+body.site-page.overflow-x-hidden {
+    overflow-x: clip;
+    max-width: 100%;
+}
+
 main.page-wrap,
 .page-wrap {
     overflow: visible !important;
-    overflow-x: visible !important;
-    overflow-y: visible !important;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
 }
 
 body.site-page::-webkit-scrollbar,

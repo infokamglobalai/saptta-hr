@@ -77,7 +77,7 @@ Website forms POST to:
 - `api/submit-lead.php`
 - `api/newsletter.php`
 
-If the CRM API is unavailable, forms fall back to FormSubmit (`info@kamgroups.com`).
+If the CRM API is unavailable, forms fall back to FormSubmit (`recruitment@kamglobalai.com`).
 
 ## Admin features
 

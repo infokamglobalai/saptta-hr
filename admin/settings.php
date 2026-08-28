@@ -46,12 +46,15 @@ kam_admin_render(function () use ($settings, $message, $error, $csrf): void {
             <div class="admin-grid-2">
                 <div>
                     <h3 class="admin-form-section-title">Contact</h3>
-                    <?php foreach (['contact_email' => 'Email', 'contact_phone' => 'Phone'] as $k => $label): ?>
-                        <div class="admin-form-group">
-                            <label for="<?= $k ?>"><?= kam_h($label) ?></label>
-                            <input id="<?= $k ?>" name="<?= $k ?>" value="<?= kam_h($settings[$k] ?? '') ?>"/>
-                        </div>
-                    <?php endforeach; ?>
+                    <div class="admin-form-group">
+                        <label for="contact_email">Email</label>
+                        <input id="contact_email" name="contact_email" value="<?= kam_h($settings['contact_email'] ?? '') ?>"/>
+                    </div>
+                    <div class="admin-form-group">
+                        <label for="contact_phone">Phone</label>
+                        <input id="contact_phone" name="contact_phone" value="<?= kam_h($settings['contact_phone'] ?? '') ?>" placeholder="+91 9900007072, +91 9900007073"/>
+                        <p class="admin-form-hint">Separate multiple numbers with a comma. Each becomes a clickable footer link.</p>
+                    </div>
                     <div class="admin-form-group">
                         <label for="site_tagline">Footer tagline</label>
                         <textarea id="site_tagline" name="site_tagline" rows="3"><?= kam_h($settings['site_tagline'] ?? '') ?></textarea>

@@ -1,24 +1,23 @@
 // Global JavaScript for Kam Global HR
 
-/** One scroll surface, no visible scrollbar (wheel/touch still scroll the page) */
+/** Keep the viewport as the only page scroller (avoids nested html/body scrollports). */
 function kamFixPageScroll() {
     const root = document.documentElement;
     if (root.classList.contains('admin-app')) return;
 
-    root.style.overflowX = 'hidden';
-    root.style.overflowY = 'auto';
-    root.style.scrollbarWidth = 'none';
+    root.style.removeProperty('overflow');
+    root.style.removeProperty('overflow-x');
+    root.style.removeProperty('overflow-y');
 
     const body = document.body;
     if (!body) return;
 
     body.classList.remove('overflow-x-hidden');
-    body.style.overflow = 'visible';
-    body.style.scrollbarWidth = 'none';
+    body.style.overflowX = 'clip';
+    body.style.removeProperty('overflow-y');
 
     document.querySelectorAll('main.page-wrap, .page-wrap').forEach((el) => {
         el.style.overflow = 'visible';
-        el.style.scrollbarWidth = 'none';
     });
 
     const mobileMenu = document.getElementById('mobile-menu');
@@ -264,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Lead forms: CRM API first, FormSubmit fallback when PHP/DB unavailable
-    const FORM_FALLBACK = 'https://formsubmit.co/ajax/info@kamgroups.com';
+    const FORM_FALLBACK = 'https://formsubmit.co/ajax/recruitment@kamglobalai.com';
     const CRM_LEAD_API = new URL('api/submit-lead.php', window.location.href).href;
     const CRM_NEWSLETTER_API = new URL('api/newsletter.php', window.location.href).href;
 
@@ -365,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 await postFallback(fallbackData);
             } catch {
-                showFormMessage(form, 'error', 'We could not send your message. Please email info@kamgroups.com or try again.');
+                showFormMessage(form, 'error', 'We could not send your message. Please email recruitment@kamglobalai.com or try again.');
                 if (submitBtn) {
                     submitBtn.disabled = false;
                     submitBtn.removeAttribute('aria-busy');

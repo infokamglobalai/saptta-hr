@@ -13,8 +13,8 @@ function kam_cms_seed_defaults(): void
 
     CmsRepository::settingsSave([
         'site_tagline' => 'Empowering organizations worldwide with recruitment excellence, workforce solutions, payroll services, and HR expertise to build stronger, future-ready teams.',
-        'contact_email' => 'info@kamgroups.com',
-        'contact_phone' => '+91 80 0000 0000',
+        'contact_email' => 'recruitment@kamglobalai.com',
+        'contact_phone' => '+91 9900007072, +91 9900007073',
         'social_linkedin' => 'https://www.linkedin.com/company/kamglobalhr',
         'social_facebook' => 'https://www.facebook.com/kamglobalhr',
         'social_x' => 'https://x.com/kamglobalhr',
