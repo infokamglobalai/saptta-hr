@@ -27,12 +27,18 @@ if (str_contains($contentType, 'application/json')) {
     }
 }
 
-$name = trim((string) ($input['name'] ?? ''));
-$email = trim((string) ($input['email'] ?? ''));
-$message = trim((string) ($input['message'] ?? ''));
-$phone = trim((string) ($input['phone'] ?? ''));
-$company = trim((string) ($input['company'] ?? ''));
-$inquiry = trim((string) ($input['inquiry_type'] ?? $input['inquiry'] ?? 'general'));
+$honeypot = trim((string) ($input['_gotcha'] ?? $input['website_hp'] ?? $input['honeypot'] ?? ''));
+if ($honeypot !== '') {
+    // Silently succeed for bots without storing spam in DB
+    kam_json(['ok' => true, 'message' => 'Thank you. Our team will respond shortly.']);
+}
+
+$name = mb_substr(trim((string) ($input['name'] ?? '')), 0, 150);
+$email = mb_substr(trim((string) ($input['email'] ?? '')), 0, 190);
+$message = mb_substr(trim((string) ($input['message'] ?? '')), 0, 10000);
+$phone = mb_substr(trim((string) ($input['phone'] ?? '')), 0, 40);
+$company = mb_substr(trim((string) ($input['company'] ?? '')), 0, 190);
+$inquiry = mb_substr(trim((string) ($input['inquiry_type'] ?? $input['inquiry'] ?? 'general')), 0, 80);
 
 if ($name === '' || $email === '' || $message === '') {
     kam_json(['ok' => false, 'error' => 'Name, email, and message are required.'], 422);
@@ -50,7 +56,7 @@ try {
         'company' => $company ?: null,
         'inquiry_type' => $inquiry ?: 'general',
         'message' => $message,
-        'source' => trim((string) ($input['source'] ?? 'website')),
+        'source' => mb_substr(trim((string) ($input['source'] ?? 'website')), 0, 60),
         'ip_address' => kam_client_ip(),
         'user_agent' => substr((string) ($_SERVER['HTTP_USER_AGENT'] ?? ''), 0, 500) ?: null,
     ]);
@@ -61,3 +67,4 @@ try {
 } catch (Throwable $e) {
     kam_json(['ok' => false, 'error' => 'Could not save inquiry. Please try again later.'], 500);
 }
+

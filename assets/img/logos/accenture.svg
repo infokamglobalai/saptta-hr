@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" fill="none">
+  <!-- accenture Wordmark with signature > mark -->
+  <text x="6" y="34" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800" fill="#000000" letter-spacing="-0.5px">accenture</text>
+  <!-- Chevron Accent above the t -->
+  <path d="M72 13 L78 18 L72 23" stroke="#a100ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

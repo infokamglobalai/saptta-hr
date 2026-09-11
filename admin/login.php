@@ -6,40 +6,61 @@ require_once dirname(__DIR__) . '/includes/admin_guard.php';
 
 kam_admin_bootstrap();
 
+Auth::startSession();
+
 if (Auth::check()) {
     kam_redirect('index.php');
 }
 
 $error = '';
+$lockoutTime = 60; // seconds
+$maxAttempts = 5;
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = trim((string) ($_POST['email'] ?? ''));
-    $password = (string) ($_POST['password'] ?? '');
+$attempts = (int) ($_SESSION['login_attempts'] ?? 0);
+$lastAttempt = (int) ($_SESSION['last_login_attempt'] ?? 0);
 
-    if ($email === '' || $password === '') {
-        $error = 'Email and password are required.';
+if ($attempts >= $maxAttempts && (time() - $lastAttempt) < $lockoutTime) {
+    $remaining = $lockoutTime - (time() - $lastAttempt);
+    $error = "Too many failed attempts. Please wait {$remaining} seconds before trying again.";
+} elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (!Auth::verifyCsrf($_POST['csrf'] ?? null)) {
+        $error = 'Invalid session. Please refresh and try again.';
     } else {
-        try {
-            $pdo = Database::connection();
-            $stmt = $pdo->prepare(
-                'SELECT * FROM admins WHERE email = ? AND is_active = 1 LIMIT 1'
-            );
-            $stmt->execute([$email]);
-            $admin = $stmt->fetch();
+        $email = trim((string) ($_POST['email'] ?? ''));
+        $password = (string) ($_POST['password'] ?? '');
 
-            if ($admin && password_verify($password, $admin['password_hash'])) {
-                Auth::login($admin);
-                $pdo->prepare('UPDATE admins SET last_login_at = NOW() WHERE id = ?')
-                    ->execute([(int) $admin['id']]);
-                kam_log_activity((int) $admin['id'], 'admin', (int) $admin['id'], 'login');
-                kam_redirect('index.php');
+        if ($email === '' || $password === '') {
+            $error = 'Email and password are required.';
+        } else {
+            try {
+                $pdo = Database::connection();
+                $stmt = $pdo->prepare(
+                    'SELECT * FROM admins WHERE email = ? AND is_active = 1 LIMIT 1'
+                );
+                $stmt->execute([$email]);
+                $admin = $stmt->fetch();
+
+                if ($admin && password_verify($password, $admin['password_hash'])) {
+                    unset($_SESSION['login_attempts'], $_SESSION['last_login_attempt']);
+                    Auth::login($admin);
+                    $pdo->prepare('UPDATE admins SET last_login_at = NOW() WHERE id = ?')
+                        ->execute([(int) $admin['id']]);
+                    kam_log_activity((int) $admin['id'], 'admin', (int) $admin['id'], 'login');
+                    kam_redirect('index.php');
+                }
+
+                $_SESSION['login_attempts'] = $attempts + 1;
+                $_SESSION['last_login_attempt'] = time();
+                $error = 'Invalid email or password.';
+            } catch (Throwable) {
+                $error = 'Database connection failed. Please check config/.env.';
             }
-            $error = 'Invalid email or password.';
-        } catch (Throwable) {
-            $error = 'Database connection failed. Check config/.env or run install.php.';
         }
     }
 }
+
+$csrf = Auth::csrfToken();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -100,6 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
             <?php endif; ?>
             <form method="post" autocomplete="on" class="admin-auth__form">
+                <input type="hidden" name="csrf" value="<?= kam_h($csrf) ?>"/>
                 <div class="admin-form-group">
                     <label for="email">Email address</label>
                     <div class="admin-input-wrap">

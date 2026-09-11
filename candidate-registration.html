@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html class="scroll-smooth light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Candidate Registration Form | KAM Global HR</title>
+    <meta name="description" content="Candidate Registration Form for Technical, Construction, MEP, Manufacturing & Engineering Opportunities across India and GCC."/>
+    <link rel="canonical" href="https://www.kamglobalhr.com/candidate-registration.html"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Candidate Registration Form | KAM Global HR"/>
+    <meta property="og:description" content="Candidate Registration Form for Technical, Construction, MEP, Manufacturing & Engineering Opportunities."/>
+    
+    <link rel="icon" href="assets/img/favicon.ico" sizes="any"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png"/>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <!-- Stylesheets -->
+    <script src="assets/js/tailwind-config.js"></script>
+    <link href="assets/css/global.css?v=16" rel="stylesheet"/>
+    <link href="assets/css/hr-redesign.css?v=2" rel="stylesheet"/>
+</head>
+<body class="bg-slate-50/70 text-slate-900 font-sans antialiased">
+
+    <!-- Header Navigation -->
+    <header id="site-header" class="site-header-clean sticky top-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 sm:h-24">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-3 group">
+                        <img src="assets/img/logo.png" alt="KAM Global HR" class="h-12 sm:h-14 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105" width="220" height="60"/>
+                    </a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-8" aria-label="Main Navigation">
+                    <a href="index.html" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">Home</a>
+                    <a href="about.html" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">About Us</a>
+                    <a href="services.html" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">Services</a>
+                    <a href="industries.html" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">Industries</a>
+                    <a href="careers.html" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">Find a Job</a>
+                    <a href="candidate-registration.html" class="text-sm font-semibold text-sky-600 hover:text-sky-700 transition-colors">Candidate Registration</a>
+                    <a href="contact.html" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="careers.html" class="hr-btn-secondary text-xs py-2.5 px-4">
+                        <span class="material-symbols-outlined text-[16px]">work</span> View Vacancies
+                    </a>
+                    <a href="contact.html" class="hr-btn-primary text-xs py-2.5 px-5">
+                        Book Consultation
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex lg:hidden items-center gap-3">
+                    <a href="careers.html" class="hr-btn-secondary text-xs px-3 py-2">
+                        Vacancies
+                    </a>
+                    <button type="button" id="mobile-menu-btn" class="p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100" aria-label="Toggle menu">
+                        <span class="material-symbols-outlined text-2xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4">
+            <a href="index.html" class="block text-slate-700 hover:text-sky-600">Home</a>
+            <a href="about.html" class="block text-slate-700 hover:text-sky-600">About Us</a>
+            <a href="services.html" class="block text-slate-700 hover:text-sky-600">Services</a>
+            <a href="industries.html" class="block text-slate-700 hover:text-sky-600">Industries</a>
+            <a href="careers.html" class="block text-slate-700 hover:text-sky-600">Find a Job</a>
+            <a href="candidate-registration.html" class="block font-semibold text-sky-600">Candidate Registration</a>
+            <a href="contact.html" class="block text-slate-700 hover:text-sky-600">Contact</a>
+        </div>
+    </header>
+
+    <!-- Page Header Banner -->
+    <section class="py-12 bg-white border-b border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-3">
+                <span class="hr-pill-badge">
+                    KAM GLOBAL HR RECRUITMENT PORTAL
+                </span>
+            </div>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-2">
+                Candidate Registration Form
+            </h1>
+            <p class="text-sm font-bold text-sky-700 uppercase tracking-wider mb-2">
+                ITI &nbsp;|&nbsp; DIPLOMA &nbsp;|&nbsp; ENGINEERING
+            </p>
+            <p class="text-xs sm:text-sm text-slate-600 max-w-2xl mx-auto">
+                For Technical, Construction, MEP, Manufacturing &amp; Engineering Opportunities across India &amp; GCC / Overseas markets.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Form Section -->
+    <main class="py-12 lg:py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Target Job Banner (Shown if applying for specific job) -->
+            <div id="target-job-card" class="mb-8 bg-sky-50 border-2 border-sky-200 rounded-3xl p-5 flex items-center justify-between shadow-sm hidden">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-600 text-white flex items-center justify-center flex-shrink-0">
+                        <span class="material-symbols-outlined text-2xl">work</span>
+                    </div>
+                    <div>
+                        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Applying For Vacancy:</div>
+                        <div id="target-job-title" class="text-base sm:text-lg font-extrabold text-slate-900"></div>
+                    </div>
+                </div>
+                <a href="careers" class="text-xs font-bold text-sky-700 hover:text-sky-900 hover:underline">Change Job</a>
+            </div>
+
+            <!-- Form Card Container -->
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-200 p-6 sm:p-10">
+                
+                <form id="candidate-page-form" action="api/apply-job.php" method="post" enctype="multipart/form-data" class="space-y-10">
+                    
+                    <input type="hidden" id="job-id-input" name="job_id" value=""/>
+                    
+                    <!-- Honeypot -->
+                    <div style="display:none;" aria-hidden="true">
+                        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"/>
+                    </div>
+
+                    <!-- 1. APPLICANT INFORMATION (ALL MANDATORY) -->
+                    <div>
+                        <div class="flex items-center gap-2 pb-3 mb-6 border-b border-slate-200">
+                            <span class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-[20px]">person</span>
+                            </span>
+                            <h2 class="text-base font-extrabold text-slate-900 uppercase tracking-wider">
+                                1. Applicant Personal Information <span class="text-rose-600 text-xs font-bold">(All Fields Mandatory)</span>
+                            </h2>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 text-xs">
+                            <div class="sm:col-span-2">
+                                <label class="block font-bold text-slate-700 mb-1.5">Full Name <span class="text-rose-600">*</span></label>
+                                <input type="text" name="full_name" required placeholder="Full name as per Aadhaar / Passport" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Date of Birth &amp; Age <span class="text-rose-600">*</span></label>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <input type="date" name="dob" required class="w-full px-2.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                                    <input type="number" name="age" required min="18" max="70" placeholder="Age" class="w-full px-2.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Gender <span class="text-rose-600">*</span></label>
+                                <select name="gender" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs">
+                                    <option value="">Select Gender</option>
+                                    <option value="Male" selected>Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Mobile No. (Calling) <span class="text-rose-600">*</span></label>
+                                <input type="tel" name="mobile_no" required placeholder="+91 9000000000" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">WhatsApp No. <span class="text-rose-600">*</span></label>
+                                <input type="tel" name="whatsapp_no" required placeholder="+91 9000000000" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Email ID <span class="text-rose-600">*</span></label>
+                                <input type="email" name="email" required placeholder="you@email.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Aadhaar / National ID No. <span class="text-rose-600">*</span></label>
+                                <input type="text" name="aadhaar_no" required placeholder="12-digit Aadhaar Number" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Nationality <span class="text-rose-600">*</span></label>
+                                <input type="text" name="nationality" value="Indian" required placeholder="Nationality" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div class="sm:col-span-3">
+                                <label class="block font-bold text-slate-700 mb-1.5">Current Residential Address <span class="text-rose-600">*</span></label>
+                                <input type="text" name="current_address" required placeholder="House/Flat No, Building, Street, Landmark, Area" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">City / District <span class="text-rose-600">*</span></label>
+                                <input type="text" name="city_district" required placeholder="City / District" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">State <span class="text-rose-600">*</span></label>
+                                <input type="text" name="state" required placeholder="State" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">PIN Code <span class="text-rose-600">*</span></label>
+                                <input type="text" name="pin_code" required placeholder="6-digit PIN Code" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. EDUCATIONAL & TECHNICAL QUALIFICATION (ALL MANDATORY) -->
+                    <div>
+                        <div class="flex items-center gap-2 pb-3 mb-6 border-b border-slate-200">
+                            <span class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-[20px]">school</span>
+                            </span>
+                            <h2 class="text-base font-extrabold text-slate-900 uppercase tracking-wider">
+                                2. Educational / Technical Qualification <span class="text-rose-600 text-xs font-bold">(All Fields Mandatory)</span>
+                            </h2>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 text-xs">
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Qualification Level <span class="text-rose-600">*</span></label>
+                                <select name="qualification_level" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs font-semibold">
+                                    <option value="">Select Qualification</option>
+                                    <option value="Diploma" selected>Diploma (Polytechnic)</option>
+                                    <option value="ITI">ITI (Industrial Training)</option>
+                                    <option value="B.E. / B.Tech">B.E. / B.Tech (Engineering)</option>
+                                    <option value="Post Graduate">Post Graduate / M.Tech / MBA</option>
+                                    <option value="Other">Other / Non-Technical</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Trade / Branch / Specialization <span class="text-rose-600">*</span></label>
+                                <input type="text" name="trade_branch" required placeholder="e.g. Mechanical, Electrical, Civil, Fitter, Welder" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Institute / College / University Name <span class="text-rose-600">*</span></label>
+                                <input type="text" name="institute_college" required placeholder="Polytechnic / College name" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Year Passed <span class="text-rose-600">*</span></label>
+                                <input type="text" name="year_passed" required placeholder="e.g. 2022" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">% Marks / CGPA / Grade <span class="text-rose-600">*</span></label>
+                                <input type="text" name="percentage_cgpa" required placeholder="e.g. 72% or 7.5 CGPA" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div class="sm:col-span-3">
+                                <label class="block font-bold text-slate-700 mb-1.5">Additional Certifications / Licences <span class="text-rose-600">*</span></label>
+                                <input type="text" name="additional_certifications" required placeholder="e.g. Wireman License, 6G Welding, HVAC, AutoCAD, Safety/NEBOSH, or type 'None'" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                                <p class="text-[11px] text-slate-500 mt-1">Mention any specific trade licenses, certifications, software skills, or write 'None'.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. EMPLOYMENT & EXPERIENCE DETAILS (Experience Status & Total Experience Mandatory) -->
+                    <div>
+                        <div class="flex items-center gap-2 pb-3 mb-6 border-b border-slate-200">
+                            <span class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-[20px]">work_history</span>
+                            </span>
+                            <h2 class="text-base font-extrabold text-slate-900 uppercase tracking-wider">
+                                3. Employment / Experience Details
+                            </h2>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 text-xs">
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Experience Status <span class="text-rose-600">*</span></label>
+                                <select name="employment_status" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs font-semibold">
+                                    <option value="experienced">Experienced Professional</option>
+                                    <option value="fresher">Fresher (0 Years)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Total Experience (Years &amp; Months) <span class="text-rose-600">*</span></label>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <input type="number" name="experience_years" min="0" max="40" required placeholder="Years (e.g. 2)" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                                    <input type="number" name="experience_months" min="0" max="11" required placeholder="Months (e.g. 6)" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Notice Period</label>
+                                <input type="text" name="notice_period" placeholder="Immediate / 15 Days / 1 Month" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Current / Last Designation</label>
+                                <input type="text" name="current_designation" placeholder="e.g. Electrical Supervisor / Site Engineer" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Current / Last Company</label>
+                                <input type="text" name="current_company" placeholder="Company / Contractor name" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Current Work Location</label>
+                                <input type="text" name="current_location" placeholder="e.g. Bengaluru / Gulf" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Current Salary</label>
+                                <input type="text" name="current_salary" placeholder="e.g. ₹35,000 / month" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Expected Salary</label>
+                                <input type="text" name="expected_salary" placeholder="e.g. ₹50,000 / month" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div class="sm:col-span-3">
+                                <label class="block font-bold text-slate-700 mb-1.5">Primary &amp; Secondary Skills</label>
+                                <input type="text" name="primary_skills" placeholder="Core trade skills, tools, machines, project types" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. PASSPORT & OVERSEAS EMPLOYMENT DETAILS -->
+                    <div>
+                        <div class="flex items-center gap-2 pb-3 mb-6 border-b border-slate-200">
+                            <span class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-[20px]">flight</span>
+                            </span>
+                            <h2 class="text-base font-extrabold text-slate-900 uppercase tracking-wider">
+                                4. Passport / Overseas Employment Details (If Applicable)
+                            </h2>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 text-xs">
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Passport No.</label>
+                                <input type="text" name="passport_no" placeholder="Passport number" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Passport Expiry Date</label>
+                                <input type="date" name="passport_expiry" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">ECNR / ECR Status</label>
+                                <select name="ecnr_status" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs font-semibold">
+                                    <option value="ECNR">ECNR (Emigration Check Not Required)</option>
+                                    <option value="ECR">ECR</option>
+                                    <option value="NA">NA / Not Applicable</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Previous GCC Experience?</label>
+                                <select name="gcc_experience" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs font-semibold">
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes (Kuwait / Saudi / UAE / Qatar / Oman / Bahrain)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Valid GCC Licence / Civil ID (if any)</label>
+                                <input type="text" name="gcc_license_id" placeholder="GCC driving license or ID" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Visa Status</label>
+                                <input type="text" name="visa_status" placeholder="e.g. Cancelled / Ready / Visit" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div class="sm:col-span-3">
+                                <label class="block font-bold text-slate-700 mb-1.5">Previous GCC Country &amp; Employer Details</label>
+                                <input type="text" name="gcc_country_employer" placeholder="e.g. Kuwait - Alghanim Industries (2020-2023)" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. DOCUMENT UPLOADS (First 4 Documents Mandatory) -->
+                    <div>
+                        <div class="flex items-center gap-2 pb-3 mb-2 border-b border-slate-200">
+                            <span class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-[20px]">upload_file</span>
+                            </span>
+                            <h2 class="text-base font-extrabold text-slate-900 uppercase tracking-wider">
+                                5. Upload Candidate Documents <span class="text-rose-600 text-xs font-bold">(First 4 Documents Mandatory)</span>
+                            </h2>
+                        </div>
+                        <p class="text-xs text-slate-500 mb-6">Attach copies of your documents (PDF, DOC, DOCX, JPG, PNG — Maximum 10MB per document).</p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 text-xs">
+                            
+                            <!-- 1. Resume / CV (Mandatory) -->
+                            <div class="border-2 border-dashed border-sky-400 bg-sky-50/60 rounded-2xl p-4">
+                                <label class="block font-bold text-slate-900 mb-1 flex items-center justify-between text-sky-900">
+                                    <span class="flex items-center gap-1.5">
+                                        <span class="material-symbols-outlined text-[18px] text-sky-700">description</span> 1. Updated Resume / CV
+                                    </span>
+                                    <span class="text-rose-600 font-bold">* Required</span>
+                                </label>
+                                <input type="file" name="doc_resume" accept=".pdf,.doc,.docx" required class="w-full text-xs text-slate-600 file:mr-2 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-sky-600 file:text-white hover:file:bg-sky-700"/>
+                            </div>
+
+                            <!-- 2. Photo (Mandatory) -->
+                            <div class="border-2 border-dashed border-sky-400 bg-sky-50/60 rounded-2xl p-4">
+                                <label class="block font-bold text-slate-900 mb-1 flex items-center justify-between text-sky-900">
+                                    <span class="flex items-center gap-1.5">
+                                        <span class="material-symbols-outlined text-[18px] text-sky-700">account_circle</span> 2. Passport Photo
+                                    </span>
+                                    <span class="text-rose-600 font-bold">* Required</span>
+                                </label>
+                                <input type="file" name="doc_photo" accept=".jpg,.jpeg,.png,.webp" required class="w-full text-xs text-slate-600 file:mr-2 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-sky-600 file:text-white hover:file:bg-sky-700"/>
+                            </div>
+
+                            <!-- 3. Aadhaar / ID Proof (Mandatory) -->
+                            <div class="border-2 border-dashed border-sky-400 bg-sky-50/60 rounded-2xl p-4">
+                                <label class="block font-bold text-slate-900 mb-1 flex items-center justify-between text-sky-900">
+                                    <span class="flex items-center gap-1.5">
+                                        <span class="material-symbols-outlined text-[18px] text-sky-700">badge</span> 3. Aadhaar Card Copy
+                                    </span>
+                                    <span class="text-rose-600 font-bold">* Required</span>
+                                </label>
+                                <input type="file" name="doc_aadhaar" accept=".pdf,.jpg,.jpeg,.png" required class="w-full text-xs text-slate-600 file:mr-2 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-sky-600 file:text-white hover:file:bg-sky-700"/>
+                            </div>
+
+                            <!-- 4. Educational Certificates (Mandatory) -->
+                            <div class="border-2 border-dashed border-sky-400 bg-sky-50/60 rounded-2xl p-4">
+                                <label class="block font-bold text-slate-900 mb-1 flex items-center justify-between text-sky-900">
+                                    <span class="flex items-center gap-1.5">
+                                        <span class="material-symbols-outlined text-[18px] text-sky-700">school</span> 4. Degree/Diploma/ITI Cert
+                                    </span>
+                                    <span class="text-rose-600 font-bold">* Required</span>
+                                </label>
+                                <input type="file" name="doc_qualification" accept=".pdf,.jpg,.jpeg,.png" required class="w-full text-xs text-slate-600 file:mr-2 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-sky-600 file:text-white hover:file:bg-sky-700"/>
+                            </div>
+
+                            <!-- 5. Experience Certificates (Optional) -->
+                            <div class="border border-slate-200 bg-slate-50/70 rounded-2xl p-4">
+                                <label class="block font-bold text-slate-800 mb-1 flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-[18px]">work_history</span> 5. Experience Certificates
+                                </label>
+                                <input type="file" name="doc_experience" accept=".pdf,.jpg,.jpeg,.png" class="w-full text-xs text-slate-600 file:mr-2 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-sky-600 file:text-white hover:file:bg-sky-700"/>
+                            </div>
+
+                            <!-- 6. Passport Copy (Optional) -->
+                            <div class="border border-slate-200 bg-slate-50/70 rounded-2xl p-4">
+                                <label class="block font-bold text-slate-800 mb-1 flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-[18px]">flight_takeoff</span> 6. Passport (Front/Back)
+                                </label>
+                                <input type="file" name="doc_passport" accept=".pdf,.jpg,.jpeg,.png" class="w-full text-xs text-slate-600 file:mr-2 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-sky-600 file:text-white hover:file:bg-sky-700"/>
+                            </div>
+
+                            <!-- 7. Skill / Trade Certificates (Optional) -->
+                            <div class="border border-slate-200 bg-slate-50/70 rounded-2xl p-4">
+                                <label class="block font-bold text-slate-800 mb-1 flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-[18px]">military_tech</span> 7. Trade/Skill Certificates
+                                </label>
+                                <input type="file" name="doc_skill" accept=".pdf,.jpg,.jpeg,.png" class="w-full text-xs text-slate-600 file:mr-2 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-sky-600 file:text-white hover:file:bg-sky-700"/>
+                            </div>
+
+                            <!-- 8. Driving Licence (Optional) -->
+                            <div class="border border-slate-200 bg-slate-50/70 rounded-2xl p-4">
+                                <label class="block font-bold text-slate-800 mb-1 flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-[18px]">directions_car</span> 8. Driving Licence (if any)
+                                </label>
+                                <input type="file" name="doc_license" accept=".pdf,.jpg,.jpeg,.png" class="w-full text-xs text-slate-600 file:mr-2 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-sky-600 file:text-white hover:file:bg-sky-700"/>
+                            </div>
+
+                            <!-- 9. Other Docs (Optional) -->
+                            <div class="border border-slate-200 bg-slate-50/70 rounded-2xl p-4">
+                                <label class="block font-bold text-slate-800 mb-1 flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-[18px]">folder_zip</span> 9. Other Supporting Docs
+                                </label>
+                                <input type="file" name="doc_other" accept=".pdf,.jpg,.jpeg,.png" class="w-full text-xs text-slate-600 file:mr-2 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-sky-600 file:text-white hover:file:bg-sky-700"/>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- 6. EMERGENCY CONTACT (ALL MANDATORY) -->
+                    <div>
+                        <div class="flex items-center gap-2 pb-3 mb-6 border-b border-slate-200">
+                            <span class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-[20px]">contact_emergency</span>
+                            </span>
+                            <h2 class="text-base font-extrabold text-slate-900 uppercase tracking-wider">
+                                6. Emergency Contact Information <span class="text-rose-600 text-xs font-bold">(All Fields Mandatory)</span>
+                            </h2>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 text-xs">
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Contact Person Name <span class="text-rose-600">*</span></label>
+                                <input type="text" name="emergency_name" required placeholder="Full name of contact person" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Relationship <span class="text-rose-600">*</span></label>
+                                <input type="text" name="emergency_relationship" required placeholder="e.g. Father, Mother, Spouse, Brother" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Mobile No. <span class="text-rose-600">*</span></label>
+                                <input type="tel" name="emergency_mobile" required placeholder="+91 9000000000" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Alternate Contact No. <span class="text-rose-600">*</span></label>
+                                <input type="tel" name="emergency_alt_mobile" required placeholder="+91 9000000000" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-sky-500 text-xs"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. CANDIDATE DECLARATION & TERMS -->
+                    <div class="border-t border-slate-200 pt-8">
+                        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 mb-8">
+                            <div class="flex items-start gap-3">
+                                <input type="checkbox" id="page-declaration" required class="mt-1 rounded text-sky-600 focus:ring-sky-500"/>
+                                <label for="page-declaration" class="cursor-pointer text-xs text-slate-700 leading-relaxed">
+                                    <strong>Candidate Declaration &amp; Authorization:</strong> I declare that the information and documents submitted by me are genuine, true, and complete. I authorize KAM Global HR to verify my credentials, conduct background/trade checks, and share my profile with prospective employers and authorized client partners for recruitment purposes in accordance with recruitment regulations and privacy policy.
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Status Message Box -->
+                        <div id="page-form-msg" class="hidden p-5 rounded-2xl text-xs font-bold mb-6"></div>
+
+                        <!-- Submit Button -->
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <a href="careers.html" class="text-xs font-bold text-slate-500 hover:text-slate-800">
+                                &larr; Back to Job Openings
+                            </a>
+                            <button type="submit" id="page-submit-btn" class="hr-btn-primary text-sm px-10 py-3.5 w-full sm:w-auto justify-center shadow-lg">
+                                <span class="material-symbols-outlined text-[20px]">send</span>
+                                Submit Candidate Registration Form
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-16">
+                
+                <div class="lg:col-span-4 space-y-6">
+                    <a href="index.html" class="inline-block group">
+                        <img src="assets/img/logo.png" alt="KAM Global HR" class="h-14 sm:h-16 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105" width="260" height="72"/>
+                    </a>
+                    <p class="text-sm text-slate-600 leading-relaxed max-w-sm">
+                        Empowering organizations worldwide with end-to-end workforce solutions and a people-first approach.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-sm font-bold text-slate-900 mb-4 uppercase tracking-wider">Solutions</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-600">
+                        <li><a href="recruitment.html" class="hover:text-sky-600">Recruitment</a></li>
+                        <li><a href="contract-staffing.html" class="hover:text-sky-600">Contract Staffing</a></li>
+                        <li><a href="payroll.html" class="hover:text-sky-600">Payroll</a></li>
+                        <li><a href="executive-search.html" class="hover:text-sky-600">Executive Search</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-sm font-bold text-slate-900 mb-4 uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-600">
+                        <li><a href="careers.html" class="hover:text-sky-600">Find a Job</a></li>
+                        <li><a href="candidate-registration.html" class="hover:text-sky-600 font-semibold text-sky-600">Candidate Registration</a></li>
+                        <li><a href="insights.html" class="hover:text-sky-600">Insights &amp; Reports</a></li>
+                        <li><a href="contact.html" class="hover:text-sky-600">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-4">
+                    <h4 class="text-sm font-bold text-slate-900 mb-4 uppercase tracking-wider">Need Immediate Guidance?</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                        Reach out to our overseas recruitment desk for trade test schedules, visa status, and interview briefings.
+                    </p>
+                    <a href="contact.html" class="hr-btn-primary text-xs py-2.5 px-5">
+                        Contact Recruitment Team
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <div>&copy; 2025 KAM Global HR. All rights reserved.</div>
+                <div class="flex items-center gap-6">
+                    <a href="privacy.html" class="hover:text-slate-800">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="terms.html" class="hover:text-slate-800">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Check URL query parameters for target job
+        const urlParams = new URLSearchParams(window.location.search);
+        const targetJobId = urlParams.get('job_id');
+        const targetTitle = urlParams.get('title');
+
+        if (targetJobId && targetTitle) {
+            document.getElementById('job-id-input').value = targetJobId;
+            document.getElementById('target-job-title').textContent = decodeURIComponent(targetTitle);
+            document.getElementById('target-job-card').classList.remove('hidden');
+        }
+
+        // Mobile drawer toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Form Submit via Fetch API
+        const pageForm = document.getElementById('candidate-page-form');
+        const pageMsg = document.getElementById('page-form-msg');
+        const pageSubmitBtn = document.getElementById('page-submit-btn');
+
+        pageForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            pageMsg.classList.add('hidden');
+            pageSubmitBtn.disabled = true;
+            pageSubmitBtn.innerHTML = `<span class="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span> Submitting Registration...`;
+
+            try {
+                const formData = new FormData(pageForm);
+                const res = await fetch('api/apply-job.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                const json = await res.json();
+
+                if (!res.ok || json.ok === false) {
+                    throw new Error(json.error || 'Submission failed. Please check required fields.');
+                }
+
+                pageMsg.className = 'p-5 rounded-2xl text-xs sm:text-sm font-bold mb-6 bg-emerald-100 text-emerald-800 border-2 border-emerald-300';
+                pageMsg.innerHTML = `<div class="flex items-center gap-2"><span class="material-symbols-outlined text-2xl">check_circle</span> <div>${json.message || 'Candidate Registration submitted successfully!'}</div></div>`;
+                pageMsg.classList.remove('hidden');
+
+                pageForm.reset();
+                window.scrollTo({ top: pageMsg.offsetTop - 100, behavior: 'smooth' });
+
+            } catch (err) {
+                pageMsg.className = 'p-5 rounded-2xl text-xs sm:text-sm font-bold mb-6 bg-rose-100 text-rose-800 border-2 border-rose-300';
+                pageMsg.innerHTML = `<div class="flex items-center gap-2"><span class="material-symbols-outlined text-2xl">error</span> <div>${err.message || 'Submission error. Please verify your details.'}</div></div>`;
+                pageMsg.classList.remove('hidden');
+            } finally {
+                pageSubmitBtn.disabled = false;
+                pageSubmitBtn.innerHTML = `<span class="material-symbols-outlined text-[20px]">send</span> Submit Candidate Registration Form`;
+            }
+        });
+    </script>
+    <script src="assets/js/site-navigation.js"></script>
+</body>
+</html>

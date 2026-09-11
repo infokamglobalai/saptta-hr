@@ -17,7 +17,6 @@ function kam_admin_app_boot(): void
             $dbError,
             [
                 ['label' => 'System check', 'href' => 'check.php'],
-                ['label' => 'Run install', 'href' => '../install.php'],
             ]
         );
     }

@@ -21,9 +21,8 @@ function kam_admin_require_env(): void
     }
     kam_admin_setup_page(
         'Configuration missing',
-        'Create config/.env on the server (copy from config/.env.example) with your MySQL credentials, then run install.php once.',
+        'Create config/.env on the server (copy from config/.env.example) with your MySQL database credentials.',
         [
-            ['label' => 'Run setup wizard', 'href' => '../install.php'],
             ['label' => 'System check', 'href' => 'check.php'],
         ]
     );
@@ -63,14 +62,7 @@ function kam_admin_test_database(): ?string
     } catch (Throwable $e) {
         $msg = $e->getMessage();
         if (str_contains($msg, 'Base table') || str_contains($msg, "doesn't exist")) {
-            try {
-                require_once KAM_ROOT . '/includes/installer.php';
-                kam_crm_ensure_installed();
-                Database::connection()->query('SELECT COUNT(*) FROM admins LIMIT 1');
-                return null;
-            } catch (Throwable $inner) {
-                return 'Database tables missing: ' . $inner->getMessage();
-            }
+            return 'Database tables missing. Please ensure database schema has been imported.';
         }
         if (str_contains($msg, 'Access denied') || str_contains($msg, 'Unknown database')) {
             return 'Cannot connect to MySQL. Check DB_HOST, DB_NAME, DB_USER, and DB_PASS in config/.env.';
@@ -114,7 +106,7 @@ function kam_admin_run_safe(callable $fn): void
     } catch (Throwable $e) {
         $detail = kam_env('APP_ENV', 'production') === 'local'
             ? kam_h($e->getMessage())
-            : 'Check config/.env, MySQL, and that install.php was run.';
+            : 'Check config/.env and MySQL database connection.';
         kam_admin_setup_page(
             'Something went wrong',
             $detail,

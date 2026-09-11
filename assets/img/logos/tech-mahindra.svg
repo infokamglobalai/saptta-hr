@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175 50" fill="none">
+  <!-- Tech Mahindra Red Emblem -->
+  <g transform="translate(6, 9)">
+    <rect x="0" y="0" width="32" height="32" rx="7" fill="#e11d48" />
+    <!-- White interconnected lines -->
+    <circle cx="10" cy="11" r="3" fill="#ffffff" />
+    <circle cx="22" cy="11" r="3" fill="#ffffff" />
+    <circle cx="16" cy="21" r="3.5" fill="#ffffff" />
+    <path d="M10 11L16 21L22 11" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <!-- Tech Mahindra Wordmark -->
+  <text x="46" y="24" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="800" fill="#1e293b" letter-spacing="-0.3px">Tech</text>
+  <text x="46" y="38" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#e11d48" letter-spacing="-0.3px">Mahindra</text>
+</svg>

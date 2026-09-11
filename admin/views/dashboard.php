@@ -71,6 +71,22 @@ $greeting = $hour < 12 ? 'Good morning' : ($hour < 17 ? 'Good afternoon' : 'Good
             <span>Newsletter subs</span>
         </div>
     </div>
+    <div class="admin-stat admin-stat--blue">
+        <div class="admin-stat__glow" aria-hidden="true"></div>
+        <div class="admin-stat__icon"><span class="material-symbols-outlined">assignment_ind</span></div>
+        <div class="admin-stat__body">
+            <strong><?= (int) ($jobStats['total_applications'] ?? 0) ?></strong>
+            <span>Applications (<?= (int) ($jobStats['new_applications'] ?? 0) ?> new)</span>
+        </div>
+    </div>
+    <div class="admin-stat admin-stat--cyan">
+        <div class="admin-stat__glow" aria-hidden="true"></div>
+        <div class="admin-stat__icon"><span class="material-symbols-outlined">work</span></div>
+        <div class="admin-stat__body">
+            <strong><?= (int) ($jobStats['active_jobs'] ?? 0) ?></strong>
+            <span>Active Vacancies</span>
+        </div>
+    </div>
 </div>
 
 <div class="admin-dashboard-grid">
@@ -119,6 +135,36 @@ $greeting = $hour < 12 ? 'Good morning' : ($hour < 17 ? 'Good afternoon' : 'Good
                     </span>
                     <span class="admin-quick-action__badge"><?= (int) $stats['new_leads'] ?></span>
                 </a>
+                <a href="applications.php" class="admin-quick-action">
+                    <span class="admin-quick-action__icon admin-quick-action__icon--blue">
+                        <span class="material-symbols-outlined">assignment_ind</span>
+                    </span>
+                    <span class="admin-quick-action__text">
+                        <strong>Applications</strong>
+                        <small>Candidate forms</small>
+                    </span>
+                    <span class="admin-quick-action__badge"><?= (int) ($jobStats['new_applications'] ?? 0) ?> new</span>
+                </a>
+                <a href="jobs.php" class="admin-quick-action">
+                    <span class="admin-quick-action__icon admin-quick-action__icon--cyan">
+                        <span class="material-symbols-outlined">work</span>
+                    </span>
+                    <span class="admin-quick-action__text">
+                        <strong>Job Vacancies</strong>
+                        <small>Manage openings</small>
+                    </span>
+                    <span class="admin-quick-action__badge"><?= (int) ($jobStats['active_jobs'] ?? 0) ?></span>
+                </a>
+                <a href="../careers.html" target="_blank" rel="noopener" class="admin-quick-action">
+                    <span class="admin-quick-action__icon admin-quick-action__icon--navy">
+                        <span class="material-symbols-outlined">badge</span>
+                    </span>
+                    <span class="admin-quick-action__text">
+                        <strong>Careers portal</strong>
+                        <small>Find a job page</small>
+                    </span>
+                    <span class="material-symbols-outlined admin-quick-action__arrow">north_east</span>
+                </a>
                 <a href="subscribers.php" class="admin-quick-action">
                     <span class="admin-quick-action__icon admin-quick-action__icon--cyan">
                         <span class="material-symbols-outlined">campaign</span>
@@ -128,16 +174,6 @@ $greeting = $hour < 12 ? 'Good morning' : ($hour < 17 ? 'Good afternoon' : 'Good
                         <small>Newsletter list</small>
                     </span>
                     <span class="admin-quick-action__badge"><?= (int) $stats['subscribers'] ?></span>
-                </a>
-                <a href="../contact.html" target="_blank" rel="noopener" class="admin-quick-action">
-                    <span class="admin-quick-action__icon admin-quick-action__icon--navy">
-                        <span class="material-symbols-outlined">language</span>
-                    </span>
-                    <span class="admin-quick-action__text">
-                        <strong>Contact page</strong>
-                        <small>View live form</small>
-                    </span>
-                    <span class="material-symbols-outlined admin-quick-action__arrow">north_east</span>
                 </a>
                 <a href="check.php" class="admin-quick-action admin-quick-action--muted">
                     <span class="admin-quick-action__icon">

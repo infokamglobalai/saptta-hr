@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 50" fill="none">
+  <!-- IBM 8-Bar Blue Vector Logo -->
+  <g fill="#0f62fe">
+    <!-- Bar 1 -->
+    <rect x="10" y="10" width="22" height="2.5"/>
+    <rect x="40" y="10" width="30" height="2.5"/>
+    <rect x="78" y="10" width="7" height="2.5"/>
+    <rect x="94" y="10" width="7" height="2.5"/>
+    <rect x="110" y="10" width="7" height="2.5"/>
+    <!-- Bar 2 -->
+    <rect x="10" y="14" width="22" height="2.5"/>
+    <rect x="40" y="14" width="30" height="2.5"/>
+    <rect x="78" y="14" width="7" height="2.5"/>
+    <rect x="91" y="14" width="13" height="2.5"/>
+    <rect x="110" y="14" width="7" height="2.5"/>
+    <!-- Bar 3 -->
+    <rect x="17" y="18" width="8" height="2.5"/>
+    <rect x="40" y="18" width="8" height="2.5"/>
+    <rect x="62" y="18" width="8" height="2.5"/>
+    <rect x="78" y="18" width="7" height="2.5"/>
+    <rect x="88" y="18" width="19" height="2.5"/>
+    <rect x="110" y="18" width="7" height="2.5"/>
+    <!-- Bar 4 -->
+    <rect x="17" y="22" width="8" height="2.5"/>
+    <rect x="40" y="22" width="25" height="2.5"/>
+    <rect x="78" y="22" width="7" height="2.5"/>
+    <rect x="85" y="22" width="7" height="2.5"/>
+    <rect x="103" y="22" width="7" height="2.5"/>
+    <rect x="110" y="22" width="7" height="2.5"/>
+    <!-- Bar 5 -->
+    <rect x="17" y="26" width="8" height="2.5"/>
+    <rect x="40" y="26" width="26" height="2.5"/>
+    <rect x="78" y="26" width="7" height="2.5"/>
+    <rect x="85" y="26" width="7" height="2.5"/>
+    <rect x="103" y="26" width="7" height="2.5"/>
+    <rect x="110" y="26" width="7" height="2.5"/>
+    <!-- Bar 6 -->
+    <rect x="17" y="30" width="8" height="2.5"/>
+    <rect x="40" y="30" width="8" height="2.5"/>
+    <rect x="62" y="30" width="8" height="2.5"/>
+    <rect x="78" y="30" width="7" height="2.5"/>
+    <rect x="85" y="30" width="7" height="2.5"/>
+    <rect x="103" y="30" width="7" height="2.5"/>
+    <rect x="110" y="30" width="7" height="2.5"/>
+    <!-- Bar 7 -->
+    <rect x="10" y="34" width="22" height="2.5"/>
+    <rect x="40" y="34" width="30" height="2.5"/>
+    <rect x="78" y="34" width="7" height="2.5"/>
+    <rect x="85" y="34" width="7" height="2.5"/>
+    <rect x="103" y="34" width="7" height="2.5"/>
+    <rect x="110" y="34" width="7" height="2.5"/>
+    <!-- Bar 8 -->
+    <rect x="10" y="38" width="22" height="2.5"/>
+    <rect x="40" y="38" width="30" height="2.5"/>
+    <rect x="78" y="38" width="7" height="2.5"/>
+    <rect x="85" y="38" width="7" height="2.5"/>
+    <rect x="103" y="38" width="7" height="2.5"/>
+    <rect x="110" y="38" width="7" height="2.5"/>
+  </g>
+</svg>

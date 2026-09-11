@@ -108,7 +108,6 @@ foreach ($checks as $c) {
             </ul>
             <div class="setup-actions">
                 <a class="setup-btn" href="login.php">Go to login</a>
-                <a class="setup-btn" href="../install.php" style="background:#005eb2">Run install.php</a>
             </div>
         </div>
     </div>

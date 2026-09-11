@@ -17,3 +17,6 @@ scratch/
 # Secrets — never commit real credentials
 config/.env
 config/.env.local
+
+# Candidate uploaded files
+uploads/

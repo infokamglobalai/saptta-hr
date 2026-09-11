@@ -32,6 +32,7 @@
 
     <script src="assets/js/tailwind-config.js"></script>
     <link href="assets/css/global.css" rel="stylesheet"/>
+    <link href="assets/css/hr-redesign.css" rel="stylesheet"/>
 </head>
 <body class="service-page service-page--blue insights-page site-page bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
 
@@ -424,6 +425,9 @@
                         <input type="hidden" name="inquiry_type" value="newsletter"/>
                         <input type="hidden" name="name" value="Newsletter subscriber"/>
                         <input type="hidden" name="message" value="Insights newsletter subscription"/>
+                        <div style="display:none;" aria-hidden="true">
+                            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"/>
+                        </div>
                         <label class="sr-only" for="insights-email">Email address</label>
                         <input id="insights-email" name="email" type="email" placeholder="professional@company.com" required autocomplete="email"/>
                         <button type="submit" class="page-btn page-btn--primary">Subscribe to Insights</button>
@@ -621,6 +625,7 @@
 
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/site-navigation.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
     (function () {

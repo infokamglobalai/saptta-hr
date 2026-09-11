@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 50" fill="none">
+  <!-- Capgemini Spade Icon -->
+  <g transform="translate(6, 12)">
+    <path d="M12 2C8 7 3 13 3 17c0 4 3 6 6 6 2 0 3-1 3-2 0 1 1 2 3 2 3 0 6-2 6-6 0-4-5-10-9-15z" fill="#0070ad"/>
+    <path d="M10 23h4v4h-4z" fill="#0070ad"/>
+  </g>
+  <!-- Capgemini Wordmark -->
+  <text x="35" y="32" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="21" font-weight="700" fill="#003d6b" letter-spacing="-0.5px">Capgemini</text>
+</svg>

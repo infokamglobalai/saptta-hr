@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" fill="none">
+  <!-- TATA Modern Blue Vector Logo -->
+  <g fill="#0b5c9e">
+    <!-- T -->
+    <path d="M12 16h24v5H26v20h-5V21H12v-5z"/>
+    <!-- A -->
+    <path d="M47 16h6l10 25h-5.6l-2.6-6.6h-9.6L42.6 41H37l10-25zm3 4.8l-3.5 9.1h7l-3.5-9.1z"/>
+    <!-- T -->
+    <path d="M72 16h24v5H86v20h-5V21H72v-5z"/>
+    <!-- A -->
+    <path d="M107 16h6l10 25h-5.6l-2.6-6.6h-9.6L102.6 41H97l10-25zm3 4.8l-3.5 9.1h7l-3.5-9.1z"/>
+  </g>
+  <!-- Decorative Tata Arc -->
+  <path d="M136 17c6 4 10 11 10 19s-4 15-10 19" stroke="#0b5c9e" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.8"/>
+  <path d="M141 22c4 3 6 8 6 14s-2 11-6 14" stroke="#0284c7" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+</svg>

@@ -18,6 +18,8 @@ $firstName = trim(explode(' ', $user['name'] ?? 'Admin')[0]);
 $navItems = [
     'dashboard' => ['href' => 'index.php', 'label' => 'Dashboard', 'icon' => 'dashboard'],
     'leads' => ['href' => 'leads.php', 'label' => 'Leads', 'icon' => 'group'],
+    'jobs' => ['href' => 'jobs.php', 'label' => 'Job Openings', 'icon' => 'work'],
+    'applications' => ['href' => 'applications.php', 'label' => 'Applications', 'icon' => 'assignment_ind'],
     'subscribers' => ['href' => 'subscribers.php', 'label' => 'Newsletter', 'icon' => 'mail'],
     'insights' => ['href' => 'insights.php', 'label' => 'Insights', 'icon' => 'article'],
     'cases' => ['href' => 'case-studies.php', 'label' => 'Case studies', 'icon' => 'folder_special'],

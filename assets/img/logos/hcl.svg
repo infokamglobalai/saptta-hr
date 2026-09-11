@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 50" fill="none">
+  <!-- HCLTech / HCL Logo -->
+  <text x="8" y="34" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="30" font-weight="900" fill="#0066cc" letter-spacing="1px">HCL</text>
+  <text x="82" y="34" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600" fill="#0284c7" letter-spacing="-0.2px">Tech</text>
+  <circle cx="132" cy="18" r="3" fill="#38bdf8" />
+</svg>

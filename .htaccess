@@ -1,19 +1,55 @@
-# KAM Global HR — Apache (enable PHP for /admin and /api)
+# KAM Global HR — Apache Configuration
 DirectoryIndex index.html index.php
+
+# Disable directory browsing
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    # Optional: force HTTPS on production
-    # RewriteCond %{HTTPS} off
-    # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    RewriteBase /
+
+    # 1. External 301 Redirect: Remove .html extension from URL if directly requested
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+([^?]+?)\.html[\s?] [NC]
+    RewriteRule ^ %1 [R=301,L,NE]
+
+    # 2. External 301 Redirect: Remove trailing /index or /index.html from root
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+index(?:\.html|\.php)?[\s?] [NC]
+    RewriteRule ^(?:index(?:\.html|\.php)?)?$ / [R=301,L,NE]
+
+    # 3. Dynamic Article / Blog / Insight Route
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^insight/([a-zA-Z0-9_-]+)/?$ insight.php?slug=$1 [QSA,L]
+
+    # 4. Internal Rewrite: /clean-name -> /clean-name.html if .html file exists
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+    # 5. Internal Rewrite: /clean-name -> /clean-name.php if .php file exists
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^([^\.]+)$ $1.php [NC,L]
 </IfModule>
 
-# Block direct access to config and includes
-<IfModule mod_authz_core.c>
-    Require all granted
+# Security Headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
-<FilesMatch "^\.">
-    Require all denied
+
+# Block hidden files and sensitive file extensions
+<FilesMatch "(^\.|\.(env|sql|log|md|example|bak|backup|config))$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Deny from all
+    </IfModule>
 </FilesMatch>
 
-RedirectMatch 403 /\.env

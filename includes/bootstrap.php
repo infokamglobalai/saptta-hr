@@ -71,11 +71,3 @@ require_once KAM_ROOT . '/includes/Database.php';
 require_once KAM_ROOT . '/includes/Auth.php';
 require_once KAM_ROOT . '/includes/helpers.php';
 
-if (is_readable(KAM_ROOT . '/config/.env')) {
-    require_once KAM_ROOT . '/includes/installer.php';
-    try {
-        kam_crm_ensure_installed();
-    } catch (Throwable) {
-        // Visible errors on admin/check.php or install.php
-    }
-}

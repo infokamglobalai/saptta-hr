@@ -148,4 +148,97 @@ function kam_cms_seed_defaults(): void
         'sort_order' => 0,
         'is_active' => 1,
     ]);
+
+    // Seed Initial Job Openings
+    require_once __DIR__ . '/JobRepository.php';
+    $jobsCount = (int) $pdo->query('SELECT COUNT(*) FROM jobs')->fetchColumn();
+    if ($jobsCount === 0) {
+        $sampleJobs = [
+            [
+                'title' => 'Fresh ITI Diploma Holders (Electrician / Plumber / HVAC / MEP)',
+                'slug' => 'fresh-iti-diploma-dubai',
+                'category' => 'Technical & ITI',
+                'job_type' => 'Full-time / Overseas',
+                'location' => 'Dubai, UAE',
+                'image_url' => 'assets/img/jobs/iti-dubai.png',
+                'experience_required' => 'Fresher / 0 - 2 Years',
+                'salary_range' => 'Attractive Gulf Scale + Accommodation',
+                'vacancies' => 25,
+                'summary' => 'Urgent requirement for Fresh ITI Diploma Holders for a Reputed Construction Company in Dubai. Roles open for Electrician, Plumber, HVAC / AC Technician, and MEP Technician.',
+                'description' => "We are looking for Fresh ITI Diploma Holders for a Reputed Construction Company in Dubai.\n\nOpen Roles:\n• Electrician\n• Plumber\n• HVAC / AC Technician\n• MEP Technician\n\nInterviews in: Bangalore & Mumbai\nEligibility: Only for Male Candidates\nContact / WhatsApp: +91 8050766464, +91 9187227450, +91 9686171617",
+                'requirements' => "• ITI / Diploma Holder in Electrical, RAC/HVAC, Plumbing, or MEP Trades\n• Fresher or up to 2 years experience\n• Only for Male Candidates with valid Passport\n• In-person / Client interviews in Bangalore & Mumbai\n• Willingness to relocate and start an international career in Dubai, UAE",
+                'status' => 'active',
+                'sort_order' => 1,
+            ],
+            [
+                'title' => 'Fresh Civil Engineers (Diploma / B.E. / B.Tech)',
+                'slug' => 'fresh-civil-engineers-dubai',
+                'category' => 'Engineering',
+                'job_type' => 'Full-time / Overseas',
+                'location' => 'Dubai, UAE',
+                'image_url' => 'assets/img/jobs/civil-dubai.png',
+                'experience_required' => 'Fresher / 0 - 2 Years',
+                'salary_range' => 'Attractive Package + Visa + Accommodation',
+                'vacancies' => 15,
+                'summary' => 'Urgent opening for Fresh Civil Engineers (Diploma / B.E. / B.Tech) for a Reputed Construction Company in Dubai. Build your career abroad with large-scale projects.',
+                'description' => "Looking for Fresh Civil Engineers to start their career abroad with a Reputed Construction Company in Dubai.\n\nKey Highlights:\n• Work with a Reputed Construction Group\n• Gain High-value International Exposure\n• Build a Strong Engineering Career Foundation\n• Be Part of Exciting Commercial & Infrastructure Projects\n\nInterviews in: Bangalore & Mumbai\nEligibility: Only for Male Candidates\nContact / WhatsApp: +91 8050766464, +91 9187227450, +91 9686171617",
+                'requirements' => "• Diploma / B.E. / B.Tech in Civil Engineering\n• Fresher or 0 - 2 Years Experience\n• Only for Male Candidates with valid Passport\n• Basic understanding of structural drawings, site supervision, and AutoCAD\n• Client interviews in Bangalore & Mumbai",
+                'status' => 'active',
+                'sort_order' => 2,
+            ],
+            [
+                'title' => 'Mechanical Site Engineer (MEP)',
+                'slug' => 'mechanical-site-engineer-mep',
+                'category' => 'Engineering',
+                'job_type' => 'Full-time / Overseas',
+                'location' => 'Kuwait / GCC',
+                'image_url' => 'assets/img/industry_engineering_mfg.png',
+                'experience_required' => '3 - 6 Years',
+                'salary_range' => 'Competitive + Accommodation',
+                'vacancies' => 5,
+                'summary' => 'Looking for experienced Mechanical Engineers with Diploma/B.E. for HVAC and plumbing installations in commercial projects.',
+                'description' => 'Oversee installation, testing, and commissioning of MEP systems. Coordinate with consultants, site supervisors, and subcontractors to ensure compliance with project specifications.',
+                'requirements' => "• Diploma / B.E. in Mechanical Engineering\n• 3+ years experience in MEP / HVAC execution\n• GCC experience & valid driving license preferred\n• Proficiency in AutoCAD / Revit is an advantage",
+                'status' => 'active',
+                'sort_order' => 3,
+            ],
+            [
+                'title' => 'Electrical Supervisor / Wireman',
+                'slug' => 'electrical-supervisor-wireman',
+                'category' => 'Technical & ITI',
+                'job_type' => 'Full-time',
+                'location' => 'Bengaluru, India',
+                'image_url' => 'assets/img/contract_staffing.png',
+                'experience_required' => '2 - 5 Years',
+                'salary_range' => '₹25,000 - ₹40,000 / month',
+                'vacancies' => 8,
+                'summary' => 'ITI / Diploma Electrical professionals required for industrial wiring, panel installation, and facility maintenance.',
+                'description' => 'Responsible for cable laying, LT/HT panel erection, transformer maintenance, and safety inspections at industrial sites.',
+                'requirements' => "• ITI (Electrician) / Diploma in Electrical Engineering\n• Valid Wireman / Supervisor license\n• Knowledge of industrial electrical safety norms",
+                'status' => 'active',
+                'sort_order' => 4,
+            ],
+            [
+                'title' => 'QA / QC Inspector (Welding & Piping)',
+                'slug' => 'qa-qc-inspector-welding-piping',
+                'category' => 'Manufacturing',
+                'job_type' => 'Contract',
+                'location' => 'Saudi Arabia / UAE',
+                'image_url' => 'assets/img/executive_leadership_boardroom.png',
+                'experience_required' => '4 - 8 Years',
+                'salary_range' => 'Attractive Tax-Free Package',
+                'vacancies' => 4,
+                'summary' => 'Certified QA/QC Inspectors needed for oil & gas and heavy fabrication projects in the Gulf region.',
+                'description' => 'Conduct non-destructive testing (NDT), weld visual inspection, hydrostatic test witness, and maintain inspection documentation as per ISO standards.',
+                'requirements' => "• Diploma / Degree in Mechanical / Metallurgy\n• CSWIP 3.1 or AWS-CWI certification mandatory\n• NDT Level II (UT, MT, PT, RT)\n• Minimum 4 years in fabrication or EPC projects",
+                'status' => 'active',
+                'sort_order' => 5,
+            ],
+        ];
+
+        foreach ($sampleJobs as $j) {
+            JobRepository::jobSave(null, $j);
+        }
+    }
 }
+
