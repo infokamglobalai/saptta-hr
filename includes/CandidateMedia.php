@@ -30,7 +30,18 @@ final class CandidateMedia
             return null;
         }
         if ($file['error'] !== UPLOAD_ERR_OK) {
-            throw new RuntimeException('File upload failed (error code ' . $file['error'] . ').');
+            switch ($file['error']) {
+                case UPLOAD_ERR_INI_SIZE:
+                case UPLOAD_ERR_FORM_SIZE:
+                    throw new RuntimeException('Document exceeds maximum allowed upload size (10 MB).');
+                case UPLOAD_ERR_PARTIAL:
+                    throw new RuntimeException('Document upload was interrupted by network. Please try again.');
+                case UPLOAD_ERR_NO_TMP_DIR:
+                case UPLOAD_ERR_CANT_WRITE:
+                    throw new RuntimeException('Server storage temporarily unavailable. Please try again.');
+                default:
+                    throw new RuntimeException('Document upload failed (error code ' . $file['error'] . ').');
+            }
         }
         if (($file['size'] ?? 0) > self::MAX_BYTES) {
             throw new RuntimeException('Each document must be 10 MB or smaller.');
@@ -38,7 +49,23 @@ final class CandidateMedia
 
         $finfo = new finfo(FILEINFO_MIME_TYPE);
         $mime = $finfo->file($file['tmp_name'] ?? '') ?: '';
-        if (!isset(self::ALLOWED_DOCS[$mime])) {
+        $ext = strtolower(pathinfo($file['name'] ?? '', PATHINFO_EXTENSION));
+        
+        $fallbackExts = [
+            'pdf' => 'pdf',
+            'doc' => 'doc',
+            'docx' => 'docx',
+            'jpg' => 'jpg',
+            'jpeg' => 'jpg',
+            'png' => 'png',
+            'webp' => 'webp',
+        ];
+
+        if (isset(self::ALLOWED_DOCS[$mime])) {
+            $finalExt = self::ALLOWED_DOCS[$mime];
+        } elseif (isset($fallbackExts[$ext])) {
+            $finalExt = $fallbackExts[$ext];
+        } else {
             throw new RuntimeException('Allowed document formats: PDF, DOC, DOCX, JPG, PNG, WebP.');
         }
 
@@ -47,9 +74,8 @@ final class CandidateMedia
             throw new RuntimeException('Could not create candidates upload folder.');
         }
 
-        $ext = self::ALLOWED_DOCS[$mime];
         $safePrefix = preg_replace('/[^a-zA-Z0-9_-]/', '', $prefix) ?: 'doc';
-        $name = $safePrefix . '-' . date('Ymd-His') . '-' . bin2hex(random_bytes(4)) . '.' . $ext;
+        $name = $safePrefix . '-' . date('Ymd-His') . '-' . bin2hex(random_bytes(4)) . '.' . $finalExt;
         $dest = $dir . '/' . $name;
 
         if (!move_uploaded_file($file['tmp_name'], $dest)) {

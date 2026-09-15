@@ -605,6 +605,94 @@
             });
         }
 
+        // Document Input Size Validation & Indicator
+        const fileInputs = pageForm.querySelectorAll('input[type="file"]');
+        const MAX_FILE_BYTES = 10 * 1024 * 1024; // 10 MB per file
+
+        fileInputs.forEach(input => {
+            input.addEventListener('change', function() {
+                const file = this.files[0];
+                let infoEl = this.parentNode.querySelector('.file-info-badge');
+                if (!infoEl) {
+                    infoEl = document.createElement('div');
+                    infoEl.className = 'file-info-badge mt-1.5 text-[11px] font-semibold flex items-center gap-1';
+                    this.parentNode.appendChild(infoEl);
+                }
+
+                if (!file) {
+                    infoEl.innerHTML = '';
+                    return;
+                }
+
+                if (file.size > MAX_FILE_BYTES) {
+                    alert(`Selected file "${file.name}" is too large (${(file.size / (1024 * 1024)).toFixed(1)} MB).\nMaximum allowed size is 10 MB per document.`);
+                    this.value = '';
+                    infoEl.className = 'file-info-badge mt-1.5 text-[11px] font-semibold text-rose-600 flex items-center gap-1';
+                    infoEl.innerHTML = `⚠️ File exceeds 10MB limit. Please choose a smaller file.`;
+                    return;
+                }
+
+                const sizeMb = (file.size / (1024 * 1024)).toFixed(2);
+                infoEl.className = 'file-info-badge mt-1.5 text-[11px] font-semibold text-emerald-700 flex items-center gap-1';
+                infoEl.innerHTML = `✓ ${file.name} (${sizeMb} MB)`;
+            });
+        });
+
+        // Client-side Image Compression Helper (Compresses huge mobile photos > 1MB down to ~300KB)
+        async function compressImageFile(file) {
+            if (!file.type.match(/^image\/(jpeg|png|webp|jpg)$/i) || file.size < 800 * 1024) {
+                return file; // Already small or not an image
+            }
+
+            return new Promise((resolve) => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = new Image();
+                    img.onload = function() {
+                        const maxDim = 1600;
+                        let width = img.width;
+                        let height = img.height;
+
+                        if (width > maxDim || height > maxDim) {
+                            if (width > height) {
+                                height = Math.round((height * maxDim) / width);
+                                width = maxDim;
+                            } else {
+                                width = Math.round((width * maxDim) / height);
+                                height = maxDim;
+                            }
+                        }
+
+                        const canvas = document.createElement('canvas');
+                        canvas.width = width;
+                        canvas.height = height;
+                        const ctx = canvas.getContext('2d');
+                        ctx.drawImage(img, 0, 0, width, height);
+
+                        canvas.toBlob(
+                            (blob) => {
+                                if (blob && blob.size < file.size) {
+                                    const compressedFile = new File([blob], file.name.replace(/\.[^/.]+$/, "") + ".jpg", {
+                                        type: "image/jpeg",
+                                        lastModified: Date.now()
+                                    });
+                                    resolve(compressedFile);
+                                } else {
+                                    resolve(file);
+                                }
+                            },
+                            'image/jpeg',
+                            0.82
+                        );
+                    };
+                    img.onerror = () => resolve(file);
+                    img.src = e.target.result;
+                };
+                reader.onerror = () => resolve(file);
+                reader.readAsDataURL(file);
+            });
+        }
+
         // Form Submit via Fetch API
         const pageForm = document.getElementById('candidate-page-form');
         const pageMsg = document.getElementById('page-form-msg');
@@ -614,31 +702,73 @@
             e.preventDefault();
             pageMsg.classList.add('hidden');
             pageSubmitBtn.disabled = true;
-            pageSubmitBtn.innerHTML = `<span class="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span> Submitting Registration...`;
+            pageSubmitBtn.innerHTML = `<span class="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span> Preparing &amp; Compressing Documents...`;
 
             try {
-                const formData = new FormData(pageForm);
+                const formData = new FormData();
+
+                // Append text inputs
+                const formElements = pageForm.elements;
+                for (let i = 0; i < formElements.length; i++) {
+                    const el = formElements[i];
+                    if (!el.name || el.type === 'file' || el.disabled) continue;
+                    if ((el.type === 'checkbox' || el.type === 'radio') && !el.checked) continue;
+                    formData.append(el.name, el.value);
+                }
+
+                // Compress images if necessary and append files
+                const fileInputsList = pageForm.querySelectorAll('input[type="file"]');
+                for (const fInput of fileInputsList) {
+                    if (fInput.files && fInput.files[0]) {
+                        const originalFile = fInput.files[0];
+                        if (originalFile.size > MAX_FILE_BYTES) {
+                            throw new Error(`File "${originalFile.name}" exceeds the 10 MB upload limit. Please choose a smaller file.`);
+                        }
+                        const optimizedFile = await compressImageFile(originalFile);
+                        formData.append(fInput.name, optimizedFile, optimizedFile.name);
+                    }
+                }
+
+                pageSubmitBtn.innerHTML = `<span class="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span> Uploading &amp; Submitting Registration...`;
+
                 const res = await fetch('api/apply-job.php', {
                     method: 'POST',
                     body: formData
                 });
-                const json = await res.json();
+
+                const rawText = await res.text();
+                let json = {};
+                try {
+                    json = JSON.parse(rawText);
+                } catch (parseError) {
+                    if (res.status === 413) {
+                        throw new Error('The total size of uploaded documents is too large for your mobile network. Please compress attached files and try again.');
+                    }
+                    throw new Error('Server returned an unexpected response (' + res.status + '). Please try again or contact support.');
+                }
 
                 if (!res.ok || json.ok === false) {
                     throw new Error(json.error || 'Submission failed. Please check required fields.');
                 }
 
                 pageMsg.className = 'p-5 rounded-2xl text-xs sm:text-sm font-bold mb-6 bg-emerald-100 text-emerald-800 border-2 border-emerald-300';
-                pageMsg.innerHTML = `<div class="flex items-center gap-2"><span class="material-symbols-outlined text-2xl">check_circle</span> <div>${json.message || 'Candidate Registration submitted successfully!'}</div></div>`;
+                pageMsg.innerHTML = `<div class="flex items-center gap-2"><span class="material-symbols-outlined text-2xl text-emerald-700">check_circle</span> <div>${json.message || 'Candidate Registration submitted successfully!'}</div></div>`;
                 pageMsg.classList.remove('hidden');
 
                 pageForm.reset();
+                document.querySelectorAll('.file-info-badge').forEach(b => b.innerHTML = '');
                 window.scrollTo({ top: pageMsg.offsetTop - 100, behavior: 'smooth' });
 
             } catch (err) {
+                let errorMsg = err.message || 'Submission error. Please check your details.';
+                if (err.name === 'TypeError' && String(err.message).toLowerCase().includes('fetch')) {
+                    errorMsg = 'Network connection issue or upload timeout. Please check your internet connection and ensure individual documents are under 10 MB.';
+                }
+
                 pageMsg.className = 'p-5 rounded-2xl text-xs sm:text-sm font-bold mb-6 bg-rose-100 text-rose-800 border-2 border-rose-300';
-                pageMsg.innerHTML = `<div class="flex items-center gap-2"><span class="material-symbols-outlined text-2xl">error</span> <div>${err.message || 'Submission error. Please verify your details.'}</div></div>`;
+                pageMsg.innerHTML = `<div class="flex items-center gap-2"><span class="material-symbols-outlined text-2xl text-rose-700">error</span> <div>${errorMsg}</div></div>`;
                 pageMsg.classList.remove('hidden');
+                window.scrollTo({ top: pageMsg.offsetTop - 100, behavior: 'smooth' });
             } finally {
                 pageSubmitBtn.disabled = false;
                 pageSubmitBtn.innerHTML = `<span class="material-symbols-outlined text-[20px]">send</span> Submit Candidate Registration Form`;

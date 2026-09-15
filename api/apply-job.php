@@ -18,6 +18,14 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     kam_json(['ok' => false, 'error' => 'Method not allowed'], 405);
 }
 
+// Check if POST data was discarded by PHP due to post_max_size overflow
+if (empty($_POST) && !empty($_SERVER['CONTENT_LENGTH']) && (int)$_SERVER['CONTENT_LENGTH'] > 0) {
+    kam_json([
+        'ok' => false,
+        'error' => 'The total uploaded file size exceeds server upload limits. Please ensure each document is under 10 MB and try again.'
+    ], 413);
+}
+
 // Check Honeypot for spam bots
 $honeypot = trim((string) ($_POST['_gotcha'] ?? $_POST['website_hp'] ?? ''));
 if ($honeypot !== '') {

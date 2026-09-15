@@ -2277,3 +2277,116 @@ a:hover { color: var(--admin-blue-bright); }
         transform: none;
     }
 }
+
+/* ==========================================================================
+   Print Styles (Multi-page Support & High Fidelity Form Dossier)
+   ========================================================================== */
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 12mm 10mm 15mm 10mm;
+    }
+
+    html,
+    html.admin-app,
+    body,
+    body.admin-body,
+    .admin-layout,
+    .admin-main,
+    .admin-content {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+        position: static !important;
+        display: block !important;
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        font-size: 10pt !important;
+        line-height: 1.4 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .admin-sidebar,
+    .admin-sidebar-backdrop,
+    .admin-topbar,
+    .admin-no-print,
+    .admin-menu-toggle,
+    .admin-pagination,
+    .admin-export-dropdown,
+    #bulkActionBar,
+    .admin-alert,
+    button[onclick*="window.print"] {
+        display: none !important;
+    }
+
+    .admin-card {
+        box-shadow: none !important;
+        border: 1px solid #94a3b8 !important;
+        border-radius: 6px !important;
+        margin-bottom: 12px !important;
+        background: #ffffff !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        padding: 14px 18px !important;
+    }
+
+    .admin-card__head {
+        background: none !important;
+        border-bottom: 1px solid #cbd5e1 !important;
+        padding: 8px 0 !important;
+    }
+
+    .admin-grid-12 {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .admin-grid-12 > div {
+        width: 100% !important;
+        display: block !important;
+    }
+
+    .admin-grid-3 {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    .admin-grid-2 {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    .admin-print-header {
+        display: block !important;
+    }
+
+    .admin-print-footer {
+        display: block !important;
+    }
+
+    .print-avoid-break {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    a {
+        text-decoration: none !important;
+        color: inherit !important;
+    }
+
+    label {
+        color: #475569 !important;
+        font-weight: 600 !important;
+    }
+
+    strong {
+        color: #0f172a !important;
+    }
+}

@@ -37,7 +37,7 @@ $navItems = [
     <title><?= kam_h($pageTitle) ?> — KAM CRM</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link rel="stylesheet" href="assets/css/admin.css?v=2"/>
+    <link rel="stylesheet" href="assets/css/admin.css?v=<?= file_exists(__DIR__ . '/../assets/css/admin.css') ? filemtime(__DIR__ . '/../assets/css/admin.css') : '3' ?>"/>
 </head>
 <body class="admin-body" data-page="<?= kam_h($activeNav ?? '') ?>">
 <div class="admin-layout">

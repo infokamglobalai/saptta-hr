@@ -486,6 +486,66 @@ final class JobRepository
         ];
     }
 
+    public static function applicationsExport(array $filters = [], array $ids = []): array
+    {
+        $pdo = Database::connection();
+        $where = ['1=1'];
+        $params = [];
+
+        // If specific IDs are selected for bulk export
+        if (!empty($ids)) {
+            $idPlaceholders = implode(',', array_fill(0, count($ids), '?'));
+            $where[] = "a.id IN ($idPlaceholders)";
+            foreach ($ids as $id) {
+                $params[] = (int) $id;
+            }
+        } else {
+            if (!empty($filters['status'])) {
+                $where[] = 'a.status = ?';
+                $params[] = $filters['status'];
+            }
+            if (!empty($filters['job_id'])) {
+                $where[] = 'a.job_id = ?';
+                $params[] = (int) $filters['job_id'];
+            }
+            if (!empty($filters['qualification'])) {
+                $where[] = 'a.qualification_level = ?';
+                $params[] = $filters['qualification'];
+            }
+            if (!empty($filters['q'])) {
+                $where[] = '(a.full_name LIKE ? OR a.email LIKE ? OR a.mobile_no LIKE ? OR a.reg_no LIKE ? OR a.trade_branch LIKE ? OR a.city_district LIKE ? OR a.state LIKE ?)';
+                $wild = '%' . $filters['q'] . '%';
+                $params[] = $wild;
+                $params[] = $wild;
+                $params[] = $wild;
+                $params[] = $wild;
+                $params[] = $wild;
+                $params[] = $wild;
+                $params[] = $wild;
+            }
+            if (!empty($filters['date_from'])) {
+                $where[] = 'DATE(a.created_at) >= ?';
+                $params[] = $filters['date_from'];
+            }
+            if (!empty($filters['date_to'])) {
+                $where[] = 'DATE(a.created_at) <= ?';
+                $params[] = $filters['date_to'];
+            }
+        }
+
+        $whereSql = implode(' AND ', $where);
+
+        $sql = "SELECT a.*, j.title AS job_title, j.category AS job_category, j.location AS job_location, adm.name AS assigned_name
+                FROM job_applications a
+                LEFT JOIN jobs j ON j.id = a.job_id
+                LEFT JOIN admins adm ON adm.id = a.assigned_to
+                WHERE $whereSql
+                ORDER BY a.created_at DESC";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute($params);
+        return $stmt->fetchAll();
+    }
+
     public static function applicationUpdateStatus(int $id, string $status, ?int $assignedTo = null): bool
     {
         $pdo = Database::connection();
